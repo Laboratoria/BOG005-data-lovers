@@ -601,6 +601,8 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
 * [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
 
+#### Únete al canal de Slack **#project-data-lovers**
+
 ## 9. Checklist
 
 * [ ] Usa VanillaJS.
