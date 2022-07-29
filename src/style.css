@@ -1,0 +1,59 @@
+
+body{
+    background-image: url(IMAGENES/LOGO1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+h1{
+
+    font-size: 2vw;
+    margin-left: 4mm;
+   
+}
+header{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+    ;
+
+}
+.logoImagen{
+    width: 7vw;
+    height: 4vw;
+    margin-left: 2vw;
+
+
+}
+button{
+
+    height: 25px;
+
+}
+
+.buscador{
+    height: 2vw;
+    width: 15vw;
+    margin-top: 1vh;
+    margin-right: 4vh;
+
+}
+
+.letrasLogo{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+
+
+
+}
+article, img{
+    width: 5vw;
+    margin-right: 4vw;
+
+
+    
+}
+
