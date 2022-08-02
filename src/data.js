@@ -17,8 +17,8 @@ export const showName = (dataRyM) => {
   return listName;
 };
 
-export const showNameAndImageSort = (dataRyM) => {
-  let nameAndImageSort = showName().sort(dataRyM)
-  return nameAndImageSort;
-  // dataRyM['results'].sort((total => total.name))
-}
+// export const showNameAndImageSort = (dataRyM) => {
+//   let nameAndImageSort = showName().sort(dataRyM)
+//   return nameAndImageSort;
+//   // dataRyM['results'].sort((total => total.name))
+// }
