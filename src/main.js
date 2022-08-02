@@ -1,25 +1,22 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
+// import { example } from './data.js';
+
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-//const nameMovie = document.getElementById("moveOne");
-//const dataTitle = data.films[0];
-//const titleMovie = dataTitle.title;
-//nameMovie.innerHTML = '<li>'+ titleMovie + '</li>';
 
-//console.log (titleMovie);
+// data.films.forEach(function (film) {
+//     console.log(film.title)
+//     const ol = document.getElementById("peliculas");
+//     const li = document.createElement("li");
+//     const text = document.createTextNode(film.title);
+//     ol.appendChild(li)
+//     li.appendChild(text)
+// })
 
-const addFilmOnMovies = function(film){
-    const listMov = document.getElementById("peliculas");
-    const img = document.createElement("img");
-    img.setAttribute('src', film.poster);
+const addFilmOnMovies = function(film) {
+    const ol = document.getElementById("peliculas");
     const li = document.createElement("li");
     const text = document.createTextNode(film.title);
-    listMov.appendChild(li);
-    li.appendChild(img);
-    li.appendChild(text);
+    ol.appendChild(li)
+    li.appendChild(text)
 };
-data.films.forEach(addFilmOnMovies);
-
-console.log(data.films)
+data.films.forEach(addFilmOnMovies)   
