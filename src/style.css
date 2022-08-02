@@ -8,6 +8,10 @@
     background-color: black;
 }
 
+/* header{
+    display: flex;
+    width: 100%;
+} */
 /* header > img{
     margin: 0.063em; */
      /* 1px; */
@@ -19,6 +23,17 @@
 /* body{
     display: grid;
 } */
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* height: 20em; */
+}
+/* header > img{
+height: 100%;
+width: 70%;
+} */
+
 header > img{
     /* height: 170px;
     text-align: center;
@@ -27,8 +42,8 @@ header > img{
 
     border-radius: 0;
     margin: 0.06em 25em;
-    width: 50%;
-    height: 1%;
+    width: 100%;
+    height: 70%;
     display: block;
     display: grid;
 }
@@ -59,6 +74,7 @@ header > img{
     justify-content: center;
 }
 #button_characteres{
+    grid-column: 2/3;
     background: #f9bf1e;
     color: black;
     margin: 3em 2em 3em 3em;
@@ -121,8 +137,6 @@ opacity: 0.8;
     display: block;
     text-align: center;
     border: 2px solid darkcyan;
-
-    
 }
 
 #bottons_navegation  li  a:hover{
@@ -140,6 +154,16 @@ opacity: 0.8;
 
 #bottons_navegation li:hover ul{
     display: block;
+}
+
+#unfold_alphabet li{
+    display: block;
+    width: 73%;
+}
+
+#unfold_species li {
+    display: block;
+    width: 60%;
 }
 /* ordenar */
 /* #unfold_alphabet{
@@ -230,7 +254,7 @@ img#rigth {
     background: white;
     float: right;
     right: 5%;
-    bottom: 0;
+    /* bottom: 0; */
 }
 #rigth:hover{
     background-color: #62A4AB;
@@ -243,7 +267,7 @@ img#left {
     background: white;
     float: left;
     left: 5%;
-    bottom: 0;
+    /* bottom: 0; */
 }
 #left:hover{
     background-color: #62A4AB;
@@ -298,6 +322,39 @@ img#left {
 }
 
 /* medida para celular */
-@media(max-width: 576px){
+@media screen and (max-width: 576px){
+    #page_start{
+        grid-template-columns: auto;
+        width: 0;
+        justify-items: center;
+    }
+#img_start{
+    margin: 2em 2em 0 2em;
+    padding: 2em;
+    width: 15em;
+    height: 15em;
+}
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* height: 20em; */
+}
+header > img{
+height: 100%;
+width: 70%;
+}
+#p_intro{
+font-size: 1em;
+width: 15em;
+text-align: justify;
+padding: 0;
+margin: 1em;
+}
+#button_characteres{
+margin: 2em;
+padding: 0.5em 1em;
+font-size: 15px;
+}
 
 }
