@@ -1,0 +1,83 @@
+:root {
+  --general-text: 'IBM Plex Sans Thai', sans-serif;
+  --titles-text: 'Bubblegum Sans', cursive;
+  --welcome-text: 'Henny Penny', cursive;
+
+  --background-color: #151314;
+  --background-color-variation: #623914;
+  --enfasis-color: #FFC857;
+  --enfasis-color-variation: #FFE9D4;
+  --primary-color: #4D5466;
+  --primary-color-variation: #CDCDCD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  width: 22%;
+}
+
+
+.button-modify-data {
+  border: 0;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  width: 9rem;
+  height: 3rem;
+  font-family: var(--general-text);
+  font-size: 1.5rem;
+}
+
+.container-characters-list {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.5rem;
+}
+
+.container-character-class {
+  display: flex;
+  width: 90.33%;
+  height: 15rem;
+  border: solid 0.2rem black;
+  border-radius: 2.5rem;
+  padding: 1rem;
+}
+
+.picture-character-class {
+  width: auto;
+  height: 100%;
+  border: 0;
+  border-radius: 50%;
+}
+
+.name-character-class {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-left: 3rem;
+  font-family: var(--titles-text);
+  font-size: 3.5rem;
+}
