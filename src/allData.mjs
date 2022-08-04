@@ -1,4 +1,4 @@
-import data from './data.mjs';
+import data from './data/harrypotter/data.mjs';
 import htmlElements from './displayMain.mjs';
 
 const allData = {
