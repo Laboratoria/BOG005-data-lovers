@@ -12,4 +12,3 @@ const addFilmOnMovies = function(film) {
     listMovie.appendChild(img);
     li.appendChild(text);
 };
-data.films.forEach(addFilmOnMovies);
