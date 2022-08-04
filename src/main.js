@@ -13,6 +13,21 @@ const addFilmOnMovies = function (film) {
     listMovie.appendChild(img);
     
 };
-
 data.films.forEach(addFilmOnMovies);
 
+const filterAlfab = document.getElementById("filAlfa");
+filterAlfab.addEventListener("click", orderAlfa);
+function SortArray(x, y) {
+    if (x.title < y.title){
+        return -1;
+     } else if (x.title > y.title) {
+        return 1;
+     } else {}
+    };
+
+function orderAlfa(evt) {
+    evt.preventDefault();
+    const dataForOrder = data.films;
+    dataForOrder.sort(SortArray);
+};
+console.log(SortArray);
