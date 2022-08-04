@@ -1,6 +1,8 @@
 // import { example } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
+import { filteringDataZtoA } from './data.js';
+const inicialDataToPrint = data.films;
 
 const addFilmOnMovies = function(film) {
     const listMovie = document.getElementById("peliculas");
@@ -12,22 +14,16 @@ const addFilmOnMovies = function(film) {
     listMovie.appendChild(img);
     li.appendChild(text);
 };
-data.films.forEach(addFilmOnMovies);
+inicialDataToPrint.forEach(addFilmOnMovies);
+
+
+function printDataFilteredZtoA(eve){
+    eve.preventDefault(eve);
+    const listMovie = document.getElementById("peliculas");
+    listMovie.innerHTML = '';
+    const dataFilteredZtoA = filteringDataZtoA(inicialDataToPrint)
+    dataFilteredZtoA.forEach(addFilmOnMovies)
+};
 
 const filterAlfab = document.getElementById("filAlfa");
-filterAlfab.addEventListener("click", orderAlfa);
-function SortArray(x, y) {
-    if (x.title < y.title){
-        return -1;
-     } else if (x.title > y.title) {
-        return 1;
-     } else {}
-    };
-
-function orderAlfa(evt) {
-    evt.preventDefault();
-    const dataForOrder = data.films;
-    dataForOrder.sort(SortArray);
-};
-console.log(SortArray);
-data.films.forEach(addFilmOnMovies);
+filterAlfab.addEventListener("click", printDataFilteredZtoA);
