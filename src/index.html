@@ -6,28 +6,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
+    <section class="page1" id="page1">
     <header>
-        <img class="logoImagen" src="IMAGENES/1659127183953.png" alt="logo olimpiadas 2016">
+        <img class="logoImagen" src="IMAGENES/LOGO RIO1.png" alt="logo olimpiadas 2016">
         <h1>INFO OLIMPIADAS</h1>
-       <!-- <button>Inicio</button>-->
-        <input id="searchvalue"  placeholder=" Busca atletas por deporte" class="buscador" type="search"> 
-        <button id="buttonSearch">Buscar</button>
+        <button id="btn1" class="btn1">Conoce más de los atletas</button>
     </header>
-    <article class="letrasLogo" ><img src="IMAGENES/RIO LETRAS.png" alt=""></article>
+    </section>
 
-   
+    <section id="page2" class="page2">
+    <header>
+ 
+    </header>
+    
+      <nav class="selectBusqueda" id="selectBusqueda">
+        <button id="btnInicio" class="btnInicio">INICIO</button>
 
-    <article id="listCard">
-      <table>
-        <thead>
-          <tr>
-            
-          </tr>
-        </thead>
-      </table>
+        <div class="filtroNombre" id="filtroNombre">
+          <input type="text" id="txtAtleta" value="" placeholder="Busca tu atleta por nombre">
+        </div>
+       <section class="busqueda" id="busquedaPorPais">
+         <select  class="selectBusquedaPais" id="selectBusquedaPais">
+           <option value=""> -Busca por país - </option>
+           </select>
+       </section>
+       <div class="busqueda" id="busquedaPorDeporte">
+        <select  class="selectBusquedaDeporte" id="selectBusquedaDeporte">
+          <option value=""> -Busca por deporte - </option>
+          </select>
+      </div>
 
-    </article>
+      <div class="btnFiltros">
+        <button class="btnBuscar" id="btnBuscar">Buscar</button>
+      </div>
+      <div class="btnLimpiar">
+        <button type="" class="btnLimpiar" id="btnLimpiar">Refrescar búsqueda</button>
+     </div>
+      </nav>
+
+     <table id="contenedorTarjetas" class="contenedorTarjetas" >
+     </table>
+
+     </section>
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>

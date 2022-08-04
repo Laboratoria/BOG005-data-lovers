@@ -1,13 +1,15 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData, anotherExample } from '../src/data.js';
+import data from './data/athletes/athletes.js';
 
 
-describe('example', () => {
+
+describe('filterData', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterData).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `filterData`', () => {
+    expect(filterData(data, "sport", "Taekwondo"  )).toBe('example');
   });
 });
 

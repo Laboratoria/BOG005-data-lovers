@@ -1,11 +1,11 @@
 
 export const filterData = (data, tipofiltro, valor) => {
-  //console.log(data);
+ // console.log(valor);
 
   let filtrado = [];
 
   data.athletes.forEach(atleta => {
-    if(atleta[tipofiltro] == valor){
+    if(atleta[tipofiltro] == valor ){
       //console.log(atleta);
       filtrado.push(atleta);
     }
@@ -14,6 +14,6 @@ export const filterData = (data, tipofiltro, valor) => {
     return filtrado;
 };
 
-//export const data = () => {
-  //return 'data';
-//};
+export const data = () => {
+  return 'data';
+};
