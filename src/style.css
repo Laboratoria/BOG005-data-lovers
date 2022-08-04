@@ -1,0 +1,40 @@
+body{
+    font-family: 'Poppins';
+    background-color: rgb(245, 244, 244);
+}
+
+header{
+    display: flex;
+    height: 100px;
+    background-color: #009A90;
+    justify-content: left;
+    align-items: center;
+    padding: 20px; 
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 100px;
+    margin-right: 50px;
+    padding: 10px auto;
+}
+
+.container {
+    height: 450px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+}
+
+#description{
+    display: flex;
+    margin: 5px auto;
+    background-color: #00CCC0;
+    justify-content: center;
+    align-items: center;
+}
