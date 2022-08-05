@@ -2,7 +2,18 @@
 export const example = () => {
   return 'example';
 };
-export const anotherExample = () => {
+export const anotherExample = (data) => {
+  console.log(data)
   return 'OMG';
 };
-export const filterByName = arr => filter(arr)
+
+
+// films.sort(x, y){
+//   if (x.title < y.title){
+//       return -1;
+//    } else if (x.title > y.title) {
+//       return 1;
+//    } else {
+//       return 0;
+//    }
+//   };
