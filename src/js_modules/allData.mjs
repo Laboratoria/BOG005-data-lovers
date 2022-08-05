@@ -1,37 +1,6 @@
-// En este archivo extraemos la  información de los personajes del objeto data
+// allData.mjs - Extract characters information to process it
 
 import data from '../data/harrypotter/data.mjs';
-// import htmlElements from './displayMain.mjs';
-
-// const allData = {
-//   bookData: data.books,
-//   characterData: data.characters,
-
-//   getData() {
-//     console.log("Books: ", this.bookData)
-//     console.log("Character: " , this.characterData)
-//   },
-
-//   getOrderedCharactersList() {
-//     const moreImportant = [];
-//     const otherCharacters = [];
-
-//     this.characterData.forEach((character) => {
-//       if (character.books_featured_in.length === 7) {
-//         moreImportant.push(character.name);
-//       } else {
-//         otherCharacters.push(character.name);
-//       }
-//     })
-
-//     const allCharacters = moreImportant.concat(otherCharacters);
-//     allCharacters.forEach((character) => {
-//       htmlElements.createViewMainPage(character);
-//     })
-
-//   }
-// }
-
 
 class ProcessData {
   constructor (data) {
@@ -42,24 +11,45 @@ class ProcessData {
 
   // Función para crear una lista con el nombre de los personajes ordenados por apariciones en los libros
   getOrderedNamesList() {
-    let moreImportantCharacters = [];
-    let otherCharacters = [];
+    let importanceLevel1 = [];
+    let importanceLevel2 = [];
+    let importanceLevel3 = [];
+    let importanceLevel4 = [];
+    let importanceLevel5 = [];
 
     this.characters.forEach(character => {
       let characterName = character.name;
       let characterBooks = character.books_featured_in;
 
-      if (characterBooks.length === 7) {
-        moreImportantCharacters.push(characterName);
-      } else {
-        otherCharacters.push(characterName);
-      }
-    })
+    //   if (characterBooks.length === 7) {
+    //     moreImportantCharacters.push(characterName);
+    //   } else {
+    //     otherCharacters.push(characterName);
+    //   }
+    // })
 
-    const allCharacters = moreImportantCharacters.concat(otherCharacters);
+      switch (characterBooks.length) {
+        case 7:
+          characterName.push(importanceLevel1);
+          break;
+        case 6:
+          characterName.push(importanceLevel2);
+          break;
+        case 5:
+          characterName.push(importanceLevel3);
+          break;
+        case 4:
+          characterName.push(importanceLevel4);
+          break;
+        default:
+          characterName.push(importanceLevel5);
+          break;
+      }
+    });
+
+    let allCharacters = importanceLevel1.concat(importanceLevel2).concat(importanceLevel3).concat(importanceLevel4).concat(importanceLevel5);
     return allCharacters;
   }
-};
-
+}
 
 export default ProcessData;
