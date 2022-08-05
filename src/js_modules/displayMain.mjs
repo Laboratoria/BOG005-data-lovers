@@ -7,15 +7,14 @@ class CreateContainersForCharactersSection {
     this.newNodeFigCaption = document.createElement("figcaption");
   }
 
-  createCharacterContainer (section, srcImage) {
+  createCharacterContainer (section) {
     this.containerCharacters = document.getElementById(`container-characters-${section}-id`);
 
     // Setting up attributes to the nodes created
     this.newNodeFigure.setAttribute("class", `newNodeFigure-${section}-class`);
     this.newNodeImage.setAttribute("class", `newNodeImage-${section}-class`);
     this.newNodeFigCaption.setAttribute("class", `newNodeFigCaption-${section}-class`);
-    this.newNodeImage.src = `${srcImage}`;
-    // this.newNodeFigCaption.textContent = ;
+    // this.newNodeImage.src = `${srcImage}`;
 
     // Appending nodes to its parents
     this.newNodeFigure.insertAdjacentElement("beforeend", this.newNodeImage);
