@@ -21,63 +21,92 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: black;
+}
+
 header {
-  width: 100%;
+  width: 100vw;
+  height: 15rem;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  width: 95%;
+
+  width: 100vw;
+  height: 100%;
 }
 
 ul {
   display: flex;
-  justify-content: space-between;
-  width: 22%;
+  justify-content: flex-end;
+
+  width: 100vw;
+  height: 100%;
+}
+
+li {
+  list-style: none;
 }
 
 
 .button-modify-data {
-  border: 0;
-  border-radius: 1rem;
-  background-color: var(--primary-color);
-  color: white;
-  width: 9rem;
-  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18.5rem;
+  height: 6rem;
+  margin-top: 4rem;
+  margin-right: 3rem;
+
   font-family: var(--general-text);
-  font-size: 1.5rem;
+  font-size: 2.8rem;
+  color: white;
+
+  background-color: var(--primary-color);
 }
 
-.container-characters-list {
-  width: 100vw;
+.container-characters-list-class {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2.5rem;
+  row-gap: 4rem;
+
+  width: 100vw;
+  padding: 0rem 7rem;
 }
 
-.container-character-class {
+.newNodeFigure-list-class {
   display: flex;
-  width: 90.33%;
-  height: 15rem;
-  border: solid 0.2rem black;
-  border-radius: 2.5rem;
-  padding: 1rem;
+
+  width: 100%;
+  height: 20rem;
+  border: solid 0.35rem white;
+  border-radius: 3rem;
+  padding: 2rem;
+
+  background-color: transparent;
 }
 
-.picture-character-class {
+.newNodeImage-list-class {
   width: auto;
   height: 100%;
+
   border: 0;
   border-radius: 50%;
+  margin-left: 4rem;
 }
 
-.name-character-class {
+.newNodeFigCaption-list-class {
   display: flex;
   align-items: center;
+
   width: 80%;
   margin-left: 3rem;
+
   font-family: var(--titles-text);
-  font-size: 3.5rem;
+  font-size: 5rem;
+  color: white;
 }
