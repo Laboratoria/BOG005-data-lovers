@@ -5,10 +5,5 @@ import CreateContainersForCharactersSection from './displayMain.mjs';
 const HarryPotterData = new ProcessData(data);
 const hpCharactersOrderedList = HarryPotterData.getOrderedNamesList();
 
-// Filling containers with characters information
-hpCharactersOrderedList.forEach(character => {
-  let characterContainer = new CreateContainersForCharactersSection();
-  characterContainer.createCharacterContainer("list");
-  characterContainer.newNodeFigCaption.textContent = character;
-  characterContainer.newNodeImage.src = "http://imageshack.com/f/pmDlbIROp";
-})
+const creatingHTMLElements = new CreateContainersForCharactersSection();
+creatingHTMLElements.createCharacterContainer (hpCharactersOrderedList, "http://imageshack.com/f/po6UMYRmp", "list");

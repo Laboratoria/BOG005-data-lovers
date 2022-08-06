@@ -18,13 +18,6 @@ class ProcessData {
       let characterName = character.name;
       let characterBooks = character.books_featured_in;
 
-    //   if (characterBooks.length === 7) {
-    //     moreImportantCharacters.push(characterName);
-    //   } else {
-    //     otherCharacters.push(characterName);
-    //   }
-    // })
-
       switch (characterBooks.length) {
         case 7:
           importanceLevel1.push(characterName);
