@@ -19,6 +19,7 @@ createViewMainPage(nameCharacter) {
 },
 
 
+
 }
 
 export default htmlElements;
