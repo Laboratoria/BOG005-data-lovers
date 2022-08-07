@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Yemmy y Karenth Cruz">
-    <title>Studio Ghibli</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <img src="https://i.blogs.es/305eed/ghiblii/450_1000.jpg" alt="Logo">
-        <h1>Studio Ghibli</h1>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Yeimmy y Karenth Cruz">
+  <title>Studio Ghibli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div id="description">
-        <section>
-            <h2>Bienvenido al mundo Ghibli, aquí podrás encontrar el listado de las maravillosas películas animadas.</h2>
-        </section>
-      </div>
+<body>
+  <header class="logo">
+    <img class="imgLogo" srcset="/src/logo.png" alt="logo imgen">
+    <h1>Studio Ghibli</h1>
+  </header>
 
-      <div id="filtrado">
-        <section>
-          <form>
-            <button class="btn" id="filAlfa">Z - A</button><br>
-            <br>
-            </form>
-            
-        </section>
-      </div>
+  <div class="container">
+    <menu id="buttons">
+      <h1>Sort By</h1>
+      <li><button class="btns" id="orderAsc">A - Z</button></li>
+      <li><button class="btns" id="orderDesc">Z - A</button></li>
+      <li><button class="btns" id="orderByScore">Rating</button></li>
+      <li><button class="btns" id="cuantity">Release date</button></li>
+    </menu>
 
-      <div class="container">
-        <section class="boxes" id="boxOne">
-          
-          <ol id="peliculas">           
-          </ol>
-          
-        </section>
+    <section>
+      <ul id="peliculas">
+      </ul>
+    </section>
 
-        <section class="boxes" id="boxTwo">
 
-        </img>
-        </section>
-      </div>
+  </div>
 
-    
-    <script src="main.js" type="module"></script>
-  </body>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
