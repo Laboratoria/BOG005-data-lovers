@@ -1,40 +1,62 @@
 body{
+    display: flex;
     font-family: 'Poppins';
-    background-color: rgb(245, 244, 244);
+    background: rgb(220,61,170);
+    background: linear-gradient(90deg, rgba(220,61,170,1) 3%, rgba(196,54,177,1) 32%, rgba(171,47,183,1) 49%, rgba(145,38,189,1) 74%);
+    flex-direction: column;
 }
 
 header{
     display: flex;
-    height: 100px;
-    background-color: #009A90;
-    justify-content: left;
-    align-items: center;
+    height: 80px;
+    justify-content:left;
     padding: 20px; 
+    margin-bottom: 12%;
+    word-spacing: 9000px;
+    margin-left: -15%;
 }
 
 .logo{
-    display: flex;
-    align-items: center;
-}
-
-.logo img{
-    height: 100px;
-    margin-right: 50px;
-    padding: 10px auto;
+    color: #f8f8f8;
+    font-size: 45px;    
 }
 
 .container {
-    height: 450px;
     margin: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content:center;
+    display: flex;    
 }
 
-#description{
-    display: flex;
-    margin: 5px auto;
-    background-color: #00CCC0;
-    justify-content: center;
-    align-items: center;
+#buttons{
+    color: #f8f8f8;
+    margin-left: 5px;
 }
+
+.btns{
+    border-radius: 12px;
+    border-color: white;
+    background-color: rgb(220,61,170);
+}
+
+
+#peliculas{
+    margin-top: 1%;
+    margin-left: 18%;
+    column-count: 4;
+    float:left;
+    align-items: center;
+    position: relative;
+    z-index: 30;
+    top: -10%;
+    padding: 5px;
+}
+
+.imgLogo{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 30px;
+    z-index: 30;
+    top: -50%;
+    left: 24%;
+}
+

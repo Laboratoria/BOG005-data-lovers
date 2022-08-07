@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Yemmy y Karenth Cruz">
-    <title>Studio Ghibli</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <img src="./logo-studio-ghibli.png" alt="Logo">
-        <h1>Studio Ghibli</h1>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Yeimmy y Karenth Cruz">
+  <title>Studio Ghibli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div id="description">
-        <section>
-            <h2>¡Bienvenido al mundo Ghibli! aquí podrás encontrar el listado de las maravillosas películas animadas.</h2>
-        </section>
-      </div>
+<body>
+  <header class="logo">
+    <img class="imgLogo" srcset="/src/logo.png" alt="logo imgen">
+    <h1>Studio Ghibli</h1>
+  </header>
 
-      <div class="container">
-        <section id="peliculas" class="boxes" id="boxOne">
-        
-            
-      </div>
+  <div class="container">
+    <menu id="buttons">
+      <h1>Sort By</h1>
+      <li><button class="btns" id="orderAsc">A - Z</button></li>
+      <li><button class="btns" id="orderDesc">Z - A</button></li>
+      <li><button class="btns" id="orderByScore">Rating</button></li>
+      <li><button class="btns" id="cuantity">Release date</button></li>
+    </menu>
 
-    
-    <script src="main.js" type="module"></script>
-  </body>
+    <section>
+      <ul id="peliculas">
+      </ul>
+    </section>
+
+
+  </div>
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

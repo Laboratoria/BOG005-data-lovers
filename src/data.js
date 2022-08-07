@@ -1,19 +1,57 @@
-//estas funciones son de ejemplo
-export const example = () => {
-  return 'example';
-};
-export const anotherExample = (data) => {
-  console.log(data)
-  return 'OMG';
-};
+
+const utilities = {
+
+  orderByTitleAsc: function (arr) {
+    const result = arr.sort((a, b) => {
+      let ma = a.title.toUpperCase();
+      let mb = b.title.toUpperCase();
+
+      if (ma < mb) {
+        return -1;
+      }
+      if (ma > mb){
+        return 1; 
+      }
+      return 0;
+    });
+    return result; 
+  },
 
 
-// films.sort(x, y){
-//   if (x.title < y.title){
-//       return -1;
-//    } else if (x.title > y.title) {
-//       return 1;
-//    } else {
-//       return 0;
-//    }
-//   };
+  orderByTitleDesc: function (arr) {
+    const result = arr.sort((a, b) => {
+      let ma = a.title.toUpperCase();
+      let mb = b.title.toUpperCase();
+
+      if (ma > mb) {
+        return -1;
+      }
+      if (ma < mb){
+        return 1; 
+      }
+      return 0;
+    });
+    return result; 
+  },
+
+  orderByScore: function (arr){
+    const result = arr.sort((a, b) => {
+      let ma = a.rt_score.toLowerCase();
+      let mb = b.rt_score.toLowerCase();
+
+      if (ma < mb) {
+        return -1;
+      }
+      if (ma > mb){
+        return 1; 
+      }
+      return 0;
+    });
+    return result; 
+  },
+
+}
+
+
+
+export default utilities;

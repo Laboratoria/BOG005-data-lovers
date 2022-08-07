@@ -1,27 +1,50 @@
-import { anotherExample, example } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
-anotherExample(data)
+import utilities from './data.js';
 
-const addFilmOnMovies = function(film) {
-    const listMovie = document.getElementById("peliculas");
-    const article = document.createElement("article");
-    const text = document.createTextNode(film.title);
-    const img = document.createElement("img");
-    img.setAttribute("src", film.poster);
-    listMovie.appendChild(article);
-    listMovie.appendChild(img);    
-    article.appendChild(text);
-   
-};
-data.films.forEach(addFilmOnMovies);
+const films = data.films;
+const listMovie = document.getElementById("peliculas");
 
-const filterAlfab = document.getElementById("filAlfa");
-filterAlfab.addEventListener("click", orderAlfa);
-function orderAlfa(eve){
-    eve.preventDefault(eve);
-    const infoNameMov = document.getElementById("peliculas");
-    const infoData = data;
-    return infoData;
+function printMovies (movies){
+    // limpia contenerdor
+    listMovie.innerHTML = "";
+
+    // agrega peliculas
+    movies.forEach(function(film) {
+        const li = document.createElement("li");
+        const text = document.createTextNode(film.title);
+        const img = document.createElement("img");
+        img.setAttribute("srcset", film.poster);
+        listMovie.appendChild(li);
+        listMovie.appendChild(img);
+        li.appendChild(text);
+    });
+}
+printMovies(films);
+
+
+const btnOrderAsc = document.getElementById("orderAsc");
+btnOrderAsc.addEventListener("click", printOrderAsc);
+
+function printOrderAsc(){
+    const order = utilities.orderByTitleAsc(films);
+    printMovies(order);;
 };
-console.log(orderAlfa);
+
+
+const btnOrderDes = document.getElementById("orderDesc");
+btnOrderDes.addEventListener("click", printOrderDes);
+
+function printOrderDes(){
+    const orderDesc = utilities.orderByTitleDesc(films);
+    printMovies(orderDesc);
+};
+
+
+const btnOrderByScore = document.getElementById("orderByScore");
+btnOrderByScore.addEventListener("click", printOrderByScore);
+
+function printOrderByScore(){
+    const orderScore = utilities.orderByScore(films);
+    printMovies(orderScore);
+}
