@@ -11,32 +11,31 @@
 </head>
 
 <body>
-  <header class="logo">
-    <img class="imgLogo" srcset="./kiki-logo.png" alt="logo imagen">
-    <h1>Studio Ghibli</h1>
-  </header>
+  <div class="container"></div>
 
-  <div class="container">
-    <menu id="buttons">
+  <div id="cabecera">
+    <img class="imgLogo" src="./logo-studio-ghibli.png" alt="logo imagen">
+    <nav id="buttons">
       <h1>Sort By</h1>
-      <li><button class="btns" id="orderAsc">A - Z</button></li>
-      <li><button class="btns" id="orderDesc">Z - A</button></li>
-      <li><button class="btns" id="orderByScore">Rating</button></li>
-      <li><button class="btns" id="cuantity">Release date</button></li>
-    </menu>
+      <button class="btns" id="orderAsc">A - Z</button>
+      <button class="btns" id="orderDesc">Z - A</button>
+      <button class="btns" id="orderByScore">Rating</button>
+      <button class="btns" id="cuantity">Release date</button>
+    </nav>
+  </div>
 
+  <div id="movies">
     <section>
       <ul id="peliculas">
       </ul>
     </section>
-
+  </div>
 
   </div>
+
 
 
   <script src="main.js" type="module"></script>
 </body>
 
 </html>
-
-
