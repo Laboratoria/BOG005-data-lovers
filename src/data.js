@@ -1,4 +1,3 @@
-
 const utilities = {
 
   orderByTitleAsc: function (arr) {
