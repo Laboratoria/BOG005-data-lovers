@@ -14,6 +14,9 @@ header{
     height: 600px;
     color: aliceblue;
     padding: 20px; 
+    margin-bottom: 12%;
+    word-spacing: 9000px;
+    margin-left: -15%;
 }
 
 .menu li a{
@@ -33,11 +36,8 @@ header{
 }
 
 .container {
-    height: 450px;
     margin: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content:center;
+    display: flex;    
 }
 
 #description{
@@ -45,4 +45,19 @@ header{
     margin: 5px auto;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 30;
+    top: -10%;
+    padding: 5px;
 }
+
+.imgLogo{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 30px;
+    z-index: 30;
+    top: -50%;
+    left: 23%;
+}
+
