@@ -14,7 +14,9 @@ class ProcessData {
     let importanceLevel4 = [];
     let importanceLevel5 = [];
 
-    this.characters.forEach(character => {
+    let characterData = [...this.characters]
+
+    characterData.forEach(character => {
       let characterName = character//.name;
       let characterBooks = character.books_featured_in;
 
