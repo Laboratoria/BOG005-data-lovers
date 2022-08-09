@@ -5,38 +5,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="author" content="Yeimmy y Karenth Cruz">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Ghibli</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="logo">
-    <img class="imgLogo" srcset="./kiki-logo.png" alt="logo imagen">
-    <h1>Studio Ghibli</h1>
+  <div class="container"></div>
+
+  <header id="cabecera">
+    <img class="imgLogo" src="./logo-studio-ghibli.png" alt="logo imagen">
+    <nav id="buttons">
+      <h1>Sort By</h1>
+      <button class="btns" id="orderAsc">A - Z</button>
+      <button class="btns" id="orderDesc">Z - A</button>
+      <button class="btns" id="orderByScore">Rating</button>
+      <button class="btns" id="cuantity">Release date</button>
+    </nav>
   </header>
 
-  <div class="container">
-    <menu id="buttons">
-      <h1>Sort By</h1>
-      <li><button class="btns" id="orderAsc">A - Z</button></li>
-      <li><button class="btns" id="orderDesc">Z - A</button></li>
-      <li><button class="btns" id="orderByScore">Rating</button></li>
-      <li><button class="btns" id="cuantity">Release date</button></li>
-    </menu>
-
-    <section>
+  
+    <section id="containerMov">
       <ul id="peliculas">
       </ul>
     </section>
-
+  
 
   </div>
+
 
 
   <script src="main.js" type="module"></script>
 </body>
 
 </html>
-
-
