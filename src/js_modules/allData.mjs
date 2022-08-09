@@ -17,7 +17,7 @@ class ProcessData {
     let characterData = [...this.characters]
 
     characterData.forEach(character => {
-      let characterName = character//.name;
+      let characterName = character;
       let characterBooks = character.books_featured_in;
 
       switch (characterBooks.length) {
