@@ -37,6 +37,7 @@ eventContainers.addEventListener('click',(event)=>{
                 detailsDataCharacters.createCharacterContainer(elem,"http://imageshack.com/f/pnUFd2QWp",'card')
                 creatingHTMLElements.hiddenDisplayList()
                 header.style.display = "none"
+                footer.style.display = "none"
                 detailsDataCharacters.displayDetailsCharacters()
             }
         })
