@@ -14,11 +14,10 @@ photoHermioneGranger.innerHTML += `<li>${result1[0].name} - ${result1[0].house} 
 const personajes = data.characters;
 const imagenHarryPotter = document.getElementById("imagen_harry_potter");
 const personajeSeleccionado = data.characters.filter(personaje => personaje.name === "Harry Potter");
-console.log(personajeSeleccionado[0].name) 
-imagenHarryPotter.innerHTML += `<li>${personajeSeleccionado[0].name} - ${personajeSeleccionado[0].house} </li>` 
+console.log(personajeSeleccionado[0].name)
+imagenHarryPotter.innerHTML += `<li>${personajeSeleccionado[0].name} - ${personajeSeleccionado[0].house} </li>`
 
 data.characters.forEach(personaje => {
-    
 })
 
 const result2 = data.characters.filter(personage => personage.name =='Ronald Weasley')
