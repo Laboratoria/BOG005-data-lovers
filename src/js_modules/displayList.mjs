@@ -6,12 +6,12 @@ class CreateContainersForCharactersSection {
     this.newNodeImage;
     this.newNodeFigCaption;
   }
-  
+
   createCharacterContainer (data, srcImage, section) {
     this.containerCharacters = document.getElementById(`container-characters-${section}-id`);
 
     // Filling containers with data information
-    
+
     // Creating nodes
     this.newNodeFigure = document.createElement("figure");
     this.newNodeImage= document.createElement("img");
@@ -23,17 +23,15 @@ class CreateContainersForCharactersSection {
     this.newNodeImage.setAttribute("alt", `${data.name}`);
     this.newNodeImage.setAttribute("data-id", `${data.id}`);
     this.newNodeImage.src = srcImage;
-    
+
     this.newNodeFigCaption.setAttribute("class", `newNodeFigCaption-${section}-class`);
     this.newNodeFigCaption.setAttribute("data-id", `${data.id}`);
     this.newNodeFigCaption.textContent = data.name;
-    
 
     // Appending nodes to its parents
     this.newNodeFigure.insertAdjacentElement("beforeend", this.newNodeImage);
     this.newNodeFigure.insertAdjacentElement("beforeend", this.newNodeFigCaption);
-    
-    
+
     return this.newNodeFigure
   }
 
