@@ -1,5 +1,5 @@
 
-export const filterData = (data, tipofiltro, valor) => {
+const filterData = (data, tipofiltro, valor) => {
  // console.log(valor);
 
   let filtrado = [];
@@ -14,20 +14,36 @@ export const filterData = (data, tipofiltro, valor) => {
     return filtrado;
 };
 
-export const filterDatas = (data, tipofiltro, tipofiltro2, valor1, valor2) => {
-  // console.log(valor);
- 
-   let filtrado = [];
- 
-   data.athletes.forEach(atleta => {
-     if(atleta[tipofiltro] == valor1 && [tipofiltro2] == valor2  ){
-       //console.log(atleta);
-       filtrado.push(atleta);
-     }
-   });
- 
-     return filtrado;
- };
-export const data = () => {
-  return 'data';
+const dataAtletas = (array, atletaNombre, atletaPais, atletaGenero, atletaDeporte) => {
+
+
+  if (atletaNombre !== '') {
+    array = filtroNombres(array, atletaNombre);
+  }
+
+  if (atletaPais !== '') {
+    array = filtroPais(array, atletaPais)
+  }
+
+  if (atletaGenero !== '') {
+    array = filtroGenero(array, atletaGenero)
+  }
+
+  if (atletaDeporte !== '') {
+    array = filtroDeporte(array, atletaDeporte)
+  }
+
+  const nuevoArray = array.map(obj => ({
+    nombre: obj.name,
+    deporte: obj.sport,
+    equipo: obj.team,
+    genero: obj.gender,
+    medalla: obj.medal,
+    edad: obj.age
+  }));
+
+  return nuevoArray;
+
 };
+
+export{ filterData, dataAtletas}
