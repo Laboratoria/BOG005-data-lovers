@@ -34,8 +34,7 @@ body {
 }
 
 
-/* INICIO MAQUETACIÓN WELCOME PAGE */
-
+/* Start Welcome Page Styles*/
 .content-welcome-page{
   width: 100%;
   height: 93%;
@@ -43,7 +42,6 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   /* display: none; */
-  
 }
 
 .content-title-btn-welcome{
@@ -51,13 +49,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
 }
 
 .content-title-welcome-page{
     font-size: 60px;
     font-family: var(--welcome-text);
-    
+
     height: 60%;
     width: 80%;
     display: flex;
@@ -103,14 +100,10 @@ body {
   color: #FFE9D4;
   outline: auto;
 }
+/* End Welcome Page Styles */
 
-
-
-/* FIN MAQUETACIÓN WELCOME PAGE */
-
-/* INICIO MAQUETACIÓN HEADER PÁGINA PRINCIPAL*/
+/* Start Header Styles*/
 .main-page-class{
-  display: flex;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -119,7 +112,6 @@ body {
 .header-main-page {
   width: 100vw;
   height: 15rem;
- 
 }
 
 nav {
@@ -142,17 +134,13 @@ li {
   list-style: none;
 }
 
-
-
-.hidden-btn-order{
- display: none; 
+/* .hidden-btn-order{
+  display: none;
 }
-
 
 .hidden-btn-filter{
- display: none; 
-}
-
+  display: none;
+} */
 
 .button-modify-data {
   display: flex;
@@ -160,23 +148,30 @@ li {
   align-items: center;
 
   width: 18.5rem;
-  height: 6rem;
+  height: 8rem;
+  border: none;
+  border-radius: 4rem;
   margin-top: 4rem;
   margin-right: 3rem;
 
   font-family: var(--general-text);
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-weight: 500;
   color: white;
 
   background-color: var(--primary-color);
+  /* box-shadow: 0px 0.3rem 3rem -1rem var(--primary-color-variation); */
 
 }
-/* FIN MAQUETACIÓN HEADER */
+
+.header-main-page i {
+  padding-right: 1rem;
+}
+/* End Header Styles */
 
 
-/* INICIO MAQUETACIÓN PÁGINA PRINCIPAL (LISTA DE PERSONAJES) */
-
-.container-characters-list-class {
+/* Start Characters List Section Styles */
+.container-characters-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,8 +179,7 @@ li {
 
   width: 100vw;
   padding: 0rem 7rem;
-
-  /* display: none; */
+  margin-top: 3rem;
 }
 
 .newNodeFigure-list-class {
@@ -193,7 +187,7 @@ li {
   width: 100%;
   height: 20rem;
   border: solid 0.35rem white;
-  border-radius: 3rem;
+  border-radius: 5rem;
   padding: 2rem;
   background-color: transparent;
 }
@@ -215,18 +209,16 @@ li {
   font-size: 5rem;
   color: white;
 }
-/* FIN MAQUETACIÓN PÁGINA PRINCIPAL */
+/* End Characters List Section Styles */
 
 
-/* INICIO MAQUETACIÓN DETALLE PERSONAJES */
+/* Start Characters Card Section Styles */
 .container-characters-card{
   width: 90%;
   height: 80%;
   margin: auto;
   display: flex;
   justify-content: center;
-  
-
 }
 
 .character-card-img-class{
@@ -240,7 +232,7 @@ li {
 
   display: flex;
   flex-direction: column;
-  
+
   border-radius: 8rem;
   overflow: hidden;
 }
@@ -272,10 +264,10 @@ li {
 
 .character-card-text-class > h3 {
   font-family: var(--titles-text);
-    font-size: 8rem;
-    color: #FFFFFF;
-    font-weight: lighter;
-    
+  font-size: 8rem;
+  color: #FFFFFF;
+  font-weight: lighter;
+
 }
 
 .infoCharactersContainer{
@@ -298,8 +290,28 @@ li {
   font-size: 4rem;
   color: #FFFFFF;
 }
+/* End Characters Card Section Styles */
+
+/* Start Footer Styles*/
+.footer-main-page {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.pagination-list {
+  width: inherit;
+  height: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li >.btn-pagination {
+  margin: 2rem;
+  padding: 0;
+}
+/* End Footer Styles*/
 
 
-
-/* :nth-child(4n)
- */
