@@ -61,7 +61,13 @@ header h1 {
     border-radius: 50% 20% / 10% 40%;
 }
 
-img{
+section{
+    display: inline-flex;
+}
+
+button img{
     pointer-events: none;
+    width: 160px;
+    height: 168px;
 }
 
