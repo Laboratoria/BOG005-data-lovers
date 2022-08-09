@@ -1,4 +1,3 @@
-import { example } from './data.js';
 import data from './data/harrypotter/data.js';
 
 document.getElementById("btnHarryPotter").addEventListener("click", showCharacters)
@@ -8,13 +7,9 @@ document.getElementById("btnAlbusDumbledore").addEventListener("click", showChar
 
 function showCharacters(e) {
     const character = e.target.dataset.character
-    console.log(character)
     const result = data.characters.filter(personage => personage.name == character)
     alert(`Nombre: ${result[0].name} \n Fecha de Nacimiento: ${result[0].birth} \n Casa de Hogwarts: ${result[0].house} \n Tipo de Mago: ${result[0].species} `)
 }
-
-
-
 
 //for(const [key, value] of Object.entries(data.characters)){
  //   console.log(value)
