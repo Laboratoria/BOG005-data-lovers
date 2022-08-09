@@ -30,7 +30,6 @@ class DetailsCharacters extends CreateContainersForCharactersSection{
         this.newNodeFigCaption.setAttribute('class',`character-${section}-text-class`)
         this.newNodeFigCaption.textContent = ''
 
-        
         this.h3TitleName.textContent = data.name
         this.spanNodeBirth.setAttribute('class', 'birth')
         this.spanNodeBirth.textContent = data.birth

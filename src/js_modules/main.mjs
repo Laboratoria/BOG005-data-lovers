@@ -44,7 +44,7 @@ eventContainers.addEventListener('click',(event)=>{
     }
 })
 
-const btnCloseDetailsDataCharacters=detailsDataCharacters.buttonClose
+const btnCloseDetailsDataCharacters = detailsDataCharacters.buttonClose;
 btnCloseDetailsDataCharacters.addEventListener('click', () => {
     detailsDataCharacters.hiddenDetailsCharacters()
     detailsDataCharacters.cleanDetailsCharacters()
