@@ -5,7 +5,7 @@ document.getElementById("btnHarryPotter").addEventListener("click", showHarryPot
 function showHarryPotter(){
 const result = data.characters.filter(personage => personage.name =='Harry Potter')
 //console.log(result)
-alert(`${result[0].name} - ${result[0].house}`)
+alert(`Nombre: ${result[0].name} \n Fecha de Nacimiento: ${result[0].birth} \n Casa de Hogwarts: ${result[0].house} \n Tipo de Mago: ${result[0].species} `)
 }
 const result1 = data.characters.filter(personage => personage.name =='Hermione Granger')
 photoHermioneGranger.innerHTML += `<li>${result1[0].name} - ${result1[0].house} </li>`
