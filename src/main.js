@@ -10,14 +10,18 @@ function printMovies(movies) {
     listMovie.innerHTML = "";
 
     // agrega peliculas
-    movies.forEach(function (film) {
-        const li = document.createElement("li");
+    movies.forEach(function(film) {
+        const newLabel = document.createElement("li");
+        newLabel.classList.add("card");
         const text = document.createTextNode(film.title);
         const img = document.createElement("img");
+        img.classList.add("imgMovie");
         img.setAttribute("srcset", film.poster);
-        listMovie.appendChild(li);
-        listMovie.appendChild(img);
-        li.appendChild(text);
+        const dateMov = document.createTextNode(film.release_date);
+        listMovie.appendChild(newLabel);
+        newLabel.appendChild(img);
+        newLabel.appendChild(text);
+        newLabel.appendChild(dateMov);
     });
 }
 printMovies(films);
@@ -26,17 +30,16 @@ printMovies(films);
 const btnOrderAsc = document.getElementById("orderAsc");
 btnOrderAsc.addEventListener("click", printOrderAsc);
 
-function printOrderAsc() {
-    const order = utilities.orderByTitleAsc(films);
+function printOrderAsc(){
+    const order = utilities.sortData(films, 'title', 'ascendente');
     printMovies(order);;
 };
-
 
 const btnOrderDes = document.getElementById("orderDesc");
 btnOrderDes.addEventListener("click", printOrderDes);
 
-function printOrderDes() {
-    const orderDesc = utilities.orderByTitleDesc(films);
+function printOrderDes(){
+    const orderDesc = utilities.sortData(films, 'title', 'descendente');
     printMovies(orderDesc);
 };
 
@@ -44,7 +47,15 @@ function printOrderDes() {
 const btnOrderByScore = document.getElementById("orderByScore");
 btnOrderByScore.addEventListener("click", printOrderByScore);
 
-function printOrderByScore() {
-    const orderScore = utilities.orderByScore(films);
+function printOrderByScore(){
+    const orderScore = utilities.sortData(films, 'rt_score', 'descendente');
     printMovies(orderScore);
-}
+};
+
+
+
+
+
+
+
+
