@@ -17,7 +17,7 @@ const btnPaginationBack = document.getElementById("btn-pagination-back-id");
 // Characters - Dataset
 const characterData = data.characters
 
-// Event welcome button
+//Event welcome button
 btnStartWelcomePage.addEventListener("click", () => {
     welcomePage.style.display = "none";
     header.style.display = "block";
