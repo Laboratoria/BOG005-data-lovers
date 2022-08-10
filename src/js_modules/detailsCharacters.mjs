@@ -1,6 +1,6 @@
 import CreateContainersForCharactersSection from "./displayList.mjs"
 
-class DetailsCharacters extends CreateContainersForCharactersSection{
+class DetailsCharacters extends CreateContainersForCharactersSection {
     constructor(){
         super()
         this.buttonClose = document.createElement('button')
@@ -32,7 +32,10 @@ class DetailsCharacters extends CreateContainersForCharactersSection{
         this.newNodeFigCaption.setAttribute('class',`character-${section}-text-class`)
         this.newNodeFigCaption.textContent = ''
 
+
         this.contentTitleAndBirth.setAttribute('class', `content-title-birth-${section}-class`)
+
+
         this.h3TitleName.textContent = data.name
         this.spanNodeBirth.setAttribute('class', 'birth')
         this.spanNodeBirth.textContent = data.birth
@@ -55,7 +58,7 @@ class DetailsCharacters extends CreateContainersForCharactersSection{
         this.contentSpan.insertAdjacentElement('beforeend', this.spanNodeGender)
         this.contentSpan.insertAdjacentElement('beforeend', this.spanNodePatronus)
         this.contentSpan.insertAdjacentElement('beforeend', this.spanNodeBooks)
-    
+
         this.containerCharacters.append(this.newNodeFigure)
     }
 

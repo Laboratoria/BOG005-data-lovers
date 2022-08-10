@@ -4,6 +4,7 @@ class ProcessData {
     // Importing characters and books from the dataset file
     this.characters = data.characters;
     this.books = data.books;
+    this.characterPosition = 0;
   }
 
   // Creating the list of characters ordered by the number of books they appear in
@@ -40,9 +41,28 @@ class ProcessData {
     });
 
     let allCharacters = importanceLevel1.concat(importanceLevel2).concat(importanceLevel3).concat(importanceLevel4).concat(importanceLevel5);
-    
+
     return allCharacters;
   }
+
+  // Creating array with characters to pagination
+  charactersPerPage() {
+    let allCharacters = this.getOrderedNamesList();
+    let pageCharacters = [];
+    let maxCharactersPerPage = this.characterPosition + 7;
+    for (let i = this.characterPosition; i <= maxCharactersPerPage; i++) {
+      pageCharacters.push(allCharacters[i]);
+    }
+
+    this.characterPosition = maxCharactersPerPage + 1;
+    return pageCharacters;
+  }
+
+  // 
+
 }
 
 export default ProcessData;
+
+
+
