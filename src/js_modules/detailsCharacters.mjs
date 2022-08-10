@@ -1,6 +1,6 @@
 import CreateContainersForCharactersSection from "./displayList.mjs"
 
-class DetailsCharacters extends CreateContainersForCharactersSection{
+class DetailsCharacters extends CreateContainersForCharactersSection {
     constructor(){
         super()
         this.buttonClose = document.createElement('button')
@@ -51,7 +51,7 @@ class DetailsCharacters extends CreateContainersForCharactersSection{
         this.contentSpan.insertAdjacentElement('beforeend', this.spanNodeGender)
         this.contentSpan.insertAdjacentElement('beforeend', this.spanNodePatronus)
         this.contentSpan.insertAdjacentElement('beforeend', this.spanNodeBooks)
-    
+
         this.containerCharacters.append(this.newNodeFigure)
     }
 
