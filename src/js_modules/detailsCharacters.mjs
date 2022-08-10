@@ -21,10 +21,10 @@ class DetailsCharacters extends CreateContainersForCharactersSection {
 
         this.buttonClose.setAttribute('id', `btn-close-${section}-id`) //btn-close-card-id
         this.buttonClose.setAttribute('type', 'button')
-        this.buttonClose.textContent= 'x'
+        this.buttonClose.innerHTML = '<i class="fa-solid fa-xmark"></i>'
 
         this.newNodeFigCaption.setAttribute('class',`character-${section}-class` )
-        
+
         this.newNodeImage.setAttribute('class', `character-${section}-img-class`)
         this.newNodeImage.setAttribute('alt', `${data.name}`)
         this.newNodeImage.src = srcImage

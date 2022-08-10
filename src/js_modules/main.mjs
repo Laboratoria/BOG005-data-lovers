@@ -12,7 +12,7 @@ const header = document.getElementById("header-main-page-id");
 const mainPage = document.getElementById("main-page-id");
 const footer = document.getElementById("footer-main-page-id");
 const btnPaginationNext = document.getElementById("btn-pagination-next-id");
-const btnPaginationBack = document.getElementById("btn-pagination-back-id");
+//const btnPaginationBack = document.getElementById("btn-pagination-back-id");
 
 // Characters - Dataset
 const characterData = data.characters
@@ -65,6 +65,7 @@ btnCloseDetailsDataCharacters.addEventListener('click', () => {
     detailsDataCharacters.hiddenDetailsCharacters()
     detailsDataCharacters.cleanDetailsCharacters()
     header.style.display = "block"
+    footer.style.display = "flex"
     creatingHTMLElements.displayListCharacters()
 })
 

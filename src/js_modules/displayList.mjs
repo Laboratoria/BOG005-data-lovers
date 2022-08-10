@@ -51,6 +51,7 @@ class CreateContainersForCharactersSection {
       this.arrayToAppendListCharacters.push(elementsCreated)
     })
 
+
   //The dynamic generation of the elements is separated from the aggregation of these to the DOM, to improve page performance
     this.containerCharacters.append(...this.arrayToAppendListCharacters)
 
