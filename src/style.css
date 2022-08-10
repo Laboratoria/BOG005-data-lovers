@@ -12,6 +12,7 @@
 .header__nav {
     background-color: white;
     display: flex;
+    justify-content: end;
 }
 
 .header__nav ul {
