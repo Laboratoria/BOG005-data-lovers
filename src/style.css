@@ -45,7 +45,7 @@ header{
 .btns{
     display: flex;
     width: 70%;
-    height: 15%;
+    height: 12%;
     color: white;
     font-size: 100%;
     border-radius: 20px;
@@ -74,7 +74,7 @@ header{
 }
 
 h1{
-    font-size: 2vw;
+    font-size: 25px;
 }
 
 .imgMovie {
