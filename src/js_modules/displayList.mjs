@@ -44,12 +44,16 @@ class CreateContainersForCharactersSection {
     // Clean container list
     this.containerCharacters = document.getElementById(`container-characters-${section}-id`);
     this.containerCharacters.innerHTML = "";
-
+    this.arrayToAppendListCharacters = []
     // Append figures with characters to container list
     data.forEach((element)=>{
       const elementsCreated = this.createCharacterContainer(element, srcImage, section);
-      this.containerCharacters.append(elementsCreated);
+      this.arrayToAppendListCharacters.push(elementsCreated)
     })
+
+  //The dynamic generation of the elements is separated from the aggregation of these to the DOM
+    this.containerCharacters.append(...this.arrayToAppendListCharacters)
+
   }
 
   // Function to hide the list characters section
