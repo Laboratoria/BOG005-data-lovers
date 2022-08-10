@@ -52,15 +52,15 @@ body {
 }
 
 .content-title-welcome-page{
-    font-size: 60px;
+    
     font-family: var(--welcome-text);
 
     height: 60%;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-left: 54px;
+    padding-left: 2.4rem;
 }
 
 .content-btn-welcome-page{
@@ -72,24 +72,24 @@ body {
 .title-welcome-page{
   font-family: var(--welcome-text);
   color: #FFFFFF;
-  font-size: 8rem;
+  font-size: 3rem;
   font-weight: lighter;
 
 }
 
 .btn-start-welcome-page{
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color:var(--enfasis-color);
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color:var(--background-color-variation);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 12rem;
-  width: 12rem;
   transform: rotate(0);
   transition: .3s ease;
 }
@@ -147,15 +147,15 @@ li {
   justify-content: center;
   align-items: center;
 
-  width: 18.5rem;
-  height: 8rem;
+  width: 10rem;
+  height: 4rem;
   border: none;
   border-radius: 4rem;
   margin-top: 4rem;
   margin-right: 3rem;
 
   font-family: var(--general-text);
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   color: white;
 
@@ -175,38 +175,40 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 4rem;
+  row-gap: 2rem;
 
   width: 100vw;
-  padding: 0rem 7rem;
+  
   margin-top: 3rem;
 }
 
 .newNodeFigure-list-class {
   display: flex;
-  width: 100%;
-  height: 20rem;
+  align-items: center;
+  justify-content: space-around;
+  width: 90.84%;
+  height: 8.1rem;
   border: solid 0.35rem white;
-  border-radius: 5rem;
-  padding: 2rem;
+  border-radius: 3rem;
+  /* padding: 2rem; */
   background-color: transparent;
 }
 
 .newNodeImage-list-class {
   width: auto;
-  height: 100%;
+  height: 88%;
   border: 0;
   border-radius: 50%;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
 }
 
 .newNodeFigCaption-list-class {
   display: flex;
   align-items: center;
-  width: 80%;
-  margin-left: 3rem;
+  width: 70%;
+  /* margin-left: 3rem; */
   font-family: var(--titles-text);
-  font-size: 5rem;
+  font-size: 2.5rem;
   color: white;
 }
 /* End Characters List Section Styles */
@@ -214,82 +216,100 @@ li {
 
 /* Start Characters Card Section Styles */
 .container-characters-card{
-  width: 90%;
-  height: 80%;
+  width: 100vw;
+  height: 100vh;
   margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .character-card-img-class{
   width: 100%;
-  height: 45%;
+  height: 44%;
 }
 
+
 .newNodeFigure-card-class{
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-
-  border-radius: 8rem;
-  overflow: hidden;
+  width: 84%;
+    height: 81%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4rem;
+    overflow: hidden;
 }
 
 .newNodeFigure-card-class > button{
-  width: 6rem;
-  height: 6rem;
+  width: 3rem;
+  height: 3rem;
   position: absolute;
-  top: 20rem;
-  right: 7rem;
-
+  top: 7.5rem;
+  right: 5rem;
   border-radius: 50%;
   border: none;
   background-color: var(--primary-color);
   color: #FFFFFF;
-  font-size: 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover{
+  background-color: #FFFFFF;
+  color: var(--primary-color);
+  outline: auto;
 }
 
 .character-card-text-class{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 4rem;
-    padding-top: 4rem;
-    align-items: center;
-    background-color: rgba(205, 205, 205, 0.25);
+  width: 100%;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(205, 205, 205, 0.25);
+  justify-content: space-evenly;
 }
 
-.character-card-text-class > h3 {
+.content-title-birth-card-class{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-title-birth-card-class > h3 {
   font-family: var(--titles-text);
-  font-size: 8rem;
-  color: #FFFFFF;
-  font-weight: lighter;
+    font-size: 3rem;
+    color: #FFFFFF;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+}
+
+.content-title-birth-card-class .birth {
+  font-family: var(--general-text);
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    text-align: center;
 
 }
 
 .infoCharactersContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 4.8rem;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
 }
 
 .infoCharactersContainer > span {
-    font-family: var(--general-text);
-    font-size: 4.8rem;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
+  font-family: var(--general-text);
+  font-size: 1.7rem;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
 }
 
-.character-card-text-class .birth {
-  font-family: var(--general-text);
-  font-size: 4rem;
-  color: #FFFFFF;
-}
+
 /* End Characters Card Section Styles */
 
 /* Start Footer Styles*/
