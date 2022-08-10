@@ -71,3 +71,8 @@ button img{
     height: 168px;
 }
 
+@media (max-width: 576px) { 
+    body{
+        background-color: fuchsia;
+    }
+ }
