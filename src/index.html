@@ -34,8 +34,11 @@
       <!-- Header with filter and sort by buttons -->
       <header class="header-main-page" id="header-main-page-id">
         <nav>
-          <ul>
-            <li><button type="button" class="button-modify-data" id="sort-button-id" data-btn="Aquí estoy"><i class="fa-solid fa-arrow-down-wide-short"></i>Sort</button></li>
+          <ul class="father-modal-menu">
+            <li><button type="button" class="button-modify-data sort-btn" id="sort-button-id" data-btn="Aquí estoy"><i class="fa-solid fa-arrow-down-wide-short"></i>Sort</button></li>
+            <ul class="sort-modal-menu" id="sort-modal-menu-id">
+              <li><button type="button" class="">Houses</button></li>
+            </ul>
             <li><button type="button" class="button-modify-data" id="filter-button-id"><i class="fa-solid fa-filter"></i>Filter</button></li>
           </ul>
         </nav>
@@ -53,8 +56,8 @@
     <!-- Footer with Pagination -->
     <footer class="footer-main-page" id="footer-main-page-id">
       <ul class="pagination-list">
-        <li><button class="btn-pagination btn-pagination-next button-modify-data" id="btn-pagination-next-id">Next</button></li>
         <li><button class="btn-pagination btn-pagination-back button-modify-data" id="btn-pagination-back-id">Back</button></li>
+        <li><button class="btn-pagination btn-pagination-next button-modify-data" id="btn-pagination-next-id">Next</button></li>
       </ul>
     </footer>
 

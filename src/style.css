@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-image: url("https://images.unsplash.com/photo-1618944913480-b67ee16d7b77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-image: url("https://imagizer.imageshack.com/img923/1154/sNHY2f.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -138,6 +138,10 @@ ul {
   height: 100%;
 }
 
+.father-modal-menu {
+  position: relative;
+}
+
 li {
   list-style: none;
 }
@@ -163,6 +167,25 @@ li {
 .header-main-page i {
   padding-right: 1rem;
 }
+
+.sort-modal-menu {
+  width: 20rem;
+  height: 12rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+
+  display: none;
+  position: absolute;
+  bottom: -13rem;
+  right: 15rem;
+  z-index: 1;
+
+  background-color: var(--primary-color);
+
+  color: #FFFFFF;
+}
+
+
 /* End Header Styles */
 
 /* Start Characters List Section Styles */

@@ -45,7 +45,7 @@ class ProcessData {
     return allCharacters;
   }
 
-  // Creating array with characters to pagination
+  // Creating array with characters to pagination to the next page
   charactersPerPage() {
     let allCharacters = this.getOrderedNamesList();
     let pageCharacters = [];
@@ -58,7 +58,8 @@ class ProcessData {
     return pageCharacters;
   }
 
-  // 
+  // Creating array with characters to pagination to the previous page
+
 
 }
 
