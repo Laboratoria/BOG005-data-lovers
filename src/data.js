@@ -2,19 +2,25 @@
 const utilities = {
 
   orderByTitleAsc: function (arr) {
+    const sortOrder = "ascendent";
     const result = arr.sort((a, b) => {
+      
       let ma = a.title.toUpperCase();
       let mb = b.title.toUpperCase();
+      if (sortOrder === "ascendent"){
+        if (ma < mb) {
+          return -1;
+        }
+        if (ma > mb) {
+          return 1;
+        }
+        
+      }
 
-      if (ma < mb) {
-        return -1;
-      }
-      if (ma > mb){
-        return 1; 
-      }
+     
       return 0;
     });
-    return result; 
+    return result;
   },
 
 
@@ -26,15 +32,15 @@ const utilities = {
       if (ma > mb) {
         return -1;
       }
-      if (ma < mb){
-        return 1; 
+      if (ma < mb) {
+        return 1;
       }
       return 0;
     });
-    return result; 
+    return result;
   },
 
-  orderByScore: function (arr){
+  orderByScore: function (arr) {
     const result = arr.sort((a, b) => {
       let ma = a.rt_score.toLowerCase();
       let mb = b.rt_score.toLowerCase();
@@ -42,12 +48,13 @@ const utilities = {
       if (ma < mb) {
         return -1;
       }
-      if (ma > mb){
-        return 1; 
+      if (ma > mb) {
+        return 1;
       }
       return 0;
     });
-    return result; 
+    let newresult = result.slice(0, 10);
+    return newresult;
   },
 
 }
