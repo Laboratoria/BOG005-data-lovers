@@ -65,6 +65,7 @@ btnCloseDetailsDataCharacters.addEventListener('click', () => {
     detailsDataCharacters.hiddenDetailsCharacters()
     detailsDataCharacters.cleanDetailsCharacters()
     header.style.display = "block"
+    footer.style.display = "flex"
     creatingHTMLElements.displayListCharacters()
 })
 
