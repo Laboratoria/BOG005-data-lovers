@@ -14,36 +14,6 @@ const filterData = (data, tipofiltro, valor) => {
     return filtrado;
 };
 
-const dataAtletas = (array, atletaNombre, atletaPais, atletaGenero, atletaDeporte) => {
 
 
-  if (atletaNombre !== '') {
-    array = filtroNombres(array, atletaNombre);
-  }
-
-  if (atletaPais !== '') {
-    array = filtroPais(array, atletaPais)
-  }
-
-  if (atletaGenero !== '') {
-    array = filtroGenero(array, atletaGenero)
-  }
-
-  if (atletaDeporte !== '') {
-    array = filtroDeporte(array, atletaDeporte)
-  }
-
-  const nuevoArray = array.map(obj => ({
-    nombre: obj.name,
-    deporte: obj.sport,
-    equipo: obj.team,
-    genero: obj.gender,
-    medalla: obj.medal,
-    edad: obj.age
-  }));
-
-  return nuevoArray;
-
-};
-
-export{ filterData, dataAtletas}
+export{filterData}

@@ -1,164 +1,182 @@
-
-html{
-    background-image: url(IMAGENES/LOGO2.jpg);
-    background-repeat: unset;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-
+html {
+  background-image: url(IMAGENES/LOGO2.jpg);
+  background-repeat: unset;
+  background-size: cover;
+  width: 100%;
+  height: auto;
 }
-h1{
-    font-size: 2vw;
-    margin-left: 30vw;
-    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(41, 41, 97);
-   
+h1 {
+  font-size: 2vw;
+  margin-left: 30vw;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(41, 41, 97);
 }
-header{
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
-    
-
-}
-.logoImagen{
-    width: 7vw;
-    height: 5vw;
-    margin-left: 2vw;
+header {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
 }
 
-.btn1{
-    margin-left: 27vw;
-    font-size: 0,5em;
+.logoImagen {
+  width: 6,4vw;
+  height: 5vw;
+  margin-left: 3vw;
 }
 
-.btn2{
-    margin-left: 23vw;
-    font-size: 0,5em;
+.btn1 {
+  margin-left: 20vw;
+  font-size: 0,5em;
+  padding: 1em;
+  border-radius: 3px;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
+  cursor: pointer;
+  font-size: 0.9em;
+  height: 4vw;
+  margin-top: 1vh;
+}
 
+nav{
+    width: 99vw;
 }
 
 /*Buscador*/
-.selectBusqueda{
+.selectBusqueda {
+  margin: 0;
+  text-align: center;
+  display: flex;
+ 
+  justify-content: left;
+  width: 98vw;
+  background-color: #55c159;
+}
 
-    margin: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:flex-end;
-    width: 100%;
-    background-color: #55c159;
-    }
+.busqueda {
+  /* margin-bottom: 0em;*/
+  font-size: 18 em;
+}
+.selectBusqueda input,
+select {
+  /*margin-bottom: 0.2em;*/
+  padding: 1em;
+  border-radius: 3px;
+  border: 1px solid rgb(103, 190, 161);
+  cursor: pointer;
+  font-size: 00.9em;
+  color: gray;
+  margin: 1vw;
+}
 
-   
-.busqueda{
-       /* margin-bottom: 0em;*/
-        font-size: 18 em;
-        
-    }
-.selectBusqueda input, select {
-        /*margin-bottom: 0.2em;*/
-        padding: 1em;
-        border-radius: 3px;
-        border: 1px solid rgb(103, 190, 161);
-        cursor: pointer;
-        font-size: 00.9em;
-        color: gray;
-        margin: 1vw;
-    }
-    
 .btnBuscar {
+  padding: 1em;
+  border-radius: 3px;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin: 1vw;
+}
 
-    padding: 1em;
-    border-radius: 3px;
-    border: 1px solid  rgb(103, 190, 161);
-    background: rgb(83, 128, 83);
-    color: honeydew;
-    cursor: pointer;
-    font-size: 0.9em;
-    margin: 1vw;
-    } 
-
-    .btnBuscar:active {
-        transform: scale(1.10); 
-        }
+.btnBuscar:active {
+  transform: scale(1.1);
+}
 
 .btnLimpiar button {
-    margin-bottom: 1em;
-    padding: 1em;
-    border-radius: 3px;
-    border: 1px solid  rgb(103, 190, 161);
-    background: rgb(83, 128, 83);
-    color: honeydew;
-    cursor: pointer;
-    font-size: 0.9em; 
-    margin: 1vw;
-    margin-right: 10rem;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 3px;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin: 1vw;
+  margin-right: 10rem;
 }
 
-.btnInicio{
-    margin-bottom: 1em;
-    padding: 1em;
-    border-radius: 3px;
-    border: 1px solid  rgb(103, 190, 161);
-    background: black;
-    color: honeydew;
-    cursor: pointer;
-    font-size: 0.9em; 
-    margin: 1vw;
+.btnInicio {
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 3px;
+  border: 1px solid rgb(103, 190, 161);
+  background: black;
+  color: honeydew;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin: 1vw;
 }
 
-
-
-article, img{
-    width: 5vw;
-    padding-right: 2vw;
-
-
+article,
+img {
+  width: 5vw;
+  padding-right: 2vw;
 }
 
-
-#contenedorTarjetas{
-    background-color: rgb(255, 255, 255);
-    width:fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    display: flexbox;
-    justify-content: center;
-    justify-items: center;
-    margin-top: 2vw;
-
+.encabezado {
+  background-color: rgb(179, 255, 0);
 }
-.names{
- font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- margin-top: 2vh;
- font-size: 1rem;
- margin-left: 2vw;
+#contenedorTarjetas {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  justify-content: center;
+  margin-top: 2vw;
+}
+.namesList {
+  margin-top: 2vh;
+  font-size: 1rem;
+  margin-left: 6vw;
+  margin-right: 100vw;
+  background-color: #c4cbcf;
+  width: 18vw;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
 }
 
-.fila{
-    margin-bottom: 4vw;
-    margin-top: 2vw;
-    margin-right: 1vw;
+.fila {
+  margin-bottom: 2vw;
+  margin-top: 3vw;
+  margin-right: 4vw;
+  margin-left: 2vw;
+  justify-content: first baseline;
+  width: 15vw;
+  height: 16vw;
+}
+tr {
+  margin-top: 2vw;
+}
+.fila tr {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1, 5vw;
+  padding-bottom: 4vw;
+}
+.container {
+  display: inline;
+}
+/* .card{
+    background-color: #55c159;
     margin-left: 2vw;
-    justify-content: center;
-
-}
-.container{
-    display:inline;
-}
+    margin-right: 4vw;
+} */
 
 /*PAGINAS*/
-.page1{
-    display: inline;
+.page1 {
+  display: inline;
 }
 .page2 {
-
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+.optionsSelect{
+    height: 50%;
 }
