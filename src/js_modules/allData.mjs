@@ -45,7 +45,7 @@ class ProcessData {
     return allCharacters;
   }
 
-  // Creating array with characters to pagination
+  // Creating array with characters to pagination to the next page
   charactersPerPage() {
     let allCharacters = this.getOrderedNamesList();
     let pageCharacters = [];
@@ -58,7 +58,23 @@ class ProcessData {
     return pageCharacters;
   }
 
-  // 
+  // Creating array with characters to pagination to the previous page
+
+  // Changing images
+  imageSource() {
+    const characters = this.charactersPerPage();
+    characters.forEach(character => {
+      if(character.species === "Human" && character.gender === "Female" || character.species === "Human (formerly)" && character.gender === "Female") {
+        return "https://imagizer.imageshack.com/img922/3540/cBthJx.png";
+      } else if (character.species === "human" && character.gender === "Male" || character.species === "Human (formerly)" && character.gender === "Male") {
+        return "https://imagizer.imageshack.com/img923/332/wM4EDt.png";
+      } else if (character.species === "Acromantula" || character.species === "Centaur" || character.species === "Peacock" || character.species === "Boarhound" || character.species === "Basilisk") {
+        return "https://imagizer.imageshack.com/img924/7108/e1ORgP.png";
+      } else {
+        return "https://imagizer.imageshack.com/img924/3708/Q2vin4.png";
+      }
+    })
+  }
 
 }
 

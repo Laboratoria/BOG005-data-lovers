@@ -1,6 +1,7 @@
 // main.mjs - DOM Events
 
 import data from '../data/harrypotter/data.mjs';
+import images from '../data/harrypotter/images.mjs';
 import ProcessData from './allData.mjs';
 import CreateContainersForCharactersSection from './displayList.mjs';
 import DetailsCharacters from './detailsCharacters.mjs'
@@ -13,6 +14,8 @@ const mainPage = document.getElementById("main-page-id");
 const footer = document.getElementById("footer-main-page-id");
 const btnPaginationNext = document.getElementById("btn-pagination-next-id");
 const btnPaginationBack = document.getElementById("btn-pagination-back-id");
+const sortBtn = document.getElementById("sort-button-id");
+const sortModalMenu = document.getElementById("sort-modal-menu-id");
 
 // Characters - Dataset
 const characterData = data.characters
@@ -28,16 +31,19 @@ btnStartWelcomePage.addEventListener("click", () => {
 // Create ordered characters list
 const HarryPotterData = new ProcessData(data);
 // const hpCharactersOrderedList = HarryPotterData.charactersPerPage();
+// console.log(hpCharactersOrderedList);
 
 // Display main page and characters list
 const creatingHTMLElements = new CreateContainersForCharactersSection();
-creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "http://imageshack.com/f/pnUFd2QWp", "list");
+// creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), HarryPotterData.imageSource(), "list");
+creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img922/3540/cBthJx.png", "list");
 
 // Create events to pagination
 // Next Page
 btnPaginationNext.addEventListener("click", () => {
 
-    creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "http://imageshack.com/f/pnUFd2QWp", "list");
+    // creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), HarryPotterData.imageSource(), "list");
+    creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img922/3540/cBthJx.png", "list");
 })
 
 // Create characters card
@@ -49,7 +55,8 @@ eventContainers.addEventListener('click', (event) => {
     if (event.target.nodeName === "FIGURE" || event.target.nodeName === "FIGCAPTION" || event.target.nodeName === "IMG") {
         characterData.forEach((elem) => {
             if(elem.id === parseInt(event.target.dataset.id)){
-                detailsDataCharacters.createCharacterContainer(elem,"http://imageshack.com/f/pnUFd2QWp",'card')
+                // detailsDataCharacters.createCharacterContainer(elem, HarryPotterData.imageSource(),'card')
+                detailsDataCharacters.createCharacterContainer(elem, "https://imagizer.imageshack.com/img922/3540/cBthJx.png",'card')
                 creatingHTMLElements.hiddenDisplayList()
                 header.style.display = "none"
                 footer.style.display = "none"
@@ -69,3 +76,7 @@ btnCloseDetailsDataCharacters.addEventListener('click', () => {
     creatingHTMLElements.displayListCharacters()
 })
 
+// Open modal menu in sort button
+sortBtn.addEventListener("click", () => {
+    sortModalMenu.style.display = "flex";
+})
