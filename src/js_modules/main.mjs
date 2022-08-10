@@ -1,7 +1,6 @@
 // main.mjs - DOM Events
 
 import data from '../data/harrypotter/data.mjs';
-import images from '../data/harrypotter/images.mjs';
 import ProcessData from './allData.mjs';
 import CreateContainersForCharactersSection from './displayList.mjs';
 import DetailsCharacters from './detailsCharacters.mjs'
@@ -35,14 +34,11 @@ const HarryPotterData = new ProcessData(data);
 
 // Display main page and characters list
 const creatingHTMLElements = new CreateContainersForCharactersSection();
-// creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), HarryPotterData.imageSource(), "list");
 creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img922/3540/cBthJx.png", "list");
 
 // Create events to pagination
 // Next Page
 btnPaginationNext.addEventListener("click", () => {
-
-    // creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), HarryPotterData.imageSource(), "list");
     creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img922/3540/cBthJx.png", "list");
 })
 
@@ -55,7 +51,6 @@ eventContainers.addEventListener('click', (event) => {
     if (event.target.nodeName === "FIGURE" || event.target.nodeName === "FIGCAPTION" || event.target.nodeName === "IMG") {
         characterData.forEach((elem) => {
             if(elem.id === parseInt(event.target.dataset.id)){
-                // detailsDataCharacters.createCharacterContainer(elem, HarryPotterData.imageSource(),'card')
                 detailsDataCharacters.createCharacterContainer(elem, "https://imagizer.imageshack.com/img922/3540/cBthJx.png",'card')
                 creatingHTMLElements.hiddenDisplayList()
                 header.style.display = "none"
