@@ -7,6 +7,8 @@
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 10px;
     color: black;
+    min-width: 300px;
+    margin-top: 4px;
 }
 
 .header__nav {
@@ -17,8 +19,10 @@
 
 .header__nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__nav ul li {
@@ -31,7 +35,7 @@
     text-decoration: none;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 4px;
-    padding: 10px;
+    margin-left: 8px;
 }
 /*Menú hamburguesa e interacción con Media Queries*/
 .nav__btn img{
@@ -44,7 +48,7 @@
     display: none;
 }
 
-@media (max-width: 976.89px){
+@media (max-width: 768px){
     .nav__checkbtn{
         display: block;
     }
@@ -53,6 +57,12 @@
         position: fixed;
         top: 20px;
         left: 20px;
+    }
+    .header__nav{
+        min-height: 76px;
+    }
+    .header__nav__title--mainTitle{
+        margin-top: 17px;
     }
     .header__nav ul{
         display: block;
