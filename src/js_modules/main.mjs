@@ -12,14 +12,15 @@ const header = document.getElementById("header-main-page-id");
 const mainPage = document.getElementById("main-page-id");
 const footer = document.getElementById("footer-main-page-id");
 const btnPaginationNext = document.getElementById("btn-pagination-next-id");
-const btnPaginationBack = document.getElementById("btn-pagination-back-id");
+// const btnPaginationBack = document.getElementById("btn-pagination-back-id");
 const sortBtn = document.getElementById("sort-button-id");
 const sortModalMenu = document.getElementById("sort-modal-menu-id");
+
 
 // Characters - Dataset
 const characterData = data.characters
 
-// Event welcome button
+//Event welcome button
 btnStartWelcomePage.addEventListener("click", () => {
     welcomePage.style.display = "none";
     header.style.display = "block";
@@ -35,7 +36,6 @@ const HarryPotterData = new ProcessData(data);
 // Display main page and characters list
 const creatingHTMLElements = new CreateContainersForCharactersSection();
 creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
-
 
 // Create events to pagination
 // Next Page

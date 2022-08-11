@@ -49,7 +49,7 @@ class ProcessData {
   charactersPerPage() {
     let allCharacters = this.getOrderedNamesList();
     let pageCharacters = [];
-    let maxCharactersPerPage = this.characterPosition + 7;
+    let maxCharactersPerPage = this.characterPosition + 3;
     for (let i = this.characterPosition; i <= maxCharactersPerPage; i++) {
       pageCharacters.push(allCharacters[i]);
     }
