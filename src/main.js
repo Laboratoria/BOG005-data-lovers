@@ -26,7 +26,7 @@ function showAllCharacters (){
     <button> Ver +
   </button>
   </section>`
-  //interpolacion de variables 
+  //interpolacion de variables
 )}
 showAllCharacters()
 
