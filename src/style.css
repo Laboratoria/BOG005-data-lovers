@@ -12,7 +12,7 @@ h1 {
   color: rgb(41, 41, 97);
 }
 header {
-  display: inline-flex;
+  display: flex;
   width: 100%;
   justify-content: center;
 }
@@ -37,28 +37,24 @@ header {
   margin-top: 1vh;
 }
 
-nav{
-    width: 99vw;
-}
-
 /*Buscador*/
-.selectBusqueda {
-  margin: 0;
+nav  {
+
   text-align: center;
   display: flex;
- 
-  justify-content: left;
-  width: 98vw;
+  justify-content:baseline;
+  align-items: center;
+  width:100vw;
   background-color: #55c159;
+  height: max-content;
+
 }
 
-.busqueda {
-  /* margin-bottom: 0em;*/
+article .busqueda {
   font-size: 18 em;
 }
 .selectBusqueda input,
 select {
-  /*margin-bottom: 0.2em;*/
   padding: 1em;
   border-radius: 3px;
   border: 1px solid rgb(103, 190, 161);
@@ -66,6 +62,9 @@ select {
   font-size: 00.9em;
   color: gray;
   margin: 1vw;
+};
+.contenedorTarjetas .order{
+  justify-content: end;
 }
 
 .btnBuscar {
@@ -93,7 +92,11 @@ select {
   cursor: pointer;
   font-size: 0.9em;
   margin: 1vw;
-  margin-right: 10rem;
+
+}
+#busquedaPorDeporte{
+
+
 }
 
 .btnInicio {
@@ -108,11 +111,7 @@ select {
   margin: 1vw;
 }
 
-article,
-img {
-  width: 5vw;
-  padding-right: 2vw;
-}
+
 
 .encabezado {
   background-color: rgb(179, 255, 0);
@@ -159,11 +158,6 @@ tr {
 .container {
   display: inline;
 }
-/* .card{
-    background-color: #55c159;
-    margin-left: 2vw;
-    margin-right: 4vw;
-} */
 
 /*PAGINAS*/
 .page1 {

@@ -7,6 +7,9 @@ import data from "./data/athletes/athletes.js";
 let buttonRefresh = document.getElementById("btnLimpiar");
 document.getElementById("contenedorTarjetas").style.visibility = "hidden";
 document.getElementById("page2").style.display = "none";
+document.getElementById("order").style.display = "none";
+
+
 
 let table = document.getElementById("contenedorTarjetas");
 
@@ -121,7 +124,11 @@ function showAthletesBySport(e) {
       selectSport + "" + ":" + resultSport.length
     }`.toUpperCase();
     table.appendChild(cabezera);
-    
+
+    let orderAlphabetic = document.createElement("select");
+
+
+
   }
 
   console.log(resultSport);

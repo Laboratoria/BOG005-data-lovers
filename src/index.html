@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>INFO OLIMPIADAS</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="page1" id="page1">
-    <header>
-        <img class="logoImagen" src="IMAGENES/LOGO RIO1.png" alt="logo olimpiadas 2016">
-        <h1>INFO OLIMPIADAS</h1>
-        <button id="btn1" class="btn1">Conoce más de los atletas</button>
-    </header>
-    </section>
 
-    <section id="page2" class="page2">
-    <header>
- 
-    </header>
-    
-      <nav class="selectBusqueda" id="selectBusqueda">
-        <button id="btnInicio" class="btnInicio">INICIO</button>
+<head>
+  <meta charset="utf-8">
+  <title>INFO OLIMPIADAS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <div class="filterByMedal" id="filterByMedal">
-          <input type="text" id="selectSearchByMedal" value="" placeholder="Search by medal">
-        </div>
-       <section class="busqueda" id="busquedaPorPais">
-         <select  id="selectSearchByTeam">
-           <option value=""> -Search by team - </option>
-           </select>
-       </section>
-       <div class="busqueda" id="busquedaPorDeporte">
+<body>
+  <section class="page1" id="page1">
+    <header>
+      <img class="logoImagen" src="IMAGENES/LOGO RIO1.png" alt="logo olimpiadas 2016">
+      <h1>INFO OLIMPIADAS</h1>
+      <button id="btn1" class="btn1">Conoce más de los atletas</button>
+    </header>
+  </section>
+
+  <section id="page2" class="page2">
+    <header>
+
+    </header>
+
+    <nav class="selectBusqueda" id="selectBusqueda">
+      <button id="btnInicio" class="btnInicio">INICIO</button>
+
+      <section class="filterByMedal" id="filterByMedal">
+        <input type="text" id="selectSearchByMedal" value="" placeholder="Search by medal">
+      </section>
+      <section class="busqueda" id="busquedaPorPais">
+        <select id="selectSearchByTeam">
+          <option value=""> -Search by team - </option>
+        </select>
+      </section>
+      <section class="busqueda" id="busquedaPorDeporte">
         <select  id="selectSearchBySport">
-          <option value=""> -Search by sport - </option>
-          </select>
-      </div>
+          <option  value=""> -Search by sport - </option>
+        </select>
+      </section>
 
-      <div class="btnFiltros">
-        <button class="btnBuscar" id="btnBuscar">Buscar</button>
-      </div>
-      <div class="btnLimpiar">
-        <button type="" class="btnLimpiar" id="btnLimpiar">Refresh</button>
-     </div>
-      </nav>
-      <article  class="container">
 
-     <section id="contenedorTarjetas" class="contenedorTarjetas" >
-     </section>
+      <button class="btnBuscar" id="btnBuscar">Buscar</button>
+
+      <article class="btnLimpiar">
+        <button type="" id="btnLimpiar">Refresh</button>
+      </article>
+    </nav>
+
+
+
+    <article class="container">
+
+      <section  id="contenedorTarjetas" class="contenedorTarjetas">
+        <select class="order" name="Order" id="order">
+          <option value="Order"> -Order- </option>
+          <option value="Order">z-a</option>
+          <option value="Order">z-a</option>
+        </select>
+      </section>
     </article>
 
-     </section>
+  </section>
 
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
