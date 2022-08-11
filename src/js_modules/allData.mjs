@@ -46,10 +46,10 @@ class ProcessData {
   }
 
   // Creating array with characters to pagination to the next page
-  charactersPerPage() {
-    let allCharacters = this.getOrderedNamesList();
+  goToNextPage() {
+    const allCharacters = this.getOrderedNamesList();
     let pageCharacters = [];
-    let maxCharactersPerPage = this.characterPosition + 3;
+    let maxCharactersPerPage = this.characterPosition + 7;
     for (let i = this.characterPosition; i <= maxCharactersPerPage; i++) {
       pageCharacters.push(allCharacters[i]);
     }
@@ -59,8 +59,25 @@ class ProcessData {
   }
 
   // Creating array with characters to pagination to the previous page
+  goToPreviousPage() {
+    const allCharacters = this.getOrderedNamesList();
+    let pageCharacters = [];
+    this.characterPosition -= 8;
+    let maxCharactersPerPage = this.characterPosition + 7;
+    if (this.characterPosition >= 0) {
+      for (let i = this.characterPosition; i <= maxCharactersPerPage; i++) {
+        pageCharacters.push(allCharacters[i]);
+      }
+    } else {
+      this.characterPosition = 0;
+      maxCharactersPerPage = this.characterPosition + 7;
+      for (let i = this.characterPosition; i <= maxCharactersPerPage; i++) {
+        pageCharacters.push(allCharacters[i]);
+      }
+    }
 
-
+    return pageCharacters;
+  }
 }
 
 export default ProcessData;

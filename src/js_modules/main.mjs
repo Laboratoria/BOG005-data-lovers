@@ -11,11 +11,10 @@ const btnStartWelcomePage = document.getElementById("btn-start-welcome-page-id")
 const header = document.getElementById("header-main-page-id");
 const mainPage = document.getElementById("main-page-id");
 const footer = document.getElementById("footer-main-page-id");
-const btnPaginationNext = document.getElementById("btn-pagination-next-id");
-// const btnPaginationBack = document.getElementById("btn-pagination-back-id");
+const btnNextPage = document.getElementById("btn-pagination-next-id");
+const btnPreviousPage = document.getElementById("btn-pagination-back-id");
 const sortBtn = document.getElementById("sort-button-id");
 const sortModalMenu = document.getElementById("sort-modal-menu-id");
-
 
 // Characters - Dataset
 const characterData = data.characters
@@ -35,12 +34,16 @@ const HarryPotterData = new ProcessData(data);
 
 // Display main page and characters list
 const creatingHTMLElements = new CreateContainersForCharactersSection();
-creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
+creatingHTMLElements.addCharacterList(HarryPotterData.goToNextPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
 
 // Create events to pagination
 // Next Page
-btnPaginationNext.addEventListener("click", () => {
-    creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
+btnNextPage.addEventListener("click", () => {
+    creatingHTMLElements.addCharacterList(HarryPotterData.goToNextPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
+})
+// Previous Page
+btnPreviousPage.addEventListener("click", () => {
+    creatingHTMLElements.addCharacterList(HarryPotterData.goToPreviousPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
 })
 
 // Create characters card
