@@ -71,8 +71,29 @@ button img{
     height: 168px;
 }
 
-@media (max-width: 576px) {
+.buttonShow{
+    background-color: aqua;
+}
+
+.wand{
+    height: 10em;
+    width: 10em;
+}
+
+.card{
+    background-color: #6b63b5;
+}
+
+@media only screen and (max-width: 576px) {
     body{
         background-color: fuchsia;
     }
  }
+
+ @media only screen and (min-width: 577px) and (max-width: 768px) { body{
+    background-color: orange;
+ }}
+
+ @media only screen and (min-width: 769px) and (max-width: 1400px) { body{
+    background-color: blue;
+ }}
