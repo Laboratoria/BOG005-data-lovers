@@ -22,7 +22,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62%;
     font-family: 'Kodchasan', sans-serif;
 }
 
@@ -46,6 +46,9 @@ header img {
 }
 
 headerTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     min-width: 288px;
     max-width: 900px;
@@ -54,46 +57,49 @@ headerTitleContainer {
 }
 
 header h1 {
-    width: 224px;
-    height: 240px;
-    background: #D9D9D9;
+    width: 50%;
+    height: 70%;
+    background: #cab7d5;
+    text-align: center;
     padding: 1.5em 1.5em 1.5em 1.5em;
     border-radius: 50% 20% / 10% 40%;
 }
 
-section{
+section {
     display: inline-flex;
 }
 
-button img{
+button img {
     pointer-events: none;
     width: 160px;
     height: 168px;
 }
 
-.buttonShow{
+.buttonShow {
     background-color: aqua;
-}
-
-.wand{
+.wand {
     height: 10em;
     width: 10em;
 }
 
-.card{
+.card {
     background-color: #6b63b5;
 }
 
 @media only screen and (max-width: 576px) {
-    body{
-        background-color: fuchsia;
+    body {
+        background-color: #90ee90;
     }
- }
+}
 
- @media only screen and (min-width: 577px) and (max-width: 768px) { body{
-    background-color: orange;
- }}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    body {
+        background-color: #ffe4b5;
+    }
+}
 
- @media only screen and (min-width: 769px) and (max-width: 1400px) { body{
-    background-color: blue;
- }}
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
+    body {
+        background-color: #b0e0e6;
+    }
+}

@@ -1,34 +1,38 @@
-import data from './data/harrypotter/data.js';
+import data from "./data/harrypotter/data.js";
 
-//const allCharacters = data.characters
-const allCharacters = data.characters.slice(0, 20)
-const content = document.querySelector("#showCharacters")
+const allCharacters = data.characters.slice(0, 20);
+const content = document.querySelector("#showCharacters");
 
 function showAllCharacters() {
-  allCharacters.forEach(element =>
-    //content.innerHTML+=element.name
-    //Template string
-    content.innerHTML += `<section class="card">
-    <img class="wand"src="Img/monophy.gif" alt="">
+  allCharacters.forEach(
+    (element) =>
+      //content.innerHTML+=element.name
+      //Template string
+      (content.innerHTML += `<section class="card">
+    <li><img class="wand"src="Img/monophy.gif" alt="">
+    <br>
     <h3>${element.name}</h3>
     <button id="showMore" class="buttonShow"> Ver +
-  </button>
-  </section>`
+  </button></li>
+  </section>`)
     //interpolacion de variables
-  )
+  );
 }
-showAllCharacters()
+showAllCharacters();
 
-document.getElementById("showMore").addEventListener("click", showCharacters)
-
-function showCharacters() {
-  const information = document.querySelector("#btnCharacters")
-  const result = data.characters.filter(personage => personage.name == allCharacters)
-  information.innerHTML +=`Nombre: ${result[0].name} \n Fecha de Nacimiento: ${result[0].birth} \n Casa de Hogwarts: ${result[0].house} \n Tipo de Mago: ${result[0].species} `
+document
+  .getElementById("showMore")
+  .addEventListener("click", showCharactersInfo);
+const information = document.querySelector("#btnCharacters");
+function showCharactersInfo() {
+  for (let i = 0; i < allCharacters.length; i++) {
+    information.innerHTML += `<section class="information">
+  Nombre: ${allCharacters[i].name} \n Fecha de Nacimiento: ${allCharacters[i].birth} \n Casa de Hogwarts: ${allCharacters[i].house} \n Tipo de Mago: ${allCharacters[i].species}
+  </section>`;
+  }
 }
-
 //for(const [key, value] of Object.entries(data.characters)){
- //   console.log(value)
+//   console.log(value)
 //}
 
 /* const personajes = data.characters;
