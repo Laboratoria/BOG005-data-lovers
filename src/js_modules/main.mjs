@@ -34,19 +34,13 @@ const HarryPotterData = new ProcessData(data);
 
 // Display main page and characters list
 const creatingHTMLElements = new CreateContainersForCharactersSection();
-<<<<<<< HEAD
 creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
-=======
 
->>>>>>> b5d03d12aa5d96ca8556c488067ac24d188f58f4
 
 // Create events to pagination
 // Next Page
 btnPaginationNext.addEventListener("click", () => {
-<<<<<<< HEAD
     creatingHTMLElements.addCharacterList(HarryPotterData.charactersPerPage(), "https://imagizer.imageshack.com/img923/332/wM4EDt.png", "list");
-=======
->>>>>>> b5d03d12aa5d96ca8556c488067ac24d188f58f4
 })
 
 // Create characters card
@@ -58,10 +52,7 @@ eventContainers.addEventListener('click', (event) => {
     if (event.target.nodeName === "FIGURE" || event.target.nodeName === "FIGCAPTION" || event.target.nodeName === "IMG") {
         characterData.forEach((elem) => {
             if(elem.id === parseInt(event.target.dataset.id)){
-<<<<<<< HEAD
                 detailsDataCharacters.createCharacterContainer(elem, "https://imagizer.imageshack.com/img923/332/wM4EDt.png",'card')
-=======
->>>>>>> b5d03d12aa5d96ca8556c488067ac24d188f58f4
                 creatingHTMLElements.hiddenDisplayList()
                 header.style.display = "none"
                 footer.style.display = "none"
