@@ -9,7 +9,7 @@ function showAllCharacters() {
       //content.innerHTML+=element.name
       //Template string
       (content.innerHTML += `<section class="card">
-    <li><img class="wand"src="Img/monophy.gif" alt="">
+    <li><img class="wand"src="Img/varita.png" alt="">
     <br>
     <h3>${element.name}</h3>
     <button id="showMore" class="buttonShow"> Ver +

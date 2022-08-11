@@ -77,13 +77,20 @@ button img {
 
 .buttonShow {
     background-color: aqua;
+}
+
+.showCharacters{
+    flex-direction: column;
+}
+
 .wand {
     height: 10em;
     width: 10em;
+    display: flex;
 }
 
 .card {
-    background-color: #6b63b5;
+    background-color: #cab7d5;
 }
 
 @media only screen and (max-width: 576px) {
