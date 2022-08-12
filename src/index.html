@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>INFO OLIMPIADAS</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -17,12 +17,9 @@
   </section>
 
   <section id="page2" class="page2">
-    <header>
 
-    </header>
 
-    <nav class="selectBusqueda" id="selectBusqueda">
-      <button id="btnInicio" class="btnInicio">INICIO</button>
+    <header class="selectBusqueda" id="selectBusqueda">
 
       <section class="filterByMedal" id="filterByMedal">
         <input type="text" id="selectSearchByMedal" value="" placeholder="Search by medal">
@@ -38,31 +35,25 @@
         </select>
       </section>
 
-
       <button class="btnBuscar" id="btnBuscar">Buscar</button>
-
-      <article class="btnLimpiar">
-        <button type="" id="btnLimpiar">Refresh</button>
-      </article>
-    </nav>
+      <button class="btnLimpiar" type="" id="btnLimpiar">Refresh</button>
+    </header>
 
 
 
     <article class="container">
-
       <section  id="contenedorTarjetas" class="contenedorTarjetas">
-        <select class="order" name="Order" id="order">
+        <select class="order" name="Order" id="selectOrder">
           <option value="Order"> -Order- </option>
           <option value="Order">z-a</option>
           <option value="Order">z-a</option>
         </select>
       </section>
     </article>
-
+    
   </section>
 
-  <div id="root"></div>
+ 
   <script src="main.js" type="module"></script>
 </body>
-
 </html>

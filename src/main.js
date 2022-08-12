@@ -2,18 +2,18 @@ import { filterData } from "./data.js";
 import athletes from "./data/athletes/athletes.js";
 // import data from './data/lol/lol.js';
 import data from "./data/athletes/athletes.js";
-// import data from './data/rickandmorty/rickandmorty.js';
 
-let buttonRefresh = document.getElementById("btnLimpiar");
+
+
 document.getElementById("contenedorTarjetas").style.visibility = "hidden";
 document.getElementById("page2").style.display = "none";
-document.getElementById("order").style.display = "none";
+document.querySelector('#selectOrder').style.visibility="hidden";
 
 
+let listAthletesInfo = document.getElementById("contenedorTarjetas");
+let buttonRefresh = document.getElementById("btnLimpiar");
 
-let table = document.getElementById("contenedorTarjetas");
 
-document.getElementById("contenedorTarjetas").style.visibility = "visible";
 console.log(data);
 
 //crear opciones para seleccionar el país
@@ -36,6 +36,7 @@ showOptionsSelect();
 
 //crear opciones para seleccionar el deporte
 function showOptionsSelectSport() {
+
   let sport = [];
   let selectSport = document.getElementById("selectSearchBySport");
   data.athletes.forEach((deporte) => {
@@ -53,14 +54,15 @@ function showOptionsSelectSport() {
 };
 showOptionsSelectSport();
 
+//función para filtrar atletas por medallas
 function showAthletesByMedal(e) {
+  listAthletesInfo.style.visibility = "visible";
   e.target.removeEventListener(e.type, showAthletesByMedal);
   let dataSearch = document.getElementById("selectSearchByMedal").value;
-
   let firstMayus = dataSearch[0].toUpperCase();
   let otherLetters = dataSearch.slice(1);
   let typeMedal = firstMayus + otherLetters;
-  //table.innerHTML = "";
+  //listAthletesInfo.innerHTML = "";
 
   let result = filterData(data, "medal", typeMedal);
   console.log(result);
@@ -70,7 +72,7 @@ function showAthletesByMedal(e) {
   encabezado.innerHTML = ` ${
     typeMedal + " medal" + "s" + " won" + " : " + result.length
   }`.toUpperCase();
-  table.appendChild(encabezado);
+  listAthletesInfo.appendChild(encabezado);
   encabezado.setAttribute("class", "encabezado")
   
   let flag = 0;
@@ -105,13 +107,13 @@ function showAthletesByMedal(e) {
     contenedor.appendChild(fila);
     contenedor.appendChild(fila);
     contenedor.appendChild(fila);
-    table.appendChild(contenedor);
-
+    listAthletesInfo.appendChild(contenedor);
     flag++;
   });
 };
 
 function showAthletesBySport(e) {
+  listAthletesInfo.style.visibility = "visible";
   e.target.removeEventListener(e.type, showAthletesBySport);
   let selectSport = document.getElementById("selectSearchBySport").value;
 
@@ -123,12 +125,9 @@ function showAthletesBySport(e) {
     cabezera.innerHTML = `Athletes of  ${
       selectSport + "" + ":" + resultSport.length
     }`.toUpperCase();
-    table.appendChild(cabezera);
+    listAthletesInfo.appendChild(cabezera);
 
     let orderAlphabetic = document.createElement("select");
-
-
-
   }
 
   console.log(resultSport);
@@ -165,7 +164,7 @@ function showAthletesBySport(e) {
     contenedor.appendChild(fila);
     contenedor.appendChild(fila);
     contenedor.appendChild(fila);
-    table.appendChild(contenedor);
+    listAthletesInfo.appendChild(contenedor);
 
     flag++;
   });
@@ -182,8 +181,7 @@ function showAthletesByTeam(e) {
     title.innerHTML = `Winners Athletes from ${
       selectTeam + ":" + " " + resultTeam.length
     }`.toUpperCase();
-    table.appendChild(title);
-    
+    listAthletesInfo.appendChild(title);
   }
 
 
@@ -221,7 +219,7 @@ function showAthletesByTeam(e) {
     fila.appendChild(colum2);
     fila.appendChild(colum3);
     contenedor.appendChild(fila);
-    table.appendChild(contenedor);
+    listAthletesInfo.appendChild(contenedor);
     flag++;
   });
 };
@@ -249,12 +247,12 @@ function backPage1() {
 }
 
 //REFRESH SEARCH
-
 function refresh() {
   document.getElementById("selectSearchByMedal").value = "";
   document.getElementById("selectSearchBySport").value = "";
   document.getElementById("selectSearchByTeam").value = "";
   document.getElementById("contenedorTarjetas").innerHTML = "";
+  listAthletesInfo.style.visibility = "hidden";
   document.getElementById("btnBuscar").addEventListener("click", showAthletesByMedal);
   document.getElementById("btnBuscar").addEventListener("click", showAthletesBySport);
   document.getElementById("btnBuscar").addEventListener("click", showAthletesByTeam);
