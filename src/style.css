@@ -83,21 +83,59 @@ li a:hover {
 .welcome img {
   object-fit: contain;
 }
-
 /*Estilos para Tablet*/
 @media (max-width: 1300px) {
   nav ul li a {
     font-size: 16px;
   }
+  .nav__btn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  li a:hover,
+  li a.active {
+    background: none;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  #check:checked ~ .welcome {
+    left: -100%;
+  }
+  .logo {
+    width: 584px;
+    margin: -23px;
+    padding-left: 50px;
+    margin-bottom: -14px;
+  }
+  .welcome {
+    margin-top: 20px;
+  }
 }
-
 /*Estilos para movil*/
 @media (max-width: 952px) {
   nav ul li a {
     font-size: 16px;
   }
 }
-
 @media (max-width: 858px) {
   .nav__btn {
     display: block;
@@ -119,28 +157,24 @@ li a:hover {
   }
   nav ul li a {
     font-size: 20px;
-    color: #ffffff;
+    color: #FFFFFF;
   }
-
   li a:hover,
   li a.active {
     background: none;
   }
-
   #check:checked ~ ul {
     left: 0;
   }
   #check:checked ~ .welcome {
     left: -100%;
   }
-
   .logo {
     width: 584px;
     margin: -23px;
     padding-left: 50px;
     margin-bottom: -14px;
   }
-
   .welcome {
     margin-top: 20px;
   }
