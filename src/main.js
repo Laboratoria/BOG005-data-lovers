@@ -1,7 +1,5 @@
 import data from "./data/harrypotter/data.js";
 
-console.log(data.funFacts)
-
 const allCharacters = data.characters.slice(0, 21);
 const content = document.querySelector("#showCharacters");
 
