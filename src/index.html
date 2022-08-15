@@ -9,14 +9,23 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@100;200;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+
 </head>
 
 <body>
   <header>
     <div class="container">
-      <h1>Harry Potter</h1>
-      <h1>Lovers</h1>
+      <div class="logo-box">
+        <img class="logo" src="Img/logo_hp2.png" alt="Harry Potter Logo" />
+      </div>
+      <h1>
+        <span class="header-title"> Harry Potter</span>
+      </h1>
+      <h2>
+        <span class="header-sub">Lovers </span>
+      </h2>
 
       <nav class="nav">
         <a href="">Home</a>
@@ -30,12 +39,19 @@
   </header>
 
   <section class="home">
-    <p>Te damos la bienvenida a Harry Potter Lovers, donde encontraras información del colegio Hogwarts sus estudiantes,
-      pociones, hechizos y más.</p>
-    <span>Ingresa</span>
+    <div class="text-box">
+      <h2 class="heading-home">
+        <span class="heading-home-first">
+          Te damos la bienvenida a Harry Potter Lovers, donde encontraras información del colegio Hogwarts sus
+          estudiantes,
+          pociones, hechizos y más.</span>
+      </h2>
+      <a href="#" class="btn btn-heading-home">Descubre +</a>
+    </div>
+
   </section>
 
-  <section id="sect-1" class="sect-1">
+<!--   <section id="sect-1" class="sect-1">
     <div class="imgContainer">
       <img src="Img/Logohplovers.png" alt="Harry Potter Lovers Logo" />
     </div>
@@ -44,7 +60,7 @@
       En Harry Potter Lovers, encontrarás información sobre tus personajes
       favoritos.
     </h1>
-  </section>
+  </section> -->
 
   <main>
     <section id="showCharacters" class="showCharacters">
@@ -53,11 +69,13 @@
 
   </main>
 
-  <footer>
-    <img src="Img/logo_hp2.png" alt="Harry Potter Shield" />
-    <div>
-      <p>Infante & Moreno &copy; 2022</p>
+  <footer class="footer-1">
+    <div class="logo-footer">
+      <img class="img-footer" src="Img/logo_hp2.png" alt="Harry Potter Logo" />
     </div>
+
+    <p class="footer-names">Infante & Moreno &copy; 2022</p>
+
   </footer>
 </body>
 

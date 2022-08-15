@@ -8,13 +8,13 @@ function showAllCharacters() {
     (element, i) =>
     //content.innerHTML+=element.name
     //Template string
-    (content.innerHTML += `<section class="card">
+    (content.insertAdjacentHTML("beforeend", `<section class="card">
     <ul><img class="wand"src="Img/harry_potter_2-.png" alt="Imagen generica para personajes">
     <br>
     <h3>${element.name}</h3>
-    <button data-id=${i} class="buttonShow"> Ver +
+    <button data-id=${i} class="btn buttonShow"> Ver +
   </button></ul>
-  </section>`)
+  </section>`))
     //interpolacion de variables
   );
 }

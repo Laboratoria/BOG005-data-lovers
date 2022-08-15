@@ -32,10 +32,12 @@ body {
     font-weight: 700;
     justify-content: center;
     align-items: center;
-    color: #231E4E;
+    color: #fff;
     background: linear-gradient(to right bottom,
-            rgba(202, 183, 213, 0.864),
-            rgba(35, 30, 78, 0.412));
+            rgb(202, 183, 213),
+            rgba(35, 30, 78, 0.625));
+    position: relative;
+    backface-visibility: hidden;
 }
 
 .container p {
@@ -44,6 +46,83 @@ body {
 
 .nav {
     text-align: right;
+}
+
+.home {
+    height: 80vh;
+    color: #fff;
+    background-image: linear-gradient(to right bottom,
+            rgba(202, 183, 213, 0.8),
+            rgba(35, 30, 78, 0.661)),
+        url(Img/castillo.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.header-title {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.header-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    animation: moveInRight 1s ease-out;
+}
+
+.heading-home {
+    color: #fff;
+}
+
+.heading-home-first {
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn-heading-home {
+    display: block;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.btn:link,
+.btn:visited {
+    /*Pseudo clase*/
+    text-decoration: none;
+    background-color: #fff;
+    color: #10141B;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active{
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sect-1 {
@@ -76,16 +155,6 @@ body {
     border-radius: 50% 20% / 10% 40%;
 }
 
-.home {
-    height: 80vh;
-    background-image: linear-gradient(to right bottom,
-            rgba(202, 183, 213, 0.8),
-            rgba(35, 30, 78, 0.8)),
-        url(Img/castillo.jpg);
-    background-size:cover;
-    background-position: center;
-}
-
 button img {
     pointer-events: none;
     display: flex;
@@ -95,7 +164,15 @@ button img {
 }
 
 .buttonShow {
+    font-family:'Kodchasan', sans-serif;
+    color: #fff;
     background-color: #514A92;
+    display: block;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    transition: all .2s;
 }
 
 .showCharacters {
@@ -111,7 +188,7 @@ button img {
 }
 
 .card {
-    background-color: #cab7d5;
+    background-color: #fff;
     display: flex;
 }
 
@@ -120,11 +197,50 @@ button img {
     width: 50%;
 }
 
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #10141B;
+    position: relative;
+}
+
+.footer-names {
+    color: #fff;
+    position: absolute;
+    left: 40px;
+    font-weight: 300;
+    font-size: 1.6em;
+}
+
+.logo-footer {
+    position: absolute;
+    right: 40px;
+}
+
+.img-footer {
+    height: 68px;
+}
+
 @media only screen and (max-width: 576px) {
     body {
         background-color: #90ee90;
         margin: 0 auto;
         padding: 0 5%;
+    }
+
+    .logo-box {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+    }
+
+    .logo {
+        height: 68px;
     }
 
     .information {
@@ -139,11 +255,63 @@ button img {
         margin: 0 auto;
         padding: 0 5%;
     }
+
+    .logo-box {
+        position: absolute;
+        top: 15px;
+        left: 40px;
+    }
+
+    .logo {
+        height: 78px;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
     body {
         margin: 0 auto;
         padding: 0 5%;
+    }
+
+    .logo-box {
+        position: absolute;
+        top: 10px;
+        left: 40px;
+    }
+
+    .logo {
+        height: 100px;
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
     }
 }
