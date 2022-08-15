@@ -1,19 +1,10 @@
-/*
-1. Posicionamiento
-2. Box model
-3. Tipografía
-4. Efectos visuales
-5. Otros
-*/
-
-:root {
-    /*Colores*/
+/*Colores
     --purple: #6b63b5;
     --purple-soft: #514A92;
     --purple--med: #231E4E;
     --purple-dark: #10141B;
     --white: #fff;
-}
+}*/
 
 * {
     box-sizing: border-box;
@@ -22,31 +13,38 @@
 }
 
 html {
+    display: flex;
     font-size: 62%;
     font-family: 'Kodchasan', sans-serif;
 }
 
 header {
-    position: relative;
     display: flex;
+    position: relative;
+    align-content: space-around;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    min-width: 320px;
-    /*Tamaño más pequeño en dispositivos moviles*/
-    height: 334px;
     text-align: center;
 }
 
 header img {
-    width: 160px;
-    height: 93px;
+    width: 28%;
+    height: 15%;
     margin-top: 60px;
     padding-right: 3em;
 }
 
+header h1{
+    width: 75%;
+    height: 95%;
+    background: #cab7d5;
+    text-align: center;
+    margin: 0;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    border-radius: 50% 20% / 10% 40%;
+}
 headerTitleContainer {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 90%;
@@ -56,52 +54,52 @@ headerTitleContainer {
     margin-top: 50px;
 }
 
-header h1 {
-    width: 50%;
-    height: 70%;
-    background: #cab7d5;
-    text-align: center;
-    padding: 1.5em 1.5em 1.5em 1.5em;
-    border-radius: 50% 20% / 10% 40%;
-}
-
 section {
     display: inline-flex;
 }
 
 button img {
     pointer-events: none;
+    display: flex;
+    justify-content: center;
     width: 160px;
     height: 168px;
 }
 
 .buttonShow {
-    background-color: aqua;
+    background-color: #514A92;
 }
 
-.showCharacters{
-    flex-direction: column;
+.showCharacters {
+    display: flex;
+    flex-wrap: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .wand {
     height: 21em;
     width: 20em;
-    display: flex;
 }
 
 .card {
     background-color: #cab7d5;
+    display: flex;
 }
 
-.information{
+.information {
     background-color: #cab7d5;
+    width: 50%;
 }
 
 @media only screen and (max-width: 576px) {
     body {
         background-color: #90ee90;
+        margin: 0 auto;
+        padding: 0 5%;
     }
-    .information{
+
+    .information {
         display: flex;
         position: absolute;
     }
@@ -110,11 +108,15 @@ button img {
 @media only screen and (min-width: 577px) and (max-width: 768px) {
     body {
         background-color: #ffe4b5;
+        margin: 0 auto;
+        padding: 0 5%;
     }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
     body {
         background-color: #b0e0e6;
+        margin: 0 auto;
+        padding: 0 5%;
     }
 }

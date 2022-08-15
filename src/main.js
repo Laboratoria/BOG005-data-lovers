@@ -11,11 +11,11 @@ function showAllCharacters() {
     //content.innerHTML+=element.name
     //Template string
     (content.innerHTML += `<section class="card">
-    <ul><li><img class="wand"src="Img/harry_potter_2-.png" alt="">
+    <ul><img class="wand"src="Img/harry_potter_2-.png" alt="Imagen generica para personajes">
     <br>
     <h3>${element.name}</h3>
     <button data-id=${i} class="buttonShow"> Ver +
-  </button></li></ul>
+  </button></ul>
   </section>`)
     //interpolacion de variables
   );
