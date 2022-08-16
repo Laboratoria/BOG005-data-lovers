@@ -4,7 +4,7 @@ import data from './data/pokemon/pokemon.js';
 //nombres de cada pokemon//
 let pokemon = Object.values(data.pokemon);
 
-function visualizardata(datos) {
+function visualizardata() {
     for (let i = 0; i < pokemon.length; i++) {
         let namepokemon = pokemon[i].name;
         let imagenpokemon = pokemon[i].img;
@@ -13,8 +13,8 @@ function visualizardata(datos) {
         contenedor.appendChild(infopokemon)
         infopokemon.innerHTML =
             `
-<img src = "${imagenpokemon}">
-            <p> ${namepokemon}</p>
+<img src = "${imagenpokemon}" class= "imagenes">
+            <p class= "names"> ${namepokemon}</p>
 
              `
     }
