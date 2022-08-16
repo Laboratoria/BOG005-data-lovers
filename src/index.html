@@ -5,56 +5,54 @@
   <meta charset="utf-8" />
   <title>Harry Potter Lovers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script src="main.js" type="module"></script>
   <link rel="stylesheet" href="style.css" />
-    <script src="main.js" type="module"></script>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@100;200;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+</head>
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;400;500;700&display=swap"
-      rel="stylesheet"
-    
-    
-  
-
-  <body>
-    <nav></nav>
-    <header>
-      <img src="Img/Logohplovers.png" alt="Harry Potter Lovers Logo" />
-      <div class="headerTitleContainer">
-        <h1>
-          En Harry Potter Lovers, encontrarás información sobre tus personajes
-          favoritos.
-        </h1>
-      </div>
-    </header>
-
-    <main>
-      <section id="showCharacters" class="showCharacters"></section>
-      <div id="informationCharacters" class="information"></div>
-    </main> --> 
-
+    <body>
+  <a name="home-page"></a>
   <header>
-    <nav>
-      <a hrfe="#">Inicio</a>
-      <a hrfe="#">Visualizar personaje</a>
-      <a hrfe="#">Filtrar personajes</a>
-      <a hrfe="#">Ordena los personaje por casas </a>
-      <a hrfe="#">Calcula a que casa perteneces</a>
-    </nav>
-    <section class="texto-header">
-      <H1>Conoce más sobre Harry Potter</H1>
-      <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-          style="height: 100%; width: 100%;">
-          <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-            style="stroke: none; fill: #08f;"></path>
-        </svg></div>
-    </section>
+    <div class="container">
+      <div class="logo-box">
+        <img class="logo" src="Img/logo_hp2.png" alt="Harry Potter Logo" />
+      </div>
+      <h1>
+        <span class="header-title"> Harry Potter</span>
+      </h1>
+      <h2>
+        <span class="header-sub">Lovers </span>
+      </h2>
+
+      <nav class="nav">
+        <a href="#home-page">Home</a>
+        <a id="nav-characters" href="#characters-information">Personajes</a>
+        <a href="">Filtrar</a>
+        <a href="">Ordenar</a>
+        <a href="">Cálculo</a>
+      </nav>
+    </div>
+
   </header>
-  <main>
-    <section class="contenedor datosCuriosos">
+
+  <section class="home">
+    <div class="text-box">
+      <h2 class="heading-home">
+        <span class="heading-home-first">
+          Te damos la bienvenida a Harry Potter Lovers, donde encontraras información del colegio Hogwarts sus
+          estudiantes,
+          pociones, hechizos y más.</span>
+      </h2>
+      <a href="#characters-information" class="btn btn-heading-home btn-animated">Descubre +</a>
+    </div>
+  </section>
+   
+   <main class="characterAllInformatio">
+
+ <section class="fun-facts">
       <h2 class="titulo">Cinco datos curiosos que seguro no sabias de Harry Potter</h2>
       <div class="contenedorDatosCuriosos"></div>
       <img src="Img/Buho HP.png" alt "Imagen Buho de Harry Potter" class=imagenBuho />
@@ -76,6 +74,7 @@
           príncipe, la sexta de la saga.<br></p>
       </h3>
     </section>
+    
     <section class="contenedor Acciones">
       <div class="contenedor"></div>
       <h2 class="titulo">¿Qué quieres conocer?></h2>
@@ -104,15 +103,33 @@
         <p class="textoVisualizar"> Cálcula a que casa de H perteneces</p> 
       </div>
     </section>
+
+    <a name="characters-information"></a>
+    <section id="showCharacters" class="showCharacters">
+      <div id="informationCharacters"></div>
+    </section>
+
+    <section class="organize-section">
+      <h3>Colegio Hogwarts</h3>
+      <br>
+      <h2>
+        <span>
+          Te damos la bienvenida a Harry Potter Lovers, donde encontraras información del colegio Hogwarts sus
+          estudiantes,
+          pociones, hechizos y más.</span>
+      </h2>
+    </section>
+
   </main>
-
-
-  <footer>
-    <img src="Img/logo_hp2.png" alt="Harry Potter Shield" />
-    <div>
-      <p>Infante & Moreno &copy; 2022</p>
+    
+  <footer class="footer-1">
+    <div class="logo-footer">
+      <img class="img-footer" src="Img/logo_hp2.png" alt="Harry Potter Logo" />
     </div>
+
+    <p class="footer-names">Infante & Moreno &copy; 2022</p>
+
   </footer>
-  </body>
+</body>
 
 </html>

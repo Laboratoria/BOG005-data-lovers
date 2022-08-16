@@ -1,154 +1,340 @@
-/*
-1. Posicionamiento
-2. Box model
-3. Tipografía
-4. Efectos visuales
-5. Otros
-*/
-
-:root {
-    /*Colores*/
+/*Colores
     --purple: #6b63b5;
     --purple-soft: #514A92;
     --purple--med: #231E4E;
     --purple-dark: #10141B;
     --white: #fff;
-}
+}*/
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 html {
-    font-size: 62%;
+    display: block;
+}
+
+body {
     font-family: 'Kodchasan', sans-serif;
+    font-weight: 400;
+    font-size: 62%;
+    line-height: 1.2;
+    color: #10141B;
+    margin: 1%;
 }
 
-header {
-    position: relative;
+.container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    min-width: 320px;
-Tamaño más pequeño en dispositivos moviles
-height: 334px;
-text-align: center;
-}
-
-header img {
-    width: 160px;
-    height: 93px;
-    margin-top: 60px;
-    padding-right: 3em;
-}
-
-headerTitleContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    min-width: 288px;
-    max-width: 900px;
-    height: 218px;
-    margin-top: 50px;
-}
-
-header h1 {
-    width: 50%;
-    height: 70%;
-    background: #cab7d5;
-    text-align: center;
-    padding: 1.5em 1.5em 1.5em 1.5em;
-    border-radius: 50% 20% / 10% 40%;
-}
-
-section {
-    display: inline-flex;
-}
-
-button img {
-    pointer-events: none;
-    width: 160px;
-    height: 168px;
-}
-
-.buttonShow {
-    background-color: aqua;
-}
-
-.showCharacters {
     flex-direction: column;
+    height: 18vh;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(to right bottom,
+            rgb(202, 183, 213),
+            rgba(35, 30, 78, 0.625));
+    position: relative;
+    backface-visibility: hidden;
 }
 
-.wand {
-    height: 21em;
-    width: 20em;
-    display: flex;
+.header-title {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
-.card {
-    background-color: #cab7d5;
+.header-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    animation: moveInRight 1s ease-out;
 }
 
-.information {
-    background-color: #cab7d5;
+.home {
+    height: 80vh;
+    color: #fff;
+    background-image: linear-gradient(to right bottom,
+            rgba(202, 183, 213, 0.8),
+            rgba(35, 30, 78, 0.661)),
+        url(Img/castillo.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.contenedor {
-    padding: 60px;
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-}
-
-.titulo {
-    color: #231E4E;
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    margin-bottom: 60px;
 }
 
-header {
+.heading-home-first {
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.btn-heading-home {
+    display: block;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.btn:link,
+.btn:visited {
+    /*Pseudo clase*/
+    background-color: #fff;
+    color: #10141B;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    /*Pseudo elemento es un hijo de btn*/
+    content: "";
+    display: inline-block;
+    height: 100%;
     width: 100%;
-    height: 600px; 
-    background: #654ea3;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(336, 60%, 81%, 0.596), hsla(256, 35%, 47%, 0.603));
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-image: url(Img/Imagen\ HarryAmigos.jpg);
-
-
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
 }
 
- 
+.btn-heading-home::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    /*Pseudo elemento posterior que se verá solo cuando el botón ha sido seleccionado*/
+    transform: scaleX(1.2) scaleY(1.2);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 0.5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+.card {/*Sección de JS para mostrar información de personaje*/
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wand {/*Imagen que acompaña información de personaje*/
+    height: 15em;
+    width: 15em;
+}
+
+#informationCharacters{
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.information {/*Div para mostrar complementaria*/
+    display: relative;
+    background-color: #cab7d5;
+    width: 50%;
+    font-weight: 300;
+    font-size: 18px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 15px;
+    transition: all 6s;
+}
+
+.name-characters {/*H3 nombre de los personajes*/
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #10141B;
+}
+
+.buttonShow {/*Botón para mostrar información complementaria*/
+    display: inline-block;
+    font-family: 'Kodchasan', sans-serif;
+    color: #10141B;
+    background-color: linear-gradient(to right bottom,
+            #cab7d5,
+            rgb(35, 30, 78));
+    border: none;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    transition: all .2s;
+    text-align: center;
+    width: 70px;
+    padding: 5px;
+    margin-left: 28%;
+}
+
+.showCharacters{
+    display: flex;
+}
+
+.showCharacters {/*Sección de HTML para mostrar información de personaje*/
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.organize-section{
+    display: flex;
+    height: 80%;
+    background-color: red;
+}
+
+.fun-facts{
+    display: flex;
+    height: 80%;
+    background-color: red;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #10141B;
+    position: relative;
+}
+
+.footer-names {
+    color: #fff;
+    position: absolute;
+    left: 40px;
+    font-weight: 300;
+    font-size: 1.6em;
+}
+
+.logo-footer {
+    position: absolute;
+    right: 40px;
+}
+
+.img-footer {
+    height: 68px;
+}
+
 @media only screen and (max-width: 576px) {
-    body {
-        background-color: #90ee90;
-    }
-    .information{
-        display: flex;
+    .logo-box {
         position: absolute;
+        top: 20px;
+        left: 40px;
+    }
+
+    .logo {
+        height: 68px;
     }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-    body {
-        background-color: #ffe4b5;
+    .logo-box {
+        position: absolute;
+        top: 15px;
+        left: 40px;
     }
-  
 
-
+    .logo {
+        height: 78px;
     }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
-    body {
-        background-color: #b0e0e6; 
+    .logo-box {
+        position: absolute;
+        top: 10px;
+        left: 40px;
+    }
 
+    .logo {
+        height: 100px;
+    }
+}
 
+@keyframes moveInLeft {
+
+    /*Secuencia de animación por punto de trayectoria*/
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 
