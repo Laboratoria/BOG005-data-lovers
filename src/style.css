@@ -183,6 +183,8 @@ button img {
 .card {/*Sección de JS para mostrar información de personaje*/
     background-color: #fff;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wand {/*Imagen que acompaña información de personaje*/
@@ -218,8 +220,10 @@ button img {
     letter-spacing: 1px;
     border-radius: 100px;
     transition: all .2s;
+    text-align: center;
+    width: 70px;
     padding: 5px;
-    margin: 5px;
+    margin-left: 28%;
 }
 
 .showCharacters {/*Sección de HTML para mostrar información de personaje*/
