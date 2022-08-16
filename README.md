@@ -1,5 +1,5 @@
 # Data Lovers
-# juegos olimpicos
+# juegos olimpicos Rio 2016
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
