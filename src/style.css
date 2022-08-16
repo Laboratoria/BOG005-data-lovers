@@ -14,7 +14,7 @@
 }
 
 html {
-    display: flex;
+    display: block;
 }
 
 body {
@@ -204,6 +204,10 @@ body {
     margin-left: 28%;
 }
 
+.showCharacters{
+    display: flex;
+}
+
 .showCharacters {/*Sección de HTML para mostrar información de personaje*/
     display: none;
     flex-wrap: wrap;
@@ -212,9 +216,14 @@ body {
 }
 
 .organize-section{
-    display: none;
+    display: flex;
     height: 80%;
-    padding: 1%;
+    background-color: red;
+}
+
+.fun-facts{
+    display: flex;
+    height: 80%;
     background-color: red;
 }
 
