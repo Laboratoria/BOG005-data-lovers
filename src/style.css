@@ -105,8 +105,8 @@
     font-size: 0.9em;
     margin: 1vw;
   }
-  #busquedaPorDeporte {
-  }
+  /* #busquedaPorDeporte {
+  } */
 
   .btnInicio {
     margin-bottom:0.1px;
@@ -189,6 +189,7 @@ footer{
 }
 
 footer, img{
-  margin-left: 40
+  margin-left: 40vw;
+  color: white;
 }
 }

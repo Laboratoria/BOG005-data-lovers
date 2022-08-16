@@ -1,6 +1,4 @@
 import { filterData } from "./data.js";
-import athletes from "./data/athletes/athletes.js";
-// import data from './data/lol/lol.js';
 import data from "./data/athletes/athletes.js";
 
 
@@ -14,7 +12,7 @@ let listAthletesInfo = document.getElementById("contenedorTarjetas");
 let buttonRefresh = document.getElementById("btnLimpiar");
 
 
-console.log(data);
+// console.log(data);
 
 //crear opciones para seleccionar el país
 function showOptionsSelect() {
@@ -119,6 +117,7 @@ function showAthletesBySport(e) {
 
   let resultSport = filterData(data, "sport", selectSport);
   if (selectSport !== "") {
+    document.querySelector('#selectOrder').style.visibility="visible";
     let cabezera = document.createElement("td");
     cabezera.style.textAlign = "center";
     cabezera.style.width = "90vw";
@@ -127,8 +126,8 @@ function showAthletesBySport(e) {
     }`.toUpperCase();
     listAthletesInfo.appendChild(cabezera);
 
-    let orderAlphabetic = document.createElement("select");
-  }
+  //   let orderAlphabetic = document.createElement("select");
+  // }
 
   console.log(resultSport);
   let flag = 0;
@@ -169,6 +168,7 @@ function showAthletesBySport(e) {
     flag++;
   });
 };
+};
 
 function showAthletesByTeam(e) {
   e.target.removeEventListener(e.type, showAthletesByTeam);
@@ -183,9 +183,6 @@ function showAthletesByTeam(e) {
     }`.toUpperCase();
     listAthletesInfo.appendChild(title);
   }
-
-
-
   console.log(resultTeam);
   let flag = 0;
   let limit = 1;
@@ -238,12 +235,17 @@ let btn1 = document.getElementById("btn1");
 function shangePage() {
   document.getElementById("page1").style.display = "none";
   document.getElementById("page2").style.display = "inline";
+document.querySelector('#selectOrder').style.visibility="visible";
+
 }
 
 let btnInicio = document.getElementById("btnInicio");
+
 function backPage1() {
   document.getElementById("page1").style.display = "inline";
   document.getElementById("page2").style.display = "none";
+  document.getElementById("btnInicio").style.visibility("hidden")
+
 }
 
 //REFRESH SEARCH
@@ -256,13 +258,14 @@ function refresh() {
   document.getElementById("btnBuscar").addEventListener("click", showAthletesByMedal);
   document.getElementById("btnBuscar").addEventListener("click", showAthletesBySport);
   document.getElementById("btnBuscar").addEventListener("click", showAthletesByTeam);
+  document.querySelector('#selectOrder').style.visibility="none";
 };
+
 buttonRefresh.addEventListener("click", refresh);
 document.getElementById("btnBuscar").addEventListener("click", showAthletesByTeam);
 btn1.addEventListener("click", shangePage);
 btnInicio.addEventListener("click", backPage1);
 document.getElementById("btnBuscar").addEventListener("click", showAthletesByMedal);
-
 document.getElementById("btnBuscar").addEventListener("click", showAthletesBySport);
 
 
