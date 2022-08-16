@@ -33,9 +33,9 @@ header {
     justify-content: center;
     width: 100%;
     min-width: 320px;
-    /*Tamaño más pequeño en dispositivos moviles*/
-    height: 334px;
-    text-align: center;
+Tamaño más pequeño en dispositivos moviles
+height: 334px;
+text-align: center;
 }
 
 header img {
@@ -79,7 +79,7 @@ button img {
     background-color: aqua;
 }
 
-.showCharacters{
+.showCharacters {
     flex-direction: column;
 }
 
@@ -93,10 +93,39 @@ button img {
     background-color: #cab7d5;
 }
 
-.information{
+.information {
     background-color: #cab7d5;
 }
 
+.contenedor {
+    padding: 60px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+}
+
+.titulo {
+    color: #231E4E;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header {
+    width: 100%;
+    height: 600px; 
+    background: #654ea3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(336, 60%, 81%, 0.596), hsla(256, 35%, 47%, 0.603));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url(Img/Imagen\ HarryAmigos.jpg);
+
+
+}
+
+ 
 @media only screen and (max-width: 576px) {
     body {
         background-color: #90ee90;
@@ -111,10 +140,15 @@ button img {
     body {
         background-color: #ffe4b5;
     }
+  
+
+
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
     body {
-        background-color: #b0e0e6;
-    }
-}
+        background-color: #b0e0e6; 
+
+
+
