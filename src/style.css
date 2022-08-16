@@ -10,6 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 html {
@@ -94,7 +95,6 @@ body {
 .btn:link,
 .btn:visited {
     /*Pseudo clase*/
-    text-decoration: none;
     background-color: #fff;
     color: #10141B;
     padding: 15px 40px;
@@ -143,43 +143,6 @@ body {
     animation-fill-mode: backwards;
 }
 
-/* .sect-1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: auto;
-    width: 90%;
-    min-width: 288px;
-    max-width: 900px;
-    height: 218px;
-    margin-top: 50px;
-}
-
-.sect-1 {
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    align-items: center;
-}
-
-.sect-1 h1 {
-    width: 75%;
-    height: 95%;
-    background: #cab7d5;
-    text-align: center;
-    margin: 0;
-    padding: 1.5em 1.5em 1.5em 1.5em;
-    border-radius: 50% 20% / 10% 40%;
-}
-
-button img {
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    width: 160px;
-    height: 168px;
-}*/
 .card {/*Sección de JS para mostrar información de personaje*/
     background-color: #fff;
     display: flex;
@@ -192,12 +155,27 @@ button img {
     width: 15em;
 }
 
-.information {
-    display: absolute;
+#informationCharacters{
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.information {/*Div para mostrar complementaria*/
+    display: relative;
     background-color: #cab7d5;
     width: 50%;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 18px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 15px;
+    transition: all 6s;
 }
 
 .name-characters {/*H3 nombre de los personajes*/
@@ -227,11 +205,17 @@ button img {
 }
 
 .showCharacters {/*Sección de HTML para mostrar información de personaje*/
-    display: flex;
-    flex-wrap: row;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     color: #fff;
+}
+
+.organize-section{
+    display: none;
+    height: 80%;
+    padding: 1%;
+    background-color: red;
 }
 
 .footer-1 {
@@ -264,11 +248,6 @@ button img {
 }
 
 @media only screen and (max-width: 576px) {
-    body {
-        margin: 0 auto;
-        padding: 0 5%;
-    }
-
     .logo-box {
         position: absolute;
         top: 20px;
@@ -278,19 +257,9 @@ button img {
     .logo {
         height: 68px;
     }
-
-    .information {/*Div para mostrar complementaria*/
-        display: flex;
-        position: absolute;
-    }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-    body {
-        margin: 0 auto;
-        padding: 0 5%;
-    }
-
     .logo-box {
         position: absolute;
         top: 15px;
@@ -303,11 +272,6 @@ button img {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1400px) {
-    body {
-        margin: 0 auto;
-        padding: 0 5%;
-    }
-
     .logo-box {
         position: absolute;
         top: 10px;
