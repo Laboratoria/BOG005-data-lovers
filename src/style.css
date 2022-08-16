@@ -1,4 +1,4 @@
-body{
+body {
     height: auto;
     width: auto;
     display: flex;
@@ -18,31 +18,32 @@ body{
 .containerMov {
     width: 70%;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    }
-
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content:left;
-    padding: 10px;  
 }
 
-.imgLogo{
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 10px;
+    max-width: 350px;
+}
+
+.imgLogo {
     max-width: 150%;
     height: auto;
     justify-content: left;
 }
 
-#buttons{
+#buttons {
     color: #f8f8f8;
     padding: 10%;
     margin-top: -7%;
 }
 
-.btns{
+.btns {
     display: flex;
     width: 70%;
     height: 12%;
@@ -55,13 +56,14 @@ header{
     border-color: white;
     margin-top: 10px;
     background-color: rgb(220, 61, 170);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
+
 .btns:hover:hover {
     background-color: rgb(86, 3, 99);
 }
 
-#peliculas  {
+#peliculas {
     color: rgb(86, 3, 99);
     display: flex;
     flex-direction: row;
@@ -73,7 +75,7 @@ header{
     padding: 5px;
 }
 
-h1{
+h1 {
     font-size: 25px;
 }
 
@@ -91,6 +93,24 @@ h1{
     margin: 1% auto;
     padding: 1em 1em 3em;
     border-radius: 8%;
-    background: #f8f8f8;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
+    background: #e6d7f1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.24);
+    font-size: 13px;
+    font-family: 'Lucida Sans';
+    /* backface-visibility: hidden;
+    overflow: hidden;
+    position: relative; */
 }
+
+/* .cardBack{
+    transform: perspective(600px) rotateY(0 deg);
+    background: blueviolet;
+    padding: 15px;
+    color:#f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+} */

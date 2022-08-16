@@ -18,7 +18,12 @@ function printMovies(movies) {
         img.classList.add("imgMovie");
         listMovie.appendChild(newLabel);
         newLabel.appendChild(img);
-        newLabel.innerHTML += ` ${film.title} <br> ${film.release_date} <br> ${film.rt_score}`;
+        newLabel.innerHTML += `Title: ${film.title} <br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}`;
+        // const card = document.createElement("li");
+        // card.classList.add("cardBack");
+        // const cardBack = document.createTextNode(film.description);
+        // listMovie.appendChild(cardBack)
+
     });
 }
 printMovies(films);
@@ -29,8 +34,8 @@ btnOrderAsc.addEventListener("click", printOrderAsc);
 
 function printOrderAsc() {
     const order = utilities.sortData(films, 'title', 'ascendente');
-    printMovies(order);;
-};
+    printMovies(order);
+}
 
 const btnOrderDes = document.getElementById("orderDesc");
 btnOrderDes.addEventListener("click", printOrderDes);
@@ -38,16 +43,16 @@ btnOrderDes.addEventListener("click", printOrderDes);
 function printOrderDes() {
     const orderDesc = utilities.sortData(films, 'title', 'descendente');
     printMovies(orderDesc);
-};
+}
 
 
 const btnOrderByScore = document.getElementById("orderByScore");
 btnOrderByScore.addEventListener("click", printOrderByScore);
 
 function printOrderByScore() {
-    const orderScore = utilities.sortData(films, 'rt_score', 'descendente');
+    const orderScore = utilities.filterData(films);
     printMovies(orderScore);
-};
+}
 
 
 
