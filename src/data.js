@@ -24,7 +24,8 @@ const utilities = {
       }
 
     });
-    return result; 
+    let newresult = result.slice(0, 10);
+    return newresult;
   },
  };
 
