@@ -18,12 +18,7 @@ function printMovies(movies) {
         img.classList.add("imgMovie");
         listMovie.appendChild(newLabel);
         newLabel.appendChild(img);
-        newLabel.innerHTML += `Title: ${film.title} <br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}`;
-        // const card = document.createElement("li");
-        // card.classList.add("cardBack");
-        // const cardBack = document.createTextNode(film.description);
-        // listMovie.appendChild(cardBack)
-
+        newLabel.innerHTML += `${film.title} <br><br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}/100`;
     });
 }
 printMovies(films);
@@ -53,8 +48,6 @@ function printOrderByScore() {
     const orderScore = utilities.filterData(films);
     printMovies(orderScore);
 }
-
-
 
 
 
