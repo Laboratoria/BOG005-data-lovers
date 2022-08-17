@@ -1,5 +1,5 @@
 import data from "./data/harrypotter/data.js";
-import {sortSpecies} from "./data.js"
+import {sortName} from "./data.js"
 
 //Mostrar sección a través de botón
 
@@ -31,6 +31,11 @@ function showAllCharacters(data) {
 }
 showAllCharacters(allCharacters);
 
+document.getElementById("pruebaOrdenar").addEventListener("click",() =>{
+  console.log('ksjhaskhdksahd', sortName(allCharacters))
+  showAllCharacters(sortName(allCharacters))
+})
+
 const btnVer = document.querySelectorAll(".buttonShow")
 const information = document.querySelector("#informationCharacters")
 btnVer.forEach((button) => {
@@ -46,51 +51,5 @@ btnVer.forEach((button) => {
 })
 
 
-document.getElementById("pruebaOrdenar").addEventListener("click",() =>{
-  console.log('ksjhaskhdksahd', sortSpecies(allCharacters))
-  showAllCharacters(sortSpecies(allCharacters))
-})
-/* const content2 = document.querySelector("#sortCharacters")
-
-function sortAllCharacters() {
-  allCharacters.forEach.sort((
-    (element, i) =>
-    //Template string
-    (content2.innerHTML +=`<section class="card">
-    <ul><img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">
-    <br>
-    <h3 class="name-characters">${element.name}</h3>
-    <h4 class="name-characters">${element.species}</h4>
-    </ul>
-  </section>`)
-    
-    //Interpolacion de variables
-  ));
-console.log(sortAllCharacters)
-  }
-sortAllCharacters(); */
 
 
-
-
-
-
-
-/* function sortAllCharacters(){
-let salida = "";
-for (let i = 0; i < allCharacters.length; i++){
-let species = (allCharacters[i].species)
- salida = species.sort()
-  };
-  
-}
-console.log(salida) */
-
-
-/* let salida = "";
-console.log(species)
-
-allCharacters.forEach(sortAllCharacters)
-
-function sortAllCharacters ()
- */

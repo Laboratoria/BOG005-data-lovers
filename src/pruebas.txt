@@ -13,6 +13,46 @@ HTML
     </section> -->
 
 JS
+17/08/2022
+
+/* const content2 = document.querySelector("#sortCharacters")
+
+function sortAllCharacters() {
+  allCharacters.forEach.sort((
+    (element, i) =>
+    //Template string
+    (content2.innerHTML +=`<section class="card">
+    <ul><img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">
+    <br>
+    <h3 class="name-characters">${element.name}</h3>
+    <h4 class="name-characters">${element.species}</h4>
+    </ul>
+  </section>`)
+
+    //Interpolacion de variables
+  ));
+console.log(sortAllCharacters)
+  }
+sortAllCharacters(); */
+
+/* function sortAllCharacters(){
+let salida = "";
+for (let i = 0; i < allCharacters.length; i++){
+let species = (allCharacters[i].species)
+ salida = species.sort()
+  };
+
+}
+console.log(salida) */
+
+
+/* let salida = "";
+console.log(species)
+
+allCharacters.forEach(sortAllCharacters)
+
+function sortAllCharacters ()
+ */
 
 12/08/2022
 
