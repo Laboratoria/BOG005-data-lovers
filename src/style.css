@@ -1,3 +1,194 @@
+html {
+  background: url(IMAGENES/LOGO2.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  width: 100%;
+  height: 500px;
+}
+h1 {
+  font-size: 4vw;
+  margin-left: 2vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(181, 121, 9);
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 2vw;
+}
+
+.logoImagen {
+  width: 6, 4vw;
+  height: 5vw;
+  margin-left: 3vw;
+}
+
+.btn1 {
+  margin-left: 7vw;
+  margin-right: 3vw;
+  font-size: 2vw;
+  border-radius: 5px;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
+  cursor: pointer;
+  height: 7vh;
+  width: 17vw;
+  display: flex;
+}
+
+/*Buscador*/
+.selectBusqueda{
+
+text-align: left;
+display: inline-flex;
+flex-wrap: wrap;
+justify-content: left;
+width: 100%;
+
+
+  background-color: #55c159;
+
+}
+
+article .busqueda {
+  font-size: 18 em;
+}
+.selectBusqueda input,
+select {
+  padding: 1em;
+  border-radius: 3px;
+  border: 1px solid rgb(103, 190, 161);
+  cursor: pointer;
+  font-size: 00.9em;
+  color: gray;
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.contenedorTarjetas .order {
+  justify-content: end;
+}
+
+.btnBuscar {
+  padding: 10px;
+  border-radius: 1px;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
+  cursor: pointer;
+  font-size: 0,5em;
+  margin: 1vw;
+
+}
+
+.btnBuscar:active {
+  transform: scale(1.1);
+}
+
+.btnLimpiar{
+  margin-bottom: 0.5em;
+  padding: 0.7em;
+  border-radius: 1px;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin: 1vw;
+}
+/* #busquedaPorDeporte {
+} */
+
+.btnInicio {
+  margin-bottom:0.1px;
+  padding: 0,1px;
+  color: honeydew;
+  cursor: pointer;
+  margin: 1vw;
+  width: 10vw;
+}
+
+.encabezado {
+  background-color: rgb(179, 255, 0);
+}
+#contenedorTarjetas {
+  background-color: rgb(255, 255, 255);
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  justify-content: center;
+  margin-top: 2vw;
+}
+.namesList {
+  margin-top: 2vh;
+  font-size: 1rem;
+  margin-left: 6vw;
+  margin-right: 100vw;
+  background-color: #c4cbcf;
+  width: 18vw;
+  border: 1px solid rgb(103, 190, 161);
+  background: rgb(83, 128, 83);
+  color: honeydew;
+}
+
+.fila {
+  margin-bottom: 2vw;
+  margin-top: 3vw;
+  margin-right: 4vw;
+  margin-left: 2vw;
+  justify-content: center;
+  width: 15vw;
+  height: 16vw;
+}
+tr {
+  margin-top: 2vw;
+}
+.fila tr {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1, 5vw;
+  padding-bottom: 4vw;
+}
+.container {
+  display: inline;
+}
+
+/*PAGINAS*/
+.page1 {
+  display: inline;
+}
+.page2 {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+.optionsSelect {
+  height: 50%;
+}
+
+footer{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+footer, img{
+margin-left: 40vw;
+color: white;
+}
+
 @media (max-width: 765px) {
   html {
     background-image: url(IMAGENES/Olimpiadi.jpg);
@@ -23,7 +214,7 @@
 
   .logoImagen {
     width: 6, 4vw;
-    height: 5vw;
+    height: 10vw;
     margin-left: 3vw;
   }
 
@@ -50,7 +241,8 @@
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: left;
-  width: 100%;
+  width: 380px;
+  height: 100px;
 
 
     background-color: #55c159;
@@ -58,17 +250,17 @@
   }
 
   article .busqueda {
-    font-size: 18 em;
+    font-size: 10 em;
   }
   .selectBusqueda input,
   select {
-    padding: 1em;
-    border-radius: 3px;
-    border: 1px solid rgb(103, 190, 161);
+    padding: 0.1em;
+    border-radius: 0.2em;
+    border: 0.1em solid rgb(103, 190, 161);
     cursor: pointer;
     font-size: 00.9em;
     color: gray;
-    margin: 1vw;
+    margin: 0.3em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -79,15 +271,15 @@
   }
 
   .btnBuscar {
-    padding: 0,2em;
-    border-radius: 2px;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 1px;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
     cursor: pointer;
-    font-size: 0,8em;
+    font-size: 0.5em;
     margin: 1vw;
-
 }
 
   .btnBuscar:active {
@@ -97,12 +289,12 @@
   .btnLimpiar{
     margin-bottom: 1em;
     padding: 1em;
-    border-radius: 2px;
+    border-radius: 1px;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.5em;
     margin: 1vw;
   }
   /* #busquedaPorDeporte {
@@ -127,15 +319,15 @@
     margin-right: auto;
     display: inline-block;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: 10px;
   }
   .namesList {
     margin-top: 2vh;
     font-size: 1rem;
-    margin-left: 6vw;
+    margin-left: 100vw;
     margin-right: 100vw;
     background-color: #c4cbcf;
-    width: 18vw;
+    width: 80vw;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
@@ -143,12 +335,12 @@
 
   .fila {
     margin-bottom: 2vw;
-    margin-top: 3vw;
+    margin-top: 7vw;
     margin-right: 4vw;
     margin-left: 2vw;
     justify-content: center;
-    width: 15vw;
-    height: 16vw;
+    width: 70vw;
+    height: 20vw;
   }
   tr {
     margin-top: 2vw;
@@ -192,4 +384,5 @@ footer, img{
   margin-left: 40vw;
   color: white;
 }
+
 }
