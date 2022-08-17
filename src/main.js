@@ -117,7 +117,7 @@ function showAthletesBySport(e) {
 
   let resultSport = filterData(data, "sport", selectSport);
   if (selectSport !== "") {
-    document.querySelector('#selectOrder').style.visibility="visible";
+    //document.querySelector('#selectOrder').style.visibility="visible";
     let cabezera = document.createElement("td");
     cabezera.style.textAlign = "center";
     cabezera.style.width = "90vw";
@@ -183,7 +183,7 @@ function showAthletesByTeam(e) {
     }`.toUpperCase();
     listAthletesInfo.appendChild(title);
   }
-  console.log(resultTeam);
+  //console.log(resultTeam);
   let flag = 0;
   let limit = 1;
   let contenedor;
@@ -264,7 +264,6 @@ function refresh() {
 buttonRefresh.addEventListener("click", refresh);
 document.getElementById("btnBuscar").addEventListener("click", showAthletesByTeam);
 btn1.addEventListener("click", shangePage);
-btnInicio.addEventListener("click", backPage1);
 document.getElementById("btnBuscar").addEventListener("click", showAthletesByMedal);
 document.getElementById("btnBuscar").addEventListener("click", showAthletesBySport);
 
