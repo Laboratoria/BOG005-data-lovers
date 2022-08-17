@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none; /*subrayados*/
+    list-style: none; /*puntos listas*/
+    box-sizing: border-box; /*los elementos no se salgan de mi contenedor*/
+}
+
+nav {
+    background: #2fcdcd;
+    height: 80px; /*altura*/
+    width: 100%; /*ancho*/
+}
+
