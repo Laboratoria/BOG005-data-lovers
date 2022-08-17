@@ -1,5 +1,5 @@
-
-const  filterData = (data, tipofiltro, valor) => {
+const  filter =  {
+  filterData: function (data, tipofiltro, valor)  {
  // console.log(valor);
 
   let filtrado = [];
@@ -12,8 +12,8 @@ const  filterData = (data, tipofiltro, valor) => {
   });
 
     return filtrado;
+}
 };
 
 
-
-export{filterData}
+export{filter}

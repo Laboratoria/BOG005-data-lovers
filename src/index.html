@@ -12,45 +12,50 @@
     <header>
       <img class="logoImagen" src="IMAGENES/LOGO RIO1.png" alt="logo olimpiadas 2016">
       <h1>INFO OLIMPIADAS</h1>
-      <button id="btn1" class="btn1">Conoce más de los atletas</button>
+      <button id="btn1" class="btn1">Know Athletes</button>
     </header>
   </section>
 
   <section id="page2" class="page2">
     <header class="selectBusqueda" id="selectBusqueda">
-      <section class="filterByMedal" id="filterByMedal">
+      <article class="filterByMedal" id="filterByMedal">
  
         <input type="text" id="selectSearchByMedal" value="" placeholder="Search by medal">
-      </section>
-      <section class="busqueda" id="busquedaPorPais">
+      </article>
+      <article class="busqueda" id="busquedaPorPais">
         <select id="selectSearchByTeam">
           <option value=""> -Search by team - </option>
         </select>
-      </section>
-      <section class="busqueda" id="busquedaPorDeporte">
+      </article>
+      <article class="busqueda" id="busquedaPorDeporte">
         <select  id="selectSearchBySport">
           <option  value=""> -Search by sport - </option>
         </select>
-      </section>
+      </article>
 
       <button class="btnBuscar" id="btnBuscar">Buscar</button>
       <button class="btnLimpiar" type="" id="btnLimpiar">Refresh</button>
     </header>
 
+    <section class="container">
 
 
-    <article class="container">
-      <section  id="contenedorTarjetas" class="contenedorTarjetas">
-        <select class="order" name="Order" id="selectOrder">
+      <article  id="contenedorTarjetas" class="contenedorTarjetas">
+        <select id="selectOrder">
+          <option value=""> -Order - </option>
+        </select>
+        <!-- <select class="orderButton" name="Order" id="selectOrder">
           <option value="Order"> -Order- </option>
           <option value="Order">a-z</option>
           <option value="Order">z-a</option>
-        </select>
+        </select> -->
+      </article>
       </section>
-    </article>
+      <footer> </footer>
+
   </section>
 
- <footer>       <img class="btnInicio" id="btnInicio" src="IMAGENES/hogar.png" alt=""></footer>
+ 
   <script src="main.js" type="module"></script>
 </body>
 </html>

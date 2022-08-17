@@ -1,17 +1,18 @@
-import { filterData, anotherExample } from '../src/data.js';
-import data from './data/athletes/athletes.js';
+import { filter } from '../src/data.js';
+// import data from './data/athletes/athletes.js';
 
 
 
-describe('filterData', () => {
-  it('is a function', () => {
-    expect(typeof filterData).toBe('function');
+describe('filter', () => {
+  it('debería ser un objeto', () => {
+    expect(typeof filter).toBe('object');
   });
 
-  it('returns `filterData`', () => {
-    expect(filterData(data, "sport", "Taekwondo"  )).toBe('example');
-  });
+  describe('filter.filterData', () => {
+    it('debería ser una función', () => {
+      expect(typeof filter.filterData).toBe('function');
+    });
+
+
 });
-
-
-
+})
