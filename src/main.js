@@ -1,4 +1,5 @@
 import data from "./data/harrypotter/data.js";
+import {sortSpecies} from "./data.js"
 
 //Mostrar sección a través de botón
 
@@ -14,12 +15,12 @@ function changeBtnStyle(){
 const allCharacters = data.characters.slice(0, 21);
 const content = document.querySelector("#showCharacters");
 
-function showAllCharacters() {
-  allCharacters.forEach(
+function showAllCharacters(data) {
+  data.forEach(
     (element, i) =>
     //Template string
     (content.innerHTML +=`<section class="card">
-    <ul><img class="wand"src="Img/icons8-harry.png" alt="Imagen generica para personajes">
+    <ul><img class="wand"  src="Img/icons8-harry.png" alt="Imagen generica para personajes">
     <br>
     <h3 class="name-characters">${element.name}</h3>
     <button data-id=${i} class="btn buttonShow"> Ver +
@@ -28,7 +29,7 @@ function showAllCharacters() {
     //Interpolacion de variables
   );
 }
-showAllCharacters();
+showAllCharacters(allCharacters);
 
 const btnVer = document.querySelectorAll(".buttonShow")
 const information = document.querySelector("#informationCharacters")
@@ -45,3 +46,51 @@ btnVer.forEach((button) => {
 })
 
 
+document.getElementById("pruebaOrdenar").addEventListener("click",() =>{
+  console.log('ksjhaskhdksahd', sortSpecies(allCharacters))
+  showAllCharacters(sortSpecies(allCharacters))
+})
+/* const content2 = document.querySelector("#sortCharacters")
+
+function sortAllCharacters() {
+  allCharacters.forEach.sort((
+    (element, i) =>
+    //Template string
+    (content2.innerHTML +=`<section class="card">
+    <ul><img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">
+    <br>
+    <h3 class="name-characters">${element.name}</h3>
+    <h4 class="name-characters">${element.species}</h4>
+    </ul>
+  </section>`)
+    
+    //Interpolacion de variables
+  ));
+console.log(sortAllCharacters)
+  }
+sortAllCharacters(); */
+
+
+
+
+
+
+
+/* function sortAllCharacters(){
+let salida = "";
+for (let i = 0; i < allCharacters.length; i++){
+let species = (allCharacters[i].species)
+ salida = species.sort()
+  };
+  
+}
+console.log(salida) */
+
+
+/* let salida = "";
+console.log(species)
+
+allCharacters.forEach(sortAllCharacters)
+
+function sortAllCharacters ()
+ */
