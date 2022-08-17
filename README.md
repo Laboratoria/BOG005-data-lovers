@@ -17,7 +17,7 @@ Studio Ghibli es un estudio japonés de animación y es considerado como uno de 
 
 ## 2. Historias de usuario
 
-![.image](./imagenes/historia-de-usuario-1.PNG)
+![.image](./historia-de-usuario-1.PNG)
 
 ## 3. Diseño de la interfaz de usuario
 
