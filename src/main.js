@@ -18,7 +18,7 @@ function printMovies(movies) {
         img.classList.add("imgMovie");
         listMovie.appendChild(newLabel);
         newLabel.appendChild(img);
-        newLabel.innerHTML += `${film.title} <br><br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}/100`;
+        newLabel.innerHTML += `${film.title} <br><br> Director: ${film.director} <br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}`;
     });
 }
 printMovies(films);

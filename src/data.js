@@ -25,7 +25,7 @@ const utilities = {
   },
 
 filterData: function(data) {
-  const arrayFilter = data.filter(films => films.rt_score >= 94);
+  const arrayFilter = data.filter(films => films.rt_score > 95);
   return arrayFilter;
  },
 };
