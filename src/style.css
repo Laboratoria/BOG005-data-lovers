@@ -222,6 +222,16 @@ body {
     justify-content: space-between;
     color: #fff;
 }
+#sortCharacters{
+    display: flex;
+}
+
+#sortCharacters {/*Sección de HTML para mostrar información de personaje*/
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+}
 
 .organize-section{
     display: flex;
