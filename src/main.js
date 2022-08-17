@@ -128,17 +128,7 @@ function showAthletesBySport(e) {
 
   let resultSport = filter.filterData(data, "sport", selectSport);
   if (selectSport !== "") {
-    buttonOrder.style.visibility = "visible";
-    let optionOrder = document.createElement("option");
-    optionOrder.text = "a-z";
-    optionOrder.value = "a-z";
-    buttonOrder.appendChild(optionOrder);
-
-    let optionOrderReverse = document.createElement("option");
-    optionOrderReverse.text = "z-a";
-    optionOrderReverse.value = "z-a";
-    buttonOrder.appendChild(optionOrderReverse);
-
+    //document.querySelector('#selectOrder').style.visibility="visible";
     let cabezera = document.createElement("td");
     cabezera.style.textAlign = "center";
     cabezera.style.width = "90vw";
@@ -215,7 +205,7 @@ function showAthletesByTeam(e) {
     optionOrderReverse.value = "z-a";
     buttonOrder.appendChild(optionOrderReverse);
   }
-
+  //console.log(resultTeam);
   let flag = 0;
   let limit = 1;
   let contenedor;
@@ -298,6 +288,9 @@ document
   .getElementById("btnBuscar")
   .addEventListener("click", showAthletesByTeam);
 btn1.addEventListener("click", shangePage);
+document.getElementById("btnBuscar").addEventListener("click", showAthletesByMedal);
+document.getElementById("btnBuscar").addEventListener("click", showAthletesBySport);
+
 
 document
   .getElementById("btnBuscar")
