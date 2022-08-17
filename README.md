@@ -25,6 +25,8 @@ Studio Ghibli es un estudio japonés de animación y es considerado como uno de 
 
 #### Prototipo de alta fidelidad
 
+![.image] (./prototipo-alta-fidelidad-movil.PNG)
+
 ## 4. Testeos de usabilidad
 
 ## 5. Referencias
