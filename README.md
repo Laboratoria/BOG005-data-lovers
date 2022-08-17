@@ -13,11 +13,11 @@
 
 ## 1. Definición del producto
 
-
+Studio Ghibli es un estudio japonés de animación y es considerado como uno de los mejores estudios de animación del mundo. Nuestro producto es una interfaz que satisface las necesidades específicas de usuarios que desean **conocer más información sobre este estudio**, clasificando las películas, personajes, ubicaciones y vehículos.
 
 ## 2. Historias de usuario
 
-
+![.image](.imagenes/historia-de-usuario-1.PNG)
 
 ## 3. Diseño de la interfaz de usuario
 
