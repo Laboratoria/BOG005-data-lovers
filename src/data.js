@@ -1,3 +1,5 @@
+
+
 // estas funciones son de ejemplo
 //funcion ( export )
 export const words = (data) => {
@@ -20,3 +22,4 @@ return order
 //   return 'OMG';
 //  };
 //Data. nombre(funcion pura)
+
