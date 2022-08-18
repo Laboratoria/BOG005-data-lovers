@@ -1,5 +1,5 @@
 const utilities = {
-  sortData: function (data, sortBy = 'title', sortOrder ='ascendente') {
+  sortData: function (data, sortBy = 'title', sortOrder = 'ascendente') {
     const result = data.sort((a, b) => {
       let ma = a[sortBy].toUpperCase();
       let mb = b[sortBy].toUpperCase();
@@ -24,12 +24,22 @@ const utilities = {
     return result;
   },
 
-filterData: function(data) {
-  const arrayFilter = data.filter(films => films.rt_score > 95);
-  return arrayFilter;
- },
-};
-  
+  filterData: function (data) {
+    const arrayFilter = data.filter(films => films.rt_score > 95);
+    return arrayFilter;
+  },
+
+  curiousData: function(data) {
+    const listDirectors = data.map(film => film.director).filter(onlyUnique);
+    console.log(listDirectors);
+    return listDirectors;
+  },
+   
+}
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
 
 export default utilities;
 
