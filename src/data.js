@@ -12,7 +12,7 @@ export const words = (data) => {
     }
     return 1;
   });
-return order
+  return order
 
 };
 
