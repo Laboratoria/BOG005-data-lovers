@@ -1,7 +1,7 @@
 import { words } from './data.js'
 import data from './data/pokemon/pokemon.js';
 
-//nombres de cada pokemon//
+//funcion visualizar data en navegador//
 let pokemon = Object.values(data.pokemon);
 
 function visualizardata(datos) {
@@ -13,16 +13,19 @@ function visualizardata(datos) {
         contenedor.appendChild(infopokemon)
         infopokemon.innerHTML =
             `
-        <img src = "${imagenpokemon}">
+            <div class= "imagen"> 
+            <img src = "${imagenpokemon}">
+            
+            </div>
         <p> ${namepokemon}</p>
         
         `
+        
     }
 
     //console.log ( pokemon.data)
     console.log(words(pokemon))
 }
-
 
 
 window.addEventListener("load", visualizardata(pokemon))

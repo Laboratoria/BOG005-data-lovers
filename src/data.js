@@ -2,7 +2,7 @@
 //funcion ( export )
 export const words = (data) => {
   //return 'data';
-
+  //funcion ordenar nombres de la  data alfabeticamente
   let order = data.sort((a, b) => {
     if (a.name == b.name) {
       return 0;
@@ -12,7 +12,7 @@ export const words = (data) => {
     }
     return 1;
   });
-return order
+  return order
 
 };
 

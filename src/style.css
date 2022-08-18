@@ -1,21 +1,20 @@
-
 * {
     margin: 0;
     padding: auto;
     color: rgb(90, 148, 199);
-    background-color: black;
+  
 }
 
 
 
-.contenedor1 {
+/* /* .contenedor1 {
     background-color: rgb(210, 191, 191);
     width: 100%;
     margin: 20px auto 20px auto;
     padding: 10%;
-    float: left;
+    float: left; 
 
-}
+} */
 
 .contenedor {
     background-color: black;
@@ -47,7 +46,7 @@ div {
 .imagenes {
 
     text-align: left;
-    
+
 
 }
 
@@ -55,7 +54,7 @@ figure {
 
     text-align: center;
     margin-top: 5%;
- 
+
 
 }
 
@@ -63,9 +62,10 @@ figure.img {
 
     text-align: center;
     background-color: transparent;
- 
+
 
 }
+
 .buttonOrder {
 
     text-align: center;
@@ -144,7 +144,7 @@ figure.img {
     margin-inline: 30px;
     margin-left: 50px;
     margin-right: 50%;
-    
+
 
 }
 
@@ -180,19 +180,19 @@ figure.img {
     height: 40px;
     font-weight: bold;
     margin-inline: 30px;
-   
+
 
 }
 
 .orderselects {
 
-   display: flex;
-   margin: 0;
-   padding: 0%;
-   width: 33%;
-   font-size: 20px;
-   height:40px;
-   float: left;
+    display: flex;
+    margin: 0;
+    padding: 0%;
+    width: 33%;
+    font-size: 20px;
+    height: 40px;
+    float: left;
 
 }
 
@@ -203,20 +203,29 @@ figure.img {
     padding: 0%;
     width: 33%;
     font-size: 20px;
-    height:40px;
+    height: 40px;
     float: none;
- 
- }
 
- .damageSelects {
+}
+
+.damageSelects {
 
     display: flex;
     margin: 0;
     padding: 0;
     width: 33%;
     font-size: 20px;
-    height:40px;
+    height: 40px;
     float: none;
 
- 
- }
+}
+
+.imagen {
+    background-color:aliceblue;
+     border-radius:  100px;
+     width:max-content;
+     height: auto ;
+    ;
+    
+
+}
