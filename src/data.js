@@ -29,6 +29,7 @@ const functions = {
     const charactersFilter = data.filter(allCharacters => allCharacters.house === 'Gryffindor')
     return charactersFilter
   }
+
 }
 
 export default functions

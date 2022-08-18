@@ -12,7 +12,7 @@ function changeBtnStyle () {
 }
 
 // Función visualizar personajes
-const allCharacters = data.characters.slice(0, 40)
+const allCharacters = data.characters.slice(0, 60)
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters () {
