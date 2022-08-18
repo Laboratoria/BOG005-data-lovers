@@ -12,7 +12,7 @@ function changeBtnStyle () {
 }
 
 // Función visualizar personajes
-const allCharacters = data.characters.slice(0, 21)
+const allCharacters = data.characters.slice(0, 40)
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters (data) {
@@ -35,6 +35,7 @@ showAllCharacters(allCharacters)
 
 const btnVer = document.querySelectorAll('.buttonShow')
 const information = document.querySelector('#informationCharacters')
+
 btnVer.forEach((button) => {
   button.addEventListener('click', (event) => {
     const i = event.target.dataset.id

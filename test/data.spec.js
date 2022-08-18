@@ -1,23 +1,18 @@
-import { example, anotherExample } from '../src/data.js';
+import functions from '../src/data.js'
 
+describe('functions', () => {
+  it('should be an object', () => {
+    expect(typeof functions).toBe('object')
+  })
+})
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+describe('functions.sortName', () => {
+  it('should be a function', () => {
+    expect(typeof functions.sortName).toBe('function')
+  })
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+  it('returns `functions.sortName`', () => {
+    const mockData = [{ name: 'a' }, { name: 'c' }, { name: 'b' }, { name: 'd' }]
+    expect(functions.sortName(mockData)).toEqual([{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }])
+  })
+})

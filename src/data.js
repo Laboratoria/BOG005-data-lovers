@@ -1,6 +1,7 @@
+/* eslint-disable array-callback-return */
 const functions = {
   sortName: function (data, sortBy = 'name', sortOrder = 'ascendant') {
-    const result = data.sort((a, b) => {
+    const result = data.sort(function (a, b) {
       const ia = a[sortBy].toUpperCase()
       const ib = b[sortBy].toUpperCase()
       if (sortOrder === 'ascendant') {
@@ -23,6 +24,7 @@ const functions = {
     })
     return result
   }
+
 }
 
 export default functions
