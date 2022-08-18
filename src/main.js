@@ -59,3 +59,11 @@ function displayOrderFalling () {
   const orderFalling = functions.sortName(allCharacters, 'name', 'falling')
   showAllCharacters(orderFalling)
 }
+
+document.getElementById('btnHouseGry').addEventListener('click', filterHouseGry)
+
+function filterHouseGry () {
+  const gryFilterHouse = functions.sortFilter(allCharacters)
+  console.log(gryFilterHouse)
+  showAllCharacters(gryFilterHouse)
+}

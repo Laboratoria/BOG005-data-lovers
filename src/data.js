@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 const functions = {
   sortName: function (data, sortBy = 'name', sortOrder = 'ascendant') {
     const result = data.sort(function (a, b) {
@@ -22,8 +23,12 @@ const functions = {
       }
     })
     return result
-  }
+  },
 
+  sortFilter: function (data) {
+    const charactersFilter = data.filter(allCharacters => allCharacters.house === 'Gryffindor')
+    return charactersFilter
+  }
 }
 
 export default functions

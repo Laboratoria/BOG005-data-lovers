@@ -6,7 +6,7 @@
   <title>Harry Potter Lovers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <script src="main.js" type="module"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@100;200;300;400;500;700;900&display=swap"
@@ -17,9 +17,8 @@
   <a name="home-page"></a>
   <header>
     <div class="container">
-      <div class="logo-box">
-        <img class="logo" src="Img/logo_hp2.png" alt="Harry Potter Logo" />
-      </div>
+      <a href="#" class="logo"><img src="Img/logo_hp2.png" alt="Logo Harry Potter"></a>
+
       <h1>
         <span class="header-title"> Harry Potter</span>
       </h1>
@@ -28,11 +27,13 @@
       </h2>
 
       <nav class="nav">
-        <a href="#home-page">Home</a>
-        <a id="nav-characters" href="#characters-information">Personajes</a>
-        <a href="">Filtrar</a>
-        <a href="">Ordenar</a>
-        <a href="">Cálculo</a>
+        <ul>
+          <li><a href="#home-page">Home</a></li>
+          <li><a id="nav-characters" href="#characters-information">Personajes</a></li>
+          <li><a href="">Filtrar</a></li>
+          <li><a href="">Ordenar</a></li>
+          <li><a href="">Cálculo</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -129,6 +130,7 @@
     <a name="characters-information"></a>
     <button id="btnOrderAscent" class="btn">Ordenar A/Z</button>
     <button id="btnOrderFalling" class="btn">Ordenar Z/A</button>
+    <button id="btnHouseGry">Casa Gryffindor</button>
 
     <section id="showCharacters" class="showCharacters">
       <div id="informationCharacters"></div>
