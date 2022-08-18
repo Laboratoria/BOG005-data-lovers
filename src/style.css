@@ -1,3 +1,13 @@
+
+* {
+    margin: 0;
+    padding: auto;
+    color: rgb(90, 148, 199);
+    background-color: black;
+}
+
+
+
 .contenedor1 {
     background-color: rgb(210, 191, 191);
     width: 100%;
@@ -6,8 +16,9 @@
     float: left;
 
 }
+
 .contenedor {
-    background-color: rgb(245, 211, 21);
+    background-color: black;
     width: 100%;
     margin: 20px auto 20px auto;
     padding: 10%;
@@ -16,11 +27,196 @@
 }
 
 div {
-    
+
     width: 33.33%;
     float: left;
     ;
 
 }
 
+.names {
 
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(250, 233, 1);
+    font-size: "30%";
+    text-align: justify;
+    font-weight: bold;
+    text-transform: capitalize
+}
+
+.imagenes {
+
+    text-align: left;
+    
+
+}
+
+figure {
+
+    text-align: center;
+    margin-top: 5%;
+ 
+
+}
+
+figure.img {
+
+    text-align: center;
+    background-color: transparent;
+ 
+
+}
+.buttonOrder {
+
+    text-align: center;
+    color: rgb(8, 8, 8);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 40px;
+    background: rgb(250, 233, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-inline: 100px;
+    cursor: pointer;
+
+}
+
+.buttonFil {
+
+    text-align: center;
+    color: rgb(8, 8, 8);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 40px;
+    background: rgb(250, 233, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-inline: 100px;
+    cursor: pointer;
+
+
+}
+
+.buttonCal {
+
+    text-align: center;
+    color: rgb(8, 8, 8);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background: rgb(250, 233, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 40px;
+    font-weight: bold;
+    margin-inline: 100px;
+    cursor: pointer;
+
+}
+
+.select {
+
+    margin-inline: 50px;
+    margin-top: 5%;
+
+}
+
+#orderPokemon {
+
+    text-align: center;
+    background: white;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 40px;
+    font-weight: bold;
+    margin-inline: 30px;
+    margin-left: 50px;
+    margin-right: 50%;
+    
+
+}
+
+#typesPokemon {
+
+    text-align: center;
+    background: white;
+    color: black;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 40px;
+    font-weight: bold;
+    margin-inline: 30px;
+
+
+}
+
+#damagePokemon {
+
+    text-align: center;
+    background: white;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    height: 40px;
+    font-weight: bold;
+    margin-inline: 30px;
+   
+
+}
+
+.orderselects {
+
+   display: flex;
+   margin: 0;
+   padding: 0%;
+   width: 33%;
+   font-size: 20px;
+   height:40px;
+   float: left;
+
+}
+
+.typesSelects {
+
+    display: flex;
+    margin: auto;
+    padding: 0%;
+    width: 33%;
+    font-size: 20px;
+    height:40px;
+    float: none;
+ 
+ }
+
+ .damageSelects {
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 33%;
+    font-size: 20px;
+    height:40px;
+    float: none;
+
+ 
+ }

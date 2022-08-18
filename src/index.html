@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
 <body>
   <div id="root"></div>
@@ -15,34 +19,68 @@
 </html>
 
 <head>
-  
+
+
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <main>
-    <div class="contenedor1" > 
-      
 
-      <button>Ordenar</button>
-      <br>
-      <input>A-Z</input>
-      <br>
-      <button>Filtrar</button>
-      <br>
-      <input>ClASES DE POKEMON</input>
-      <br>
-      <button>Calcular</button>
-      <input>DAÑO QUE HAGA A CADA POKEMON</input>
-    </div>
-    <div class="contenedor"></div>
-
-
-
-  </main>
+  <div id="root"></div>
   <script src="main.js" type="module"></script>
+</body>
+
+</html>
+
+<head>
+  <figure>
+    <img src="img-datalovers/logo1.png" alt="Logo de Pokemon">
+  </figure>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<div class="orderselects">
+  <select name="orderPokemon" id="orderPokemon">
+    <option value="Order Names">A-Z</option>
+    <option value="Order Names">Z-A</option>
+  </select>
+</div>
+<div class="typesSelect">
+  <select name="TypesPokemon" id="typesPokemon" placeholder="Tipos de Pokemones">
+    <option value="Tipos de pokemon">Agua</option>
+    <option value="Tipos de pokemon">Aire</option>
+    <option value="Tipos de pokemon">Fuego</option>
+    <option value="Tipos de pokemon">Tierra</option>
+
+  </select>
+</div>
+<div class="damageSelect">
+  <select name="dañoPokemon" id="damagePokemon">
+    <option value="Daño de pokemones">Pokemon capaz de hacer mayor daño</option>
+    <option value="Daño de pokemones"> Pokemon capaz de hacer menor daño</option>
+  </select>
+</div>
+</div>
+
+<body>
+  <main>
+ 
+    <div class="contenOrder"><button class="buttonOrder">Ordenar</button></div>
+    <div class="contenFil"><button class="buttonFil">Filtrar</button></div>
+    <div class="contenCal"><button class="buttonCal">Calcular</button></div>
+
+    <main>
+
+
+
+
+
+      <div class="contenedor"></div>
+    </main>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>

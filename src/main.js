@@ -4,7 +4,7 @@ import data from './data/pokemon/pokemon.js';
 //nombres de cada pokemon//
 let pokemon = Object.values(data.pokemon);
 
-function visualizardata(pokemon) {
+function visualizardata(datos) {
     for (let i = 0; i < pokemon.length; i++) {
         let namepokemon = pokemon[i].name;
         let imagenpokemon = pokemon[i].img;
@@ -19,14 +19,14 @@ function visualizardata(pokemon) {
         `
     }
 
-   // words(pokemon.name)
+    //console.log ( pokemon.data)
     console.log(words(pokemon))
-
 }
 
 
 
 window.addEventListener("load", visualizardata(pokemon))
+
 
 //ESTO ES UN OBJETO  const data = {
 //     pokemon:{

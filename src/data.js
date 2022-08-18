@@ -12,9 +12,11 @@ export const words = (data) => {
     }
     return 1;
   });
-  return order
+return order
 
 };
+
+
 
 // export const anotherExample = () => {
 //   return 'OMG';
