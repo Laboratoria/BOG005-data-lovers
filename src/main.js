@@ -46,23 +46,6 @@ function information (event) {
   showAllCharacters(information)
 } */
 
-const btnVer = document.querySelectorAll('.buttonShow')
-const information = document.querySelector('#informationCharacters')
-
-btnVer.forEach((button) => {
-  button.addEventListener('click', (event) => {
-    const i = event.target.dataset.id
-    information.innerHTML = `<div class="information">
-  <strong>Nombre:</strong> ${allCharacters[i].name ? allCharacters[i].name : 'Sin información'}
-  <br> <strong>Fecha de Nacimiento:</strong> ${allCharacters[i].birth ? allCharacters[i].birth : 'Sin información'}
-  <br> <strong>Casa de Hogwarts:</strong> ${allCharacters[i].house ? allCharacters[i].house : 'Sin información'}
-  <br> <strong>Tipo de Mago:</strong> ${allCharacters[i].species ? allCharacters[i].species : 'Sin información'}
-  </div>`
-  })
-})
-
-showAllCharacters(information)
-
 document.getElementById('btnOrderAscent').addEventListener('click', displayOrderAscent)
 
 function displayOrderAscent () {
