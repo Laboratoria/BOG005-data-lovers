@@ -227,6 +227,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     color: #fff;
+    z-index: 200;
 }
 
 .fun-facts {

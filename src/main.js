@@ -8,16 +8,16 @@ btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
 function changeBtnStyle () {
   document.getElementById('showCharacters').style.display = 'none'
-  document.getElementById('showCharacters').style.display = 'flex'
+  document.getElementById('showCharacters').style.display = 'block'
 }
 
 // Función visualizar personajes
 const allCharacters = data.characters.slice(0, 40)
 const content = document.querySelector('#showCharacters')
 
-function showAllCharacters (data) {
+function showAllCharacters () {
   content.innerHTML = ''
-  data.forEach(
+  allCharacters.forEach(
     (element, i) =>
     // Template string
       (content.innerHTML += `<section class="card">
@@ -33,6 +33,19 @@ function showAllCharacters (data) {
 
 showAllCharacters(allCharacters)
 
+/* document.getElementsByClassName('#btn buttonShow').addEventListener('click', information)
+function information (event) {
+  const information2 = document.querySelector('#informationCharacters')
+  const i = event.target.dataset.id
+  information2.innerHTML = `<div class="information">
+  <strong>Nombre:</strong> ${allCharacters[i].name ? allCharacters[i].name : 'Sin información'}
+  <br> <strong>Fecha de Nacimiento:</strong> ${allCharacters[i].birth ? allCharacters[i].birth : 'Sin información'}
+  <br> <strong>Casa de Hogwarts:</strong> ${allCharacters[i].house ? allCharacters[i].house : 'Sin información'}
+  <br> <strong>Tipo de Mago:</strong> ${allCharacters[i].species ? allCharacters[i].species : 'Sin información'}
+  </div>`
+  showAllCharacters(information)
+} */
+
 const btnVer = document.querySelectorAll('.buttonShow')
 const information = document.querySelector('#informationCharacters')
 
@@ -46,10 +59,9 @@ btnVer.forEach((button) => {
   <br> <strong>Tipo de Mago:</strong> ${allCharacters[i].species ? allCharacters[i].species : 'Sin información'}
   </div>`
   })
-  console.log(information)
 })
 
-showAllCharacters(allCharacters, btnVer)
+showAllCharacters(information)
 
 document.getElementById('btnOrderAscent').addEventListener('click', displayOrderAscent)
 
