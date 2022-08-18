@@ -18,7 +18,7 @@ function printMovies(movies) {
         img.classList.add("imgMovie");
         listMovie.appendChild(newLabel);
         newLabel.appendChild(img);
-        newLabel.innerHTML += `${film.title} <br><br> Director: ${film.director} <br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}`;
+        newLabel.innerHTML += `<h3>${film.title}</h3> Director: ${film.director} <br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}`;
     });
 }
 printMovies(films);
@@ -49,8 +49,10 @@ function printOrderByScore() {
     printMovies(orderScore);
 }
 
+const btnCuriousFact = document.getElementById("cuantity");
+btnCuriousFact.addEventListener("click", printCuriousData);
 
-
-
-
-
+function printCuriousData() {
+    const listDirectors = utilities.curiousData(films);
+    (listDirectors);
+}
