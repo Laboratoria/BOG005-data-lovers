@@ -151,19 +151,21 @@ body {
     animation-fill-mode: backwards;
 }
 
-.card {/*Sección de JS para mostrar información de personaje*/
+.card {
+    /*Sección de JS para mostrar información de personaje*/
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.wand {/*Imagen que acompaña información de personaje*/
+.wand {
+    /*Imagen que acompaña información de personaje*/
     height: 15em;
     width: 15em;
 }
 
-#informationCharacters{
+#informationCharacters {
     display: flex;
     width: 100%;
     max-width: 90%;
@@ -174,7 +176,8 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.information {/*Div para mostrar complementaria*/
+.information {
+    /*Div para mostrar complementaria*/
     display: relative;
     background-color: #cab7d5;
     width: 50%;
@@ -186,14 +189,16 @@ body {
     transition: all 6s;
 }
 
-.name-characters {/*H3 nombre de los personajes*/
+.name-characters {
+    /*H3 nombre de los personajes*/
     font-weight: 700;
     font-size: 14px;
     text-align: center;
     color: #10141B;
 }
 
-.buttonShow {/*Botón para mostrar información complementaria*/
+.buttonShow {
+    /*Botón para mostrar información complementaria*/
     display: inline-block;
     font-family: 'Kodchasan', sans-serif;
     color: #10141B;
@@ -212,34 +217,25 @@ body {
     margin-left: 28%;
 }
 
-.showCharacters{
+.showCharacters {
     display: flex;
 }
 
-.showCharacters {/*Sección de HTML para mostrar información de personaje*/
-    display: none;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: #fff;
-}
-#sortCharacters{
+.showCharacters {
+    /*Sección de HTML para mostrar información de personaje*/
     display: flex;
-}
-
-#sortCharacters {/*Sección de HTML para mostrar información de personaje*/
-    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     color: #fff;
 }
 
-.organize-section{
+.organize-section {
     display: flex;
     height: 80%;
     background-color: red;
 }
 
-.fun-facts{
+.fun-facts {
     display: flex;
     height: 80%;
     background-color: red;
@@ -355,4 +351,3 @@ body {
         transform: translate(0);
     }
 }
-

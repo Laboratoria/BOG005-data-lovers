@@ -1,5 +1,5 @@
 import data from './data/harrypotter/data.js'
-import { sortName } from './data.js'
+import functions from './data.js'
 
 // Mostrar sección a través de botón
 
@@ -16,9 +16,10 @@ const allCharacters = data.characters.slice(0, 21)
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters (data) {
+  content.innerHTML = ''
   data.forEach(
     (element, i) =>
-    // Template string
+      // Template string
       (content.innerHTML += `<section class="card">
     <ul><img class="wand"  src="Img/icons8-harry.png" alt="Imagen generica para personajes">
     <br>
@@ -29,12 +30,8 @@ function showAllCharacters (data) {
     // Interpolacion de variables
   )
 }
-showAllCharacters(allCharacters)
 
-document.getElementById('pruebaOrdenar').addEventListener('click', () => {
-  console.log('ksjhaskhdksahd', sortName(allCharacters))
-  showAllCharacters(sortName(allCharacters))
-})
+showAllCharacters(allCharacters)
 
 const btnVer = document.querySelectorAll('.buttonShow')
 const information = document.querySelector('#informationCharacters')
@@ -48,4 +45,21 @@ btnVer.forEach((button) => {
   <br> <strong>Tipo de Mago:</strong> ${allCharacters[i].species ? allCharacters[i].species : 'Sin información'}
   </div>`
   })
+  console.log(information)
 })
+
+showAllCharacters(allCharacters, btnVer)
+
+document.getElementById('btnOrderAscent').addEventListener('click', displayOrderAscent)
+
+function displayOrderAscent () {
+  const orderAscent = functions.sortName(allCharacters, 'name', 'ascendant')
+  showAllCharacters(orderAscent)
+}
+
+document.getElementById('btnOrderFalling').addEventListener('click', displayOrderFalling)
+
+function displayOrderFalling () {
+  const orderFalling = functions.sortName(allCharacters, 'name', 'falling')
+  showAllCharacters(orderFalling)
+}
