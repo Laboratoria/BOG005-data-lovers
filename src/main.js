@@ -19,7 +19,7 @@ function showAllCharacters (data) {
   content.innerHTML = ''
   data.forEach(
     (element, i) =>
-      // Template string
+    // Template string
       (content.innerHTML += `<section class="card">
     <ul><img class="wand"  src="Img/icons8-harry.png" alt="Imagen generica para personajes">
     <br>

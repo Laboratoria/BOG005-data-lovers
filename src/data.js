@@ -3,7 +3,7 @@ const functions = {
     const result = data.sort((a, b) => {
       const ia = a[sortBy].toUpperCase()
       const ib = b[sortBy].toUpperCase()
-      if (sortOrder == 'ascendant') {
+      if (sortOrder === 'ascendant') {
         if (ia < ib) {
           return -1
         }
@@ -11,7 +11,7 @@ const functions = {
           return 1
         }
         return 0
-      } else if (sortOrder == 'falling') {
+      } else if (sortOrder === 'falling') {
         if (ia > ib) {
           return -1
         }
