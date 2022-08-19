@@ -14,6 +14,51 @@ HTML
 
 JS
 19/08/2022
+
+function helloName(name){
+  //Templates strings o concatenar
+  //Recibimos un nombre y debemos retornar un string
+  //hello + el nombre
+  //return `Hello ${name}!`
+  return 'Hello '+name+'!'
+}
+
+-------
+function firstLast6(nums){
+  //Recibimos un arreglo que contiene numeros
+  //Debemos retornar un booleano
+  //Si 6 es el primer o ultimo numero del arreglo return true
+  //Buscar la primera posicion del arreglo
+  //Buscar la ultima posicion del arreglo
+  //Usar un condicional para evaluarlos
+
+  let firstPosition = nums[0];
+  let lastPosition = nums.at(-1);
+
+  /*if(firstPosition === 6 || lastPosition ===6){
+    return true;
+  }else{
+    return false;
+  }*/
+
+  return firstPosition === 6 || lastPosition ===6?true:false;
+}
+
+-------------
+function firstLast6(nums){
+  //Recibimos un arreglo que recibe números
+  //Debemos retornar booleano si el 6 esta al inicio o al final
+  let firstPosition = nums[0];
+  let lastPosition = nums.at(-1); (Encuentra la última posición del arreglo)
+
+  if(firstPosition === 6 || lastPosition === 6){
+    return true
+  }else{
+    return false
+  }
+}
+}
+--------
 function intMax(a, b, c){
   //Recibimos 3 valores
   //Tenemos que retornar el valor mayor
