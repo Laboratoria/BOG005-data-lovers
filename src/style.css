@@ -27,6 +27,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
 }
 
 /* html {
@@ -58,12 +59,27 @@ body {
     backface-visibility: hidden;
 }
 
+.container-header > div{
+    display: inline-block;
+}
+
 .logo{
     position: absolute;
     left: 40px;
     height: 100px;
     width: 100px;
     z-index: 3;
+    display: inline-block;
+}
+
+.main-nav{
+    border: 3px solid red;
+    display: inline-block;
+}
+
+.main-nav__item{
+    display: inline-block;
+    text-align: right;
 }
 
 .main-title {
@@ -92,14 +108,6 @@ body {
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
-
-.main-nav{
-    border: 3px solid red;
-}
-
-.main-nav__item{
-    display: inline-block;
 }
 
 .text-box {
