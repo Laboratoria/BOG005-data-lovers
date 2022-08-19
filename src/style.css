@@ -109,9 +109,21 @@ body{
   transition: 0.3s
 }
 
-.cardText{
+.cardText *{
   margin: 0.5rem;
-  
+}
+
+.filmTitle{
+  font-family: "Bebas Neue", cursive;
+}
+
+.filmDescription{
+  font-family: 'Abel', sans-serif;
+}
+
+.releaseDate{
+  font-family: 'Abel', sans-serif;
+  font-size: large;
 }
 
 /*Estilos para Tablet*/
