@@ -25,11 +25,8 @@ function createCard(){
           />
           <div class="cardText">
             <h2 class="filmTitle">${fullTitles[i]}</h2>
-<<<<<<< Updated upstream
-=======
             <p class="directorAndProducer">Director: ${fullDirectors[i]} | Producer: ${fullProducers[i]}</p>
             <h5 class="releaseDate">${fullReleases[i]}</h5>
->>>>>>> Stashed changes
             <p class="filmDescription">${fullDescriptions[i]}
             </p>
             <h5 class="releaseDate">${fullReleases[i]}</h5>
