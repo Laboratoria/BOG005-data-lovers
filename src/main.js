@@ -1,5 +1,5 @@
 import data from "./data/harrypotter/data.js";
-import {sortSpecies} from "./data.js"
+import ordenarData from "./data.js"
 
 //Mostrar sección a través de botón
 
@@ -12,11 +12,12 @@ function changeBtnStyle(){
 }
 
 //Función visualizar personajes
-const allCharacters = data.characters.slice(0, 21);
+const allCharacters = data.characters;
 const content = document.querySelector("#showCharacters");
 
 function showAllCharacters(data) {
-  data.forEach(
+  content.innerHTML = ""
+  allCharacters.forEach(
     (element, i) =>
     //Template string
     (content.innerHTML +=`<section class="card">
@@ -29,7 +30,7 @@ function showAllCharacters(data) {
     //Interpolacion de variables
   );
 }
-showAllCharacters(allCharacters);
+showAllCharacters();
 
 const btnVer = document.querySelectorAll(".buttonShow")
 const information = document.querySelector("#informationCharacters")
@@ -46,10 +47,19 @@ btnVer.forEach((button) => {
 })
 
 
-document.getElementById("pruebaOrdenar").addEventListener("click",() =>{
-  console.log('ksjhaskhdksahd', sortSpecies(allCharacters))
-  showAllCharacters(sortSpecies(allCharacters))
-})
+document.getElementById("pruebaOrdenar").addEventListener("click", ordenar)
+  function ordenar() {
+    const ascendente1 = ordenarData.sortName(allCharacters,"name","ascendente")
+    console.log(ascendente1)
+    showAllCharacters(ascendente1)
+  }
+ document.getElementById("pruebaFiltar1").addEventListener("click",filter)
+ function filter(){
+  const filterHouses = ordenarData.filterHouse(allCharacters)
+  console.log(filterHouses)
+  showAllCharacters(filterHouses)
+ }
+
 /* const content2 = document.querySelector("#sortCharacters")
 
 function sortAllCharacters() {

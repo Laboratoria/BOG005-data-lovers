@@ -209,7 +209,7 @@ body {
 }
 
 .showCharacters {/*Sección de HTML para mostrar información de personaje*/
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     color: #fff;
