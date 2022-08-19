@@ -22,21 +22,23 @@ console.log(fullReleases);
 let container = document.querySelector(".cardContainer");
 
 function createCard(){       
+    for (let i = 0; i < moviesData.length; i ++) {
     let code = `
     <div class="card">
           <img
-            src="${fullPosters[0]}"
+            src="${fullPosters[i]}"
             alt=""
           />
           <div class="cardText">
-            <h2 class="filmTitle">${title}</h2>
-            <p class="filmDescription">${description}
+            <h2 class="filmTitle">${fullTitles[i]}</h2>
+            <p class="filmDescription">${fullDescriptions[i]}
             </p>
-            <h5 class="releaseDate">${release_date}</h5>
+            <h5 class="releaseDate">${fullReleases[i]}</h5>
           </div>
         </div>
     `;
-    container.innerHTML += code;};
+    container.innerHTML += code;}};
 
+    createCard();
 
 // console.log(example);
