@@ -25,8 +25,8 @@ const functions = {
     return result
   },
 
-  sortFilter: function (data) {
-    const charactersFilter = data.filter(allCharacters => allCharacters.house === 'Gryffindor')
+  sortFilter: function (data, selectHouse) {
+    const charactersFilter = data.filter(allCharacters => allCharacters.house === selectHouse)
     return charactersFilter
   }
 
