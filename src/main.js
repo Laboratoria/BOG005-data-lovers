@@ -8,17 +8,11 @@ console.log(moviesData)
 // Trayendo todos los elementos
 
 let fullPosters = moviesData.map(posters => `${posters.poster}`);
-console.log(fullPosters);
-
 let fullTitles = moviesData.map(movies => `${movies.title}`);
-console.log(fullTitles);
-
 let fullDescriptions = moviesData.map(descriptions => `${descriptions.description}`);
-console.log(fullDescriptions);
-
 let fullReleases = moviesData.map(releases => `${releases.release_date}`);
-console.log(fullReleases);
-
+let fullDirectors = moviesData.map(directors => `${directors.director}` )
+let fullProducers = moviesData.map (producers => `${producers.producer}`)
 let container = document.querySelector(".cardContainer");
 
 function createCard(){       
@@ -31,6 +25,11 @@ function createCard(){
           />
           <div class="cardText">
             <h2 class="filmTitle">${fullTitles[i]}</h2>
+<<<<<<< Updated upstream
+=======
+            <p class="directorAndProducer">Director: ${fullDirectors[i]} | Producer: ${fullProducers[i]}</p>
+            <h5 class="releaseDate">${fullReleases[i]}</h5>
+>>>>>>> Stashed changes
             <p class="filmDescription">${fullDescriptions[i]}
             </p>
             <h5 class="releaseDate">${fullReleases[i]}</h5>

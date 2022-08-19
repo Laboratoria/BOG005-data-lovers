@@ -87,6 +87,17 @@ li a:hover {
 body{
   background-color: #D9D9D9;
 }
+
+.moviesWelcome {
+  text-align: center;
+  margin: 2rem;
+  padding-top: 10px;
+  font-size: 30px;
+  font-family: 'Abel', sans-serif;  
+  font-style: normal;
+  font-variant: normal;
+}
+
 .cardContainer{
   display: flex;
   flex-wrap: wrap;
@@ -124,6 +135,11 @@ body{
 .releaseDate{
   font-family: 'Abel', sans-serif;
   font-size: large;
+}
+
+.directorAndProducer {
+  font-family: 'Abel', sans-serif;
+  font-size: medium;
 }
 
 /*Estilos para Tablet*/
