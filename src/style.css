@@ -180,7 +180,7 @@ body {
     /*Div para mostrar complementaria*/
     display: relative;
     background-color: #cab7d5;
-    color: #fff;
+    color:#fff;
     width: 50%;
     font-weight: 300;
     font-size: 18px;
@@ -222,8 +222,10 @@ body {
     display: flex;
 }
 
+
 .showCharacters {
     /*Sección de HTML para mostrar información de personaje*/
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

@@ -30,6 +30,7 @@ const functions = {
     return charactersFilter
   }
 
+
 }
 
 export default functions
