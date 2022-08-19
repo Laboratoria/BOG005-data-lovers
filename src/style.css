@@ -94,8 +94,12 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.nav-header{
+.main-nav{
     border: 3px solid red;
+}
+
+.main-nav__item{
+    display: inline-block;
 }
 
 .text-box {
