@@ -1,8 +1,6 @@
-import data from './data/harrypotter/data.js'
+import data from "./data/harrypotter/data.js"
 import functions from './data.js'
-
 // Mostrar sección a través de botón
-
 const btnShowSectionCharacters = document.getElementById('nav-characters')
 btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
