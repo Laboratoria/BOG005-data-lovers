@@ -101,9 +101,10 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
   })
 })
 
-document.getElementById('btnHouseGry').addEventListener('click', filterHouseGry)
-
 function filterHouse () {
+ if(document.getElementById('filterHouseSelect').value == 'Gryffindor'){
+
+ }
   const gryFilterHouse = functions.sortFilter(allCharacters)
   console.log(gryFilterHouse)
   orderCharacters(filterHouse)
