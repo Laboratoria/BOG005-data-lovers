@@ -1,10 +1,10 @@
-import data from "./data/harrypotter/data.js"
+import data from './data/harrypotter/data.js'
 import functions from './data.js'
 // Mostrar sección a través de botón
 const btnShowSectionCharacters = document.getElementById('nav-characters')
 btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
-function changeBtnStyle() {
+function changeBtnStyle () {
   document.getElementById('showCharacters').style.display = 'none'
   document.getElementById('showCharacters').style.display = 'block'
 }
@@ -100,9 +100,9 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
 })
 
 function filterHouse () {
-  if(document.getElementById('filterHouseSelect').value == 'Gryffindor'){
+  if (document.getElementById('filterHouseSelect').value === 'Gryffindor') {
   }
-   const gryFilterHouse = functions.sortFilter(allCharacters)
-   console.log(gryFilterHouse)
-   orderCharacters(filterHouse)
- }
+  const gryFilterHouse = functions.sortFilter(allCharacters)
+  console.log(gryFilterHouse)
+  orderCharacters(filterHouse)
+}
