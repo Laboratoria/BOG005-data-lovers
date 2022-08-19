@@ -6,7 +6,7 @@ import functions from './data.js'
 const btnShowSectionCharacters = document.getElementById('nav-characters')
 btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
-function changeBtnStyle () {
+function changeBtnStyle() {
   document.getElementById('showCharacters').style.display = 'none'
   document.getElementById('showCharacters').style.display = 'block'
 }
@@ -15,54 +15,66 @@ function changeBtnStyle () {
 const allCharacters = data.characters.slice(0, 60)
 const content = document.querySelector('#showCharacters')
 
-function showAllCharacters () {
-  content.innerHTML = ''
-  allCharacters.forEach(
-    (element, i) =>
-    // Template string
-      (content.innerHTML += `<section class="card">
-    <ul><img class="wand"  src="Img/icons8-harry.png" alt="Imagen generica para personajes">
-    <br>
-    <h3 class="name-characters">${element.name}</h3>
-    <button data-id=${i} class="btn buttonShow"> Ver +
-  </button></ul>
-  </section>`)
-    // Interpolacion de variables
-  )
+
+function showAllCharacters(arrData) {
+
+  const cards = []
+  // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
+  arrData.forEach((item) => {
+    const card = document.createElement('div');
+
+    const img = document.createElement('img');
+    img.innerHTML = '<img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">';
+
+    const name = document.createElement('p');
+    name.innerHTML = `${item.name}`
+
+    const button = document.createElement('button');
+    button.innerHTML = 'Ver +';
+    button.addEventListener('click', (e) => {
+      const information2 = document.querySelector('#informationCharacters')
+      const i = e.target.dataset.id
+      information2.innerHTML = `<div class="information">
+        <strong>Nombre:</strong> ${item.name ? item.name : 'Sin información'}
+        <strong>Fecha de Nacimiento:</strong> ${item.birth ? item.birth : 'Sin información'}
+        <br> <strong>Casa de Hogwarts:</strong> ${item.house ? item.house : 'Sin información'}
+        <br> <strong>Tipo de Mago:</strong> ${item.species ? item.species : 'Sin información'}
+      </div>`
+
+    });
+
+    card.appendChild(name)
+    card.appendChild(button)
+    card.appendChild(img)
+
+    cards.push(card);
+  })
+
+  return cards;
 }
 
-showAllCharacters(allCharacters)
+showAllCharacters(allCharacters).forEach((card) => {
+  content.appendChild(card)
+});
 
-/* document.getElementsByClassName('#btn buttonShow').addEventListener('click', information)
-function information (event) {
-  const information2 = document.querySelector('#informationCharacters')
-  const i = event.target.dataset.id
-  information2.innerHTML = `<div class="information">
-  <strong>Nombre:</strong> ${allCharacters[i].name ? allCharacters[i].name : 'Sin información'}
-  <br> <strong>Fecha de Nacimiento:</strong> ${allCharacters[i].birth ? allCharacters[i].birth : 'Sin información'}
-  <br> <strong>Casa de Hogwarts:</strong> ${allCharacters[i].house ? allCharacters[i].house : 'Sin información'}
-  <br> <strong>Tipo de Mago:</strong> ${allCharacters[i].species ? allCharacters[i].species : 'Sin información'}
-  </div>`
-  showAllCharacters(information)
-} */
-
-document.getElementById('btnOrderAscent').addEventListener('click', displayOrderAscent)
-
-function displayOrderAscent () {
+document.getElementById('btnOrderAscent').addEventListener('click', () => {
   const orderAscent = functions.sortName(allCharacters, 'name', 'ascendant')
-  showAllCharacters(orderAscent)
-}
+  content.innerHTML = ''
+  showAllCharacters(orderAscent).forEach((card) => {
+    content.appendChild(card)
+  });
+})
 
 document.getElementById('btnOrderFalling').addEventListener('click', displayOrderFalling)
 
-function displayOrderFalling () {
+function displayOrderFalling() {
   const orderFalling = functions.sortName(allCharacters, 'name', 'falling')
   showAllCharacters(orderFalling)
 }
 
 document.getElementById('btnHouseGry').addEventListener('click', filterHouseGry)
 
-function filterHouseGry () {
+function filterHouseGry() {
   const gryFilterHouse = functions.sortFilter(allCharacters)
   console.log(gryFilterHouse)
   showAllCharacters(gryFilterHouse)

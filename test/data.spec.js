@@ -1,24 +1,29 @@
 import functions from '../src/data.js'
 
 describe('functions', () => {
-  it('should be an object', () => {
+  it('Debería ser un objeto', () => {
     expect(typeof functions).toBe('object')
   })
 })
 
 describe('functions.sortName', () => {
-  it('should be a function', () => {
+  it('Debería ser una función', () => {
     expect(typeof functions.sortName).toBe('function')
   })
 
-  it('returns `functions.sortName`', () => {
-    const sortAz = [{ name: 'a' }, { name: 'c' }, { name: 'b' }, { name: 'd' }]
-    expect(functions.sortName(sortAz)).toEqual([{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }])
+  it('returns `functions.sortName` Az', () => {
+    const sortAz = [{ name: 'A' }, { name: 'C' }, { name: 'B' }, { name: 'D' }]
+    expect(functions.sortName(sortAz)).toEqual([{ name: 'A' }, { name: 'B' }, { name: 'C' }, { name: 'D' }])
+  })
+
+  it('returns `functions.sortName` zA', () => {
+    const sortZa = [{ name: 'A' }, { name: 'D' }, { name: 'C' }, { name: 'B' }]
+    expect(functions.sortName(sortZa)).toBe([{ name: 'D' }, { name: 'C' }, { name: 'B' }, { name: 'A' }])
   })
 })
 
 describe('functions.sortFilter', () => {
-  it('should be a function', () => {
+  it('Debería ser una función', () => {
     expect(typeof functions.sortFilter).toBe('function')
   })
 
