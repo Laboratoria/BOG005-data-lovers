@@ -42,7 +42,7 @@ const utilities = {
       let movies = films.filter(film => film.director == director)
       let cantidad = movies.length;
       return {
-        "director": director,
+        "name": director,
         "length": cantidad,
         "films": movies,
       }
