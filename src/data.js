@@ -24,10 +24,12 @@ const functions = {
     })
     return result
   },
-
-  sortFilter: function (data, selectHouse) {
-    const charactersFilter = data.filter(allCharacters => allCharacters.house === selectHouse)
-    return charactersFilter
+  
+  
+  sortFilter: function (data,house) {
+    const salida ="";
+    const charactersFilter = data.filter(allCharacters => allCharacters.house === 'Gryffindor')
+    return salida
   }
 
 
