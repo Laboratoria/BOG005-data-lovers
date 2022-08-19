@@ -13,6 +13,41 @@ HTML
     </section> -->
 
 JS
+19/08/2022
+function intMax(a, b, c){
+  //Recibimos 3 valores
+  //Tenemos que retornar el valor mayor
+  //Los valores son de tipo numerico
+  //Usamos un condicional para comprobar los valores
+  /*if(a>b && a>c){
+     return a;
+  }else if(b>a && b>c){
+    return b;
+  }else{
+    return c;
+  }*/
+  switch(true){
+    case (a>b && a>c):
+      return a;
+    case (b>a && b>c):
+      return b;
+    default:
+      return c;
+  }
+}
+
+18/08/2022
+card.innerHTML += `
+    <div class="card">
+      <img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">
+      <h3 class="name-characters">${item.name}</h3>
+      <button id=${item.id} onclick="${console.log('hola')}" class="btn buttonShow">Ver +</button>
+    </div>`
+
+<br> <strong>Fecha de Nacimiento:</strong> ${allCharacters[i].birth ? allCharacters[i].birth : 'Sin información'}
+        <br> <strong>Casa de Hogwarts:</strong> ${allCharacters[i].house ? allCharacters[i].house : 'Sin información'}
+        <br> <strong>Tipo de Mago:</strong> ${allCharacters[i].species ? allCharacters[i].species : 'Sin información'}
+
 17/08/2022
 
 /*

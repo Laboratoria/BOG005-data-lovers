@@ -15,7 +15,6 @@ function changeBtnStyle() {
 const allCharacters = data.characters.slice(0, 60)
 const content = document.querySelector('#showCharacters')
 
-
 function showAllCharacters(arrData) {
 
   const cards = []
@@ -65,12 +64,13 @@ document.getElementById('btnOrderAscent').addEventListener('click', () => {
   });
 })
 
-document.getElementById('btnOrderFalling').addEventListener('click', displayOrderFalling)
-
-function displayOrderFalling() {
+document.getElementById('btnOrderFalling').addEventListener('click', () =>{
   const orderFalling = functions.sortName(allCharacters, 'name', 'falling')
-  showAllCharacters(orderFalling)
-}
+  content.innerHTML = ''
+  showAllCharacters(orderFalling).forEach((card) => {
+    content.appendChild(card)
+  });
+})
 
 document.getElementById('btnHouseGry').addEventListener('click', filterHouseGry)
 
