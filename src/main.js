@@ -6,7 +6,7 @@ import functions from './data.js'
 const btnShowSectionCharacters = document.getElementById('nav-characters')
 btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
-function changeBtnStyle () {
+function changeBtnStyle() {
   document.getElementById('showCharacters').style.display = 'none'
   document.getElementById('showCharacters').style.display = 'block'
 }
@@ -30,9 +30,9 @@ function showAllCharacters (arrData) {
     const button = document.createElement('button')
     button.innerHTML = 'Ver +'
     button.addEventListener('click', (e) => {
-      const information2 = document.querySelector('#informationCharacters')
+      const information = document.querySelector('#informationCharacters')
       // const i = e.target.dataset.id
-      information2.innerHTML = `<div class="information">
+      information.innerHTML = `<div class="information">
         <strong>Nombre:</strong> ${item.name ? item.name : 'Sin información'}
         <strong>Fecha de Nacimiento:</strong> ${item.birth ? item.birth : 'Sin información'}
         <br> <strong>Casa de Hogwarts:</strong> ${item.house ? item.house : 'Sin información'}
@@ -54,26 +54,57 @@ showAllCharacters(allCharacters).forEach((card) => {
   content.appendChild(card)
 })
 
+// Funciones
+
+const contentOrder = document.querySelector('#showOrderCharacters')
+
+function orderCharacters (arrData) {
+  const cards = []
+  // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
+  arrData.forEach((item) => {
+    const cardOrder = document.createElement('div')
+
+    const img = document.createElement('img')
+    img.innerHTML = '<img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">'
+
+    const name = document.createElement('p')
+    name.innerHTML = `${item.name}`
+
+    cardOrder.appendChild(name)
+    cardOrder.appendChild(img)
+
+    cards.push(cardOrder)
+  })
+
+  return cards
+}
+
+orderCharacters(allCharacters).forEach((cardOrder) => {
+  contentOrder.appendChild(cardOrder)
+})
+
+// Función ordenar AZ / ZA
+
 document.getElementById('btnOrderAscent').addEventListener('click', () => {
   const orderAscent = functions.sortName(allCharacters, 'name', 'ascendant')
-  content.innerHTML = ''
-  showAllCharacters(orderAscent).forEach((card) => {
-    content.appendChild(card)
+  contentOrder.innerHTML = ''
+  orderCharacters(orderAscent).forEach((card) => {
+    contentOrder.appendChild(card)
   })
 })
 
 document.getElementById('btnOrderFalling').addEventListener('click', () => {
   const orderFalling = functions.sortName(allCharacters, 'name', 'falling')
-  content.innerHTML = ''
-  showAllCharacters(orderFalling).forEach((card) => {
-    content.appendChild(card)
+  contentOrder.innerHTML = ''
+  orderCharacters(orderFalling).forEach((card) => {
+    contentOrder.appendChild(card)
   })
 })
 
 document.getElementById('btnHouseGry').addEventListener('click', filterHouseGry)
 
-function filterHouseGry () {
+function filterHouse () {
   const gryFilterHouse = functions.sortFilter(allCharacters)
   console.log(gryFilterHouse)
-  showAllCharacters(gryFilterHouse)
+  orderCharacters(filterHouse)
 }
