@@ -29,8 +29,7 @@ function createCard(){
             <h5 class="releaseDate">${fullReleases[i]}</h5>
             <p class="filmDescription">${fullDescriptions[i]}
             </p>
-            <h5 class="releaseDate">${fullReleases[i]}</h5>
-          </div>
+            </div>
         </div>
     `;
     container.innerHTML += code;}};
