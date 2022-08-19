@@ -6,7 +6,7 @@ import functions from './data.js'
 const btnShowSectionCharacters = document.getElementById('nav-characters')
 btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
-function changeBtnStyle() {
+function changeBtnStyle () {
   document.getElementById('showCharacters').style.display = 'none'
   document.getElementById('showCharacters').style.display = 'block'
 }
@@ -102,10 +102,9 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
 })
 
 function filterHouse () {
- if(document.getElementById('filterHouseSelect').value == 'Gryffindor'){
-
- }
-  const gryFilterHouse = functions.sortFilter(allCharacters)
-  console.log(gryFilterHouse)
+  if (document.getElementById('filterHouseSelect').value === 'Gryffindor') {
+    console.log(filterHouse)
+    const filterHouses = functions.sortFilter(allCharacters, 'house')
+  }
   orderCharacters(filterHouse)
 }
