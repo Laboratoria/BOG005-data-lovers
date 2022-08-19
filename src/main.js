@@ -100,10 +100,9 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
 })
 
 function filterHouse () {
- if(document.getElementById('filterHouseSelect').value == 'Gryffindor'){
-
+  if(document.getElementById('filterHouseSelect').value == 'Gryffindor'){
+  }
+   const gryFilterHouse = functions.sortFilter(allCharacters)
+   console.log(gryFilterHouse)
+   orderCharacters(filterHouse)
  }
-  const gryFilterHouse = functions.sortFilter(allCharacters)
-  console.log(gryFilterHouse)
-  orderCharacters(filterHouse)
-}
