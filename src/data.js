@@ -1,66 +1,36 @@
-/* export const sortName = (data) => {
-  
-  return data.sort((a, b) =>{
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-  });
-}; */
-
-const ordenarData= {
-sortName: function(data, sortBy="name", sortOrder="ascendente"){
-const resultado = data.sort((a, b)  => {
-  let ma = a[sortBy].toLowerCase();
-  let mb = b[sortBy].toLowerCase();
-
-  if(sortOrder == 'ascendente'){
-    if (ma == mb){
-      return 0;
-    }
-    if (ma > mb){
-      return 1;
-    }
-    if (ma < mb){
-      return -1;
-    }
-    } else if (sortOrder == "descendente"){
-      if (ma == mb){
-        return 0;
+/* eslint-disable array-callback-return */
+const functions = {
+  sortName: function (data, sortBy = 'name', sortOrder = 'ascendant') {
+    const result = data.sort(function (a, b) {
+      const ia = a[sortBy].toUpperCase()
+      const ib = b[sortBy].toUpperCase()
+      if (sortOrder === 'ascendant') {
+        if (ia < ib) {
+          return -1
+        }
+        if (ia > ib) {
+          return 1
+        }
+        return 0
+      } else if (sortOrder === 'falling') {
+        if (ia > ib) {
+          return -1
+        }
+        if (ia < ib) {
+          return 1
+        }
+        return 0
       }
-      if (ma > mb){
-        return -1;
-      }
-      if (ma < mb){
-        return 1;
-      }
-    };
-  })
-  return resultado;
+    })
+    return result
   },
 
-
-  /* filterHouse: function(data) {
-    const houseCharacter = data.filter(function(allCharacters){ 
-      return allCharacters.house === "Gryffindor"
-    }) */
-    filterHouse: function(data) {
-      const houseCharacter = data.filter(allCharacter => allCharacter.house == "Gryffindor"  )
-      return (houseCharacter)
-    
+  sortFilter: function (data) {
+    const charactersFilter = data.filter(allCharacters => allCharacters.house === 'Gryffindor')
+    return charactersFilter
   }
+
 
 }
 
-  
-export default ordenarData ;
-
-
-
-
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+export default functions

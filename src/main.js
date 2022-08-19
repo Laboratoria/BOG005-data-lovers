@@ -1,106 +1,77 @@
-import data from "./data/harrypotter/data.js";
-import ordenarData from "./data.js"
+import data from "./data/harrypotter/data.js"
+import functions from './data.js'
+// Mostrar sección a través de botón
+const btnShowSectionCharacters = document.getElementById('nav-characters')
+btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
-//Mostrar sección a través de botón
-
-let btnShowSectionCharacters = document.getElementById("nav-characters")
-btnShowSectionCharacters.addEventListener("click", changeBtnStyle)
-
-function changeBtnStyle(){
-  document.getElementById("showCharacters").style.display = "none"
-  document.getElementById("showCharacters").style.display = "flex"
+function changeBtnStyle () {
+  document.getElementById('showCharacters').style.display = 'none'
+  document.getElementById('showCharacters').style.display = 'block'
 }
 
-//Función visualizar personajes
-const allCharacters = data.characters;
-const content = document.querySelector("#showCharacters");
+// Función visualizar personajes
+const allCharacters = data.characters.slice(0, 60)
+const content = document.querySelector('#showCharacters')
 
-function showAllCharacters(data) {
-  content.innerHTML = ""
-  allCharacters.forEach(
-    (element, i) =>
-    //Template string
-    (content.innerHTML +=`<section class="card">
-    <ul><img class="wand"  src="Img/icons8-harry.png" alt="Imagen generica para personajes">
-    <br>
-    <h3 class="name-characters">${element.name}</h3>
-    <button data-id=${i} class="btn buttonShow"> Ver +
-  </button></ul>
-  </section>`)
-    //Interpolacion de variables
-  );
+function showAllCharacters (arrData) {
+  const cards = []
+  // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
+  arrData.forEach((item) => {
+    const card = document.createElement('div')
+
+    const img = document.createElement('img')
+    img.innerHTML = '<img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">'
+
+    const name = document.createElement('p')
+    name.innerHTML = `${item.name}`
+
+    const button = document.createElement('button')
+    button.innerHTML = 'Ver +'
+    button.addEventListener('click', (e) => {
+      const information2 = document.querySelector('#informationCharacters')
+      // const i = e.target.dataset.id
+      information2.innerHTML = `<div class="information">
+        <strong>Nombre:</strong> ${item.name ? item.name : 'Sin información'}
+        <strong>Fecha de Nacimiento:</strong> ${item.birth ? item.birth : 'Sin información'}
+        <br> <strong>Casa de Hogwarts:</strong> ${item.house ? item.house : 'Sin información'}
+        <br> <strong>Tipo de Mago:</strong> ${item.species ? item.species : 'Sin información'}
+      </div>`
+    })
+
+    card.appendChild(name)
+    card.appendChild(button)
+    card.appendChild(img)
+
+    cards.push(card)
+  })
+
+  return cards
 }
-showAllCharacters();
 
-const btnVer = document.querySelectorAll(".buttonShow")
-const information = document.querySelector("#informationCharacters")
-btnVer.forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const i = event.target.dataset.id
-    information.innerHTML = `<div class="information">
-  <strong>Nombre:</strong> ${allCharacters[i].name ? allCharacters[i].name : "Sin información"}
-  <br> <strong>Fecha de Nacimiento:</strong> ${allCharacters[i].birth ? allCharacters[i].birth : "Sin información"}
-  <br> <strong>Casa de Hogwarts:</strong> ${allCharacters[i].house ? allCharacters[i].house : "Sin información"}
-  <br> <strong>Tipo de Mago:</strong> ${allCharacters[i].species ? allCharacters[i].species : "Sin información"}
-  </div>`
+showAllCharacters(allCharacters).forEach((card) => {
+  content.appendChild(card)
+})
+
+document.getElementById('btnOrderAscent').addEventListener('click', () => {
+  const orderAscent = functions.sortName(allCharacters, 'name', 'ascendant')
+  content.innerHTML = ''
+  showAllCharacters(orderAscent).forEach((card) => {
+    content.appendChild(card)
   })
 })
 
+document.getElementById('btnOrderFalling').addEventListener('click', () => {
+  const orderFalling = functions.sortName(allCharacters, 'name', 'falling')
+  content.innerHTML = ''
+  showAllCharacters(orderFalling).forEach((card) => {
+    content.appendChild(card)
+  })
+})
 
-document.getElementById("pruebaOrdenar").addEventListener("click", ordenar)
-  function ordenar() {
-    const ascendente1 = ordenarData.sortName(allCharacters,"name","ascendente")
-    console.log(ascendente1)
-    showAllCharacters(ascendente1)
-  }
- document.getElementById("pruebaFiltar1").addEventListener("click",filter)
- function filter(){
-  const filterHouses = ordenarData.filterHouse(allCharacters)
-  console.log(filterHouses)
-  showAllCharacters(filterHouses)
- }
+document.getElementById('btnHouseGry').addEventListener('click', filterHouseGry)
 
-/* const content2 = document.querySelector("#sortCharacters")
-
-function sortAllCharacters() {
-  allCharacters.forEach.sort((
-    (element, i) =>
-    //Template string
-    (content2.innerHTML +=`<section class="card">
-    <ul><img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">
-    <br>
-    <h3 class="name-characters">${element.name}</h3>
-    <h4 class="name-characters">${element.species}</h4>
-    </ul>
-  </section>`)
-    
-    //Interpolacion de variables
-  ));
-console.log(sortAllCharacters)
-  }
-sortAllCharacters(); */
-
-
-
-
-
-
-
-/* function sortAllCharacters(){
-let salida = "";
-for (let i = 0; i < allCharacters.length; i++){
-let species = (allCharacters[i].species)
- salida = species.sort()
-  };
-  
+function filterHouseGry () {
+  const gryFilterHouse = functions.sortFilter(allCharacters)
+  console.log(gryFilterHouse)
+  showAllCharacters(gryFilterHouse)
 }
-console.log(salida) */
-
-
-/* let salida = "";
-console.log(species)
-
-allCharacters.forEach(sortAllCharacters)
-
-function sortAllCharacters ()
- */
