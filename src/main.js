@@ -10,6 +10,7 @@ const cardDirectors = document.getElementById("directores");
 function printMovies(movies) {
     // limpia contenerdor
     listMovie.innerHTML = "";
+    cardDirectors.innerHTML = "";
 
     // agrega peliculas
     movies.forEach(function (film) {
@@ -51,33 +52,25 @@ function printOrderByScore() {
     printMovies(orderScore);
 }
 
-
-// const btnCuriousFact = document.getElementById("cuantity");
-// btnCuriousFact.addEventListener("click", printCuriousData);
-
-// function printCuriousData() {
-//     const orderCurious = utilities.curiousData(films);
-    
-// }
-
 const btnDirectors = document.getElementById("cuantity");
 btnDirectors.addEventListener("click", printDirectors);
 
     function printDirectors() {
         const directors = utilities.curiousData(films);
+        listMovie.innerHTML = "";
+        cardDirectors.innerHTML = "";
 
-        cardDirectors.innerHTML = 
 
       directors.forEach(function (director) {
-        
+            const trim = director.name.replace(/\s+/g, '')
             const labelDir = document.createElement("li");
-            labelDir.classList.add("cardTwo");
+            const imgDirector = document.createElement("img");
+            imgDirector.setAttribute("srcset", `${trim}.jpg`);
+            imgDirector.classList.add("imgDir");
+            labelDir.classList.add("card");
             cardDirectors.appendChild(labelDir);
-            labelDir.innerHTML += `<h3> Director:${director.name}</h3>`;
+            labelDir.appendChild(imgDirector);
+            labelDir.innerHTML += `<h3>${director.name}</h3> Total movies: ${director.length}` ;
         });
     }
 
-    
-    // function printDirectors(directors) {
-        
-    // }
