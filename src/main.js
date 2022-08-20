@@ -4,6 +4,8 @@ import utilities from './data.js';
 
 const films = data.films;
 const listMovie = document.getElementById("peliculas");
+const cardDirectors = document.getElementById("directores");
+
 
 function printMovies(movies) {
     // limpia contenerdor
@@ -18,7 +20,7 @@ function printMovies(movies) {
         img.classList.add("imgMovie");
         listMovie.appendChild(newLabel);
         newLabel.appendChild(img);
-        newLabel.innerHTML += `${film.title} <br><br> Director: ${film.director} <br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}`;
+        newLabel.innerHTML += `<h3>${film.title}</h3> Director: ${film.director} <br> Relase date: ${film.release_date} <br> Raiting: ${film.rt_score}`;
     });
 }
 printMovies(films);
@@ -50,11 +52,32 @@ function printOrderByScore() {
 }
 
 
-const btnCuriousFact = document.getElementById("cuantity");
-btnCuriousFact.addEventListener("click", printCuriousData);
+// const btnCuriousFact = document.getElementById("cuantity");
+// btnCuriousFact.addEventListener("click", printCuriousData);
 
-function printCuriousData() {
-    const orderCurious = utilities.curiousData(films);
-    printMovies(orderCurious);
-}
+// function printCuriousData() {
+//     const orderCurious = utilities.curiousData(films);
+    
+// }
 
+const btnDirectors = document.getElementById("cuantity");
+btnDirectors.addEventListener("click", printDirectors);
+
+    function printDirectors() {
+        const directors = utilities.curiousData(films);
+
+        cardDirectors.innerHTML = 
+
+      directors.forEach(function (director) {
+        
+            const labelDir = document.createElement("li");
+            labelDir.classList.add("cardTwo");
+            cardDirectors.appendChild(labelDir);
+            labelDir.innerHTML += `<h3> Director:${director.name}</h3>`;
+        });
+    }
+
+    
+    // function printDirectors(directors) {
+        
+    // }
