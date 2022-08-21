@@ -17861,7 +17861,7 @@ export default {
       "medal": "Gold"
     },
     {
-      "name": "Yulimar del Valle Rojas Rodrguez",
+      "name": "Yulimar del Valle Rojas Rodriguez",
       "gender": "F",
       "height": "192",
       "weight": "72",

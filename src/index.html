@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>INFO OLIMPIADAS</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <section class="page1" id="page1">
+    <header>
+      <img class="logoImagen" src="IMAGENES/LOGO RIO1.png" alt="logo olimpiadas 2016">
+      <h1>INFO OLIMPIADAS</h1>
+      <button id="btn1" class="btn1">INFO ATHLETES</button>
+    </header>
+  </section>
+
+  <section id="page2" class="page2">
+    <header class="selectBusqueda" id="selectBusqueda">
+      <section class="filterByMedal" id="filterByMedal">
+ 
+        <input type="text" id="selectSearchByMedal" value="" placeholder="Search by medal">
+      </section>
+      <section class="busqueda" id="busquedaPorPais">
+        <select id="selectSearchByTeam">
+          <option value=""> -Search by team - </option>
+        </select>
+      </section>
+      <section class="busqueda" id="busquedaPorDeporte">
+        <select  id="selectSearchBySport">
+          <option  value=""> -Search by sport - </option>
+        </select>
+      </section>
+
+      <button class="btnBuscar" id="btnBuscar">Buscar</button>
+      <button class="btnLimpiar" type="" id="btnLimpiar">Refresh</button>
+    </header>
+
+
+
+    <article class="container">
+      <section  id="contenedorTarjetas" class="contenedorTarjetas">
+        <select class="order" name="Order" id="selectOrder">
+          <option value="Order"> -Order- </option>
+          <option value="Order">a-z</option>
+          <option value="Order">z-a</option>
+        </select>
+      </section>
+    </article>
+  </section>
+
+ <footer> </footer>
+  <script src="main.js" type="module"></script>
+</body>
 </html>
