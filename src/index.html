@@ -15,27 +15,21 @@
 
 <body>
   <a name="home-page"></a>
-  <header>
-    <div class="container">
-      <a href="#" class="logo"><img src="Img/logo_hp2.png" alt="Logo Harry Potter"></a>
-
-      <h1>
-        <span class="header-title"> Harry Potter</span>
-      </h1>
-      <h2>
-        <span class="header-sub">Lovers </span>
-      </h2>
-
-      <nav class="nav">
-        <ul>
-          <li><a href="#home-page">Home</a></li>
-          <li><a id="nav-characters" href="#characters-information">Personajes</a></li>
-          <li><a href="">Filtrar</a></li>
-          <li><a href="">Ordenar</a></li>
-          <li><a href="">Cálculo</a></li>
-        </ul>
-      </nav>
+  <header class="container-header">
+    <a href="#"><img class="logo" src="Img/logo_hp2.png" alt="Logo Harry Potter"></a>
+    <div>
+      <h1><span class="header-title"> Harry Potter</span></h1>
+      <h2><span class="header-sub">Lovers </span></h2>
     </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="main-nav__item"><a href="#home-page">Home</a></li>
+        <li class="main-nav__item"><a id="nav-characters" href="#characters-information">Personajes</a></li>
+        <li class="main-nav__item"><a href="">Filtrar</a></li>
+        <li class="main-nav__item"><a href="">Ordenar</a></li>
+        <li class="main-nav__item"><a href="">Cálculo</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="home">
@@ -126,16 +120,28 @@
         <p class="textoVisualizar">Cálcula a que casa de H perteneces</p>
       </div>
     </section>
-    
+
     <a name="characters-information"></a>
+    <section id="showCharacters" class="showCharacters">
+      <div id="informationCharacters"></div>
+    </section>
+
+    <br><br><br><br><br><br><br><br><br>
+    <section id="showOrderCharacters">
+      <div id="orderCharacters"></div>
+    </section>
+
+
     <button id="btnOrderAscent" class="btn">Ordenar A/Z</button>
     <button id="btnOrderFalling" class="btn">Ordenar Z/A</button>
-    <button id="btnHouseGry">Casa Gryffindor</button>
 
-    <section id="showCharacters" class="showCharacters">
-      
-      <div id="informationCharacters"></div>
-      
+    <section>
+      <select id="filterHouseSelect" onchange="filterHouse()">
+        <option>Gryffindor</option>
+        <option>Hufflepuff</option>
+        <option>Slytherin</option>
+        <option>Ravenclaw</option>
+      </select>
     </section>
     
 

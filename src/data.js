@@ -24,10 +24,11 @@ const functions = {
     })
     return result
   },
-  
-  
-  
 
+  sortFilter: function (data, selectHouse) {
+    const charactersFilter = data.filter(allCharacters => allCharacters.house === selectHouse)
+    return charactersFilter
+  }
 
 }
 
