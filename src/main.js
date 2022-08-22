@@ -6,7 +6,6 @@ const films = data.films;
 const listMovie = document.getElementById("peliculas");
 const cardDirectors = document.getElementById("directores");
 
-
 function printMovies(movies) {
     // limpia contenerdor
     listMovie.innerHTML = "";
@@ -26,7 +25,6 @@ function printMovies(movies) {
 }
 printMovies(films);
 
-
 const btnOrderAsc = document.getElementById("orderAsc");
 btnOrderAsc.addEventListener("click", printOrderAsc);
 
@@ -43,7 +41,6 @@ function printOrderDes() {
     printMovies(orderDesc);
 }
 
-
 const btnOrderByScore = document.getElementById("orderByScore");
 btnOrderByScore.addEventListener("click", printOrderByScore);
 
@@ -55,22 +52,21 @@ function printOrderByScore() {
 const btnDirectors = document.getElementById("cuantity");
 btnDirectors.addEventListener("click", printDirectors);
 
-    function printDirectors() {
-        const directors = utilities.curiousData(films);
-        listMovie.innerHTML = "";
-        cardDirectors.innerHTML = "";
+function printDirectors() {
+    const directors = utilities.curiousData(films);
+    listMovie.innerHTML = "";
+    cardDirectors.innerHTML = "";
 
-
-      directors.forEach(function (director) {
-            const trim = director.name.replace(/\s+/g, '')
-            const labelDir = document.createElement("li");
-            const imgDirector = document.createElement("img");
-            imgDirector.setAttribute("srcset", `${trim}.jpg`);
-            imgDirector.classList.add("imgDir");
-            labelDir.classList.add("card");
-            cardDirectors.appendChild(labelDir);
-            labelDir.appendChild(imgDirector);
-            labelDir.innerHTML += `<h3>${director.name}</h3> Total movies: ${director.length}` ;
-        });
-    }
+    directors.forEach(function (director) {
+        const trim = director.name.replace(/\s+/g, '');
+        const labelDir = document.createElement("li");
+        const imgDirector = document.createElement("img");
+        imgDirector.setAttribute("srcset", `${trim}.jpg`);
+        imgDirector.classList.add("imgDir");
+        labelDir.classList.add("card");
+        cardDirectors.appendChild(labelDir);
+        labelDir.appendChild(imgDirector);
+        labelDir.innerHTML += `<h3>${director.name}</h3> Total movies: ${director.length}`;
+    });
+}
 
