@@ -16,8 +16,8 @@
 
 /*Máximo ancho*/
 
-@media (max-width: 600px){
-    body{
+@media (max-width: 600px) {
+    body {
         flex-direction: column;
     }
 }
@@ -55,11 +55,11 @@ body {
     backface-visibility: hidden;
 }
 
-.container-header > div{
+.container-header > div {
     display: inline-block;
 }
 
-.logo{
+.logo {
     position: absolute;
     left: 40px;
     height: 100px;
@@ -68,14 +68,28 @@ body {
     display: inline-block;
 }
 
-.main-nav{
-    border: 3px solid red;
-    display: inline-block;
+.header-title, .header-sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main-nav__item{
+.main-nav {
+    border: 3px solid red;
     display: inline-block;
     text-align: right;
+    width: calc(100% - 49px);
+}
+
+.main-nav__items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+
 }
 
 .main-title {
@@ -180,11 +194,11 @@ body {
     animation-fill-mode: backwards;
 }
 
-.characterAllInformation{
+.characterAllInformation {
     display: flex;
 }
 
-.containerFunFacts{
+.containerFunFacts {
     width: 45%;
 }
 
@@ -217,7 +231,7 @@ body {
     /*Div para mostrar complementaria*/
     display: relative;
     background-color: #cab7d5;
-    color:#fff;
+    color: #fff;
     width: 50%;
     font-weight: 300;
     font-size: 18px;
@@ -275,7 +289,7 @@ body {
     background-color: red;
 }
 
-.contenedor-acciones{
+.contenedor-acciones {
     display: flex;
     height: 80%;
     background-color: red;
