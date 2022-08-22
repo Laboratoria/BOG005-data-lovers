@@ -8,7 +8,51 @@ html, body {
 main{
 	display: flex;
 	padding: 30px;
-}        
+
+}  
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+		
+}
+img#logo{
+	height: 30%;
+	width: 30%;
+	padding-top: 30px;	
+	margin-left: 90px;
+
+}
+
+/* estilo seccion buscador*/
+button#searchButton{
+	padding-top: 0px;
+	overflow: hidden;
+    transition: 0.2s;
+	box-shadow: 0 0 20px #2de627, 0 0 40px #2de627, 0 0 80px #2de627;
+	border-radius: 10px;
+	height: 30px;
+	width: 60px;
+	background-color: rgb(156, 134, 10);
+	
+
+}
+
+input#seeker{
+	height: 30px;
+	width: 180px;
+	border-radius: 10px;
+
+
+}
+.buscador{
+	padding-right: 0px;
+	margin-right: 100px;
+	
+}
+
+
 article{
 	padding: 20px;
 }
@@ -18,44 +62,43 @@ article{
 #filterButtons {
   display: flex;
   justify-content: space-around;
+  overflow: hidden;
+  transition: 0.2s;
 }
 #filterButtons select {
   width: 20%;
   padding: 8px 15px;
-  color: #a38e14;
-  background-color: #ececd0;
-  border: 3px solid #a38e14 ;
-  border-radius: 6px;
+  color: black;
+  background-color: rgba(180, 151, 75, 0.825);
+  box-shadow: 0 0 40px #272ae6, 0 0 60px #272ae6, 0 0 80px #272ae6;
+  border: 3px solid #ddc74c;
+  border-radius: 8px;
   text-align: center;
-  font-size: 10px;
+  font-size: 18px;
   font-family: 'Supermercado One', cursive;
+  font-weight: bold;
+
  
 }
-/* estilo seccion buscador*/
-input#search {
-  width: 220px;
-  height: 25px;
-  padding: 1px 6px;
-  font-size: 15px;
-  color: black;
-    
-
+section#filterButtons{
+	padding: 30px;
 }
 
+
  .containerCard{
-  display: grid;
+	align-items: center;
+    display: grid;
 	max-width:1200px;
 	margin: auto;
-	background-image: url
 	margin-top:100px;
 	perspective: 1000px;
-  grid-template-columns: repeat(4, 1fr);
-  
+    grid-template-columns: repeat(4, 1fr);
+	
   
   }
 
 .containerFather:hover .card{ 
-        transform:rotateY(180deg) ;        
+        transform:rotateY(180deg);        
 	
 }
 
@@ -68,7 +111,7 @@ input#search {
 	transition: all 600ms;
 	border-radius: 20px;
 	text-align: center;
-  font-family: 'Supermercado One', cursive;
+    font-family: 'Supermercado One', cursive;
   
  }
         
@@ -85,11 +128,19 @@ input#search {
 	
 }
 
+.cardFront{
+	background-size: cover;
+	background-position: center;
+ 
+}
 
 .cardBack{
 	transform: rotateY(180deg);
 	background: blue;
+
 }
+
+
 
 .bodyCardFront{
 	width: 100%;
@@ -100,7 +151,11 @@ input#search {
 	 justify-content: center;
 	 align-items: center;
 
-}        
+} 
+.bodyCardBack{
+	text-align: center;
+
+}       
  /*boton inicio*/
 .btnInicio {
   font-family: 'Supermercado One', cursive;  
@@ -109,13 +164,15 @@ input#search {
   border-radius: 10px;
   margin: 80px 700px;
   padding: 10px 15px;  
-  color: #23d747;
+  color: black;
   overflow: hidden;
   transition: 0.2s;
+  font-weight: bold;
+  background-color: #ab940f;
 
   
 }
 .btnInicio:hover {
-  background: #a945c7;
-  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+  background: rgba(198, 176, 51, 0.837);
+  box-shadow: 0 0 50px #5fcc1a, 0 0 80px #5fcc1a, 0 0 100px #5fcc1a;
 }

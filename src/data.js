@@ -4,6 +4,6 @@ export const example = () => {
   return 'example';
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export const filtrarPersonajes= (datosHarry, string) => {
+  const nuevoArray = datosHarry.filter((obj.))
+}
