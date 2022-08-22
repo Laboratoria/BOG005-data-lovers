@@ -1,6 +1,121 @@
-body  {
-        background-image: url(videofondo.mp4);
-      }
+html, body {
+	height: 100%;
+	width: 100%;
+  background-image: url(https://i.pinimg.com/originals/1f/1c/93/1f1c93e42c1c2cac80e0965d11dcd5e8.gif);
+}
 
 
+main{
+	display: flex;
+	padding: 30px;
+}        
+article{
+	padding: 20px;
+}
 
+
+/* estilo para selectores*/
+#filterButtons {
+  display: flex;
+  justify-content: space-around;
+}
+#filterButtons select {
+  width: 20%;
+  padding: 8px 15px;
+  color: #a38e14;
+  background-color: #ececd0;
+  border: 3px solid #a38e14 ;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 10px;
+  font-family: 'Supermercado One', cursive;
+ 
+}
+/* estilo seccion buscador*/
+input#search {
+  width: 220px;
+  height: 25px;
+  padding: 1px 6px;
+  font-size: 15px;
+  color: black;
+    
+
+}
+
+ .containerCard{
+  display: grid;
+	max-width:1200px;
+	margin: auto;
+	background-image: url
+	margin-top:100px;
+	perspective: 1000px;
+  grid-template-columns: repeat(4, 1fr);
+  
+  
+  }
+
+.containerFather:hover .card{ 
+        transform:rotateY(180deg) ;        
+	
+}
+
+ .card{
+	width: 150px;
+	height: 200px;
+	background: red;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 600ms;
+	border-radius: 20px;
+	text-align: center;
+  font-family: 'Supermercado One', cursive;
+  
+ }
+        
+.cardFront,
+.cardBack{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	border-radius: 20px;
+	
+}
+
+
+.cardBack{
+	transform: rotateY(180deg);
+	background: blue;
+}
+
+.bodyCardFront{
+	width: 100%;
+	 height: 100%;
+	 text-align: center;
+	 padding: 40px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+
+}        
+ /*boton inicio*/
+.btnInicio {
+  font-family: 'Supermercado One', cursive;  
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin: 80px 700px;
+  padding: 10px 15px;  
+  color: #23d747;
+  overflow: hidden;
+  transition: 0.2s;
+
+  
+}
+.btnInicio:hover {
+  background: #a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
