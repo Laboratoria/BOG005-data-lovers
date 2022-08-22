@@ -14,13 +14,14 @@ const allCharacters = data.characters.slice(0, 60)
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters (arrData) {
+  console.log(arrData, "Lo que recibe")
   const cards = []
   // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
   arrData.forEach((item) => {
     const card = document.createElement('div')
 
     const img = document.createElement('img')
-    img.innerHTML = '<img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">'
+    img.src = "./Img/icons8-harry.png"
 
     const name = document.createElement('p')
     name.innerHTML = `${item.name}`
@@ -63,7 +64,7 @@ function orderCharacters (arrData) {
     const cardOrder = document.createElement('div')
 
     const img = document.createElement('img')
-    img.innerHTML = '<img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">'
+    img.src = "./Img/soplón-96.png"
 
     const name = document.createElement('p')
     name.innerHTML = `${item.name}`
@@ -99,10 +100,12 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
   })
 })
 
+document.getElementById('filterHouseSelect').addEventListener('change', filterHouse)
 function filterHouse () {
-  if (document.getElementById('filterHouseSelect').value === 'Gryffindor') {
-  }
-  const gryFilterHouse = functions.sortFilter(allCharacters)
-  console.log(gryFilterHouse)
-  orderCharacters(filterHouse)
+  contentOrder.innerHTML = ''
+  const house = document.getElementById('filterHouseSelect').value
+  const filter1 = functions.sortFilter(allCharacters, house)
+  orderCharacters(filter1).forEach((card) => {
+    contentOrder.appendChild(card)
+  })
 }

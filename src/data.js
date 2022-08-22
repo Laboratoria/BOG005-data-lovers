@@ -25,8 +25,8 @@ const functions = {
     return result
   },
 
-  sortFilter: function (data, selectHouse) {
-    const charactersFilter = data.filter(allCharacters => allCharacters.house === selectHouse)
+  sortFilter: function (data, house) {
+    const charactersFilter = data.filter((item) => item.house === house)
     return charactersFilter
   }
 

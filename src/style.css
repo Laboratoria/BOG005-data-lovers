@@ -43,7 +43,7 @@ body {
 .container-header {
     display: flex;
     flex-direction: column;
-    height: 22vh;
+    height: 18vh;
     font-weight: 700;
     justify-content: center;
     align-items: center;
@@ -66,19 +66,23 @@ body {
     width: 100px;
     z-index: 3;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .header-title, .header-sub{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    vertical-align: middle;
 }
 
 .main-nav {
     border: 3px solid red;
     display: inline-block;
     text-align: right;
-    width: calc(100% - 49px);
+    width: calc(100% - 100px);
+    vertical-align: middle;
 }
 
 .main-nav__items{
@@ -89,7 +93,21 @@ body {
 
 .main-nav__item {
     display: inline-block;
+    margin: 0 10px;
+}
 
+.main-nav__item a{
+    color: #fff;
+    font-weight: lighter;
+}
+
+.main-nav__item a:hover{
+    color:#00000e;
+
+}
+
+.main-nav__item a:active{
+    color:#00000e;
 }
 
 .main-title {
@@ -194,9 +212,9 @@ body {
     animation-fill-mode: backwards;
 }
 
-.characterAllInformation {
+/* .characterAllInformation {
     display: flex;
-}
+} */
 
 .containerFunFacts {
     width: 45%;
