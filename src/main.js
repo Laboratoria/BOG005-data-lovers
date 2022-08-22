@@ -57,8 +57,8 @@ function setData() {
           <div class="cardText">
             <h2 class="filmTitle">${p.name}</h2>
             <h5 class="releaseDate">Especie: ${p.specie}</h5>
-            <h5 class="releaseDate">Especie: ${p.age}</h5>
-            <h5 class="releaseDate">Especie: ${p.gender}</h5>
+            <h5 class="releaseDate">Edad: ${p.age}</h5>
+            <h5 class="releaseDate">Género: ${p.gender}</h5>
          </div>
         </div>
     `);
