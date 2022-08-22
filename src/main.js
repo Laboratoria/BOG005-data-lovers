@@ -67,9 +67,13 @@ function orderCharacters (arrData) {
     img.src = "./Img/soplón-96.png"
 
     const name = document.createElement('p')
-    name.innerHTML = `${item.name}`
+    name.innerHTML = `Nombre: ${item.name}`
+
+    const nameHouse = document.createElement('p')
+    nameHouse.innerHTML = `Casa: ${item.house ? item.house : 'Sin información'}`
 
     cardOrder.appendChild(name)
+    cardOrder.appendChild(nameHouse)
     cardOrder.appendChild(img)
 
     cards.push(cardOrder)

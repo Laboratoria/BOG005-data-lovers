@@ -303,7 +303,7 @@ body {
 
 .fun-facts {
     display: flex;
-    height: 80%;
+    height: 80vh;
     background-color: red;
 }
 

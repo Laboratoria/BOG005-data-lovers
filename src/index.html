@@ -45,45 +45,74 @@
   </section>
 
   <main class="characterAllInformation">
+
     <a name="characters-funFacts"></a>
     <section class="fun-facts">
       <h2 class="titleFunFacts">
         Cinco datos curiosos que seguro no sabías de Harry Potter
       </h2>
-      <div class="containerFunFacts"></div>
-      <img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
-      <div class="textoCincoDatosCuriosos"></div>
-      <h3>
-        <span>1</span> Hogwarts a través de los ojos de un muggle:
-        <p>
-          Si los muggles llegaran a descubrir el paredero de Hogwarts, se
-          encontrarían con un edificio en ruinas con un cartel de "Mantenerse
-          fuera: Peligro". <br>
-        </p>
-        <span>2</span> ¿Pareja perfecta?:
-        <p>
-          Rowling ha admitido arrepentirse de la relación entre Ron y
-          Hermione. ¡Nosotros no! <br>
-        </p>
-        <span>3</span> Estableciendo las reglas:
-        <p>
-          Los primeros cinco años que Rowling trabajó en los libros de Harry
-          Potter se dedicaron a determinar las reglas sobre lo que sus
-          personajes podían y no podían hacer. <br>
-        </p>
-        <span>4</span> Hermione rompecorazones:
-        <p>
-          Daniel Radcliffe y Rupert Grint han admitido que ambos se quedaron
-          prendados de Emma Watson en las primeras películas, pero la que cosa
-          no pasó de un bonito amor platónico.<br>
-        </p>
-        <span>5</span> Padre no hay más que uno:
-        <p>
-          El padre de Harry, James Potter, aparece en todas las películas
-          excepto una, Harry Potter y el misterio del príncipe, la sexta de la
-          saga.<br>
-        </p>
-      </h3>
+
+        <div class="containerFunFacts">
+          <figure><img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter" class="imagenBuho" /></figure>
+          <div class="capa">
+            <h3>Hogwarts a través de los ojos de un muggle:</h3>
+            <p>Si los muggles llegaran a descubrir el paredero de Hogwarts, se
+              encontrarían con un edificio en ruinas con un cartel de "Mantenerse
+              fuera: Peligro".</p>
+          </div>
+
+          <div class="containerFunFacts">
+            <figure><img src="Img/Y6XI5VRSBZAPHH57QJWC26OEYA.jpg" alt="Imagen Buho de Harry Potter" class="imagenBuho" /></figure>
+            <div class="capa">
+              <h3>¿Pareja perfecta?</h3>
+              <p>Rowling ha admitido arrepentirse de la relación entre Ron y
+                Hermione. ¡Nosotros no!</p>
+            </div>
+
+            <div class="containerFunFacts">
+              <figure><img src="Img/rowling1.webp" alt="Imagen Buho de Harry Potter" class="imagenBuho" /></figure>
+              <div class="capa">
+                <h3>Estableciendo las reglas:</h3>
+                <p>Los primeros cinco años que Rowling trabajó en los libros de Harry
+                  Potter se dedicaron a determinar las reglas sobre lo que sus
+                  personajes podían y no podían hacer.
+                </p>
+              </div>
+
+              <div class="containerFunFacts">
+                <figure><img src="Img/15-2.jpg" alt="Imagen Buho de Harry Potter" class="imagenBuho" /></figure>
+                <div class="capa">
+                  <h3>Hermione rompecorazones</h3>
+                  <p>Daniel Radcliffe y Rupert Grint han admitido que ambos se quedaron
+                    prendados de Emma Watson en las primeras películas, pero la que cosa
+                    no pasó de un bonito amor platónico.<br>
+                  </p>
+                </div>
+
+                <div class="containerFunFacts">
+                  <figure><img src="Img/jamespotter.jpg" alt="Imagen Buho de Harry Potter" class="imagenBuho" /></figure>
+                  <div class="capa">
+                    <h3>Padre no hay más que uno</h3>
+                    <p>
+                      El padre de Harry, James Potter, aparece en todas las películas
+                      excepto una, Harry Potter y el misterio del príncipe, la sexta de la
+                      saga.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="containerFunFacts">
+                  <figure><img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter" class="imagenBuho" /></figure>
+                  <div class="capa">
+                    <h3>Padre no hay más que uno</h3>
+                    <p>
+                      El padre de Harry, James Potter, aparece en todas las películas
+                      excepto una, Harry Potter y el misterio del príncipe, la sexta de la
+                      saga.
+                    </p>
+                  </div>
+                </div>
+
     </section>
 
     <section class="contenedor-Acciones">
@@ -130,12 +159,9 @@
     <a name="characters-orderFilter"></a>
     <button id="btnOrderAscent" class="btn">Ordenar A/Z</button>
     <button id="btnOrderFalling" class="btn">Ordenar Z/A</button>
-    <section id="showOrderCharacters">
-      <div id="orderCharacters"></div>
-    </section>
-
     <section>
       <select id="filterHouseSelect">
+        <option>Escoge una casa</option>
         <option>Gryffindor</option>
         <option>Hufflepuff</option>
         <option>Slytherin</option>
@@ -143,7 +169,9 @@
       </select>
     </section>
 
-
+    <section id="showOrderCharacters">
+      <div id="orderCharacters"></div>
+    </section>
 
     </section>
   </main>
