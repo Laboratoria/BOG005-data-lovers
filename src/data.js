@@ -26,11 +26,7 @@ const functions = {
   },
   
   
-  sortFilter: function (data,house) {
-    const salida ="";
-    const charactersFilter = data.filter(allCharacters => allCharacters.house === 'Gryffindor')
-    return salida
-  }
+  
 
 
 }
