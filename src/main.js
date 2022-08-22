@@ -27,15 +27,6 @@ locationsMenu.addEventListener("click", showLocations);
 vehiclesMenu.addEventListener("click", showVehicles);
 ghibliMatchMenu.addEventListener("click", showGhibliMatch);
 
-// addEventListenerTo(characters);
-/*Info para mostrar las tarjetas*/
-
-// let fullPosters = moviesData.map(posters => `${posters.poster}`);
-// let fullTitles = moviesData.map(movies => `${movies.title}`);
-// let fullDescriptions = moviesData.map(descriptions => `${descriptions.description}`);
-// let fullReleases = moviesData.map(releases => `${releases.release_date}`);
-// let fullDirectors = moviesData.map(directors => `${directors.director}` )
-// let fullProducers = moviesData.map (producers => `${producers.producer}`)
 let container = document.querySelector(".cardContainer");
 
 function setData() {
@@ -65,8 +56,10 @@ function setData() {
           />
           <div class="cardText">
             <h2 class="filmTitle">${p.name}</h2>
-            <p class="filmDescription">${p.specie}</p>
-          </div>
+            <h5 class="releaseDate">Especie: ${p.specie}</h5>
+            <h5 class="releaseDate">Especie: ${p.age}</h5>
+            <h5 class="releaseDate">Especie: ${p.gender}</h5>
+         </div>
         </div>
     `);
       characters.push(p);
@@ -124,3 +117,4 @@ setData();
 showMovies();
 
 // console.log(example);
+
