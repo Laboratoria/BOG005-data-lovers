@@ -1,9 +1,7 @@
-// estas funciones son de ejemplo
+// AQUI DEBE IR TODA LA LOGICA//
 
-export const example = () => {
-  return 'example';
-};
+// import ghibli from "./data/ghibli/ghibli.js";
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+
+export {}
