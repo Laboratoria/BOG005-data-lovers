@@ -25,14 +25,12 @@ const functions = {
     return result;
   },
 
-  /* sortFilter: function (data, selectHouse) {
-    const charactersFilter = data.filter(allCharacters => allCharacters.house === selectHouse)
-    return charactersFilter 
-  },*/
   sortFilter: function (data, house) {
-    const charactersFilter = data.filter( (item) => item.house === house);
-    return charactersFilter;
-  },
-};
+    const charactersFilter = data.filter((item) => item.house === house)
+    return charactersFilter
+  }
+
+}
+
 
 export default functions;

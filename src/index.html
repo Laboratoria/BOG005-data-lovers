@@ -18,16 +18,16 @@
   <header class="container-header">
     <a href="#"><img class="logo" src="Img/logo_hp2.png" alt="Logo Harry Potter"></a>
     <div>
-      <h1><span class="header-title"> Harry Potter</span></h1>
-      <h2><span class="header-sub">Lovers </span></h2>
+      <h1 class="header-title"><span> Harry Potter</span></h1>
+      <h2 class="header-sub"><span>Lovers </span></h2>
     </div>
     <nav class="main-nav">
-      <ul>
+      <ul class="main-nav__items">
         <li class="main-nav__item"><a href="#home-page">Home</a></li>
         <li class="main-nav__item"><a id="nav-characters" href="#characters-information">Personajes</a></li>
-        <li class="main-nav__item"><a href="">Filtrar</a></li>
-        <li class="main-nav__item"><a href="">Ordenar</a></li>
-        <li class="main-nav__item"><a href="">Cálculo</a></li>
+        <li class="main-nav__item"><a href="#characters-orderFilter">Filtrar</a></li>
+        <li class="main-nav__item"><a href="#characters-orderFilter">Ordenar</a></li>
+        <li class="main-nav__item"><a href="#characters-orderFilter">Cálculo</a></li>
       </ul>
     </nav>
   </header>
@@ -40,50 +40,86 @@
           información del colegio Hogwarts sus estudiantes, pociones, hechizos
           y más.</span>
       </h2>
-      <a href="#characters-information" class="btn btn-heading-home btn-animated">Descubre +</a>
+      <a href="#characters-funFacts" class="btn btn-heading-home btn-animated">Descubre +</a>
     </div>
   </section>
 
-  <main class="characterAllInformatio">
+  <main class="characterAllInformation">
 
+    <a name="characters-funFacts"></a>
     <section class="fun-facts">
-      <h2 class="heading-home">
+      <h2 class="titleFunFacts">
         Cinco datos curiosos que seguro no sabías de Harry Potter
       </h2>
-      <div class="contenedorDatosCuriosos"></div>
-      <img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
-      <div class="textoCincoDatosCuriosos"></div>
-      <h3>
-        <span>1</span> Hogwarts a través de los ojos de un muggle:
-        <p>
-          Si los muggles llegaran a descubrir el paredero de Hogwarts, se
-          encontrarían con un edificio en ruinas con un cartel de "Mantenerse
-          fuera: Peligro". <br>
-        </p>
-        <span>2</span> ¿Pareja perfecta?:
-        <p>
-          Rowling ha admitido arrepentirse de la relación entre Ron y
-          Hermione. ¡Nosotros no! <br>
-        </p>
-        <span>3</span> Estableciendo las reglas:
-        <p>
-          Los primeros cinco años que Rowling trabajó en los libros de Harry
-          Potter se dedicaron a determinar las reglas sobre lo que sus
-          personajes podían y no podían hacer. <br>
-        </p>
-        <span>4</span> Hermione rompecorazones:
-        <p>
-          Daniel Radcliffe y Rupert Grint han admitido que ambos se quedaron
-          prendados de Emma Watson en las primeras películas, pero la que cosa
-          no pasó de un bonito amor platónico.<br>
-        </p>
-        <span>5</span> Padre no hay más que uno:
-        <p>
-          El padre de Harry, James Potter, aparece en todas las películas
-          excepto una, Harry Potter y el misterio del príncipe, la sexta de la
-          saga.<br>
-        </p>
-      </h3>
+
+      <div class="containerFunFacts">
+        <figure><img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
+        <div class="capa">
+          <h3>Hogwarts a través de los ojos de un muggle:</h3>
+          <p>Si los muggles llegaran a descubrir el paredero de Hogwarts, se
+            encontrarían con un edificio en ruinas con un cartel de "Mantenerse
+            fuera: Peligro".</p>
+          </figure>
+        </div>
+
+        <div class="containerFunFacts">
+          <figure><img src="Img/Y6XI5VRSBZAPHH57QJWC26OEYA.jpg" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
+          
+          <div class="capa">
+            <h3>¿Pareja perfecta?</h3>
+            <p>Rowling ha admitido arrepentirse de la relación entre Ron y
+              Hermione. ¡Nosotros no!</p>
+            </figure>
+          </div>
+
+          <div class="containerFunFacts">
+            <figure><img src="Img/rowling1.webp" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
+            <div class="capa">
+              <h3>Estableciendo las reglas:</h3>
+              <p>Los primeros cinco años que Rowling trabajó en los libros de Harry
+                Potter se dedicaron a determinar las reglas sobre lo que sus
+                personajes podían y no podían hacer.
+              </p>
+            </figure>
+            </div>
+
+            <div class="containerFunFacts">
+              <figure><img src="Img/15-2.jpg" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
+              <div class="capa">
+                <h3>Hermione rompecorazones</h3>
+                <p>Daniel Radcliffe y Rupert Grint han admitido que ambos se quedaron
+                  prendados de Emma Watson en las primeras películas, pero la que cosa
+                  no pasó de un bonito amor platónico.<br>
+                </p>
+              </figure>
+              </div>
+
+              <div class="containerFunFacts">
+                <figure><img src="Img/jamespotter.jpg" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
+                <div class="capa">
+                  <h3>Padre no hay más que uno</h3>
+                  <p>
+                    El padre de Harry, James Potter, aparece en todas las películas
+                    excepto una, Harry Potter y el misterio del príncipe, la sexta de la
+                    saga.
+                  </p>
+                </div>
+              </figure>
+              </div>
+
+              <div class="containerFunFacts">
+                <figure><img src="Img/futbolera.jpg" alt="Imagen afición futbolera"/>
+                <div class="capa">
+                  <h3>Afición futbolera</h3>
+                  <p>Uno de los amigos de toda la vida de Rowling es
+                    seguidor del club de fútbol West Ham,
+                    por lo que la autora incluyó al equipo en los libros como guiño personal.
+                    El antiguo jugador del club, Jonjo Shelvey, fue
+                    comparado por los propios aficionados con el mismísimo Lord Voldemort.
+                  </p>
+                </div>
+              </figure>
+              </div>
     </section>
 
     <section class="contenedor-Acciones">
@@ -126,33 +162,23 @@
       <div id="informationCharacters"></div>
     </section>
 
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br>
+    <a name="characters-orderFilter"></a>
+    <button id="btnOrderAscent" class="btn">Ordenar A/Z</button>
+    <button id="btnOrderFalling" class="btn">Ordenar Z/A</button>
+    <section>
+      <select id="filterHouseSelect">
+        <option>Escoge una casa</option>
+        <option>Gryffindor</option>
+        <option>Hufflepuff</option>
+        <option>Slytherin</option>
+        <option>Ravenclaw</option>
+      </select>
+    </section>
+
     <section id="showOrderCharacters">
       <div id="orderCharacters"></div>
     </section>
-
-
-    <button id="btnOrderAscent" class="btn">Ordenar A/Z</button>
-    <button id="btnOrderFalling" class="btn">Ordenar Z/A</button>
-
-    <section>
-      <select id="filterHouseSelect" onchange="filterHouse()">
-        <option>Gryffindor</option>
-        <option>Hufflepuff</option>
-        <option>Slytherin</option>
-        <option>Ravenclaw</option>
-      </select>
-    </section>
-    <section id="informationfiltrarHouse">
-      <select id="menuCasas">
-        <option>Selecciona una Casa</option>
-        <option>Gryffindor</option>
-        <option>Hufflepuff</option>
-        <option>Ravenclaw</option>
-        <option>Slytherin</option>
-        <div id="divFiltrarCasas"></div>
-      </select>
-
 
     </section>
   </main>

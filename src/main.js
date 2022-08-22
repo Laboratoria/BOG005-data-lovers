@@ -20,7 +20,7 @@ function showAllCharacters (arrData) {
     const card = document.createElement('div')
 
     const img = document.createElement('img')
-    img.innerHTML = '<img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">'
+    img.src = './Img/icons8-harry.png'
 
     const name = document.createElement('p')
     name.innerHTML = `${item.name}`
@@ -63,12 +63,16 @@ function orderCharacters (arrData) {
     const cardOrder = document.createElement('div')
 
     const img = document.createElement('img')
-    img.innerHTML = '<img class="wand" src="Img/icons8-harry.png" alt="Imagen generica para personajes">'
+    img.src = './Img/soplón-96.png'
 
     const name = document.createElement('p')
-    name.innerHTML = `${item.name}`
+    name.innerHTML = `Nombre: ${item.name}`
+
+    const nameHouse = document.createElement('p')
+    nameHouse.innerHTML = `Casa: ${item.house ? item.house : 'Sin información'}`
 
     cardOrder.appendChild(name)
+    cardOrder.appendChild(nameHouse)
     cardOrder.appendChild(img)
 
     cards.push(cardOrder)
@@ -99,23 +103,11 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
   })
 })
 
-/* function filterHouse () {
-  if (document.getElementById('filterHouseSelect').value === 'Gryffindor') {
-  }
-  const gryFilterHouse = functions.sortFilter(allCharacters)
-  console.log(gryFilterHouse)
-  orderCharacters(filterHouse)
-}
- */
-document.getElementById("menuCasas").addEventListener("change",filtrar);
-function filtrar(){
+document.getElementById('filterHouseSelect').addEventListener('change', filterHouse)
+function filterHouse () {
   contentOrder.innerHTML = ''
-  const house = document.getElementById("menuCasas").value
-  console.log(house)
-  let filter1 = functions.sortFilter(allCharacters,house) 
-  console.log(functions.sortFilter(allCharacters,house))
-  
-  
+  const house = document.getElementById('filterHouseSelect').value
+  const filter1 = functions.sortFilter(allCharacters, house)
   orderCharacters(filter1).forEach((card) => {
     contentOrder.appendChild(card)
   })
