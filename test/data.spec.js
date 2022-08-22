@@ -1,23 +1,34 @@
-import { example, anotherExample } from '../src/data.js';
+import functions from '../src/data.js'
 
+describe('functions', () => {
+  it('Debería ser un objeto', () => {
+    expect(typeof functions).toBe('object')
+  })
+})
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+describe('functions.sortName', () => {
+  it('Debería ser una función', () => {
+    expect(typeof functions.sortName).toBe('function')
+  })
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+  it('returns `functions.sortName` Az', () => {
+    const sortAz = [{ name: 'A' }, { name: 'C' }, { name: 'B' }, { name: 'D' }]
+    expect(functions.sortName(sortAz)).toEqual([{ name: 'A' }, { name: 'B' }, { name: 'C' }, { name: 'D' }])
+  })
 
+  it('returns `functions.sortName` zA', () => {
+    const sortZa = [{ name: 'A' }, { name: 'D' }, { name: 'C' }, { name: 'B' }]
+    expect(functions.sortName(sortZa)).toBe([{ name: 'D' }, { name: 'C' }, { name: 'B' }, { name: 'A' }])
+  })
+})
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+describe('functions.sortFilter', () => {
+  it('Debería ser una función', () => {
+    expect(typeof functions.sortFilter).toBe('function')
+  })
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+  it('returns `functions.sortFilter`', () => {
+    const filterData = [{ house: 'Gryffindor' }, { house: 'Ravenclaw' }, { house: 'Slytherin' }, { house: 'Hufflepuff' }]
+    expect(functions.sortFilter(filterData)).toEqual([{ house: 'Gryffindor' }])
+  })
+})

@@ -1,0 +1,441 @@
+/*Colores
+    --purple: #6b63b5;
+    --purple-soft: #514A92;
+    --purple--med: #231E4E;
+    --purple-dark: #00000e;
+    --white: #fff;
+}*/
+
+/*
+.color1 {color: #00000e;}
+.color2 {color: #202b4b;}
+.color3 {color: #515993;}
+.color4 {color: #918ee6;}
+.color5 {color: #e1c9ff;}
+*/
+
+/*Máximo ancho*/
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    border: 3px solid orange;
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 400;
+    font-size: 62%;
+    line-height: 1.2;
+    color: #00000e;
+    margin: 1%;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(to right bottom,
+            rgb(202, 183, 213),
+            rgba(35, 30, 78, 0.625));
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.container-header > div {
+    display: inline-block;
+}
+
+.logo {
+    position: absolute;
+    left: 40px;
+    height: 100px;
+    width: 100px;
+    z-index: 3;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-nav {
+    border: 3px solid red;
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 100px);
+    vertical-align: middle;
+}
+
+.main-nav__items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.main-nav__item a{
+    color: #fff;
+    font-weight: lighter;
+}
+
+.main-nav__item a:hover{
+    color:#00000e;
+
+}
+
+.main-nav__item a:active{
+    color:#00000e;
+}
+
+.header-title {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.header-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    animation: moveInRight 1s ease-out;
+}
+
+.home {
+    height: 80vh;
+    color: #fff;
+    background-image: linear-gradient(to right bottom,
+            rgba(202, 183, 213, 0.8),
+            rgba(35, 30, 78, 0.661)),
+        url(Img/castillo.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-home-first {
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.btn-heading-home {
+    display: block;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.btn:link,
+.btn:visited {
+    /*Pseudo clase*/
+    background-color: #fff;
+    color: #00000e;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    /*Pseudo elemento es un hijo de btn*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-heading-home::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    /*Pseudo elemento posterior que se verá solo cuando el botón ha sido seleccionado*/
+    transform: scaleX(1.2) scaleY(1.2);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 0.5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+.containerFunFacts {
+    width: 45%;
+}
+
+.card {
+    /*Sección de JS para mostrar información de personaje*/
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wand {
+    /*Imagen que acompaña información de personaje*/
+    height: 15em;
+    width: 15em;
+}
+
+#informationCharacters {
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.information {
+    /*Div para mostrar complementaria*/
+    display: relative;
+    background-color: #cab7d5;
+    color: #fff;
+    width: 50%;
+    font-weight: 300;
+    font-size: 18px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 15px;
+    transition: all 6s;
+}
+
+.name-characters {
+    /*H3 nombre de los personajes*/
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #00000e;
+}
+
+.buttonShow {
+    /*Botón para mostrar información complementaria*/
+    display: inline-block;
+    font-family: 'Kodchasan', sans-serif;
+    color: #00000e;
+    background-color: linear-gradient(to right bottom,
+            #cab7d5,
+            rgb(35, 30, 78));
+    border: none;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    transition: all .2s;
+    text-align: center;
+    width: 70px;
+    padding: 5px;
+    margin-left: 28%;
+}
+
+.showCharacters {
+    display: flex;
+}
+
+.showCharacters {
+    /*Sección de HTML para mostrar información de personaje*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #cab7d5;
+    z-index: 200;
+}
+
+.fun-facts {
+    display: flex;
+    background-color: #fff;
+}
+
+.containerFunFacts{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.containerFunFacts figure{
+    flex-direction: row;
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+}
+
+.containerFunFacts figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.containerFunFacts figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(145, 142, 230, 0.842);
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.containerFunFacts figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.containerFunFacts figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.containerFunFacts figure .capa h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.containerFunFacts figure .capa p{
+    color: #fff;
+    font-weight: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+.contenedor-acciones {
+    display: flex;
+    height: 80%;
+    background-color: red;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #00000e;
+    position: relative;
+}
+
+.footer-names {
+    color: #fff;
+    position: absolute;
+    left: 40px;
+    font-weight: 300;
+    font-size: 1.6em;
+}
+
+.logo-footer {
+    position: absolute;
+    right: 40px;
+}
+
+.img-footer {
+    height: 68px;
+}
+
+/*Animaciones para titulo aplicación web y botones*/
+@keyframes moveInLeft {
+
+    /*Secuencia de animación por punto de trayectoria*/
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

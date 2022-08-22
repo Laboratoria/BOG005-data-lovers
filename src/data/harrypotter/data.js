@@ -34,7 +34,7 @@ export default {
     },
     {
       "id": 3,
-      "name": "African prince",
+      "name": "African Prince",
       "birth": null,
       "death": null,
       "species": "Human",
@@ -50,7 +50,7 @@ export default {
     },
     {
       "id": 4,
-      "name": "Agnes's son",
+      "name": "Agnes's Son",
       "birth": null,
       "death": null,
       "species": "Human",
@@ -82,7 +82,7 @@ export default {
     },
     {
       "id": 6,
-      "name": "Albino peacock",
+      "name": "Albino Peacock",
       "birth": "Pre 1997",
       "death": null,
       "species": "Peacock",
@@ -130,7 +130,7 @@ export default {
     },
     {
       "id": 9,
-      "name": "Antioch Peverell's killer",
+      "name": "Antioch Peverell's Killer",
       "birth": null,
       "death": null,
       "species": "Human",
@@ -146,7 +146,7 @@ export default {
     },
     {
       "id": 10,
-      "name": "Apothecary shopkeeper",
+      "name": "Apothecary Shopkeeper",
       "birth": null,
       "death": null,
       "species": "Human",
@@ -194,7 +194,7 @@ export default {
     },
     {
       "id": 13,
-      "name": "Arkie Alderton's alleged son",
+      "name": "Arkie Alderton's Alleged Son",
       "birth": null,
       "death": null,
       "species": "Human",
@@ -210,7 +210,7 @@ export default {
     },
     {
       "id": 14,
-      "name": "Armenian warlock",
+      "name": "Armenian Warlock",
       "birth": null,
       "death": null,
       "species": "Human",
@@ -350,7 +350,7 @@ export default {
     },
     {
       "id": 22,
-      "name": "Ludovic Bagman's father",
+      "name": "Ludovic Bagman's Father",
       "birth": null,
       "death": null,
       "species": "Human",
