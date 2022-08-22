@@ -99,10 +99,24 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
   })
 })
 
-function filterHouse () {
+/* function filterHouse () {
   if (document.getElementById('filterHouseSelect').value === 'Gryffindor') {
   }
   const gryFilterHouse = functions.sortFilter(allCharacters)
   console.log(gryFilterHouse)
   orderCharacters(filterHouse)
+}
+ */
+document.getElementById("menuCasas").addEventListener("change",filtrar);
+function filtrar(){
+  contentOrder.innerHTML = ''
+  const house = document.getElementById("menuCasas").value
+  console.log(house)
+  let filter1 = functions.sortFilter(allCharacters,house) 
+  console.log(functions.sortFilter(allCharacters,house))
+  
+  
+  orderCharacters(filter1).forEach((card) => {
+    contentOrder.appendChild(card)
+  })
 }
