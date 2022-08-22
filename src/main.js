@@ -1,34 +1,126 @@
 /*AQUI DEBEN ESTAR LAS INTERACCIONES CON EL DOM--- EVENT LISTENER ETC...*/
 import ghibli from "./data/ghibli/ghibli.js";
-const moviesData = ghibli.films;
+import {} from "./data.js";
 
-let fullPosters = moviesData.map(posters => `${posters.poster}`);
-let fullTitles = moviesData.map(movies => `${movies.title}`);
-let fullDescriptions = moviesData.map(descriptions => `${descriptions.description}`);
-let fullReleases = moviesData.map(releases => `${releases.release_date}`);
-let fullDirectors = moviesData.map(directors => `${directors.director}` )
-let fullProducers = moviesData.map (producers => `${producers.producer}`)
+const moviesData = ghibli.films;
+const characters = [];
+const locations = [];
+const vehicles = [];
+/*Separación*/
+const moviesHtml = [];
+const charactersHtml = [];
+const locationsHtml = [];
+const vehiclesHtml = [];
+const ghibliMatchHtml = [];
+
+/*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
+
+const moviesMenu = document.getElementById("movies");
+const charactersMenu = document.getElementById("characters");
+const locationsMenu = document.getElementById("locations");
+const vehiclesMenu = document.getElementById("vehicles");
+const ghibliMatchMenu = document.getElementById("ghibliMatch");
+
+moviesMenu.addEventListener("click", showMovies);
+charactersMenu.addEventListener("click", showCharacters);
+locationsMenu.addEventListener("click", showLocations);
+vehiclesMenu.addEventListener("click", showVehicles);
+ghibliMatchMenu.addEventListener("click", showGhibliMatch);
+
+// addEventListenerTo(characters);
+/*Info para mostrar las tarjetas*/
+
+// let fullPosters = moviesData.map(posters => `${posters.poster}`);
+// let fullTitles = moviesData.map(movies => `${movies.title}`);
+// let fullDescriptions = moviesData.map(descriptions => `${descriptions.description}`);
+// let fullReleases = moviesData.map(releases => `${releases.release_date}`);
+// let fullDirectors = moviesData.map(directors => `${directors.director}` )
+// let fullProducers = moviesData.map (producers => `${producers.producer}`)
 let container = document.querySelector(".cardContainer");
 
-function createCard(){       
-    for (let i = 0; i < moviesData.length; i ++) {
-    let code = `
-    <div class="card">
+function setData() {
+  for (let i = 0; i < moviesData.length; i++) {
+    moviesHtml.push(`
+        <div class="card">
           <img
-            src="${fullPosters[i]}"
+            src="${moviesData[i].poster}"
             alt=""
           />
           <div class="cardText">
-            <h2 class="filmTitle">${fullTitles[i]}</h2>
-            <p class="directorAndProducer">Director: ${fullDirectors[i]} | Producer: ${fullProducers[i]}</p>
-            <h5 class="releaseDate">${fullReleases[i]}</h5>
-            <p class="filmDescription">${fullDescriptions[i]}
+            <h2 class="filmTitle">${moviesData[i].title}</h2>
+            <p class="directorAndProducer">Director: ${moviesData[i].director} | Producer: ${moviesData[i].director}</p>
+            <h5 class="releaseDate">${moviesData[i].release_date}</h5>
+            <p class="filmDescription">${moviesData[i].description}
             </p>
-            </div>
+          </div>
         </div>
-    `;
-    container.innerHTML += code;}}
+    `);
 
-    createCard();
+    moviesData[i].people.forEach((p) => {
+      charactersHtml.push(`
+        <div class="card">
+          <img
+            src="${p.img}"
+            alt=""
+          />
+          <div class="cardText">
+            <h2 class="filmTitle">${p.name}</h2>
+            <p class="filmDescription">${p.specie}</p>
+          </div>
+        </div>
+    `);
+      characters.push(p);
+    });
+
+    moviesData[i].locations.forEach((l) => {
+      locationsHtml.push(`
+        <div class="card">
+          <img
+            src="${l.img}"
+            alt=""
+          />
+          <div class="cardText">
+            <h2 class="filmTitle">${l.name}</h2>
+          </div>
+        </div>
+    `);
+      locations.push(l);
+    });
+
+    moviesData[i].vehicles.forEach((v) => {
+      vehiclesHtml.push(`
+        <div class="card">
+          <img
+            src="${v.img}"
+            alt=""
+          />
+          <div class="cardText">
+            <h2 class="filmTitle">${v.name}</h2>
+          </div>
+        </div>
+    `);
+      vehicles.push(v);
+    });
+  }
+}
+
+function showMovies() {
+  container.innerHTML = moviesHtml.join("");
+}
+function showCharacters() {
+  container.innerHTML = charactersHtml.join("");
+}
+function showLocations() {
+  container.innerHTML = locationsHtml.join("");
+}
+function showVehicles() {
+  container.innerHTML = vehiclesHtml.join("");
+}
+function showGhibliMatch() {
+  container.innerHTML = ghibliMatchHtml.join("");
+}
+
+setData();
+showMovies();
 
 // console.log(example);
