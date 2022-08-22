@@ -30,10 +30,6 @@
     list-style: none;
 }
 
-/* html {
-    display: block;
-} */
-
 body {
     border: 3px solid orange;
     font-family: 'Kodchasan', sans-serif;
@@ -182,6 +178,14 @@ body {
 .btn-animated {
     animation: moveInBottom 0.5s ease-out .75s;
     animation-fill-mode: backwards;
+}
+
+.characterAllInformation{
+    display: flex;
+}
+
+.containerFunFacts{
+    width: 45%;
 }
 
 .card {
