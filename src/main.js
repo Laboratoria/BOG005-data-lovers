@@ -4,7 +4,7 @@ import functions from './data.js'
 const btnShowSectionCharacters = document.getElementById('nav-characters')
 btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
 
-function changeBtnStyle() {
+function changeBtnStyle () {
   document.getElementById('showCharacters').style.display = 'none'
   document.getElementById('showCharacters').style.display = 'block'
 }
@@ -13,7 +13,7 @@ function changeBtnStyle() {
 const allCharacters = data.characters.slice(0, 450)
 const content = document.querySelector('#showCharacters')
 
-function showAllCharacters(arrData) {
+function showAllCharacters (arrData) {
   const cards = []
   // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
   arrData.forEach((item) => {
@@ -56,7 +56,7 @@ showAllCharacters(allCharacters).forEach((card) => {
 
 const contentOrder = document.querySelector('#showOrderCharacters')
 
-function orderCharacters(arrData) {
+function orderCharacters (arrData) {
   const cards = []
   // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
   arrData.forEach((item) => {
@@ -104,7 +104,7 @@ document.getElementById('btnOrderFalling').addEventListener('click', () => {
 })
 
 document.getElementById('filterHouseSelect').addEventListener('change', filterHouse)
-function filterHouse() {
+function filterHouse () {
   contentOrder.innerHTML = ''
   const house = document.getElementById('filterHouseSelect').value
   const filter1 = functions.sortFilter(allCharacters, house)

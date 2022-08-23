@@ -18,7 +18,12 @@ describe('functions.sortName', () => {
 
   it('returns `functions.sortName` zA', () => {
     const sortZa = [{ name: 'A' }, { name: 'D' }, { name: 'C' }, { name: 'B' }]
-    expect(functions.sortName(sortZa)).toBe([{ name: 'D' }, { name: 'C' }, { name: 'B' }, { name: 'A' }])
+    expect(functions.sortName(sortZa, 'name', 'falling')).toEqual([{ name: 'D' }, { name: 'C' }, { name: 'B' }, { name: 'A' }])
+  })
+  // Con arreglo vacio
+  it('returns `functions.sortName` zA', () => {
+    console.log() // revisen test cipher/card
+    expect(functions.sortName([], 'name', 'falling')).toEqual()
   })
 })
 

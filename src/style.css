@@ -298,8 +298,8 @@ body {
 .containerFunFacts {
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
