@@ -16,11 +16,6 @@
 <body>
   <a name="home-page"></a>
   <header class="container-header">
-<!--     <img class="logo" src="Img/logo_hp2.png" alt="Logo Harry Potter">
-    <div>
-      <h1 class="header-title"><span> Harry Potter</span></h1>
-      <h2 class="header-sub"><span>Lovers </span></h2>
-    </div> -->
     <nav class="main-nav">
       <div id="toggle-menu" class="toggle-menu">
         <img src="./Img/menu.png" alt="Icono menu hamburguesa">
@@ -43,7 +38,7 @@
           información del colegio Hogwarts sus estudiantes, pociones, hechizos
           y más.</span>
       </h2>
-      <a href="#characters-funFacts" class="btn btn-heading-home btn-animated">Descubre +</a>
+      <a href="#characters-information" class="btn btn-heading-home btn-animated">Descubre +</a>
     </div>
   </section>
 
@@ -129,6 +124,7 @@
                 </div>
               </figure>
               </div>
+
     </section>
 
     <div class="titleShowCharacters">
@@ -142,13 +138,17 @@
       <div id="informationCharacters"></div>
     </section>
 
-    <br><br><br><br>
-    <a name="characters-orderFilter"></a>
+    <br><br><br><br><br><br><br><br><br>
+    <section id="showOrderCharacters">
+      <div id="orderCharacters"></div>
+    </section>
+
+
     <button id="btnOrderAscent" class="btn">Ordenar A/Z</button>
     <button id="btnOrderFalling" class="btn">Ordenar Z/A</button>
+
     <section>
-      <select id="filterHouseSelect">
-        <option>Escoge una casa</option>
+      <select id="filterHouseSelect" onchange="filterHouse()">
         <option>Gryffindor</option>
         <option>Hufflepuff</option>
         <option>Slytherin</option>
@@ -159,10 +159,16 @@
       <input id="averagePrint"/>
     </div>
     </section>
+    <section id="informationfiltrarHouse">
+      <select id="menuCasas">
+        <option>Selecciona una Casa</option>
+        <option>Gryffindor</option>
+        <option>Hufflepuff</option>
+        <option>Ravenclaw</option>
+        <option>Slytherin</option>
+        
+      </select>
 
-    <section id="showOrderCharacters">
-      <div id="orderCharacters"></div>
-    </section>
 
     </section>
   </main>
