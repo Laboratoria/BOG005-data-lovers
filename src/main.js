@@ -5,51 +5,41 @@ console.log(data);
 const dataAtletas = data.athletes
 
 
-//mostrar en consola solo los nombres de los atletas.
-// const mostrarInfo = mostrarData(data);
-// console.log(ordenarNombres(mostrarInfo));
-
-//mostrar las edades los atletas y ordenarlos de menor a mayor en consola
-// const mostrarAge = mostrarEdad(data);
-// console.log(ordenarEdad(mostrarAge));
-
 const pintarData = (data) => {
     let plantilla = ""
     data.forEach((element) => {
         console.log(element)
-        plantilla += `<h1>Nombre: ${element.name}</h1>
-                      <h1>Género: ${element.gender}</h1>
-        `
+        plantilla += `
+                    <tr>
+                    <th>${element.name}</th>
+                    <td>${element.age}</td>
+                    <td>${element.gender}</td>
+                    <td>${element.sport}</td>
+                    <td>${element.medal}</td>
+                    </tr>
+                     `
     })
-    document.getElementById("Olimpics-Games").innerHTML = plantilla;
+    document.getElementById("contenido").innerHTML = plantilla;
 }
-
-
 
 pintarData(dataAtletas)
 
-// /cuando le de click a ordenar se debe pintar la data ordenada
-// cuando se de click a filtrar se debe pintar la data filtrada
+const buttonOrder = document.querySelector("#buttonOrder");
+buttonOrder.addEventListener("change", () => {
+    const valueOrder = buttonOrder.value;
+    dataAtletas.innerHTML = "";
+    showData(ordenarNombres(data,valueOrder));
 
-//ordenar por edad ascendente y por orden alfabetico dentro del mismo rango de edad
+});
 
-// const mostrarAtletas = dataAtletas(data);
-// console.log(mostrarAtletas);
-
-// mostrarAtletas.sort((a, b) => {
-//     if (a.age > b.age) {
-//         return 1;
-//     }
-//     if (a.age < b.age) {
-//         return -1;
-//     }
-//     if (a.name.toLowerCase() > b.name.toLowerCase()) {
-//         return 1;
-//     }
-//     if (a.name.toLowerCase() < b.name.toLowerCase()) {
-//         return -1;
-//     }
-//     return 0;
-// })
-// console.log(mostrarAtletas);
-
+import ordenarNombres from './data/athletes/ordenarNombres.js';
+const showData = (parametro) => {
+    let show = "";
+    parametro.forEach((element) => {
+        const atletas = `
+            <div class="atleta" data-name="${element.name} name="athletes"></div> 
+            `;
+            show += atletas;
+    });
+    ordenarNombres.innerHTML = show;
+}

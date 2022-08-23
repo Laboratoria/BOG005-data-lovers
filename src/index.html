@@ -19,11 +19,11 @@
         <div class "logo"> RIO 2016</div>
         <nav class="nav">
               <a href="#Paises"
-              class="nav-link"> Paises</a>
+              class="nav-link"> Países</a>
               <a href="#Atletas"
-              class="nav-link">Atletas</a>
+              class="nav-link">Filtrar por.. </a>
               <a href="#Mujeres"
-              class="nav-link">Mujeres</a>
+              class="nav-link">Mujeres mas Destacadas</a>
               <a href="#Deportes"
               class="nav-link">Deportes</a>
               <a href="#Top 10 de Medallas"
@@ -34,53 +34,44 @@
 
     <section id="hero">
        <h1>Juegos Olimpicos<br>Rio de Janeiro<br>2016</h1>
-       <form action="https:..."><button>INICIO</button></form>
+       <!-- <form action="https:..."> -->
+        <select id="buttonOrder">
+          <option value="" disabled selected>ORDENAR</option>
+          <option value="a-z">A - Z</option>
+          <option value="z-a">Z - A</option>
+        </select>
+       <!-- <button id="orden">Ordenar A - Z / POR EDADES DE MAYOR A MENOR</button> -->
      </section>
               
      <section id="Olimpics-Games">
-       <div class="container">
-          <h2>Olimpics Games</h2>
-           <div class="Games">
-
-               <div class="carta">
-                  <h3>Países</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus? </p>
-                  <button>+ Info</button>
-               </div>
-
-
-
-               <div class="carta">
-                  <h3>Atletas</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus? </p>
-                  <button>+ Info</button>
-              </div>
-
-               <div class="carta">
-                  <h3>Mujeres</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus? </p>
-                  <button>+ Info</button>
-               </div>  
-
-               <div class="carta">
-                  <h3>Deportes</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus? </p>
-                  <button>+ Info</button>
-               </div>
-
-               <div class="carta">
-                  <h3>Top 10 Medallas</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus? </p>
-                  <button>+ Info</button>
-              </div>
-          </div>
-       </div>
+       <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre Atleta</th>
+            <th>Edad</th>
+            <th>Género</th>
+            <th>Deporte</th>
+            <th>Medalla</th>
+          </tr>
+        </thead>
+        <tbody id="contenido">
+          <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>femal</th>
+            <th>sport</th>
+            <th>medal</th>
+          </tr>
+        </tbody>
+       </table>
      </section>
 
-     <section id="final">
+
+     
+   <section id="final">
       <h2>videos </h2>
       <button>Play</button>
-  </section>
+  </section> 
 
   <footer>
       <div class="container">
