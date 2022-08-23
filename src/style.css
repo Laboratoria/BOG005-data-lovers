@@ -14,14 +14,6 @@
 .color5 {color: #e1c9ff;}
 */
 
-/*Máximo ancho*/
-
-@media (max-width: 600px) {
-    body {
-        flex-direction: column;
-    }
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -40,10 +32,14 @@ body {
     margin: 1%;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container-header {
     display: flex;
     flex-direction: column;
-    height: 18vh;
+    height: 15%;
     font-weight: 700;
     justify-content: center;
     align-items: center;
@@ -55,13 +51,13 @@ body {
     backface-visibility: hidden;
 }
 
-.container-header > div {
+.container-header>div {
     display: inline-block;
 }
 
 .logo {
     position: absolute;
-    left: 40px;
+    left: 20px;
     height: 100px;
     width: 100px;
     z-index: 3;
@@ -69,37 +65,51 @@ body {
     vertical-align: middle;
 }
 
-.main-nav {
-    border: 3px solid red;
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 100px);
-    vertical-align: middle;
+.toggle-menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    filter: invert(1);
+    width: 40px;
 }
 
-.main-nav__items{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.main-menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-weight: 300;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+    z-index: 1;
 }
 
-.main-nav__item {
-    display: inline-block;
-    margin: 0 10px;
+.main-menu__item {
+    padding: 1em;
 }
 
-.main-nav__item a{
+.main-menu--show{
+    transform: translateY(0);
+}
+
+.main-menu__link {
     color: #fff;
-    font-weight: lighter;
 }
 
-.main-nav__item a:hover{
-    color:#00000e;
 
-}
+@media screen and (min-width:768px) {
+    .main-menu {
+        flex-direction: row;
+        transform: translateY(0);
+    }
 
-.main-nav__item a:active{
-    color:#00000e;
+    .toggle-menu{
+        display: none;
+    }
 }
 
 .header-title {
@@ -123,8 +133,8 @@ body {
     height: 80vh;
     color: #fff;
     background-image: linear-gradient(to right bottom,
-            rgba(202, 183, 213, 0.8),
-            rgba(35, 30, 78, 0.661)),
+            rgba(202, 183, 213, 0.541),
+            rgba(35, 30, 78, 0.329)),
         url(Img/castillo.jpg);
     background-size: cover;
     background-position: center;
@@ -289,21 +299,28 @@ body {
     z-index: 200;
 }
 
+.titleFunFacts {
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 17px;
+    text-align: center;
+    color: #515993;
+}
+
 .fun-facts {
     display: flex;
+    flex-wrap: wrap;
     background-color: #fff;
 }
 
-.containerFunFacts{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
+.containerFunFacts {
+    width: 33%;
+    height: 100%;
 }
 
-.containerFunFacts figure{
+.containerFunFacts figure {
     flex-direction: row;
     position: relative;
     height: 250px;
@@ -314,54 +331,50 @@ body {
     cursor: pointer;
 }
 
-.containerFunFacts figure img{
+.containerFunFacts figure img {
     width: 100%;
     height: 100%;
     transition: all 500ms ease-out;
 }
 
-.containerFunFacts figure .capa{
+.containerFunFacts figure .capa {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(145, 142, 230, 0.842);
+    background: rgba(145, 142, 230, 0.699);
     opacity: 0;
     visibility: hidden;
     text-align: center;
 }
 
-.containerFunFacts figure:hover > .capa{
+.containerFunFacts figure:hover>.capa {
     opacity: 1;
     visibility: visible;
 }
 
-.containerFunFacts figure:hover > .capa h3{
+.containerFunFacts figure:hover>.capa h3 {
     margin-top: 70px;
     margin-bottom: 15px;
 }
 
-.containerFunFacts figure .capa h3{
+.containerFunFacts figure .capa h3 {
     color: #fff;
     font-weight: 400;
+    font-size: 20px;
     margin-bottom: 120px;
     transition: all 500ms ease-out;
     margin-top: 30px;
 }
 
-.containerFunFacts figure .capa p{
+.containerFunFacts figure .capa p {
     color: #fff;
-    font-weight: 15px;
+    font-weight: 300;
+    font-size: 12px;
     line-height: 1.5;
     width: 100%;
     max-width: 220px;
     margin: auto;
-}
-
-.contenedor-acciones {
-    display: flex;
-    height: 80%;
-    background-color: red;
 }
 
 .footer-1 {

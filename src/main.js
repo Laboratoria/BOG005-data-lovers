@@ -9,8 +9,17 @@ function changeBtnStyle () {
   document.getElementById('showCharacters').style.display = 'block'
 }
 
+// Menu
+
+const toggleMenuElement = document.getElementById('toggle-menu')
+const mainMenuElement = document.getElementById('main-menu')
+
+toggleMenuElement.addEventListener('click', () => {
+  mainMenuElement.classList.toggle('main-menu--show')
+})
+
 // Función visualizar personajes
-const allCharacters = data.characters.slice(0, 60)
+const allCharacters = data.characters.slice(0, 450)
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters (arrData) {
@@ -111,4 +120,7 @@ function filterHouse () {
   orderCharacters(filter1).forEach((card) => {
     contentOrder.appendChild(card)
   })
+  console.log(filter1.length)
+  const average = ((filter1.length / 450) * 100).toFixed(2)
+  document.getElementById('averagePrint').value = average + '%'
 }

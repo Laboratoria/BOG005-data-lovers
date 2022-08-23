@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8" />
@@ -16,18 +16,16 @@
 <body>
   <a name="home-page"></a>
   <header class="container-header">
-    <a href="#"><img class="logo" src="Img/logo_hp2.png" alt="Logo Harry Potter"></a>
-    <div>
-      <h1><span class="header-title"> Harry Potter</span></h1>
-      <h2><span class="header-sub">Lovers </span></h2>
-    </div>
     <nav class="main-nav">
-      <ul>
-        <li class="main-nav__item"><a href="#home-page">Home</a></li>
-        <li class="main-nav__item"><a id="nav-characters" href="#characters-information">Personajes</a></li>
-        <li class="main-nav__item"><a href="">Filtrar</a></li>
-        <li class="main-nav__item"><a href="">Ordenar</a></li>
-        <li class="main-nav__item"><a href="">Cálculo</a></li>
+      <div id="toggle-menu" class="toggle-menu">
+        <img src="./Img/menu.png" alt="Icono menu hamburguesa">
+      </div>
+      <ul id="main-menu" class="main-menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="#home-page">Home</a></li>
+        <li class="main-menu__item"><a id="nav-characters" class="main-menu__link" href="#characters-information">Personajes</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#characters-orderFilter">Filtrar</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#characters-orderFilter">Ordenar</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#characters-orderFilter">Cálculo</a></li>
       </ul>
     </nav>
   </header>
@@ -44,82 +42,96 @@
     </div>
   </section>
 
-  <main class="characterAllInformatio">
+  <main class="characterAllInformation">
+<section>
 
-    <section class="fun-facts">
-      <h2 class="heading-home">
+  <a name="characters-funFacts"></a>
+    <div class="titleFunFacts">
+      <h2>
         Cinco datos curiosos que seguro no sabías de Harry Potter
       </h2>
-      <div class="contenedorDatosCuriosos"></div>
-      <img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter" class="imagenBuho" />
-      <div class="textoCincoDatosCuriosos"></div>
-      <h3>
-        <span>1</span> Hogwarts a través de los ojos de un muggle:
-        <p>
-          Si los muggles llegaran a descubrir el paredero de Hogwarts, se
-          encontrarían con un edificio en ruinas con un cartel de "Mantenerse
-          fuera: Peligro". <br>
-        </p>
-        <span>2</span> ¿Pareja perfecta?:
-        <p>
-          Rowling ha admitido arrepentirse de la relación entre Ron y
-          Hermione. ¡Nosotros no! <br>
-        </p>
-        <span>3</span> Estableciendo las reglas:
-        <p>
-          Los primeros cinco años que Rowling trabajó en los libros de Harry
-          Potter se dedicaron a determinar las reglas sobre lo que sus
-          personajes podían y no podían hacer. <br>
-        </p>
-        <span>4</span> Hermione rompecorazones:
-        <p>
-          Daniel Radcliffe y Rupert Grint han admitido que ambos se quedaron
-          prendados de Emma Watson en las primeras películas, pero la que cosa
-          no pasó de un bonito amor platónico.<br>
-        </p>
-        <span>5</span> Padre no hay más que uno:
-        <p>
-          El padre de Harry, James Potter, aparece en todas las películas
-          excepto una, Harry Potter y el misterio del príncipe, la sexta de la
-          saga.<br>
-        </p>
-      </h3>
+    </div>
+    <section class="fun-facts">
+      <div class="containerFunFacts">
+        <figure><img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter"/>
+        <div class="capa">
+          <h3>Hogwarts a través de los ojos de un muggle:</h3>
+          <p>Si los muggles llegaran a descubrir el paredero de Hogwarts, se
+            encontrarían con un edificio en ruinas con un cartel de "Mantenerse
+            fuera: Peligro".</p>
+            </div>
+          </figure>
+        </div>
+
+        <div class="containerFunFacts">
+          <figure><img src="Img/Y6XI5VRSBZAPHH57QJWC26OEYA.jpg" alt="Imagen Ron y Hermione" />
+
+          <div class="capa">
+            <h3>¿Pareja perfecta?</h3>
+            <p>Rowling ha admitido arrepentirse de la relación entre Ron y
+              Hermione. ¡Nosotros no!</p>
+            </div>
+            </figure>
+          </div>
+
+          <div class="containerFunFacts">
+            <figure><img src="Img/rowling1.webp" alt="Imagen escritora Rowling" />
+            <div class="capa">
+              <h3>Estableciendo las reglas:</h3>
+              <p>Los primeros cinco años que Rowling trabajó en los libros de Harry
+                Potter se dedicaron a determinar las reglas sobre lo que sus
+                personajes podían y no podían hacer.
+              </p>
+            </div>
+            </figure>
+            </div>
+
+            <div class="containerFunFacts">
+              <figure><img src="Img/15-2.jpg" alt="Imagen de Harry, Ron y Hermione" />
+              <div class="capa">
+                <h3>Hermione rompecorazones</h3>
+                <p>Daniel Radcliffe y Rupert Grint han admitido que ambos se quedaron
+                  prendados de Emma Watson en las primeras películas, pero la que cosa
+                  no pasó de un bonito amor platónico.<br>
+                </p>
+              </div>
+              </figure>
+              </div>
+
+              <div class="containerFunFacts">
+                <figure><img src="Img/jamespotter.jpg" alt="Imagen padres de Harry Potter" />
+                <div class="capa">
+                  <h3>Padre no hay más que uno</h3>
+                  <p>
+                    El padre de Harry, James Potter, aparece en todas las películas
+                    excepto una, Harry Potter y el misterio del príncipe, la sexta de la
+                    saga.
+                  </p>
+                </div>
+              </figure>
+              </div>
+
+              <div class="containerFunFacts">
+                <figure><img src="Img/futbolera.jpg" alt="Imagen jugador de futbol Jonjo Shelvey"/>
+                <div class="capa">
+                  <h3>Afición futbolera</h3>
+                  <p>Uno de los amigos de toda la vida de Rowling es
+                    seguidor del club de fútbol West Ham,
+                    por lo que la autora incluyó al equipo en los libros como guiño personal.
+                    El antiguo jugador del club, Jonjo Shelvey, fue
+                    comparado con Lord Voldemort.
+                  </p>
+                </div>
+              </figure>
+              </div>
+
     </section>
 
-    <section class="contenedor-Acciones">
-      <div class="contenedor"></div>
-      <h2 class="titulo">¿Qué quieres conocer?</h2>
-      <div class="imagenConocer">
-        <img src="Img/harry_potter_2-.png" />
-        <div class="hover-galeria"></div>
-        <img src="Img/Icono1.png" />
-        <p class="textoVisualizar">
-          Visualizar todos los personajes de Harry Poter
-        </p>
-      </div>
-      <div class="imagenConocer">
-        <img src="Img/hermione_granger-.png" />
-        <div class="hover-galeria"></div>
-        <img src="Img/Icono1.png" />
-        <p class="textoVisualizar">
-          Filtra los personajes de Harry Poter por casa
-        </p>
-      </div>
-      <div class="imagenConocer">
-        <img src="Img/ron_weasley-removebg-.png" />
-        <div class="hover-galeria"></div>
-        <img src="Img/Icono1.png" />
-        <p class="textoVisualizar">
-          Ordena todos los personajes de Harry Poter
-        </p>
-      </div>
-      <div class="imagenConocer">
-        <img src="Img/Albus_Dumbledore-.png" />
-        <div class="hover-galeria"></div>
-        <img src="Img/Icono1.png" />
-        <p class="textoVisualizar">Cálcula a que casa de H perteneces</p>
-      </div>
-    </section>
+    <div class="titleShowCharacters">
+      <h2>
+        Visualiza información de los personajes de la saga de Harry Potter
+      </h2>
+    </div>
 
     <a name="characters-information"></a>
     <section id="showCharacters" class="showCharacters">
@@ -142,6 +154,10 @@
         <option>Slytherin</option>
         <option>Ravenclaw</option>
       </select>
+      <div>
+      <p> El porcentaje de alumnos por casa es del: </p>
+      <input id="averagePrint"/>
+    </div>
     </section>
     <section id="informationfiltrarHouse">
       <select id="menuCasas">
@@ -159,7 +175,7 @@
 
   <footer class="footer-1">
     <div class="logo-footer">
-      <img class="img-footer" src="Img/logo_hp2.png" alt="Harry Potter Logo" />
+      <img class="img-footer" src="Img/logo_hp2.png" alt="Logo Harry Potter" />
     </div>
     <p class="footer-names">2022 Infante y Moreno</p>
   </footer>
