@@ -24,22 +24,22 @@ const pintarData = (data) => {
 
 pintarData(dataAtletas)
 
-const buttonOrder = document.querySelector("#buttonOrder");
-buttonOrder.addEventListener("change", () => {
-    const valueOrder = buttonOrder.value;
-    dataAtletas.innerHTML = "";
-    showData(ordenarNombres(data,valueOrder));
+// const buttonOrder = document.querySelector("#buttonOrder");
+// buttonOrder.addEventListener("change", () => {
+//     const valueOrder = buttonOrder.value;
+//     dataAtletas.innerHTML = "";
+//     showData(ordenarNombres(data,valueOrder));
 
-});
+// });
 
-import ordenarNombres from './data/athletes/ordenarNombres.js';
-const showData = (parametro) => {
-    let show = "";
-    parametro.forEach((element) => {
-        const atletas = `
-            <div class="atleta" data-name="${element.name} name="athletes"></div> 
-            `;
-            show += atletas;
-    });
-    ordenarNombres.innerHTML = show;
-}
+// import ordenarNombres from './data/athletes/ordenarNombres.js';
+// const showData = (parametro) => {
+//     let show = "";
+//     parametro.forEach((element) => {
+//         const atletas = `
+//             <div class="atleta" data-name="${element.name} name="athletes"></div> 
+//             `;
+//             show += atletas;
+//     });
+//     ordenarNombres.innerHTML = show;
+// }
