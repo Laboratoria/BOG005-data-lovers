@@ -96,7 +96,7 @@ function setData() {
             <h5 class="releaseDate">Especie: ${p.specie}</h5>
             <h5 class="releaseDate">Edad: ${p.age}</h5>
             <h5 class="releaseDate">Género: ${p.gender}</h5>
-          </div>
+</div>
         </div>
     `);
       characters.push(p);
