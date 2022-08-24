@@ -18,7 +18,7 @@
   <header class="container-header" id="container-header">
     <!-- <img class="logo-img" src="Img/logo_hp2.png" alt="Logo Harry Potter"> -->
     <div class="container">
-      <p class="logo"> Harry Potter Lovers</p>
+<!--       <p class="logo"> Harry Potter Lovers</p> -->
       <nav>
         <div id="toggle-menu" class="toggle-menu">
           <img src="./Img/pngegg.png" alt="Icono menu hamburguesa">
@@ -26,10 +26,10 @@
         <ul id="main-menu" class="main-menu">
           <li class="main-menu__item"><a class="main-menu__link" href="#container-header">Home</a></li>
           <li class="main-menu__item"><a id="nav-characters" class="main-menu__link"
-              href="#characters-information">Personajes</a></li>
-          <li class="main-menu__item"><a class="main-menu__link" href="#characters-orderFilter">Filtrar</a></li>
-          <li class="main-menu__item"><a class="main-menu__link" href="#characters-orderFilter">Ordenar</a></li>
-          <li class="main-menu__item"><a class="main-menu__link" href="#characters-orderFilter">Cálculo</a></li>
+              href="#titleShowCharacters">Personajes</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#orderCharactersSection">Filtrar</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#orderCharactersSection">Ordenar</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#orderCharactersSection">Cálculo</a></li>
         </ul>
       </nav>
     </div>
@@ -49,17 +49,17 @@
   <main class="characterAllInformation">
     <section>
 
-      <a name="characters-funFacts"></a>
       <div class="titleFunFacts" id="titleFunFacts">
         <h2>
           Cinco datos curiosos que seguro no sabías de Harry Potter
         </h2>
       </div>
+
       <section class="fun-facts">
         <div class="containerFunFacts">
           <figure><img src="Img/Buho HP.png" alt="Imagen Buho de Harry Potter" />
             <div class="capa">
-              <h3>Hogwarts a través de los ojos de un muggle:</h3>
+              <h3>Hogwarts a través de los ojos de un muggle</h3>
               <p>Si los muggles llegaran a descubrir el paredero de Hogwarts, se
                 encontrarían con un edificio en ruinas con un cartel de "Mantenerse
                 fuera: Peligro".</p>
@@ -81,7 +81,7 @@
         <div class="containerFunFacts">
           <figure><img src="Img/rowling1.webp" alt="Imagen escritora Rowling" />
             <div class="capa">
-              <h3>Estableciendo las reglas:</h3>
+              <h3>Estableciendo las reglas</h3>
               <p>Los primeros cinco años que Rowling trabajó en los libros de Harry
                 Potter se dedicaron a determinar las reglas sobre lo que sus
                 personajes podían y no podían hacer.
@@ -95,7 +95,7 @@
             <div class="capa">
               <h3>Hermione rompecorazones</h3>
               <p>Daniel Radcliffe y Rupert Grint han admitido que ambos se quedaron
-                prendados de Emma Watson en las primeras películas, pero la que cosa
+                prendados de Emma Watson en las primeras películas, pero que la cosa
                 no pasó de un bonito amor platónico.<br>
               </p>
             </div>
@@ -130,22 +130,26 @@
         </div>
       </section>
 
-      <div class="titleShowCharacters">
+      <div class="titleShowCharacters" id="titleShowCharacters">
         <h2>
           ¡En este espacio podrás visualizar información relacionada de los personajes de la saga de Harry Potter!
         </h2>
       </div>
 
-      <a name="characters-information"></a>
       <section id="showCharacters" class="showCharacters">
         <div id="informationCharacters"></div>
       </section>
 
-      <br><br>
-      <a name="characters-orderFilter"></a>
+      <div class="titleOrderCharacters" id="titleOrderCharacters">
+        <h2>
+          ¡En este espacio podrás ordernar, filtrar y calcular información relacionada de los personajes de la saga de Harry Potter!
+        </h2>
+      </div>
+
+      <section id="orderCharactersSection">
+        <div class="options">
       <button id="btnOrderAscent" class="btnOrderAz">Ordenar A/Z</button>
       <button id="btnOrderFalling" class="btnOrderZa">Ordenar Z/A</button>
-      <section>
         <select id="filterHouseSelect">
           <option>Escoge una casa</option>
           <option>Gryffindor</option>
@@ -153,15 +157,14 @@
           <option>Slytherin</option>
           <option>Ravenclaw</option>
         </select>
-        <div>
-          <p> El porcentaje de alumnos por casa es del: </p>
-          <input id="averagePrint" />
-        </div>
-      </section>
+
+        <p> El porcentaje de alumnos por casa es del: </p><input id="averagePrint"/>
+      </div>
 
       <section id="showOrderCharacters">
         <div id="orderCharacters"></div>
       </section>
+    </section>
 
     </section>
   </main>

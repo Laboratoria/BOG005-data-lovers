@@ -15,7 +15,7 @@
 }
 
 body {
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
     font-family: 'Kodchasan', sans-serif;
     font-weight: 400;
     font-size: 62%;
@@ -38,6 +38,7 @@ h3 {
 
 p,
 li {
+    font-family: 'Kodchasan', sans-serif;
     font-size: 1.25em;
 }
 
@@ -151,7 +152,7 @@ header nav {
     }
 }
 
-/* Sección descubre +*/
+/* Sección banner descubre +*/
 
 #home-banner {
     display: flex;
@@ -280,36 +281,43 @@ button:hover {
             rgb(35, 30, 78));
     border: none;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: bold;
     letter-spacing: 1px;
     border-radius: 80px;
     transition: all .2s;
     text-align: center;
-    width: 150px;
-    padding: 5px;
+    width: 160px;
+    padding: 14px;
 }
 
 /* Fin botones */
 
 /* Inicio datos curiosos*/
-.containerFunFacts {
-    width: 45%;
-}
-
-.titleFunFacts {
-    display: flex;
-    height: 20px;
-    justify-content: center;
-    font-weight: bolder;
-    font-size: 17px;
-    text-align: center;
-    color: #515993;
-}
-
 .fun-facts {
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.containerFunFacts {
+    width: 45%;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 0.4em;
+}
+
+.titleFunFacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: rgb(81, 89, 147);
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .containerFunFacts {
@@ -339,7 +347,7 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(145, 142, 230, 0.699);
+    background: rgba(145, 142, 230, 0.76);
     opacity: 0;
     visibility: hidden;
     text-align: center;
@@ -412,6 +420,15 @@ button:hover {
     align-items: center;
 }
 
+.titleShowCharacters, .titleOrderCharacters{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+    text-align: center;
+    color: #515993;
+    padding-bottom: 2em;
+}
+
 .divShow-js {
     font-size: 14px;
     justify-content: center;
@@ -448,6 +465,26 @@ button:hover {
     color: #202b4b;
 }
 
+.options {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.options p {
+    font-weight: bold;
+}
+
+#averagePrint {
+    font-family: 'Kodchasan', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#filterHouseSelect {
+    font-family: 'Kodchasan', sans-serif;
+
+}
 /* Fin tarjetas de visualización */
 
 .footer-1 {
