@@ -1,17 +1,18 @@
 /*AQUI DEBEN ESTAR LAS INTERACCIONES CON EL DOM--- EVENT LISTENER ETC...*/
 import ghibli from "./data/ghibli/ghibli.js";
-import {} from "./data.js";
+import { sort } from "./data.js";
 
-const moviesData = ghibli.films;
+let moviesData = ghibli.films;
 const characters = [];
 const locations = [];
 const vehicles = [];
+let currentPage = "movies";
 /*Separación*/
-const moviesHtml = [];
-const charactersHtml = [];
-const locationsHtml = [];
-const vehiclesHtml = [];
-const ghibliMatchHtml = [];
+let moviesHtml = [];
+let charactersHtml = [];
+let locationsHtml = [];
+let vehiclesHtml = [];
+let ghibliMatchHtml = [];
 
 /*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
 
@@ -20,25 +21,52 @@ const charactersMenu = document.getElementById("characters");
 const locationsMenu = document.getElementById("locations");
 const vehiclesMenu = document.getElementById("vehicles");
 const ghibliMatchMenu = document.getElementById("ghibliMatch");
+const sorAtoZ = document.getElementById("btn1");
 
+// eventos
 moviesMenu.addEventListener("click", showMovies);
 charactersMenu.addEventListener("click", showCharacters);
 locationsMenu.addEventListener("click", showLocations);
 vehiclesMenu.addEventListener("click", showVehicles);
 ghibliMatchMenu.addEventListener("click", showGhibliMatch);
+sorAtoZ.addEventListener("click", sort2);
 
 // addEventListenerTo(characters);
 /*Info para mostrar las tarjetas*/
 
-// let fullPosters = moviesData.map(posters => `${posters.poster}`);
-// let fullTitles = moviesData.map(movies => `${movies.title}`);
-// let fullDescriptions = moviesData.map(descriptions => `${descriptions.description}`);
-// let fullReleases = moviesData.map(releases => `${releases.release_date}`);
-// let fullDirectors = moviesData.map(directors => `${directors.director}` )
-// let fullProducers = moviesData.map (producers => `${producers.producer}`)
 let container = document.querySelector(".cardContainer");
 
+function sort2() {
+  switch (currentPage) {
+    case "movies":
+      moviesData = sort(moviesData);
+      break;
+    case "characters":
+      moviesData = sort(moviesData);
+      break;
+    case "locations":
+      moviesData = sort(moviesData);
+      break;
+    case "vehicles":
+      moviesData = sort(moviesData);
+      break;
+    case "ghibliMatch":
+      moviesData = sort(moviesData);
+      break;
+    default:
+      break;
+  }
+
+  setData();
+  showMovies();
+}
 function setData() {
+  moviesHtml = [];
+  charactersHtml = [];
+  locationsHtml = [];
+  vehiclesHtml = [];
+  ghibliMatchHtml = [];
+
   for (let i = 0; i < moviesData.length; i++) {
     moviesHtml.push(`
         <div class="card">
@@ -65,7 +93,9 @@ function setData() {
           />
           <div class="cardText">
             <h2 class="filmTitle">${p.name}</h2>
-            <p class="filmDescription">${p.specie}</p>
+            <h5 class="releaseDate">Especie: ${p.specie}</h5>
+            <h5 class="releaseDate">Edad: ${p.age}</h5>
+            <h5 class="releaseDate">Género: ${p.gender}</h5>
           </div>
         </div>
     `);
@@ -105,22 +135,27 @@ function setData() {
 }
 
 function showMovies() {
+  currentPage = "movies";
   container.innerHTML = moviesHtml.join("");
 }
 function showCharacters() {
+  currentPage = "characters";
   container.innerHTML = charactersHtml.join("");
 }
 function showLocations() {
+  currentPage = "locations";
   container.innerHTML = locationsHtml.join("");
 }
 function showVehicles() {
+  currentPage = "vehicles";
   container.innerHTML = vehiclesHtml.join("");
 }
 function showGhibliMatch() {
+  currentPage = "ghibliMatch";
   container.innerHTML = ghibliMatchHtml.join("");
 }
 
 setData();
 showMovies();
 
-// console.log(example);
+/*Filtrando*/
