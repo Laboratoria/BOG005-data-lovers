@@ -36,12 +36,18 @@ h3 {
     font-size: 2em;
 }
 
-p {
+p,
+li {
     font-size: 1.25em;
 }
 
 img {
     max-width: 100%;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
 }
 
 .container-header {
@@ -63,7 +69,28 @@ img {
     display: inline-block;
 }
 
-.logo {
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.6em;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/* .logo-img {
     position: absolute;
     left: 20px;
     height: 100px;
@@ -72,7 +99,7 @@ img {
     display: inline-block;
     vertical-align: middle;
 }
-
+ */
 .toggle-menu {
     position: absolute;
     top: 0.5rem;
@@ -86,7 +113,7 @@ img {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 15px;
     display: flex;
     flex-direction: column;
@@ -108,6 +135,10 @@ img {
     color: #fff;
 }
 
+.main-menu__link:hover {
+    color: #00000e;
+}
+
 
 @media screen and (min-width:768px) {
     .main-menu {
@@ -120,67 +151,51 @@ img {
     }
 }
 
-.header-title {
-    display: block;
-    font-size: 28px;
-    font-weight: 500;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
+/* Sección descubre +*/
 
-.header-sub {
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    animation: moveInRight 1s ease-out;
-}
-
-.home {
     height: 80vh;
     color: #fff;
     background-image: linear-gradient(to right bottom,
             rgba(202, 183, 213, 0.541),
             rgba(35, 30, 78, 0.329)),
         url(Img/castillo.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.heading-home-first {
-    display: block;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
+#home h3 {
+    font-weight: normal;
+    font-weight: 1.5em;
+    padding-bottom: 1em;
 }
 
 /* Botones */
-button{
+button {
     font-size: 1.5em;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 10px;
     border: 2px solid rgba(145, 142, 230, 0.575);
-    box-shadow: 2px 2px 10px rgba(145, 142, 230, 0.575) ;
+    box-shadow: 2px 2px 10px rgba(145, 142, 230, 0.575);
     color: #515993;
-    background-color:#fff;
+    background-color: #fff;
+}
+
+button:hover {
+    background-color: #918ee677;
 }
 
 .btn-heading-home {
     display: block;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -235,7 +250,7 @@ button{
     animation-fill-mode: backwards;
 }
 
-.buttonShow {
+.btnShow-js {
     /*Botón para mostrar información complementaria*/
     display: inline-block;
     font-family: 'Kodchasan', sans-serif;
@@ -252,29 +267,11 @@ button{
     text-align: center;
     width: 70px;
     padding: 5px;
-    margin-left: 28%;
 }
 
 /* Fin botones */
 
-.containerFunFacts {
-    width: 45%;
-}
-
-.card {
-    /*Sección de JS para mostrar información de personaje*/
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wand {
-    /*Imagen que acompaña información de personaje*/
-    height: 15em;
-    width: 15em;
-}
-
+/*Tarjetas de visualización*/
 #informationCharacters {
     display: flex;
     width: 100%;
@@ -288,7 +285,6 @@ button{
 
 .information {
     /*Div para mostrar complementaria*/
-    display: relative;
     background-color: #cab7d5;
     color: #fff;
     width: 50%;
@@ -298,20 +294,29 @@ button{
     padding: 1em;
     border-radius: 15px;
     transition: all 6s;
+    justify-content: center;
+    align-items: center;
 }
 
-.name-characters {
-    /*H3 nombre de los personajes*/
-    font-weight: 700;
+.divShow-js {
     font-size: 14px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.imgShow-js {
+    /*Div de JS para mostrar información de personaje*/
+    height: 15em;
+    width: 15em;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameShow-js {
+    /*H3 nombre de los personajes*/
     text-align: center;
     color: #00000e;
-}
-
-
-
-.showCharacters {
-    display: flex;
 }
 
 .showCharacters {
@@ -321,6 +326,11 @@ button{
     justify-content: space-between;
     color: #cab7d5;
     z-index: 200;
+}
+
+/* Inicio datos curiosos*/
+.containerFunFacts {
+    width: 45%;
 }
 
 .titleFunFacts {
@@ -400,6 +410,8 @@ button{
     max-width: 220px;
     margin: auto;
 }
+
+/* Fin datos curiosos*/
 
 .footer-1 {
     display: flex;
