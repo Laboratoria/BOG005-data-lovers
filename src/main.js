@@ -1,28 +1,42 @@
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
-//const names = document.getElementById("name").value;
 const names = athletes["name"];
 console.log(athletes.athletes);
 
 makeCard(athletes.athletes);
 
-function makeCard(information) {
+function makeCard(athletes) {
   let container = document.querySelector(".containerCard");
-  container.innerHTML = console.log(information);
-}
-//const sports = document.getElementById("sport").value;
-//const countrys = document.getElementById("team").value;
-//const medals = document.getElementById("medal").value;
-//const countryMedals = document.getElementById("medal", "team");
-//console.log(names);
 
-///let dataCard = [{ names, countrys, medals, sports }];
-//let cartas = "";
-//dataCard.forEach((elem) => {
-//let card = `<h1>${elem.names}</h1>
-//          <p>${elem.sports}</p>
-//        <p>${elem.countrys}</p>
-//      <p>${elem.medals}</p>`;
-// cartas += card;
-//});
+  let finalHtml = "";
+  athletes.slice(0, 500).forEach((athletes) => {
+    finalHtml += ` 
+    <div class="cardFather">
+      <div class="card">
+        <div class="cardFront">
+          <h1 class = "nameBack"> ${athletes.name} </h1> 
+        </div> 
+      </div>
+    </div>`;
+  });
+  //
+  //
+  //       <div class="bodyCardFront">
+  //         <h1 class="namePrincipal"> ${athletes.name} </h1>
+  //       </div>
+  //     </div>
+  //     <div class="cardBack">
+  //       <div class="bodyCardBack"></div>
+  //       <h1 class = "nameBack"> ${athletes.name} </h1>
+  //       <p> Pais: ${athletes.team}</p>
+  //       <p>Medalla: ${athletes.medal}</p>
+  //       <p>Deporte: ${athletes.sport} </p>
+  //       <p>Altura: ${athletes.height}</p>
+  //       <p>Peso: ${athletes.weight}</p>
+
+  //
+  //
+
+  container.innerHTML = finalHtml;
+}
