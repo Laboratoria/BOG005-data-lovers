@@ -19,7 +19,7 @@ toggleMenuElement.addEventListener('click', () => {
 })
 
 // Función visualizar personajes
-const allCharacters = data.characters.slice(0, 450)
+const allCharacters = data.characters.slice(0, 15)
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters (arrData) {
@@ -128,6 +128,6 @@ function filterHouse () {
     contentOrder.appendChild(card)
   })
   console.log(filter1.length)
-  const average = ((filter1.length / 450) * 100).toFixed(2)
+  const average = ((filter1.length / 15) * 100).toFixed(2)
   document.getElementById('averagePrint').value = average + '%'
 }
