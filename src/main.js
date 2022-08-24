@@ -84,9 +84,9 @@ function orderCharacters (arrData) {
     const nameHouse = document.createElement('p')
     nameHouse.innerHTML = `<strong>Casa:</strong> ${item.house ? item.house : 'Sin información'}`
 
+    cardOrder.appendChild(img)
     cardOrder.appendChild(name)
     cardOrder.appendChild(nameHouse)
-    cardOrder.appendChild(img)
 
     cards.push(cardOrder)
   })

@@ -271,63 +271,6 @@ button:hover {
 
 /* Fin botones */
 
-/*Tarjetas de visualización*/
-#informationCharacters {
-    display: flex;
-    width: 100%;
-    max-width: 90%;
-    height: 80%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.information {
-    /*Div para mostrar complementaria*/
-    background-color: #cab7d5;
-    color: #fff;
-    width: 50%;
-    font-weight: 300;
-    font-size: 18px;
-    margin: auto;
-    padding: 1em;
-    border-radius: 15px;
-    transition: all 6s;
-    justify-content: center;
-    align-items: center;
-}
-
-.divShow-js {
-    font-size: 14px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-
-.imgShow-js {
-    /*Div de JS para mostrar información de personaje*/
-    height: 15em;
-    width: 15em;
-    justify-content: center;
-    align-items: center;
-}
-
-.nameShow-js {
-    /*H3 nombre de los personajes*/
-    text-align: center;
-    color: #00000e;
-}
-
-.showCharacters {
-    /*Sección de HTML para mostrar información de personaje*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: #cab7d5;
-    z-index: 200;
-}
-
 /* Inicio datos curiosos*/
 .containerFunFacts {
     width: 45%;
@@ -413,6 +356,73 @@ button:hover {
 
 /* Fin datos curiosos*/
 
+/* Inicio tarjetas de visualización*/
+.showCharacters {
+    /*Sección de HTML para mostrar + información de personaje*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #cab7d5;
+    z-index: 200;
+}
+
+#informationCharacters {
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.information {
+    /*Div de JS para mostrar complementaria*/
+    background-color: #cab7d5;
+    color: #fff;
+    width: 50%;
+    font-weight: 300;
+    font-size: 18px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 15px;
+    transition: all 6s;
+    justify-content: center;
+    align-items: center;
+}
+
+.divShow-js {
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.imgShow-js {
+    /*Div de JS para mostrar img hp*/
+    height: 12em;
+    width: 12em;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameShow-js {
+    /*H3 nombre de los personajes*/
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: #202b4b;
+}
+
+#showOrderCharacters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Fin tarjetas de visualización */
+
 .footer-1 {
     display: flex;
     flex-direction: column;
@@ -442,7 +452,7 @@ button:hover {
     height: 68px;
 }
 
-/*Animaciones para titulo aplicación web y botones*/
+/*Animaciones para título aplicación web y botones*/
 @keyframes moveInLeft {
 
     /*Secuencia de animación por punto de trayectoria*/
