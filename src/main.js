@@ -73,15 +73,18 @@ function orderCharacters (arrData) {
   // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
   arrData.forEach((item) => {
     const cardOrder = document.createElement('div')
+    cardOrder.className = 'cardOrder-js'
 
     const img = document.createElement('img')
+    img.className = 'imgOrder-js'
     img.src = './Img/soplón-96.png'
 
     const name = document.createElement('p')
-    name.className = 'name-js'
+    name.className = 'nameOrder-js'
     name.innerHTML = `<strong>Nombre:</strong> ${item.name}`
 
     const nameHouse = document.createElement('p')
+    nameHouse.className = 'houseOrder-js'
     nameHouse.innerHTML = `<strong>Casa:</strong> ${item.house ? item.house : 'Sin información'}`
 
     cardOrder.appendChild(img)

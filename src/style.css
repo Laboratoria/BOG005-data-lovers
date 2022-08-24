@@ -153,7 +153,7 @@ header nav {
 
 /* Sección descubre +*/
 
-#home {
+#home-banner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,10 +170,12 @@ header nav {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-#home h3 {
+#home-banner h3 {
     font-weight: normal;
     font-weight: 1.5em;
     padding-bottom: 1em;
+    animation: moveInLeft 0.5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 
 /* Botones */
@@ -266,6 +268,24 @@ button:hover {
     transition: all .2s;
     text-align: center;
     width: 70px;
+    padding: 5px;
+}
+
+.btnOrderAz, .btnOrderZa {
+    display: inline-block;
+    font-family: 'Kodchasan', sans-serif;
+    color: #00000e;
+    background-color: linear-gradient(to right bottom,
+            #cab7d5,
+            rgb(35, 30, 78));
+    border: none;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    border-radius: 80px;
+    transition: all .2s;
+    text-align: center;
+    width: 150px;
     padding: 5px;
 }
 
@@ -419,6 +439,13 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.cardOrder-js {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #202b4b;
 }
 
 /* Fin tarjetas de visualización */

@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <a name="home-page"></a>
-  <header class="container-header">
+
+  <header class="container-header" id="container-header">
     <!-- <img class="logo-img" src="Img/logo_hp2.png" alt="Logo Harry Potter"> -->
     <div class="container">
       <p class="logo"> Harry Potter Lovers</p>
@@ -24,7 +24,7 @@
           <img src="./Img/pngegg.png" alt="Icono menu hamburguesa">
         </div>
         <ul id="main-menu" class="main-menu">
-          <li class="main-menu__item"><a class="main-menu__link" href="#home-page">Home</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#container-header">Home</a></li>
           <li class="main-menu__item"><a id="nav-characters" class="main-menu__link"
               href="#characters-information">Personajes</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="#characters-orderFilter">Filtrar</a></li>
@@ -35,14 +35,14 @@
     </div>
   </header>
 
-  <section class="home" id="home">
+  <section id="home-banner">
     <div >
       <h3>
           Te damos la bienvenida a Harry Potter Lovers, <br>
           donde encontrarás información del colegio Hogwarts,<br>
           sus estudiantes, pociones, hechizos y más.
       </h3>
-      <a href="#characters-funFacts" class="btn btn-heading-home btn-animated">Descubre +</a>
+      <a href="#titleFunFacts" class="btn btn-heading-home btn-animated">Descubre +</a>
     </div>
   </section>
 
@@ -50,7 +50,7 @@
     <section>
 
       <a name="characters-funFacts"></a>
-      <div class="titleFunFacts">
+      <div class="titleFunFacts" id="titleFunFacts">
         <h2>
           Cinco datos curiosos que seguro no sabías de Harry Potter
         </h2>
@@ -143,8 +143,8 @@
 
       <br><br>
       <a name="characters-orderFilter"></a>
-      <button id="btnOrderAscent" class="btn">Ordenar A/Z</button>
-      <button id="btnOrderFalling" class="btn">Ordenar Z/A</button>
+      <button id="btnOrderAscent" class="btnOrderAz">Ordenar A/Z</button>
+      <button id="btnOrderFalling" class="btnOrderZa">Ordenar Z/A</button>
       <section>
         <select id="filterHouseSelect">
           <option>Escoge una casa</option>
