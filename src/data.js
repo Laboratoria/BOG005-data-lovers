@@ -12,7 +12,7 @@ const functions = {
           return 1
         }
         return 0
-      } else if (sortOrder === 'falling') {
+      } else {
         if (ia > ib) {
           return -1
         }
