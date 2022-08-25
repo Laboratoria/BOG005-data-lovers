@@ -13,18 +13,32 @@ export const dataAtletas = (datos) => {
     return atletas;
 }
 
-//ordenarlos en orden alfabetico
+//ordenarlos en orden alfabetico A-Z
 export const ordenarNombres= (datos) => {
-    datos.sort( (a, b) =>{
-        if (a == b){
-            return 0;
-        }
-        if (a < b){
-            return -1;
-        }
-        return 1;
-})
-}
+    return datos.sort( (a, b) =>{
+          if (a.name.toLowerCase() == b.name.toLowerCase()){
+              return 0;
+          }
+          if (a.name < b.name){
+              return -1;
+          }
+            return 1;
+        })    
+          
+  }
+
+  //descendente Z-A
+  export const ordenarNombresZa= (datos) => {
+    return datos.datos.reverse();
+          
+  }
+
+
+//datos = datos.reverse();
+
+
+
+
 
 export const ordenarEdad = (datos) => {
     datos.sort( (a, b) =>{

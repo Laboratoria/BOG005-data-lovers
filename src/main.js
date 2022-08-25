@@ -1,14 +1,16 @@
 // import { ordenarNombres, ordenarEdad } from "./data.js";
-
+import {ordenarNombres} from './data.js';
 import data from './data/athletes/athletes.js';
 console.log(data);
+
 const dataAtletas = data.athletes
 
 
-const pintarData = (data) => {
+
+let pintarData = (data) => {
     let plantilla = ""
     data.forEach((element) => {
-        console.log(element)
+        
         plantilla += `
                     <tr>
                     <th>${element.name}</th>
@@ -24,22 +26,24 @@ const pintarData = (data) => {
 
 pintarData(dataAtletas)
 
+
+//Boton Ordenar A-Z (BOTON)
+
 // const buttonOrder = document.querySelector("#buttonOrder");
 // buttonOrder.addEventListener("change", () => {
 //     const valueOrder = buttonOrder.value;
-//     dataAtletas.innerHTML = "";
-//     showData(ordenarNombres(data,valueOrder));
+//     pintarData(ordenarNombres(dataAtletas,valueOrder));
+    
+//  });
 
-// });
 
-// import ordenarNombres from './data/athletes/ordenarNombres.js';
-// const showData = (parametro) => {
-//     let show = "";
-//     parametro.forEach((element) => {
-//         const atletas = `
-//             <div class="atleta" data-name="${element.name} name="athletes"></div> 
-//             `;
-//             show += atletas;
-//     });
-//     ordenarNombres.innerHTML = show;
-// }
+const OrdenarAz = document.getElementById("hero az")
+OrdenarAz.addEventListener("click", () => {
+    // const valueOrder = OrdenarAz.value;
+    // pintarData(dataAtletas)
+    pintarData(ordenarNombres(dataAtletas, OrdenarAz.value))
+    // pintarData(ordenarNombres(dataAtletas));
+    
+})
+// console.log((ordenarNombres(dataAtletas)))
+console.log((ordenarNombres(dataAtletas).reverse()))
