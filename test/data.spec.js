@@ -12,18 +12,18 @@ describe('functions.sortName', () => {
   })
 
   it('returns `functions.sortName` Az', () => {
-    const sortAz = [{ name: 'A' }, { name: 'C' }, { name: 'B' }, { name: 'D' }]
-    expect(functions.sortName(sortAz)).toEqual([{ name: 'A' }, { name: 'B' }, { name: 'C' }, { name: 'D' }])
+    const sortAz = [{ name: 'A' }, { name: 'C' }, { name: 'B' }, { name: 'D' }, { name: 'A' }]
+    expect(functions.sortName(sortAz)).toEqual([{ name: 'A' }, { name: 'A' }, { name: 'B' }, { name: 'C' }, { name: 'D' }])
   })
 
   it('returns `functions.sortName` zA', () => {
-    const sortZa = [{ name: 'A' }, { name: 'D' }, { name: 'C' }, { name: 'B' }]
-    expect(functions.sortName(sortZa, 'name', 'falling')).toEqual([{ name: 'D' }, { name: 'C' }, { name: 'B' }, { name: 'A' }])
+    const sortZa = [{ name: 'A' }, { name: 'D' }, { name: 'C' }, { name: 'B' }, { name: 'A' }]
+    expect(functions.sortName(sortZa, 'name', 'falling')).toEqual([{ name: 'D' }, { name: 'C' }, { name: 'B' }, { name: 'A' }, { name: 'A' }])
   })
   // Con arreglo vacio
   it('returns `functions.sortName` zA', () => {
     console.log() // revisen test cipher/card
-    expect(functions.sortName([], 'name', 'falling')).toEqual()
+    expect(functions.sortName([], 'name', 'falling')).toEqual([])
   })
 })
 
@@ -34,6 +34,6 @@ describe('functions.sortFilter', () => {
 
   it('returns `functions.sortFilter`', () => {
     const filterData = [{ house: 'Gryffindor' }, { house: 'Ravenclaw' }, { house: 'Slytherin' }, { house: 'Hufflepuff' }]
-    expect(functions.sortFilter(filterData)).toEqual([{ house: 'Gryffindor' }])
+    expect(functions.sortFilter(filterData, 'Slytherin')).toEqual([{ house: 'Slytherin' }])
   })
 })

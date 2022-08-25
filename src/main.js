@@ -19,7 +19,8 @@ toggleMenuElement.addEventListener('click', () => {
 })
 
 // Función visualizar personajes
-const allCharacters = data.characters.slice(0, 20)
+const allCharacters = data.characters.slice(0, 15)
+
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters (arrData) {
@@ -27,29 +28,32 @@ function showAllCharacters (arrData) {
   // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
   arrData.forEach((item) => {
     const card = document.createElement('div')
+    card.className = 'divShow-js'
 
     const img = document.createElement('img')
     img.src = './Img/icons8-harry.png'
+    img.className = 'imgShow-js'
 
     const name = document.createElement('p')
     name.innerHTML = `${item.name}`
+    name.className = 'nameShow-js'
 
     const button = document.createElement('button')
+    button.className = 'btnShow-js'
     button.innerHTML = 'Ver +'
     button.addEventListener('click', (e) => {
       const information = document.querySelector('#informationCharacters')
       // const i = e.target.dataset.id
       information.innerHTML = `<div class="information">
         <strong>Nombre:</strong> ${item.name ? item.name : 'Sin información'}
-        <strong>Fecha de Nacimiento:</strong> ${item.birth ? item.birth : 'Sin información'}
+        <br><strong>Fecha de Nacimiento:</strong> ${item.birth ? item.birth : 'Sin información'}
         <br> <strong>Casa de Hogwarts:</strong> ${item.house ? item.house : 'Sin información'}
         <br> <strong>Tipo de Mago:</strong> ${item.species ? item.species : 'Sin información'}
       </div>`
     })
-
+    card.appendChild(img)
     card.appendChild(name)
     card.appendChild(button)
-    card.appendChild(img)
 
     cards.push(card)
   })
@@ -70,19 +74,23 @@ function orderCharacters (arrData) {
   // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
   arrData.forEach((item) => {
     const cardOrder = document.createElement('div')
+    cardOrder.className = 'cardOrder-js'
 
     const img = document.createElement('img')
+    img.className = 'imgOrder-js'
     img.src = './Img/soplón-96.png'
 
     const name = document.createElement('p')
-    name.innerHTML = `Nombre: ${item.name}`
+    name.className = 'nameOrder-js'
+    name.innerHTML = `<strong>Nombre:</strong> ${item.name}`
 
     const nameHouse = document.createElement('p')
-    nameHouse.innerHTML = `Casa: ${item.house ? item.house : 'Sin información'}`
+    nameHouse.className = 'houseOrder-js'
+    nameHouse.innerHTML = `<strong>Casa:</strong> ${item.house ? item.house : 'Sin información'}`
 
+    cardOrder.appendChild(img)
     cardOrder.appendChild(name)
     cardOrder.appendChild(nameHouse)
-    cardOrder.appendChild(img)
 
     cards.push(cardOrder)
   })
@@ -121,6 +129,6 @@ function filterHouse () {
     contentOrder.appendChild(card)
   })
   console.log(filter1.length)
-  const average = ((filter1.length / 450) * 100).toFixed(2)
+  const average = ((filter1.length / 15) * 100).toFixed(2)
   document.getElementById('averagePrint').value = average + '%'
 }
