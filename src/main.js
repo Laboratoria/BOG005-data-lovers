@@ -20,6 +20,7 @@ toggleMenuElement.addEventListener('click', () => {
 
 // Función visualizar personajes
 const allCharacters = data.characters.slice(0, 15)
+
 const content = document.querySelector('#showCharacters')
 
 function showAllCharacters (arrData) {
