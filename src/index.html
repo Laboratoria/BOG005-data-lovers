@@ -7,7 +7,10 @@
   </head>
   <body>
     <div id="root"></div>
-    <header><img src="rio2016.jpg" id="imagtitle" alt="title" /></header>
+    <!--Encabezado de la pagina-->
+    <header><img src="TituloDL.jpg" id="imagtitle" alt="title" /></header>
+
+    <!--Filtros-->
     <section id="seeker">
       <ul id="filters">
         <li id="name">NOMBRE &nbsp;<input type="text" id="inputName" /></li>
@@ -23,25 +26,23 @@
         <button id="searcher">Buscar</button>
       </ul>
     </section>
+
+    <!--Tarjetas-->
     <main>
-      <div class="containerCard">
-        <!--<div class="cardFather">
-          <div class="card">
-            <div class="cardFront">
-              <div class="bodyCardFront">
-                <h1>names</h1>
-              </div>
-            </div>
-            <div class="cardBack">
-              <div class="bodyCardBack"></div>
-              <h1>name</h1>
-              <p>age, sport</p>
-            </div>
-          </div>
-        </div>-->
-      </div>
+      <section class="containerCard"></section>
     </main>
 
+    <!--Paginación de las tarjetas-->
+    <section class="pagination" aria-label="...">
+      <ul class="pagination">
+        <li class="page-item" id="previous">
+          <a class="page-link" href="#" tabindex="-1">Anterior</a>
+        </li>
+        <li class="page-item" id="next">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </section>
     <script src="main.js" type="module"></script>
   </body>
 </html>

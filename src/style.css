@@ -10,9 +10,10 @@ body {
 }
 
 #imagtitle {
-   width: 1500px;
+   width: 1450px;
    height: 300px;
-}
+   margin-left: 30px;
+   }
 #seeker {
 
 width: 1380px;
