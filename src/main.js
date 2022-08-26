@@ -1,14 +1,5 @@
 import data from './data/harrypotter/data.js'
 import functions from './data.js'
-// Mostrar sección a través de botón
-const btnShowSectionCharacters = document.getElementById('nav-characters')
-btnShowSectionCharacters.addEventListener('click', changeBtnStyle)
-
-function changeBtnStyle () {
-  document.getElementById('showCharacters').style.display = 'none'
-  document.getElementById('showCharacters').style.display = 'block'
-}
-
 // Menu
 
 const toggleMenuElement = document.getElementById('toggle-menu')
