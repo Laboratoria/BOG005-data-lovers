@@ -2,7 +2,7 @@ import data from './data/harrypotter/data.js'
 import functions from './data.js'
 
 function loadPage () {
-  // Menu
+  // Menu responsive mobile
 
   const toggleMenuElement = document.getElementById('toggle-menu')
   const mainMenuElement = document.getElementById('main-menu')
@@ -16,7 +16,7 @@ function loadPage () {
 
   const content = document.querySelector('#showCharacters')
 
-  function showAllCharacters(arrData) {
+  function showAllCharacters (arrData) {
     const cards = []
     // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
     arrData.forEach((item) => {
@@ -62,7 +62,7 @@ function loadPage () {
 
   const contentOrder = document.querySelector('#showOrderCharacters')
 
-  function orderCharacters(arrData) {
+  function orderCharacters (arrData) {
     const cards = []
     // Recorro el arreglo de objetos y por cada objeto, creo una tarjeta, la inserto en el arreglo y al final devuelvo el arreglo
     arrData.forEach((item) => {
@@ -114,7 +114,7 @@ function loadPage () {
   })
 
   document.getElementById('filterHouseSelect').addEventListener('change', filterHouse)
-  function filterHouse() {
+  function filterHouse () {
     contentOrder.innerHTML = ''
     const house = document.getElementById('filterHouseSelect').value
     const filter1 = functions.sortFilter(allCharacters, house)
