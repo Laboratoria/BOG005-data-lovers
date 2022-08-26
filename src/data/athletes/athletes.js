@@ -4,6 +4,7 @@ export default {
   "season": "summer",
   "city": "Rio de Janeiro",
   "athletes": [
+    
     {
       "name": "Giovanni Abagnale",
       "gender": "M",
