@@ -56,9 +56,11 @@ para conocer el % de cada casa.
 
 * [X] Incluye _sketch_ de la solución (prototipo de baja fidelidad):
 ![Imagen prototipo de baja fidelidad](./src/Img/Prototipo_a_lapiz.jpeg)
+![Imagen prototipo de baja fidelidad 2](./src/Img/prototipobaja.jpeg)
 
 * [X] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad):
 ![Imagen prototipo de alta fidelidad](./src/Img/figma_prototipo.png)
+![Imagen prototipo de alta fidelidad2](./src/Img/alta_fidelidad.png)
 
 * [X] Incluye link a Figma: [anchor](https://www.figma.com/file/cSDHRljUZmtPmyyOcHwvje/Data-lovers?node-id=2%3A4
  "Prototipo de alta fidelidad")
