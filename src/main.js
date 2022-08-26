@@ -4,20 +4,31 @@ import data from "./data/athletes/athletes.js";
 console.log(athletes.athletes);
 
 makeCard(athletes.athletes);
-
-function makeCard(athletes) {
+let posicionInicial = 0;
+let posicionFinal = 52;
+function pagination(direction) {
+  if (direction === "rigth") {
+    posicionInicial += 52;
+    posicionFinal += 52;
+  } else if (direction === "left") {
+    posicionInicial -= 52;
+    posicionFinal -= 52;
+  }
+  makeCard(athletes);
+}
+function makeCard() {
   let container = document.querySelector(".containerCard");
-
   let finalHtml = "";
-  athletes.slice(0, 52).forEach((athletes) => {
+
+  for (let i = posicionInicial; i < posicionFinal; i++) {
     finalHtml += ` 
     <section class="cardFather">
       <section class="card">
         <section class="cardFront">
-          <h1 class="namePrincipal"> ${athletes.name} </h1>
+          <h1 class="namePrincipal"> ${athletes[i].name} </h1>
           </section>
         <section class="cardBack">
-          <h1 class = "nameBack"> ${athletes.name} </h1> 
+          <h1 class = "nameBack"> ${athletes[i].name} </h1> 
           <p> Pais: ${athletes.team}</p>
           <p> Pais: ${athletes.team}</p>
           <p>Medalla: ${athletes.medal}</p>
@@ -27,7 +38,7 @@ function makeCard(athletes) {
         </section> 
       </section>
     </section>`;
-  });
+  }
 
   //       <div class="bodyCardFront">
   //     </div>
