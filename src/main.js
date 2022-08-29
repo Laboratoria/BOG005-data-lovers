@@ -15,6 +15,16 @@ let locationsHtml = [];
 let vehiclesHtml = [];
 // let ghibliMatchHtml = [];
 
+// Variables para función filtrar
+let moviesByDirector = ghibli.films
+.filter(function(film) {
+  return film.director === 'Hayao Miyazaki'
+})
+
+console.log(moviesByDirector);
+
+
+
 /*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
 
 const moviesMenu = document.getElementById("movies");
