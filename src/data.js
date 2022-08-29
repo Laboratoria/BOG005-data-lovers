@@ -1,11 +1,28 @@
 // AQUI DEBE IR TODA LA LOGICA//
 
-function sort(moviesData){
-   return moviesData.sort(function(a, b) {
-    var textA = a.title.toUpperCase() || a.name.toUpperCase();
-    var textB = b.title.toUpperCase() || a.name.toUpperCase();
-    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-});
+function sortByNameOrTitle(data) {
+  return data.sort(function (a, b) {
+    var textA = a.title
+      ? a.title.toUpperCase()
+      : a.name
+      ? a.name.toUpperCase()
+      : "";
+    var textB = b.title
+      ? b.title.toUpperCase()
+      : b.name
+      ? b.name.toUpperCase()
+      : "";
+    return textA < textB ? -1 : textA > textB ? 1 : 0;
+  });
 }
-export {sort};
+export { sortByNameOrTitle };
 // import ghibli from "./data/ghibli/ghibli.js";
+
+
+// if (a) {
+//     //bla
+// } else {
+//     //ble
+// }
+
+// a ? //bla : //ble
