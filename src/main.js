@@ -1,7 +1,11 @@
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
+
 console.log(athletes.athletes);
+
+let buttons= document.getElementById('buttons')
+console.log('⏮️, ⏭️')
 
 makeCard(athletes.athletes);
 let posicionInicial = 0;
@@ -17,7 +21,11 @@ function pagination(direction) {
   }
   console.log(pagination);
   makeCard(athletes);
+ posicionFinal= athletes.next ? `<button>⏭️</button>` : ""
+ posicionInicial= athletes.posicionInicial ? `<button>⏮️</button>` : ""
 }
+
+
 function makeCard() {
   let container = document.querySelector(".containerCard");
   let finalHtml = "";
