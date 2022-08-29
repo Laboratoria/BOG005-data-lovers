@@ -1,6 +1,8 @@
 import data from './data/harrypotter/data.js'
 import functions from './data.js'
 
+window.onload = loadPage()
+
 function loadPage () {
   // Función visualizar personajes
   const allCharacters = data.characters.slice(0, 15)
@@ -117,4 +119,3 @@ function loadPage () {
     document.getElementById('averagePrint').value = average + '%'
   }
 }
-window.onload = loadPage()
