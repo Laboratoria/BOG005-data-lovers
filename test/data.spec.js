@@ -22,7 +22,7 @@ describe('functions.sortName', () => {
   })
   // Con arreglo vacio
   it('returns `functions.sortName` zA', () => {
-    console.log() // revisen test cipher/card
+    console.log()
     expect(functions.sortName([], 'name', 'falling')).toEqual([])
   })
 })
