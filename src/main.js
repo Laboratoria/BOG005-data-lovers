@@ -2,15 +2,6 @@ import data from './data/harrypotter/data.js'
 import functions from './data.js'
 
 function loadPage () {
-  // Menu responsive mobile
-
-  const toggleMenuElement = document.getElementById('toggle-menu')
-  const mainMenuElement = document.getElementById('main-menu')
-
-  toggleMenuElement.addEventListener('click', () => {
-    mainMenuElement.classList.toggle('main-menu--show')
-  })
-
   // Función visualizar personajes
   const allCharacters = data.characters.slice(0, 15)
 
