@@ -1,237 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>DL HARRY POTER</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" type="module"></script>
-      </head>
-      
-          
-  <!-- seccion pagina principal-->
-   <header>
-              
-        <img src=" imgs/logo.gif"  id= "logo" alt="icono-potter"/>
-        <div class="buscador">
-        <input type= "search" id= "seeker" placeholder="search character">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Harry Potter fan page. Data Lovers">
+  <title>DL HARRY POTER</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+  <!--creacion pagina principal-->
+  <div id="pag1">
+    <header id="logoPag1">
+      <img src="imgs/logo.gif" id="logoHomePage" />
+      <h1 id="mesajeHome">Dejate llevar por la magia y aprende sobre el <br> impresionante mundo de Harry Potter</h1>
+    </header>
+    <!--boton welcome-->
+    <section id="sectionHomePage">
+      <button type="button" id="welcome">BIENVENIDO</button>
+    </section>
+  </div>
+  <!--creacion pagina secundaria-->
+  <div id="pag2">
+    <!--encabezado:logo,barra buscador y boton buscador-->
+    <header>
+      <img src=" imgs/logo.gif" id="logo" alt="icono-potter" />
+      <div class="buscador">
+        <input type="search" id="seeker" placeholder="search character">
         <button type="button" id="searchButton">buscar</button>
-       </div> 
-        </header>
-   
-   <body>
-
-           
-  </section>
+      </div>
+    </header>
+    <!--botones de nuestros filtros-->
     <section id=filterButtons>
-    
-    <select name = "filterCharacters" id="characters" class="filterSelectors">
-      <option>PERSONAJES</option>
-      <option value="magic">Magic</option>
-      <option value="muggle">Muggle</option>
-    </select>
-    <select name = "filterHogwartsHouses" id="HogwartsHouses" class="filterSelectors">
-      <option>CASAS DE HOGWARTS</option>
-      <option value="gryffindor">Gryffindor</option>
-      <option value="hufflepuff">Hufflepuff</option>
-      <option value="ravenclaw">Ravenclaw</option>
-      <option value="slytherin">Slytherin</option>
-    </select>
-    <select name="filterAlphabetically" id="alphabeticalOrder" class="filterSelectors">
-      <option>ORDENAR</option>
-      <option value="a-z">A-Z</option>
-      <option value="z-a">Z-A</option>
-    </select>  
-  </section>
-  
-
- <main class="containerCard" >
-    
-  <article class="containerFather">
-    <nav class="card">
-      <nav class="cardFront" style="background-image:url(imgs/escudo4.jpeg)"  alt=""> 
-        <nav class="bodyCardFront">
-        </nav>
-      </nav>
-      <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-        <nav class="bodyCardBack">
-          <h2> NOMBRE </h2>
-          <P> fecha<br> casa<br> genero<br> </P>
-        </nav>
-      </nav>
-    </nav>
-  </article>
-
-
-  <article class="containerFather">
-    <nav class="card">
-      <nav class="cardFront" style="background-image:url(imgs/escudo1.jpeg)"  alt=""> 
-        <nav class="bodyCardFront">
-        </nav>
-      </nav>
-      <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-        <nav class="bodyCardBack">
-          <h2> NOMBRE </h2>
-          <P> fecha<br> casa<br> genero<br> </P>
-        </nav>
-      </nav>
-    </nav>
-  </article>
-
-
- <article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo2.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo3.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo4.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo1.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo2.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo3.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo4.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo1.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo2.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-
-<article class="containerFather">
-  <nav class="card">
-    <nav class="cardFront" style="background-image:url(imgs/escudo3.jpeg)"  alt=""> 
-      <nav class="bodyCardFront">
-      </nav>
-    </nav>
-    <nav class="cardBack" style="background-image:url(imgs/background.jpeg)">
-      <nav class="bodyCardBack">
-        <h2> NOMBRE </h2>
-        <P> fecha<br> casa<br> genero<br> </P>
-      </nav>
-    </nav>
-  </nav>
-</article>
-</main>
-<footer>
-  <button type="button" class= "btnInicio">INICIO</button>  
-</footer>
-<script src="script.js"></script>
+      <select name="filterCharacters" id="characters" class="filterSelectors">
+        <option>PERSONAJES</option>
+        <option value="Male">Hombre</option>
+        <option value="Female">Mujer</option>
+      </select>
+      <select name="filterHogwartsHouses" id="HogwartsHouses" class="filterSelectors">
+        <option>CASAS DE HOGWARTS</option>
+        <option value="gryffindor">Gryffindor</option>
+        <option value="hufflepuff">Hufflepuff</option>
+        <option value="ravenclaw">Ravenclaw</option>
+        <option value="slytherin">Slytherin</option>
+      </select>
+      <select name="filterAlphabetically" id="alphabeticalOrder" class="filterSelectors">
+        <option>ORDENAR</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+      </select>
+    </section>
+    <main class="containerCard"></main>
+    <!--boton regresa Inicio-->
+    <footer>
+      <button type="button" id="homeBack" class="btnInicio">INICIO</button>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </div>
 </body>
 
 </html>

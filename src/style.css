@@ -1,20 +1,65 @@
 html, body {
-	height: 100%;
+	background-image: url(https://images5.alphacoders.com/339/thumb-1920-339227.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
 	width: 100%;
-  background-image: url(https://i.pinimg.com/originals/1f/1c/93/1f1c93e42c1c2cac80e0965d11dcd5e8.gif);
+	height: 100%;
+	display:grid;
+	flex-direction: column;
+	background-size: cover;
+	
+}
+
+#logoHomePage{
+	width: 500px;
+	margin-top: 30px;
+
+}
+#mesajeHome{
+	color:#f7d081;
+	margin-right: 140px;
+	text-align: center;
+	font-family: 'High Tower Text';
+	font-size: 35px;
+	
+}
+
+#welcome{
+	margin-top: 350px;
+	margin-left: 1380px;
+	width: 120px;
+	height: 50px;
+	background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
+	border-radius: 10px;
+	font-family: 'High Tower Text';
+	font-weight: bold;
+	overflow: hidden;    
+	
+
+}
+#welcome:hover{
+	transition: 0.2s;
+	box-shadow: 0 0 50px #f7d081, 0 0 80px #f7d081, 0 0 100px #f7d081;
 }
 
 
-main{
-	display: flex;
-	padding: 30px;
 
-}  
+#pag2{
+	background-image: url(https://i.pinimg.com/originals/1f/1c/93/1f1c93e42c1c2cac80e0965d11dcd5e8.gif);
+	display:none;
+	width: 100%;
+	height: 100%;
+	
+
+	
+}
+
 header{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	
 		
 }
 img#logo{
@@ -29,16 +74,18 @@ img#logo{
 button#searchButton{
 	padding-top: 0px;
 	overflow: hidden;
-    transition: 0.2s;
-	box-shadow: 0 0 20px #2de627, 0 0 40px #2de627, 0 0 80px #2de627;
 	border-radius: 10px;
 	height: 30px;
 	width: 60px;
-	background-color: rgb(156, 134, 10);
+	background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
 	
-
 }
 
+button#searchButton:hover{
+	transition: 0.2s;
+	box-shadow: 0 0 50px #f7d081, 0 0 80px #f7d081, 0 0 100px #f7d081;
+	
+}
 input#seeker{
 	height: 30px;
 	width: 180px;
@@ -68,9 +115,9 @@ article{
 #filterButtons select {
   width: 20%;
   padding: 8px 15px;
-  color: black;
-  background-color: rgba(180, 151, 75, 0.825);
-  box-shadow: 0 0 40px #272ae6, 0 0 60px #272ae6, 0 0 80px #272ae6;
+  color: rgba(15, 13, 4, 0.975);
+  background-color: #f7d081;
+  background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
   border: 3px solid #ddc74c;
   border-radius: 8px;
   text-align: center;
@@ -166,13 +213,12 @@ section#filterButtons{
   padding: 10px 15px;  
   color: black;
   overflow: hidden;
-  transition: 0.2s;
   font-weight: bold;
-  background-color: #ab940f;
+  background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
 
   
 }
 .btnInicio:hover {
-  background: rgba(198, 176, 51, 0.837);
-  box-shadow: 0 0 50px #5fcc1a, 0 0 80px #5fcc1a, 0 0 100px #5fcc1a;
+	transition: 0.2s;
+	box-shadow: 0 0 50px #f7d081, 0 0 80px #f7d081, 0 0 100px #f7d081;
 }
