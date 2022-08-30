@@ -13,25 +13,7 @@ Planificar, ejecutar y presentar su proyecto dentro del tiempo indicado por spri
 
 HISTORIASDE USUARIO
 
-1. El usuario requiere poder visualizar a todos los personajes de Harry Potter mostrando por cada uno de ellos:
 
-
-- nombre del actor que representa al personaje.
-- nombre del personaje.
-- la especie del personaje.
-- casa a la que pertenece al personaje.
-- la imagen de la insignia de la casa a la que pertenece a ese personaje (de ser el caso).
-- edad actual del personaje.
-- el rol del personaje, si es estudiante o parte del personal.
-
-2. El usuario requiere poder filtrar a los personajes de Harry Potter por:
-
-Género: femenino, masculino.
-especie: estudiante, personal.
-Casas: Gryffindor, Slytherin, Ravenclaw, Hufflepuff.
-
-3. El usuario requiere poder ordenar la visualización de los personajes de Harry Potter, de manera A-Z y/o Z-A.
-4. De igual manera un boton de busqueda por si desea conocer la informacion de un personaje en especificio.
 
 
 
