@@ -1,5 +1,4 @@
 // AQUI DEBE IR TODA LA LOGICA//
-// Función de ordenar A-Z
 
 function sortByNameOrTitle(data) {
   return data.sort(function (a, b) {
@@ -17,21 +16,14 @@ function sortByNameOrTitle(data) {
   });
 }
 
-// Función filtrar por director
-
-/*let moviesByDirector = function x () {dataforFilter.filter(function (film) {
-  return film.director === selectedDirector;
-  })};*/
-  
-export const directorFilter = function filterByDirector() {
-  let dataforFilter = ghibli.films;
-    let moviesByDirector = dataforFilter.filter(function (film) {
-    return film.director === selectedDirector;
+function filterByDirector(data, director) {
+  let moviesByDirector = data.filter(function (film) {
+    return film.director === director;
   });
   console.log(moviesByDirector);
 }
 
-export { sortByNameOrTitle};
+export { sortByNameOrTitle, filterByDirector };
 // import ghibli from "./data/ghibli/ghibli.js";
 
 // if (a) {
