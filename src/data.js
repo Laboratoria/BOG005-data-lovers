@@ -1,4 +1,5 @@
 // AQUI DEBE IR TODA LA LOGICA//
+// Función de ordenar A-Z
 
 function sortByNameOrTitle(data) {
   return data.sort(function (a, b) {
@@ -16,13 +17,21 @@ function sortByNameOrTitle(data) {
   });
 }
 
-function filterByDirector(data) {
-  let moviesByDirector = data.filter(function (film) {
-    return film.director === "Hayao Miyazaki";
-  }); console.log(moviesByDirector);
+// Función filtrar por director
+
+/*let moviesByDirector = function x () {dataforFilter.filter(function (film) {
+  return film.director === selectedDirector;
+  })};*/
+  
+export const directorFilter = function filterByDirector() {
+  let dataforFilter = ghibli.films;
+    let moviesByDirector = dataforFilter.filter(function (film) {
+    return film.director === selectedDirector;
+  });
+  console.log(moviesByDirector);
 }
 
-export { sortByNameOrTitle, filterByDirector };
+export { sortByNameOrTitle};
 // import ghibli from "./data/ghibli/ghibli.js";
 
 // if (a) {

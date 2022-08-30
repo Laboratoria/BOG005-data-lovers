@@ -1,6 +1,6 @@
 /*AQUI DEBEN ESTAR LAS INTERACCIONES CON EL DOM--- EVENT LISTENER ETC...*/
 import ghibli from "./data/ghibli/ghibli.js";
-import { sortByNameOrTitle, filterByDirector } from "./data.js";
+import { sortByNameOrTitle, directorFilter} from "./data.js";
 
 let moviesData = [];
 let charactersData = [];
@@ -16,24 +16,30 @@ let vehiclesHtml = [];
 // let ghibliMatchHtml = [];
 
 
+
 function showFilterByDirector() {
-  let dataforFilter = ghibli.films;
-=======
-// Variables para función filtrar
-let moviesByDirector = ghibli.films
-.filter(function(film) {
-  return film.director === 'Hayao Miyazaki'
-})
-console.log(moviesByDirector);
+  
+  // Elementos del DOM para el menú desplegable por Director
+  let select = document.getElementById("directorOptions");
+  select.addEventListener("change", function () {
+    let selectedOption = this.options[select.selectedIndex];
+    let selectedDirector = selectedOption.text;
+    console.log("El director elegido es " + selectedDirector);
+  
+    
+  });
 
-var select = document.getElementById('directorOptions');
-select.addEventListener('change', function(){
-  var selectedOption = this.options[select.selectedIndex];
-  console.log(selectedOption.text)
-})
+  // Elementos del DOM para el menú desplegable por Productor
+  let selectPr = document.getElementById("producerOptions");
+  selectPr.addEventListener("change", function () {
+    let selectedProducerOption = this.options[selectPr.selectedIndex];
+    let selectedProducer = selectedProducerOption.text;
+    console.log("El productor elegido es " + selectedProducer);
 
-  filterByDirector(dataforFilter); //Ojo aqui
+    filterByDirector(dataforFilter); //Ojo aqui
+  });
 }
+
 showFilterByDirector();
 
 /*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
@@ -47,6 +53,7 @@ const selectDirector = document.getElementById("directorOptions");
 const sorAtoZ = document.getElementById("btn1");
 
 // eventos
+selectDirector.addEventListener("change", directorFilter);
 moviesMenu.addEventListener("click", showMovies);
 charactersMenu.addEventListener("click", showCharacters);
 locationsMenu.addEventListener("click", showLocations);
@@ -88,6 +95,14 @@ async function sortAsc() {
       break;
   }
 }
+
+// Función de imprimir data del filtro
+
+/*async function directorFilter() {
+  moviesData = await showFilterByDirector(moviesData);
+  setMoviesHtml();
+  showMovies();
+}*/
 
 function setData() {
   blankHtml();
