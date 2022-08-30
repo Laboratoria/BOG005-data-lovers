@@ -18,6 +18,7 @@ function loadPage () {
 
       const img = document.createElement('img')
       img.src = './Img/icons8-harry.png'
+      img.alt = 'Iamgen generica de HP'
       img.className = 'imgShow-js'
 
       const name = document.createElement('p')
@@ -51,7 +52,7 @@ function loadPage () {
     content.appendChild(card)
   })
 
-  // Funciones
+  // Funciones ordenar, filtrar y calcular
 
   const contentOrder = document.querySelector('#showOrderCharacters')
 
@@ -64,6 +65,7 @@ function loadPage () {
 
       const img = document.createElement('img')
       img.className = 'imgOrder-js'
+      img.alt = 'Iamgen generica de HP'
       img.src = './Img/soplón-96.png'
 
       const name = document.createElement('p')
