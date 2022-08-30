@@ -20,8 +20,13 @@ let moviesByDirector = ghibli.films
 .filter(function(film) {
   return film.director === 'Hayao Miyazaki'
 })
-
 console.log(moviesByDirector);
+
+var select = document.getElementById('directorOptions');
+select.addEventListener('change', function(){
+  var selectedOption = this.options[select.selectedIndex];
+  console.log(selectedOption.text)
+})
 
 
 
