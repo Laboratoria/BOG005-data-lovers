@@ -16,10 +16,11 @@ function sortByNameOrTitle(data) {
   });
 }
 
-function filterByDirector(data) {
+function filterByDirector(data, director) {
   let moviesByDirector = data.filter(function (film) {
-    return film.director === "Hayao Miyazaki";
-  }); console.log(moviesByDirector);
+    return film.director === director;
+  });
+  console.log(moviesByDirector);
 }
 
 export { sortByNameOrTitle, filterByDirector };

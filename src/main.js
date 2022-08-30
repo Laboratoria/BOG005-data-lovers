@@ -15,12 +15,7 @@ let locationsHtml = [];
 let vehiclesHtml = [];
 // let ghibliMatchHtml = [];
 
-function showFilterByDirector() {
-  let dataforFilter = ghibli.films;
 
-  filterByDirector(dataforFilter); //Ojo aqui
-}
-showFilterByDirector();
 
 /*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
 
@@ -29,7 +24,7 @@ const charactersMenu = document.getElementById("characters");
 const locationsMenu = document.getElementById("locations");
 const vehiclesMenu = document.getElementById("vehicles");
 // const ghibliMatchMenu = document.getElementById("ghibliMatch");
-const selectDirector = document.getElementById("directorOptions");
+
 const sorAtoZ = document.getElementById("btn1");
 
 // eventos
@@ -170,6 +165,20 @@ function setVehiclesHtml() {
   `);
   });
 }
+/*Funcion filtrado*/
+function showFilterByDirector() {
+  let dataforFilter = ghibli.films;
+  const selectDirector = document.getElementById("directorOptions");
+  selectDirector.addEventListener("change", function () {
+    let selectedOption = this.options[selectDirector.selectedIndex];
+    let selectedDirector = selectedOption.text;
+    console.log(selectedDirector);
+    filterByDirector(dataforFilter, selectedDirector);
+  });
+  
+}
+showFilterByDirector();
+
 
 function blankHtml() {
   moviesHtml = [];
