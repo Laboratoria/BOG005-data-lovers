@@ -1,6 +1,6 @@
 /*AQUI DEBEN ESTAR LAS INTERACCIONES CON EL DOM--- EVENT LISTENER ETC...*/
 import ghibli from "./data/ghibli/ghibli.js";
-import { sortByNameOrTitle } from "./data.js";
+import { sortByNameOrTitle, filterByDirector } from "./data.js";
 
 let moviesData = [];
 let charactersData = [];
@@ -15,6 +15,10 @@ let locationsHtml = [];
 let vehiclesHtml = [];
 // let ghibliMatchHtml = [];
 
+
+function showFilterByDirector() {
+  let dataforFilter = ghibli.films;
+=======
 // Variables para función filtrar
 let moviesByDirector = ghibli.films
 .filter(function(film) {
@@ -28,7 +32,9 @@ select.addEventListener('change', function(){
   console.log(selectedOption.text)
 })
 
-
+  filterByDirector(dataforFilter); //Ojo aqui
+}
+showFilterByDirector();
 
 /*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
 
@@ -37,6 +43,7 @@ const charactersMenu = document.getElementById("characters");
 const locationsMenu = document.getElementById("locations");
 const vehiclesMenu = document.getElementById("vehicles");
 // const ghibliMatchMenu = document.getElementById("ghibliMatch");
+const selectDirector = document.getElementById("directorOptions");
 const sorAtoZ = document.getElementById("btn1");
 
 // eventos

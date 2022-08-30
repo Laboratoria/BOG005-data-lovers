@@ -15,9 +15,15 @@ function sortByNameOrTitle(data) {
     return textA < textB ? -1 : textA > textB ? 1 : 0;
   });
 }
-export { sortByNameOrTitle };
-// import ghibli from "./data/ghibli/ghibli.js";
 
+function filterByDirector(data) {
+  let moviesByDirector = data.filter(function (film) {
+    return film.director === "Hayao Miyazaki";
+  }); console.log(moviesByDirector);
+}
+
+export { sortByNameOrTitle, filterByDirector };
+// import ghibli from "./data/ghibli/ghibli.js";
 
 // if (a) {
 //     //bla
