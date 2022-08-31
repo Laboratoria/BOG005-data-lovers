@@ -24,7 +24,6 @@ function filterByDirector(data, director) {
 }
 
 export { sortByNameOrTitle, filterByDirector };
-// import ghibli from "./data/ghibli/ghibli.js";
 
 // if (a) {
 //     //bla

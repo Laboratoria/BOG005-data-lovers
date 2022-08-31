@@ -7,17 +7,11 @@ describe("ssortByNameOrTitleort", () => {
   });
 });
 
+/*it ('returns `sortByNameOrTitle`', () => {
+  expect(sortByNameOrTitle()).toBe('function');
+});*/
 
 
-// describe('example', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
 
 // describe('anotherExample', () => {
 //   it('is a function', () => {
