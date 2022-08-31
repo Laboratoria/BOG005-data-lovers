@@ -21,6 +21,7 @@ function filterByDirector(data, director) {
     return film.director === director;
   });
   console.log(moviesByDirector);
+  moviesByDirectorData = moviesByDirector;
 }
 
 export { sortByNameOrTitle, filterByDirector };

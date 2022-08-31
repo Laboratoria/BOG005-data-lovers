@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <nav class="nav">
+      <input type="checkbox" id="check" />
+      <label for="check" class="nav__checkbtn">
+        <i class="nav__btn"
+          ><img src="./imagenes/MenuIcon.png" alt="IconImage"
+        /></i>
+        <a href="#" class="link">
+          <img src="./imagenes/TextTitle.png" alt="Texto Imagen" class="logo" />
+        </a>
+      </label>
 
-<body>
-  <nav class="nav">
-    <input type="checkbox" id="check" />
-    <label for="check" class="nav__checkbtn">
-      <i class="nav__btn"><img src="./imagenes/MenuIcon.png" alt="IconImage" /></i>
-      <a href="#" class="link">
-        <img src="./imagenes/TextTitle.png" alt="Texto Imagen" class="logo" />
-      </a>
-    </label>
+      <ul>
+        <li><a href="#" id="movies">Películas</a></li>
+        <li><a href="#" id="characters" onclick="">Personajes</a></li>
+        <li><a href="#" id="locations">Lugares</a></li>
+        <li><a href="#" id="vehicles">Vehículos</a></li>
+        <li><a href="#" id="ghibliMatch">Ghibli Match</a></li>
+      </ul>
+    </nav>
 
-    <ul>
-      <li><a href="#" id="movies">Películas</a></li>
-      <li><a href="#" id="characters" onclick="">Personajes</a></li>
-      <li><a href="#" id="locations">Lugares</a></li>
-      <li><a href="#" id="vehicles">Vehículos</a></li>
-      <li><a href="#" id="ghibliMatch">Ghibli Match</a></li>
-    </ul>
-  </nav>
+    <section class="welcome"></section>
 
-  <section class="welcome"></section>
-
-  <main class="main" id="main">
-    <p class="moviesWelcome">
-      Aquí encontrarás la información que necesitas sobre las animaciones de
-      Studio Ghibli, <b>que son un total de 20.</b>
-      <br />
-      Puedes ir hacia abajo ⬇️ y descubrir información de cada una.
-      <br />
-      ¡Vamos alla! 🏯
-    </p>
+    <main class="main" id="main">
+      <p class="moviesWelcome">
+        Aquí encontrarás la información que necesitas sobre las animaciones de
+        Studio Ghibli, <b>que son un total de 20.</b>
+        <br />
+        Puedes ir hacia abajo ⬇️ y descubrir información de cada una.
+        <br />
+        ¡Vamos alla! 🏯
+      </p>
 
       <div id="buttons">
-        <p>Filtros:</p>
-        <button class="btn" id="btn1">A to Z</button>
-        <button class="btn" id="btn2">Z to A</button>
+        <button class="btn" id="btn1">Ordenar de la A a la Z</button>
+        <!-- <button class="btn" id="btn2">Z to A</button>-->
       </div>
       <div id="filterByDirector">
         <p>Filtro por Director</p>
@@ -70,19 +76,19 @@
         </select>
       </div>
 
-    <div class="cardContainer"></div>
-  </main>
+      <div class="cardContainer"></div>
+    </main>
 
-  <footer class="footer">
-    <p class="welcome__text">
-      Copyright © 2022 Data Lovers - Studio Ghibli por <b>Mariana Santos y Andrea Zapata</b>
-    </p>
-  </footer>
+    <footer class="footer">
+      <p class="welcome__text">
+        Copyright © 2022 Data Lovers - Studio Ghibli por
+        <b>Mariana Santos y Andrea Zapata</b>
+      </p>
+    </footer>
 
-  <div id="root"></div>
-  <!--Esto lo hizo Alexis-->
-  <script src="main.js" type="module"></script>
-  <!--Esto es la ruta al JS-->
-</body>
-
+    <div id="root"></div>
+    <!--Esto lo hizo Alexis-->
+    <script src="main.js" type="module"></script>
+    <!--Esto es la ruta al JS-->
+  </body>
 </html>

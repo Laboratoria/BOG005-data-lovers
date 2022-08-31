@@ -6,10 +6,12 @@ let moviesData = [];
 let charactersData = [];
 let locationsData = [];
 let vehiclesData = [];
+let moviesByDirectorData  = [];
 
 let currentPage = "movies";
 /*Separación*/
 let moviesHtml = [];
+let moviesByDirectorHtml = [];
 let charactersHtml = [];
 let locationsHtml = [];
 let vehiclesHtml = [];
@@ -18,7 +20,6 @@ let vehiclesHtml = [];
 
 
 /*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
-
 const moviesMenu = document.getElementById("movies");
 const charactersMenu = document.getElementById("characters");
 const locationsMenu = document.getElementById("locations");
@@ -26,6 +27,7 @@ const vehiclesMenu = document.getElementById("vehicles");
 // const ghibliMatchMenu = document.getElementById("ghibliMatch");
 
 const sorAtoZ = document.getElementById("btn1");
+const direcFilter = document.getElementById("directorOptions")
 
 // eventos
 moviesMenu.addEventListener("click", showMovies);
@@ -34,6 +36,7 @@ locationsMenu.addEventListener("click", showLocations);
 vehiclesMenu.addEventListener("click", showVehicles);
 // ghibliMatchMenu.addEventListener("click", showGhibliMatch);
 sorAtoZ.addEventListener("click", sortAsc);
+direcFilter.addEventListener("change", showMoviesByDirector);
 
 // addEventListenerTo(characters);
 /*Info para mostrar las tarjetas*/
@@ -70,9 +73,22 @@ async function sortAsc() {
   }
 }
 
+async function showByDirector() {
+  switch (currentPage) {
+    case "directorOptions":
+      moviesByDirectorData = await filterByDirector(moviesByDirectorData);
+      setMoviesByDirectorHtml(moviesByDirectorData);
+      showMoviesByDirector();
+    break;
+    default:
+      break;
+  }
+}
+
 function setData() {
   blankHtml();
   moviesData = ghibli.films;
+  moviesByDirectorData = [];
   charactersData = [];
   locationsData = [];
   vehiclesData = [];
@@ -93,11 +109,32 @@ function setData() {
   setLocationsHtml(locationsData);
   setVehiclesHtml(vehiclesData);
   setMoviesHtml();
+  setMoviesByDirectorHtml();
 }
 
 function setMoviesHtml() {
   moviesData.forEach((m) => {
     moviesHtml.push(`
+        <div class="card">
+          <img
+            src="${m.poster}"
+            alt=""
+          />
+          <div class="cardText">
+            <h2 class="filmTitle">${m.title}</h2>
+            <p class="directorAndProducer">Director: ${m.director} | Producer: ${m.director}</p>
+            <h5 class="releaseDate">${m.release_date}</h5>
+            <p class="filmDescription">${m.description}
+            </p>
+          </div>
+        </div>
+        `);
+  });
+}
+
+function setMoviesByDirectorHtml() {
+  moviesByDirectorData.forEach((m) => {
+    moviesByDirectorHtml.push(`
         <div class="card">
           <img
             src="${m.poster}"
@@ -186,6 +223,16 @@ function blankHtml() {
   locationsHtml = [];
   vehiclesHtml = [];
   // ghibliMatchHtml = [];
+  moviesByDirectorHtml = [];
+}
+
+function showMoviesByDirector(){
+  blankHtml();
+  setMoviesByDirectorHtml();
+  currentPage = "";
+  container.innerHTML = moviesByDirectorHtml.join("");
+  
+  
 }
 
 function showMovies() {
@@ -224,5 +271,6 @@ function showVehicles() {
 
 setData();
 showMovies();
+
 
 /*Filtrando*/

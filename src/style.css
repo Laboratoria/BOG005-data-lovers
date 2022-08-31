@@ -84,6 +84,17 @@ li a:hover {
   object-fit: contain;
 }
 
+#btn1 {
+  float: right;
+  margin-right: 40px;
+  color: #000000;
+  font-size: 26px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: 'Abel', sans-serif;  
+  font-style: normal;
+  font-variant: normal;
+}
 
 body{
   background-color: #D9D9D9;
