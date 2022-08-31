@@ -6,7 +6,7 @@ let moviesData = [];
 let charactersData = [];
 let locationsData = [];
 let vehiclesData = [];
-let moviesByDirectorData  = [];
+let moviesByDirectorData = [];
 
 let currentPage = "movies";
 /*Separación*/
@@ -17,8 +17,6 @@ let locationsHtml = [];
 let vehiclesHtml = [];
 // let curiousFactHtml = [];
 
-
-
 /*Ids de peliculas,personajes,lugares,vehiculos y dato curioso*/
 const moviesMenu = document.getElementById("movies");
 const charactersMenu = document.getElementById("characters");
@@ -27,7 +25,7 @@ const vehiclesMenu = document.getElementById("vehicles");
 // const curiousFactMenu = document.getElementById("curiousFact");
 
 const sorAtoZ = document.getElementById("btn1");
-const direcFilter = document.getElementById("directorOptions")
+const direcFilter = document.getElementById("directorOptions");
 
 // eventos
 moviesMenu.addEventListener("click", showMovies);
@@ -73,17 +71,17 @@ async function sortAsc() {
   }
 }
 
-/*async function showByDirector() {
+async function showByDirector() {
   switch (currentPage) {
     case "directorOptions":
       moviesByDirectorData = await filterByDirector(moviesByDirectorData);
       setMoviesByDirectorHtml(moviesByDirectorData);
       showMoviesByDirector();
-    break;
+      break;
     default:
       break;
   }
-}*/
+}
 
 function setData() {
   blankHtml();
@@ -92,6 +90,11 @@ function setData() {
   charactersData = [];
   locationsData = [];
   vehiclesData = [];
+  for (let i = 0; i < moviesByDirectorData.length; i++) {
+    moviesByDirectorData[i].forEach((d) => {
+      moviesByDirectorData.push(d);
+    });
+  }
 
   for (let i = 0; i < moviesData.length; i++) {
     moviesData[i].people.forEach((p) => {
@@ -212,10 +215,8 @@ function showFilterByDirector() {
     console.log(selectedDirector);
     filterByDirector(dataforFilter, selectedDirector);
   });
-  
 }
 showFilterByDirector();
-
 
 function blankHtml() {
   moviesHtml = [];
@@ -226,13 +227,11 @@ function blankHtml() {
   moviesByDirectorHtml = [];
 }
 
-function showMoviesByDirector(){
+function showMoviesByDirector() {
   blankHtml();
   setMoviesByDirectorHtml();
-  currentPage = "";
+  currentPage = "directorOptions";
   container.innerHTML = moviesByDirectorHtml.join("");
-  
-  
 }
 
 function showMovies() {
@@ -271,6 +270,5 @@ function showVehicles() {
 
 setData();
 showMovies();
-
 
 /*Filtrando*/
