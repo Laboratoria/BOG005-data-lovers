@@ -6,8 +6,8 @@ console.log(athletes.athletes);
 
 console.log("⏮️, ⏭️");
 
-const right = document.getElementById("buttonRigth");
 const left = document.getElementById("buttonLeft");
+const right = document.getElementById("buttonRight");
 let container = document.querySelector(".containerCard");
 let posicionInicial = 0;
 let posicionFinal = 40;
@@ -17,13 +17,14 @@ function makeCard(athletes) {
 
   let finalHtml = "";
   console.log("o.o", posicionFinal, posicionInicial);
-  for (let i = posicionInicial; i < posicionFinal + posicionFinal; i++) {
+  for (let i = posicionInicial; i < posicionFinal; i++) {
     console.log("position en for: ", i);
     //console.log("khkhk", athletes[0]);
     finalHtml += `
      <section class="cardFather">
        <section class="card">
          <section class="cardFront">
+           <h1 class="namePrincipal">${i + 1}</h1>
            <h1 class="namePrincipal">${athletes[i].name}</h1>
            </section>
          <section class="cardBack">
@@ -41,44 +42,21 @@ function makeCard(athletes) {
   container.innerHTML = finalHtml;
 }
 
-left.addEventListener("click", () => {
+right.addEventListener("click", () => {
   posicionInicial += 40;
   posicionFinal += 40;
-  removeChildNodes(container);
+
   makeCard(athletes.athletes);
 });
 
-right.addEventListener("click", () => {
+left.addEventListener("click", () => {
   if (posicionInicial != 0) {
     posicionInicial -= 40;
     posicionFinal -= 40;
-    removeChildNodes(container);
+
     makeCard(athletes.athletes);
   }
 });
-
-function removeChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}
-//document.getElementById("buttons").innerHTML = `<button id='left'> ⏮</button>
-// <button id="derecho">siguiente</button>`;
-//let buttonRight = document.getElementById("derecho");
-//buttonRight.addEventListener("onclick", alert("si estoy"));
-//con
-//f//unction pagination(direction) {
-//////if (direction === "rigth") {
-// posicionInicial += "";
-// posicionFinal += "";
-// } else {
-// posicionInicial -= 52;
-//posicionFinal -= 52;
-// }
-//sole.log(pagination);
-
-//makeCard(athletes.athletes);
-//}
 
 //       <div class="bodyCardFront"></div>
 //       <div class="bodyCardBack"></div>
