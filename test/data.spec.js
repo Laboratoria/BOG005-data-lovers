@@ -1,24 +1,19 @@
-// import { example, anotherExample } from '../src/data.js';
+import {sortByNameOrTitle} from "../src/data.js";
 
-import { sortByNameOrTitle } from "../src/data.js";
-describe("ssortByNameOrTitleort", () => {
+// Test para función de ordenar A-Z
+
+describe("sortByNameOrTitle", () => {
   it("is a function", () => {
     expect(typeof sortByNameOrTitle).toBe("function");
   });
 });
 
-/*it ('returns `sortByNameOrTitle`', () => {
-  expect(sortByNameOrTitle()).toBe('function');
-});*/
+/*it('Orders from A to Z', () => {
 
+  let moviesOrder = sortByNameOrTitle(Object.values(moviesSample), 'Z-A');
 
+  expect(moviesOrder[0]).toEqual(moviesSample."CastleInTheSky")
+  expect(moviesOrder[3]).toEqual(moviesSample."HowlsMovingCastle")
 
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
+})*/
 
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });

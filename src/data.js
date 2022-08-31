@@ -1,5 +1,4 @@
-// AQUI DEBE IR TODA LA LOGICA//
-
+// Función de Ordenar de la A a la Z
 function sortByNameOrTitle(data) {
   return data.sort(function (a, b) {
     var textA = a.title
@@ -16,15 +15,15 @@ function sortByNameOrTitle(data) {
   });
 }
 
+// Función para filtrar por director
+
 function filterByDirector(data, director) {
   let moviesByDirector = data.filter(function (film) {
     return film.director === director;
-  });
-  console.log(moviesByDirector);
-  moviesByDirectorData = moviesByDirector;
+  });console.log(moviesByDirector);  
 }
 
-export { sortByNameOrTitle, filterByDirector };
+export {sortByNameOrTitle, filterByDirector};
 
 // if (a) {
 //     //bla

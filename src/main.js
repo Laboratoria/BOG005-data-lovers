@@ -15,16 +15,16 @@ let moviesByDirectorHtml = [];
 let charactersHtml = [];
 let locationsHtml = [];
 let vehiclesHtml = [];
-// let ghibliMatchHtml = [];
+// let curiousFactHtml = [];
 
 
 
-/*Ids de peliculas,personajes,lugares,vehiculos y ghibli match*/
+/*Ids de peliculas,personajes,lugares,vehiculos y dato curioso*/
 const moviesMenu = document.getElementById("movies");
 const charactersMenu = document.getElementById("characters");
 const locationsMenu = document.getElementById("locations");
 const vehiclesMenu = document.getElementById("vehicles");
-// const ghibliMatchMenu = document.getElementById("ghibliMatch");
+// const curiousFactMenu = document.getElementById("curiousFact");
 
 const sorAtoZ = document.getElementById("btn1");
 const direcFilter = document.getElementById("directorOptions")
@@ -34,7 +34,7 @@ moviesMenu.addEventListener("click", showMovies);
 charactersMenu.addEventListener("click", showCharacters);
 locationsMenu.addEventListener("click", showLocations);
 vehiclesMenu.addEventListener("click", showVehicles);
-// ghibliMatchMenu.addEventListener("click", showGhibliMatch);
+// curiousFactMenu.addEventListener("click", showCuriousFact);
 sorAtoZ.addEventListener("click", sortAsc);
 direcFilter.addEventListener("change", showMoviesByDirector);
 
@@ -65,7 +65,7 @@ async function sortAsc() {
       setVehiclesHtml(locationsData);
       showVehicles();
       break;
-    case "ghibliMatch":
+    case "curiousFact":
       // moviesData = sort(moviesData); ???????
       break;
     default:
@@ -73,7 +73,7 @@ async function sortAsc() {
   }
 }
 
-async function showByDirector() {
+/*async function showByDirector() {
   switch (currentPage) {
     case "directorOptions":
       moviesByDirectorData = await filterByDirector(moviesByDirectorData);
@@ -83,7 +83,7 @@ async function showByDirector() {
     default:
       break;
   }
-}
+}*/
 
 function setData() {
   blankHtml();
@@ -109,7 +109,7 @@ function setData() {
   setLocationsHtml(locationsData);
   setVehiclesHtml(vehiclesData);
   setMoviesHtml();
-  setMoviesByDirectorHtml();
+  setMoviesByDirectorHtml(moviesByDirectorData);
 }
 
 function setMoviesHtml() {
@@ -222,7 +222,7 @@ function blankHtml() {
   charactersHtml = [];
   locationsHtml = [];
   vehiclesHtml = [];
-  // ghibliMatchHtml = [];
+  // curiousFactHtml = [];
   moviesByDirectorHtml = [];
 }
 

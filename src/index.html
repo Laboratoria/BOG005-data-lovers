@@ -31,7 +31,7 @@
         <li><a href="#" id="characters" onclick="">Personajes</a></li>
         <li><a href="#" id="locations">Lugares</a></li>
         <li><a href="#" id="vehicles">Vehículos</a></li>
-        <li><a href="#" id="ghibliMatch">Ghibli Match</a></li>
+        <li><a href="#" id="curiousFact">Dato Curioso</a></li>
       </ul>
     </nav>
 
@@ -47,33 +47,22 @@
         ¡Vamos alla! 🏯
       </p>
 
-      <div id="buttons">
-        <button class="btn" id="btn1">Ordenar de la A a la Z</button>
-        <!-- <button class="btn" id="btn2">Z to A</button>-->
-      </div>
-      <div id="filterByDirector">
-        <p>Filtro por Director</p>
-        <select name="directorOptions" id="directorOptions">
-          <option value="">Elige un director...</option>
-          <option value="hayaoM">Hayao Miyazaki</option>
-          <option value="isaoT">Isao Takahata</option>
-          <option value="yoshifumiK">Yoshifumi Kondō</option>
-          <option value="hiroyuriM">Hiroyuki Morita</option>
-          <option value="goroM">Gorō Miyazaki</option>
-          <option value="hiromasaY">Hiromasa Yonebayashi</option>
-        </select>
-      </div>
-
-      <div id="filterByProducer">
-        <p>Filtro por Productor</p>
-        <select name="producerOptions" id="producerOptions">
-          <option value="">Elige un productor...</option>
-          <option value="pIsaoT">Isao Takahata</option>
-          <option value="pHayaoM">Hayao Miyazaki</option>
-          <option value="pToruH">Toru Hara</option>
-          <option value="pToshioS">Toshio Suzuki</option>
-          <option value="pYoshiakiN">Yoshiaki Nishimura</option>
-        </select>
+      <div class="filterOptions">
+        <div id="filterByDirector">
+          
+          <select name="directorOptions" id="directorOptions">
+            <option value="">Filtra por director...</option>
+            <option value="hayaoM">Hayao Miyazaki</option>
+            <option value="isaoT">Isao Takahata</option>
+            <option value="yoshifumiK">Yoshifumi Kondō</option>
+            <option value="hiroyuriM">Hiroyuki Morita</option>
+            <option value="goroM">Gorō Miyazaki</option>
+            <option value="hiromasaY">Hiromasa Yonebayashi</option>
+          </select>
+        </div>
+        <div id="buttons">
+          <button class="btn" id="btn1">Ordena de la A a la Z</button>
+        </div>
       </div>
 
       <div class="cardContainer"></div>
