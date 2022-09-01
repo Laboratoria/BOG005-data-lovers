@@ -20,11 +20,11 @@ function sortByNameOrTitle(data) {
 function filterByDirector(data, director) {
   let moviesByDirector = data.filter(function (film) {
     return film.director === director;
-    
-  });console.log(moviesByDirector);  
+  });
+  return moviesByDirector;
 }
 
-export {sortByNameOrTitle, filterByDirector};
+export { sortByNameOrTitle, filterByDirector };
 
 // if (a) {
 //     //bla

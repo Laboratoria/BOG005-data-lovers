@@ -6,12 +6,10 @@ let moviesData = [];
 let charactersData = [];
 let locationsData = [];
 let vehiclesData = [];
-let moviesByDirectorData = [];
 
 let currentPage = "movies";
 /*Separación*/
 let moviesHtml = [];
-let moviesByDirectorHtml = [];
 let charactersHtml = [];
 let locationsHtml = [];
 let vehiclesHtml = [];
@@ -25,7 +23,6 @@ const vehiclesMenu = document.getElementById("vehicles");
 // const curiousFactMenu = document.getElementById("curiousFact");
 
 const sorAtoZ = document.getElementById("btn1");
-const direcFilter = document.getElementById("directorOptions");
 
 // eventos
 moviesMenu.addEventListener("click", showMovies);
@@ -34,18 +31,15 @@ locationsMenu.addEventListener("click", showLocations);
 vehiclesMenu.addEventListener("click", showVehicles);
 // curiousFactMenu.addEventListener("click", showCuriousFact);
 sorAtoZ.addEventListener("click", sortAsc);
-direcFilter.addEventListener("change", showMoviesByDirector);
 
-// addEventListenerTo(characters);
 /*Info para mostrar las tarjetas*/
-
 let container = document.querySelector(".cardContainer");
 
 async function sortAsc() {
   switch (currentPage) {
     case "movies":
       moviesData = await sortByNameOrTitle(moviesData);
-      setMoviesHtml();
+      setMoviesHtml(moviesData);
       showMovies();
       break;
     case "characters":
@@ -71,30 +65,12 @@ async function sortAsc() {
   }
 }
 
-async function showByDirector() {
-  switch (currentPage) {
-    case "directorOptions":
-      moviesByDirectorData = await filterByDirector(moviesByDirectorData);
-      setMoviesByDirectorHtml(moviesByDirectorData);
-      showMoviesByDirector();
-      break;
-    default:
-      break;
-  }
-}
-
 function setData() {
   blankHtml();
   moviesData = ghibli.films;
-  moviesByDirectorData = [];
   charactersData = [];
   locationsData = [];
   vehiclesData = [];
-  for (let i = 0; i < moviesByDirectorData.length; i++) {
-    moviesByDirectorData[i].forEach((d) => {
-      moviesByDirectorData.push(d);
-    });
-  }
 
   for (let i = 0; i < moviesData.length; i++) {
     moviesData[i].people.forEach((p) => {
@@ -111,33 +87,12 @@ function setData() {
   setCharactersHtml(charactersData);
   setLocationsHtml(locationsData);
   setVehiclesHtml(vehiclesData);
-  setMoviesHtml();
-  setMoviesByDirectorHtml(moviesByDirectorData);
+  setMoviesHtml(moviesData);
 }
 
-function setMoviesHtml() {
-  moviesData.forEach((m) => {
+function setMoviesHtml(arrData) {
+  arrData.forEach((m) => {
     moviesHtml.push(`
-        <div class="card">
-          <img
-            src="${m.poster}"
-            alt=""
-          />
-          <div class="cardText">
-            <h2 class="filmTitle">${m.title}</h2>
-            <p class="directorAndProducer">Director: ${m.director} | Producer: ${m.director}</p>
-            <h5 class="releaseDate">${m.release_date}</h5>
-            <p class="filmDescription">${m.description}
-            </p>
-          </div>
-        </div>
-        `);
-  });
-}
-
-function setMoviesByDirectorHtml() {
-  moviesByDirectorData.forEach((m) => {
-    moviesByDirectorHtml.push(`
         <div class="card">
           <img
             src="${m.poster}"
@@ -206,17 +161,15 @@ function setVehiclesHtml() {
   });
 }
 /*Funcion filtrado*/
-function showFilterByDirector() {
-  let dataforFilter = ghibli.films;
-  const selectDirector = document.getElementById("directorOptions");
-  selectDirector.addEventListener("change", function () {
-    let selectedOption = this.options[selectDirector.selectedIndex];
-    let selectedDirector = selectedOption.text;
-    console.log(selectedDirector);
-    filterByDirector(dataforFilter, selectedDirector);
-  });
-}
-showFilterByDirector();
+
+const selectDirector = document.getElementById("directorOptions");
+selectDirector.addEventListener("change", function () {
+  let selectedOption = this.options[selectDirector.selectedIndex];
+  let selectedDirector = selectedOption.text;
+  const arrayDirector = filterByDirector(moviesData, selectedDirector);
+
+  showMovies(arrayDirector);
+});
 
 function blankHtml() {
   moviesHtml = [];
@@ -224,19 +177,11 @@ function blankHtml() {
   locationsHtml = [];
   vehiclesHtml = [];
   // curiousFactHtml = [];
-  moviesByDirectorHtml = [];
 }
 
-function showMoviesByDirector() {
+function showMovies(data = ghibli.films) {
   blankHtml();
-  setMoviesByDirectorHtml();
-  currentPage = "directorOptions";
-  container.innerHTML = moviesByDirectorHtml.join("");
-}
-
-function showMovies() {
-  blankHtml();
-  setMoviesHtml();
+  setMoviesHtml(data);
   currentPage = "movies";
   container.innerHTML = moviesHtml.join("");
 }
