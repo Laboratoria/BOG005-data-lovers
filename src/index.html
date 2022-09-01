@@ -10,47 +10,50 @@
     <!--Encabezado de la pagina-->
     <header><img src="TituloDL.jpg" id="imagtitle" alt="title" /></header>
 
-    <!--Filtros-->
-    <section id="seeker">
-      <ul id="filters">
-        <li id="name">NOMBRE &nbsp;<input type="text" id="inputName" /></li>
-        <li id="country">PAIS &nbsp;<input type="text" id="inputCountry" /></li>
-        <li id="medal">MEDALLA &nbsp;<input type="text" id="inputMedal" /></li>
-        <li id="sport">DEPORTE &nbsp;<input type="text" id="inputSport" /></li>
-        <li id="countryMedal">
-          PAIS CON MÁS MEDALLAS &nbsp;<input
-            type="text"
-            id="inputCountryMedal"
-          />
-        </li>
-        <button id="searcher">Buscar</button>
-      </ul>
+    <!--Página de inicio-->
+    <section id="homepage" class="homepage">
+      <p>Fueron los primeros Juegos Olímpicos celebrados en América del Sur.</p>
+
+      <!--Filtros-->
+      <section id="seeker">
+        <ul id="filters">
+          <li id="name">NOMBRE &nbsp;<input type="text" id="inputName" /></li>
+          <li id="country">
+            PAIS &nbsp;<input type="text" id="inputCountry" />
+          </li>
+          <li id="medal">
+            MEDALLA &nbsp;<input type="text" id="inputMedal" />
+          </li>
+          <li id="sport">
+            DEPORTE &nbsp;<input type="text" id="inputSport" />
+          </li>
+          <li id="countryMedal">
+            PAIS CON MÁS MEDALLAS &nbsp;<input
+              type="text"
+              id="inputCountryMedal"
+            />
+          </li>
+          <button id="searcher">Buscar</button>
+        </ul>
+      </section>
     </section>
 
-    <!--Tarjetas-->
-    <main>
-      <section class="containerCard"></section>
+    <!--página con resultados de país-->
 
-      <section class="buttons" id="buttons"></section>
-    </main>
+    <section id="pageCountry" class="pageCountry">
+      <!--Tarjetas-->
+      <main>
+        <section class="containerCard"></section>
 
-    <!--Paginación de las tarjetas-->
-    <section class="pagination">
-      <button id="buttonLeft">Anterior</button>
-      <button id="buttonRight">Siguiente</button>
+        <section class="buttons" id="buttons"></section>
+      </main>
+
+      <!--Paginación de las tarjetas-->
+      <section class="pagination">
+        <button id="buttonLeft">Anterior</button>
+        <button id="buttonRight">Siguiente</button>
+      </section>
+      <script src="main.js" type="module"></script>
     </section>
-    <script src="main.js" type="module"></script>
-    <!-- <header>  -->
-    <!--<img src="rio2016.jpg" id="imagtitle" alt="title">
-  </header>
-  <section id="seeker">
-    <ul id="filters">
-      <li id="name">NOMBRE</li>
-      <li id="country">PAIS</li>
-      <li id="medal">MEDALLA</li>
-      <li id="sport">DEPORTE</li>
-      <li id="countryMedal">PAIS CON MÁS MEDALLAS </li>
-    </ul> 
-  </section>-->
   </body>
 </html>

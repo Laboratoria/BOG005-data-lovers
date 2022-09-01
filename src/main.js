@@ -1,11 +1,10 @@
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
-// eslint-disable-next-line no-console
-console.log(athletes.athletes);
-
-console.log("⏮️, ⏭️");
-
+//Variables//
+const firstPage = document.getElementById("homepage");
+const countryPage = document.getElementById("pageCountry");
+const bottonSearcher = document.getElementById("searcher");
 const left = document.getElementById("buttonLeft");
 const right = document.getElementById("buttonRight");
 let container = document.querySelector(".containerCard");
@@ -19,7 +18,7 @@ function makeCard(athletes) {
   console.log("o.o", posicionFinal, posicionInicial);
   for (let i = posicionInicial; i < posicionFinal; i++) {
     console.log("position en for: ", i);
-    //console.log("khkhk", athletes[0]);
+
     finalHtml += `
      <section class="cardFather">
        <section class="card">
@@ -61,3 +60,8 @@ left.addEventListener("click", () => {
 //       <div class="bodyCardFront"></div>
 //       <div class="bodyCardBack"></div>
 makeCard(athletes.athletes);
+
+bottonSearcher.addEventListener("click", () => {
+  countryPage.style.display = "block";
+  firstPage.style.display = "none";
+});
