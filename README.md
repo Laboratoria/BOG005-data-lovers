@@ -34,6 +34,8 @@ Establecimos los criterios de aceptación para cada historia, buscando una conco
 
 #### Prototipo de baja fidelidad
 
+![.image](./Baja-fidelidad.png)
+
 #### Prototipo de alta fidelidad
 
 ![.image](./prototipo-alta-fidelidad-movil.PNG)
