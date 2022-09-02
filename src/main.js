@@ -1,15 +1,19 @@
+
 import data from './data/harrypotter/data.js'; //importamos la data.
-const books = data.books; //declaramos una constante de la data
+import { orderNameAZ, orderNameZA } from './data.js';
+/*card(data.harrypotter)*/
+  
+ //declaramos una constante de la data
 const characters = data.characters;
+
+
+
 //importamos filtros
 /*import{
   filterGender,
   HogwartsHouses,
   alphabeticalOrder,
-}from './data.js';*/
-
-/*let selectedHouse = "";*/
-/*let sortBy = "";*/
+  }from './data.js';*/
 
 //selectores del DOM
 const welcome = document.getElementById("welcome");
@@ -17,8 +21,8 @@ const page1 = document.getElementById("pag1");
 const page2 = document.getElementById("pag2");
 const HomeBack = document.getElementById("homeBack");
 let containerCard = document.querySelector(".containerCard");
-const AlphabeticalOrder = document.querySelector("alphabeticalOrder");
-/*let containerCard = document.querySelector(".containerCard");*/
+const orderAZ = document.getElementById("order-a-z");
+const orderZA = document.getElementById("order-z-a");
 
 //funcion boton inicio
 
@@ -27,6 +31,7 @@ function changePage() {
   page1.style.display = "none";
   page2.style.display = "block";
 }
+
 //funcion boton regresar inicio
 HomeBack.addEventListener("click",changePage2)
 function changePage2(){
@@ -34,14 +39,29 @@ function changePage2(){
   page2.style.display = "none";
 }
 
+//funcion botones filtro A-Z Y Z-A
+orderAZ.addEventListener("click", OrderAZ)
+function OrderAZ(){
+  let saveData= data.harrypotter.sort(orderNameAZ("name"));
+  card(saveData);
+}
+
+orderZA.addEventListener("click", OrderZA)
+function OrderZA(){
+  let saveData= data.harrypotter.sort(orderNameZA("name"));
+  card(saveData);
+}
+
+
+
+
 //funcion creacion de tarjetas y pintar data dentro de ellas
 function card(characters) {
-
   
   let totalCard = ''
   characters.forEach((element) => {
     totalCard += `    
- 
+
   <article class="containerFather">
   <nav class="card">
     <nav class="cardFront" style="background-image:url(imgs/escudo4.jpeg)"  alt=""> 
@@ -65,13 +85,6 @@ function card(characters) {
   console.log(totalCard)
 }
 card(characters)
-
-AlphabeticalOrder.addEventListener("change", function (event) {
-  sortBy = event.currentTarget.value;
-  renderFilteredData();
-});
-
-
 
 
 //funcion de filtrado
