@@ -6,8 +6,12 @@ describe("sortByNameOrTitle", () => {
   it("Es una función", () => {
     expect(typeof sortByNameOrTitle).toBe("function");
   });
-  it("Filtra en el orden que corresponde", () => {
-    let data = [{ title: "a" }, { title: "b" }, { title: "c" }, { title: "z" }];
+
+it("Filtra en el orden que corresponde", () => {
+    let data = [{ title: "b" }, { title: "a" }, { title: "z" }, { title: "c" }];
+    let expectedResult = [{ title: "a" }, { title: "b" }, { title: "c" }, { title: "z" }]
+    let realResult = sortByNameOrTitle(data);
+    expect(realResult).toEqual(expectedResult);
   });
 });
 
@@ -41,7 +45,7 @@ describe("filterByDirector", () => {
   });
 });
 
-it("Retorna una lista de objetos", () => {
+/*it("Retorna una lista de objetos", () => {
   const lista = filterByDirector(data, []);
   expect(lista).toEqual(["something"]);
-});
+});*/
