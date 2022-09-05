@@ -5,6 +5,7 @@
   <title>INFO OLIMPIADAS</title>
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,50 +13,55 @@
     <header>
       <img class="logoImagen" src="IMAGENES/LOGO RIO1.png" alt="logo olimpiadas 2016">
       <h1>INFO OLIMPIADAS</h1>
-      <button id="btn1" class="btn1">INFO ATHLETES</button>
+      <button id="btn1" class="btn1">ABOUT ATHLETES</button>
     </header>
   </section>
 
   <section id="page2" class="page2">
     <header class="selectBusqueda" id="selectBusqueda">
-      <article class="filterByMedal" id="filterByMedal">
- 
-        <input type="text" id="selectSearchByMedal" value="" placeholder="Search by medal">
-      </article>
-      <article class="busqueda" id="busquedaPorPais">
-        <select id="selectSearchByTeam">
-          <option value=""> -Search by team - </option>
-        </select>
-      </article>
-      <article class="busqueda" id="busquedaPorDeporte">
-        <select  id="selectSearchBySport">
-          <option  value=""> -Search by sport - </option>
-        </select>
-      </article>
-
-      <button class="btnBuscar" id="btnBuscar">Buscar</button>
-      <button class="btnLimpiar" type="" id="btnLimpiar">Refresh</button>
+      <nav class="selectOptions">
+        <article class="busqueda" id="filterByMedal">
+          <input type="text" id="selectSearchByMedal" value="" placeholder="Search by medal">
+        </article>
+        <article class="busqueda" id="busquedaPorPais">
+          <select id="selectSearchByTeam">
+            <option value=""> -Search by team - </option>
+          </select>
+        </article>
+        <article class="busqueda" id="busquedaPorDeporte">
+          <select id="selectSearchBySport">
+            <option value=""> -Search by sport - </option>
+          </select>
+        </article>
+      </nav>
+      <aside class="buttonsAside">
+        <section class="imagenmascotas">
+          <img class="mascotaimg" src="IMAGENES/mascotas.png" alt="">
+        </section>
+        <section class="buttons">
+          <button class="btnBuscar" id="btnBuscar">Search</button>
+          <button class="btnLimpiar" type="" id="btnLimpiar">Refresh</button>
+        </section>
+      </aside>
     </header>
-
-    <section class="container">
-
-
-      <article  id="contenedorTarjetas" class="contenedorTarjetas">
-        <select id="selectOrder">
-          <option value=""> -Order - </option>
-        </select>
-        <!-- <select class="orderButton" name="Order" id="selectOrder">
-          <option value="Order"> -Order- </option>
-          <option value="Order">a-z</option>
-          <option value="Order">z-a</option>
-        </select> -->
-      </article>
-      </section>
-      <footer> </footer>
-
   </section>
 
- <footer> </footer>
+
+  <main class="container">
+    <article id="contenedorTarjetas" class="contenedorTarjetas">
+      <p class="encabezado" id="encabezado"></p>
+      <aside class="bothButtons">
+        <select class="orderButton" id="selectOrder">
+          <option value="order"> -Order- </option>
+          <option value="a-z">a-z</option>
+          <option value="z-a">z-a</option>
+        </select>
+        <button class="maxWinner" id="maxWinner">Max Winners</button>
+      </aside>
+      <div class="cardsContainer" id="cardsContainer"></div>
+    </article>
+  </main>
+
   <script src="main.js" type="module"></script>
 </body>
 </html>

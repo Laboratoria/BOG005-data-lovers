@@ -1,389 +1,507 @@
-html {
-  background: url(IMAGENES/LOGO2.jpg);
-  background-size: cover;
-  background-repeat:no-repeat;
-  width: 100%;
-  height: 500px;
-}
-h1 {
-  font-size: 4vw;
-  margin-left: 2vw;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: rgb(181, 121, 9);
-  text-align: center;
-}
-
-header {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin-top: 2vw;
-}
-
-.logoImagen {
-  width: 6, 4vw;
-  height: 5vw;
-  margin-left: 3vw;
-}
-
-.btn1 {
-  margin-left: 7vw;
-  margin-right: 3vw;
-  font-size: 2vw;
-  border-radius: 5px;
-  border: 1px solid rgb(103, 190, 161);
-  background: rgb(83, 128, 83);
-  color: honeydew;
-  cursor: pointer;
-  height: 7vh;
-  width: 17vw;
-  display: flex;
-}
-
-/*Buscador*/
-.selectBusqueda{
-
-text-align: left;
-display: inline-flex;
-flex-wrap: wrap;
-justify-content: left;
-width: 100%;
-
-
-  background-color: #55c159;
-
-}
-
-article .busqueda {
-  font-size: 18 em;
-}
-.selectBusqueda input,
-select {
-  padding: 1em;
-  border-radius: 3px;
-  border: 1px solid rgb(103, 190, 161);
-  cursor: pointer;
-  font-size: 00.9em;
-  color: gray;
-  margin: 1vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-}
-.contenedorTarjetas .order {
-  justify-content: end;
-}
-
-.btnBuscar {
-  padding: 10px;
-  border-radius: 1px;
-  border: 1px solid rgb(103, 190, 161);
-  background: rgb(83, 128, 83);
-  color: honeydew;
-  cursor: pointer;
-  font-size: 0,5em;
-  margin: 1vw;
-
-}
-
-.btnBuscar:active {
-  transform: scale(1.1);
-}
-
-.btnLimpiar{
-  margin-bottom: 0.5em;
-  padding: 0.7em;
-  border-radius: 1px;
-  border: 1px solid rgb(103, 190, 161);
-  background: rgb(83, 128, 83);
-  color: honeydew;
-  cursor: pointer;
-  font-size: 0.9em;
-  margin: 1vw;
-}
-/* #busquedaPorDeporte {
-} */
-
-.btnInicio {
-  margin-bottom:0.1px;
-  padding: 0,1px;
-  color: honeydew;
-  cursor: pointer;
-  margin: 1vw;
-  width: 10vw;
-}
-
-.encabezado {
-  background-color: rgb(179, 255, 0);
-}
-#contenedorTarjetas {
-  background-color: rgb(255, 255, 255);
-  width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  justify-content: center;
-  margin-top: 2vw;
-}
-.namesList {
-  margin-top: 2vh;
-  font-size: 1rem;
-  margin-left: 6vw;
-  margin-right: 100vw;
-  background-color: #c4cbcf;
-  width: 18vw;
-  border: 1px solid rgb(103, 190, 161);
-  background: rgb(83, 128, 83);
-  color: honeydew;
-}
-
-.fila {
-  margin-bottom: 2vw;
-  margin-top: 3vw;
-  margin-right: 4vw;
-  margin-left: 2vw;
-  justify-content: center;
-  width: 15vw;
-  height: 16vw;
-}
-tr {
-  margin-top: 2vw;
-}
-.fila tr {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 1, 5vw;
-  padding-bottom: 4vw;
-}
-.container {
-  display: inline;
-}
-
-/*PAGINAS*/
-.page1 {
-  display: inline;
-}
-.page2 {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-}
-.optionsSelect {
-  height: 50%;
-}
-
-footer{
-display: inline-flex;
-justify-content: center;
-align-items: center;
-
-
-}
-
-footer, img{
-margin-left: 40vw;
-color: white;
-}
-
-@media (max-width: 765px) {
-  html {
-    background-image: url(IMAGENES/Olimpiadi.jpg);
-    background-repeat: unset;
+@media (min-width: 1025px) {
+  * {
+    font-family: "Secular One", sans-serif;
+  }
+  body {
+    background: url(IMAGENES/LOGO2.jpg);
     background-size: cover;
-  background-repeat:no-repeat;
-  width: 100%;
-    height: auto;
-  }
-  h1 {
-    font-size: 4vw;
-    margin-left: 15vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Cochin, Georgia, Times, "Times New Roman", serif;
-    color: rgb(213, 149, 39);
-    text-align: center;
+    background-repeat: no-repeat;
+    width: 99%;
   }
 
-header {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin-top: 2vw;
-}
+  header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: inline-flex;
+  }
 
   .logoImagen {
-    width: 6, 4vw;
-    height: 10vw;
+    width: 6vw;
+    height: 5vw;
     margin-left: 3vw;
   }
 
-.btn1 {
-    margin-left: 10vw;
-    margin-right: 2vw;
+  h1 {
     font-size: 2vw;
-    padding: 1em;
-    border-radius: 3px;
+    margin-left: 12vw;
+    font-family: "Secular One", sans-serif;
+    color: rgb(83, 128, 83);
+    letter-spacing: 0.2em;
+  }
+
+  .btn1 {
+    margin-left: 7vw;
+    margin-right: 3vw;
+    font-size: 1.2vw;
+    border-radius: 5px;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: pointer;
+    cursor: grab;
     height: 6vh;
-    width: 20vw;
-    display: flex;
-    height: vh;
+    width: 12vw;
+    text-align: center;
   }
 
-  /*Buscador*/
-.selectBusqueda{
-
-  text-align: left;
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  width: 380px;
-  height: 100px;
-
-
+  header.selectBusqueda {
+    align-items: center;
+    justify-content: space-between;
+    width: 99vw;
+    border-radius: 5px;
+    border: 1px solid rgb(103, 190, 161);
     background-color: #55c159;
-
+    height: 10vh;
   }
 
-  article .busqueda {
-    font-size: 10 em;
-  }
-  .selectBusqueda input,
-  select {
-    padding: 0.1em;
+  .selectBusqueda select {
     border-radius: 0.2em;
     border: 0.1em solid rgb(103, 190, 161);
-    cursor: pointer;
-    font-size: 00.9em;
+    cursor: grab;
+    font-size: 1em;
     color: gray;
     margin: 0.3em;
     display: flex;
+    width: 20vw;
+    height: 5vh;
+  }
+  nav.selectOptions {
+    display: inline;
+  }
+  section .mascotaimg {
+    width: 67px;
+    height: 58px;
+    margin-left: 3vw;
+    margin-top: 2vw;
+  }
+  .selectBusqueda input {
+    border-radius: 3px;
+    border: 1px solid rgb(103, 190, 161);
+    cursor: grab;
+    font-size: 1em;
+    margin: 0.3em;
+    color: gray;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-  }
-  .contenedorTarjetas .order {
-    justify-content: end;
+    width: 20vw;
+    height: 4vh;
   }
 
+  article.busqueda {
+    font-size: 1rem;
+  }
+
+  nav.selectOptions {
+    display: inline-flex;
+  }
+
+  .contenedorTarjetas .encabezado {
+    text-align: center;
+    font-size: 4vw;
+    letter-spacing: 2px;
+  }
+  .cardsContainer {
+    width: 100%;
+    align-items: center;
+  }
   .btnBuscar {
-    margin-bottom: 1em;
-    padding: 1em;
+    padding: 10px;
     border-radius: 1px;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: pointer;
-    font-size: 0.5em;
+    cursor: grab;
+    font-size: 0.6rem;
     margin: 1vw;
-}
+  }
 
-.btnBuscar:active {
-  transform: scale(1.1);
-}
+  .btnBuscar:active {
+    transform: scale(1.1);
+  }
 
-.btnLimpiar {
-  margin-bottom: 1em;
-  padding: 1em;
-  border-radius: 1px;
-  border: 1px solid rgb(103, 190, 161);
-  background: rgb(83, 128, 83);
-  color: honeydew;
-  cursor: pointer;
-  font-size: 0.5em;
-  margin: 1vw;
-}
-/* #busquedaPorDeporte {
-} */
+  .btnLimpiar {
+    margin-bottom: 0.5em;
+    padding: 0.7em;
+    border-radius: 1px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    font-size: 0.6em;
+    margin-right: 1.5vw;
+    margin-top: 1vw;
+  }
 
-.btnInicio {
-  margin-bottom: 0.1px;
-  padding: 0, 1px;
-  color: honeydew;
-  cursor: pointer;
-  margin: 1vw;
-  width: 10vw;
-}
+  .contenedorTarjetas .encabezado {
+    background-color: rgb(179, 255, 0);
+    font-size: 1.5rem;
+  }
+  #notacuriosa{
+    width: 5vw;
+    height: 5vw;
+    margin-left: 60vw;
 
-.encabezado {
-  background-color: rgb(179, 255, 0);
-}
-#contenedorTarjetas {
-  background-color: rgb(255, 255, 255);
-  width: 100vw;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  justify-content: center;
-  margin-top: 10px;
-}
-.namesList {
-  margin-top: 2vh;
-  font-size: 1rem;
-  margin-left: 100vw;
-  margin-right: 100vw;
-  background-color: #c4cbcf;
-  width: 80vw;
-  border: 1px solid rgb(103, 190, 161);
-  background: rgb(83, 128, 83);
-  color: honeydew;
-}
-
-.fila {
-  margin-bottom: 2vw;
-  margin-top: 7vw;
-  margin-right: 4vw;
-  margin-left: 2vw;
-  justify-content: center;
-  width: 70vw;
-  height: 20vw;
-}
-tr {
-  margin-top: 2vw;
-}
-.fila tr {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 1, 5vw;
-  padding-bottom: 4vw;
-}
-.container {
-  display: inline;
-}
-
-/*PAGINAS*/
-.page1 {
-  display: inline;
-}
-.page2 {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-}
-.optionsSelect {
-  height: 50%;
-}
-
-footer {
-  padding-top: 95vw;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  }
 
 
+  .orderButton {
+    margin-bottom: 1em;
+    border-radius: 1px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    font-size: 0, 2em;
+    margin: 1vw;
+  }
+  .maxWinner {
+    margin-bottom: 1em;
+    border-radius: 1px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    font-size: 0, 2em;
+    margin: 1vw;
+  }
+  
+
+  .contenedorTarjetas {
+    width: 98vw;
+    display: inline-block;
+    justify-content: space-between;
+    margin-top: 5vw;
+    background-color: #eaecee;
+  }
+  .namesList {
+    margin-top: 1.5vh;
+    font-size: 1rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: #c4cbcf;
+    width: 26vw;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    height: 30vh;
+  }
+
+  .cardsCalcular {
+    margin-top: 1vh;
+    font-size: 1rem;
+    justify-content: center;
+    margin-right: 100vw;
+    background-color: #c4cbcf;
+    width: 26vw;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    height: 26vh;
+  }
+
+  .fila {
+    margin-bottom: 1vw;
+    margin-top: 2vw;
+    margin-left: 1vw;
+    justify-content: center;
+    width: 25vw;
+  }
+
+  tr {
+    margin-top: 1vw;
+  }
+  .fila tr {
+    font-size: 1.2vw;
+    padding-bottom: 2vw;
+  }
+  .container {
+    display: inline;
+  }
+
+  /*PAGINAS*/
+  .page1 {
+    display: inline;
+  }
+  .page2 {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .optionsSelect {
+    height: 50%;
+  }
+
+  .buttonsAside {
+    display: inline-flex;
+    margin-right: 1vw;
+    
+  }
+  .imagenmascotas {
+    margin-bottom: 2vw;
+  }
+
+  .buttons {
+    margin-left: 2vw;
+    margin-top: 2vw;
+    
+  }
+
+
+
+  aside.bothButtons {
+    margin-left: 2vw;
+    display: inline-flex;
+    justify-content: center;
+  }
 }
 
-footer, img{
-  margin-left: 40vw;
-  color: white;
-}
+/* RESPONSIVE MOBILE */
+@media (max-width: 765px) {
+  * {
+    font-family: "Secular One", sans-serif;
+  }
+  body {
+    background-image: url(IMAGENES/Minimalist\ Olympic\ Wallpaper\ -\ USA\ Olympics\ Wallpaper.jpg);
+    background-size: cover;
+    width: 99%;
+    background-repeat: repeat;
+    margin: 0;
+  }
+
+  header {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 2vw;
+    width: 80%;
+    margin-left: 2.5vw;
+  }
+
+  h1 {
+    font-size: 4vw;
+    margin-left: 20vw;
+    font-family: "Secular One", sans-serif;
+    color: black;
+    text-align: center;
+  }
+
+  header.selectBusqueda {
+    align-items: center;
+    margin-top: 2vw;
+    display: inline-flex;
+    width: 94vw;
+    background-color: #55c159;
+  }
+
+  .logoImagen {
+    width: 6, 4vw;
+    height: 10vw;
+    margin-left: 6vw;
+  }
+
+  .btn1 {
+    margin-left: 17vw;
+    margin-right: 2vw;
+    font-size: 2.4vw;
+    padding-top: 0.3em;
+    border-radius: 3px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    height: 5vh;
+    width: 22vw;
+    display: flex;
+    letter-spacing: 0.1em;
+  }
+
+  /*Buscador*/
+
+  article .busqueda {
+    font-size: 5em;
+  }
+  .selectBusqueda select {
+    border-radius: 0.2em;
+    border: 0.1em solid rgb(103, 190, 161);
+    cursor: grab;
+    font-size: 0.7em;
+    color: gray;
+    margin: 0.3em;
+    display: flex;
+    width: 57vw;
+    height: 9vw;
+  }
+  nav.selectOptions {
+    display: inline;
+  }
+  section .mascotaimg {
+    width: 89px;
+    height: 80px;
+    margin-left: 3vw;
+    margin-top: 2vw;
+  }
+  .selectBusqueda input {
+    border-radius: 0.2em;
+    border: 0.1em solid rgb(103, 190, 161);
+    cursor: grab;
+    font-size: 0.7em;
+    color: gray;
+    margin: 0.3em;
+    display: flex;
+    width: 55vw;
+    height: 7vw;
+  }
+
+  .orderButton {
+    margin-bottom: 1em;
+    border-radius: 1px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    font-size: 0.2em;
+    width: 19vw;
+  }
+
+  aside.bothButtons {
+    margin-left: 6vw;
+    display: inline-flex;
+    justify-content: center;
+  }
+  .buttonsAside {
+    display: inline-block;
+  }
+  .imagenmascotas {
+    flex-wrap: nowrap;
+  }
+
+  .buttons {
+    margin-left: 2vw;
+    margin-bottom: 1vw;
+  }
+
+  .btnBuscar {
+    border-radius: 1px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    font-size: 0.6em;
+    width: 15vw;
+    /* margin-top: 17vw; */
+  }
+
+  .btnBuscar:active {
+    transform: scale(1.1);
+  }
+
+  .btnLimpiar {
+    border-radius: 1px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    font-size: 0.6em;
+    width: 15vw;
+  }
+
+  .encabezado {
+    background-color: rgb(179, 255, 0);
+  }
+  .maxWinner {
+    margin-bottom: 1em;
+    border-radius: 1px;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: grab;
+    font-size: 0, 2em;
+    margin: 1vw;
+  }
+  .contenedorTarjetas {
+    width: 98vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    justify-content: space-between;
+    margin-top: 4vw;
+    background-color: #c4cbcf;
+  }
+
+  .contenedorTarjetas .encabezado {
+    text-align: center;
+    font-size: 5vw;
+  }
+  .cardsContainer {
+    width: 100%;
+    margin: auto;
+  }
+  .namesList {
+    margin-top: 0.5vh;
+    font-size: 1rem;
+    margin-left: 100vw;
+    margin-right: 100vw;
+    background-color: #c4cbcf;
+    width: 90vw;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    text-align: start;
+  }
+  .cardsCalcular {
+    margin-top: 2vh;
+    font-size: 1em;
+    width: 90vw;
+    border: 1px solid rgb(103, 190, 161);
+
+    color: black;
+    margin-left: 2vw;
+    height: 20vh;
+    letter-spacing: 0.1em;
+  }
+
+  .fila {
+    margin-bottom: 5vw;
+    margin-top: 4vw;
+    margin-right: 1vw;
+    margin-left: 3vw;
+    /* justify-content: center; */
+    width: 70vw;
+    height: 20vw;
+  }
+  tr {
+    margin-top: 2vw;
+  }
+  .fila tr {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 1;
+    padding-bottom: 4vw;
+    width: max-content;
+    margin: 1vh;
+  }
+  .container {
+    display: inline;
+  }
+
+  /*PAGINAS*/
+  .page1 {
+    display: inline;
+  }
+  .page2 {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .optionsSelect {
+    height: 60%;
+  }
+
 
 }
