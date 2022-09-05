@@ -116,4 +116,18 @@ describe("objetAthletes", () => {
     });
   });
 
+  describe("objetAthletes.porcentaje", () => {
+    it("debería ser una función", () => {
+      expect(typeof objetAthletes.porcentaje).toBe("function");
+    });
+  
+
+  const primerNumero= 36;
+  const segundoNumero= 66;
+
+  it("debería devolver el porcentaje", () => {
+    expect(objetAthletes.porcentaje(segundoNumero, primerNumero)).toStrictEqual(55);
+  })
+
+})
 });

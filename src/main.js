@@ -5,7 +5,16 @@ let cardsContainer = document.getElementById("cardsContainer");
 let encabezadoFilter = document.getElementById("encabezado");
 let resultAll = [];
 let contenedor;
-let calcular=0;
+let calcular = 0;
+
+
+let selectTeam = document.getElementById("selectSearchByTeam");
+let selectSport = document.getElementById("selectSearchBySport");
+let selectMedal = document.getElementById("selectSearchByMedal");
+let parrafoDatoCurioso = document.getElementById("datocurioso");
+
+parrafoDatoCurioso.style.visibility="hidden"
+
 
 
 //crear opciones para seleccionar el país
@@ -226,6 +235,29 @@ function calcularMaxWinner() {
 }
 
 
+let notaCuriosaButton= document.querySelector("#notacuriosa")
+notaCuriosaButton.addEventListener("click", porcentaje)
+function porcentaje() {
+parrafoDatoCurioso.style.visibility="visible"
+
+
+let dataCalcular = resultAll.length
+console.log(dataCalcular);
+
+
+  let dataHombre = objetAthletes.filterData(resultAll, "gender","M");
+  let totalHombre = dataHombre.length;
+console.log(totalHombre)
+  let porcentajeHombre = objetAthletes.porcentaje(dataCalcular, totalHombre);
+console.log(porcentajeHombre);
+  let dataMujer = objetAthletes.filterData(resultAll, "gender","F");
+  let totalMujer = dataMujer.length;
+
+  let porcentajeMujer = objetAthletes.porcentaje(dataCalcular, totalMujer);
+console.log(porcentajeMujer);
+parrafoDatoCurioso.innerHTML=` ${totalMujer}%  Are Women ${totalHombre}% Are Men` ;
+  // let contenedorCalculo = document.getElementById("contenedorCalculos");
+}
 
 //CAMBIAR DE PANTALLA
 document.getElementById("page2").style.display = "none";
@@ -251,6 +283,12 @@ function refresh() {
   calcular = 0;
   document.querySelector("#selectOrder").style.display = "inline";
   document.querySelector("#maxWinner").style.display = "inline";
+
+  selectMedal.disabled=false;
+  selectSport.disabled=false;
+  selectTeam.disabled=false;
+
+
 }
 
 btn1.addEventListener("click", shangePage);
@@ -270,6 +308,38 @@ document
 
 
 
+function apagarSelect1(){
+  if ( selectTeam.value !== "") {
+   selectMedal.disabled=true;
+   selectSport.disabled=true;
+  }else{
+    selectMedal.disabled=false;
+    selectSport.disabled=false;
+  }}
 
+  function apagarSelect2(){
+  if ( selectSport.value !== ""){
+    selectTeam.disabled=true;
+    selectMedal.disabled=true;
+  }else{
+    selectMedal.disabled=false;
+    selectTeam.disabled=false;
+  }}
+  function apagarSelect3(){
+  if ( selectMedal.value !== ""){
+    selectTeam.disabled=true;
+    selectSport.disabled=true;
+  }else{
+    selectTeam.disabled=false;
+    selectSport.disabled=false;
+  }
+
+}
+  console.log(selectTeam.value);
+
+
+selectTeam.addEventListener("change", apagarSelect1) 
+selectSport.addEventListener("change", apagarSelect2) 
+selectMedal.addEventListener("change", apagarSelect3) 
 
 

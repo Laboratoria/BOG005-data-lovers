@@ -100,7 +100,10 @@ const objetAthletes = {
     return resultado[0].name;
   },
 
-
+  porcentaje: function (total, variable) {
+    let porcentaje = Math.round((variable / total) * 100);
+    return porcentaje;
+  },
 };
 
 export { objetAthletes };
