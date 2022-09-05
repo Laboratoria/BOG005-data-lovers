@@ -11,7 +11,7 @@ body {
 }
 
 #imagtitle {
-   width: 1450px;
+   width: 1400px;
    height: 300px;
    margin-left: 30px;
    }
@@ -21,6 +21,15 @@ body {
     justify-items: center;
     flex-direction: column;
     display: block;
+    background-color: #6bccf6;
+}
+.principal{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    display: block;
+    background-color: #15339e;
+    grid-auto-rows: 250px;
 }
 
 .pageCountry {
@@ -36,7 +45,7 @@ height: 150px;
 display: flex;
 margin-top: 20px;
 margin-left: 70px;
-background: #F8DB21;
+background: #86D3E5;
 border-radius: 10px;
 }
 

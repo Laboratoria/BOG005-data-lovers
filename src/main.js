@@ -1,21 +1,47 @@
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
+// declaracion de variable para la data 
+const deportes = data.athletes
+console.log (deportes)
+
+deportes.forEach(( gender )=> { 
+console.log("F")
+});
+
 //Variables//
 const firstPage = document.getElementById("homepage");
 const countryPage = document.getElementById("pageCountry");
 const bottonSearcher = document.getElementById("searcher");
+const bottonInicio = document.getElementById("buttoninicio");
 const left = document.getElementById("buttonLeft");
 const right = document.getElementById("buttonRight");
 let container = document.querySelector(".containerCard");
 let posicionInicial = 0;
 let posicionFinal = 40;
 
+// cambio de pagina inicio a pagina de cartas 
+bottonSearcher.addEventListener("click", () => {
+  countryPage.style.display = "block";
+  firstPage.style.display = "none";
+});
+
+// Cambio de pagina de cartas a pagina de inicio
+
+bottonInicio.addEventListener("click", () => {
+  firstPage.style.display = "block";
+  countryPage.style.display = "none";
+});
+// filtrado 
+
+  console.log(makeCard)
+
+// 
 function makeCard(athletes) {
   console.log("athletes: ", athletes);
 
   let finalHtml = "";
-  console.log("o.o", posicionFinal, posicionInicial);
+ // console.log("o.o", posicionFinal, posicionInicial);
   for (let i = posicionInicial; i < posicionFinal; i++) {
     console.log("position en for: ", i);
 
@@ -61,7 +87,7 @@ left.addEventListener("click", () => {
 //       <div class="bodyCardBack"></div>
 makeCard(athletes.athletes);
 
-bottonSearcher.addEventListener("click", () => {
-  countryPage.style.display = "block";
-  firstPage.style.display = "none";
-});
+//bottonSearcher.addEventListener("click", () => {
+ // countryPage.style.display = "block";
+ // firstPage.style.display = "none";
+//});
