@@ -24,12 +24,13 @@ function filterByDirector(data, director) {
   return moviesByDirector;
 }
 
-export { sortByNameOrTitle, filterByDirector };
+//Función para obtener un porcentaje
 
-// if (a) {
-//     //bla
-// } else {
-//     //ble
-// }
-
-// a ? //bla : //ble
+function getPercentage(data) {
+  let result = 0;
+  data.forEach((e) => {
+    result += parseInt(e.rt_score) / data.length;
+  });
+  return result;
+}
+export { sortByNameOrTitle, filterByDirector, getPercentage };
