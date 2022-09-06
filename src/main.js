@@ -1,6 +1,6 @@
 /*AQUI DEBEN ESTAR LAS INTERACCIONES CON EL DOM--- EVENT LISTENER ETC...*/
 import ghibli from "./data/ghibli/ghibli.js";
-import { sortByNameOrTitle, filterByDirector } from "./data.js";
+import { sortByNameOrTitle, filterByDirector, getPercentage } from "./data.js";
 
 let moviesData = [];
 let charactersData = [];
@@ -13,14 +13,13 @@ let moviesHtml = [];
 let charactersHtml = [];
 let locationsHtml = [];
 let vehiclesHtml = [];
-// let curiousFactHtml = [];
 
 /*Ids de peliculas,personajes,lugares,vehiculos y dato curioso*/
 const moviesMenu = document.getElementById("movies");
 const charactersMenu = document.getElementById("characters");
 const locationsMenu = document.getElementById("locations");
 const vehiclesMenu = document.getElementById("vehicles");
-// const curiousFactMenu = document.getElementById("curiousFact");
+const curiousFactMenu = document.getElementById("curiousFact");
 
 const sorAtoZ = document.getElementById("btn1");
 
@@ -29,11 +28,12 @@ moviesMenu.addEventListener("click", showMovies);
 charactersMenu.addEventListener("click", showCharacters);
 locationsMenu.addEventListener("click", showLocations);
 vehiclesMenu.addEventListener("click", showVehicles);
-// curiousFactMenu.addEventListener("click", showCuriousFact);
+curiousFactMenu.addEventListener("click", showCuriousFact);
 sorAtoZ.addEventListener("click", sortAsc);
 
 /*Info para mostrar las tarjetas*/
 let container = document.querySelector(".cardContainer");
+let messageContainer = document.querySelector(".messageContainer");
 
 async function sortAsc() {
   switch (currentPage) {
@@ -58,7 +58,7 @@ async function sortAsc() {
       showVehicles();
       break;
     case "curiousFact":
-      // moviesData = sort(moviesData); ???????
+      showCuriousFact();
       break;
     default:
       break;
@@ -168,7 +168,7 @@ selectDirector.addEventListener("change", function () {
   let selectedDirector = selectedOption.text;
   const arrayDirector = filterByDirector(moviesData, selectedDirector);
 
-  showMovies(arrayDirector);
+  showMovies("", arrayDirector);
 });
 
 function blankHtml() {
@@ -176,10 +176,11 @@ function blankHtml() {
   charactersHtml = [];
   locationsHtml = [];
   vehiclesHtml = [];
-  // curiousFactHtml = [];
+  messageContainer.innerHTML = "";
 }
 
-function showMovies(data = ghibli.films) {
+function showMovies(evt, data = ghibli.films) {
+  console.log(data)
   blankHtml();
   setMoviesHtml(data);
   currentPage = "movies";
@@ -207,11 +208,22 @@ function showVehicles() {
   container.innerHTML = vehiclesHtml.join("");
 }
 
-// function showGhibliMatch() {
-//   // blankHtml();
-//   // currentPage = "ghibliMatch";
-//   // container.innerHTML = ghibliMatchHtml.join(""); ?????
-// }
+function showCuriousFact() {
+  blankHtml();
+  currentPage = "curiousFact";
+  // container.innerHTML = getPercentage(moviesData);
+  container.innerHTML = "";
+  messageContainer.innerHTML = `
+  <div>
+    <div class="card">
+      <div class="cardText">
+        <h2 class="filmTitle">${getPercentage(moviesData)}</h2>
+      </div>
+    </div>
+  </div>
+`;
+  setMoviesHtml(moviesData);
+}
 
 setData();
 showMovies();
