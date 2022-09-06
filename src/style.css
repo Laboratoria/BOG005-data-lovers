@@ -1,169 +1,159 @@
-html, body {
+html{
 	background-image: url(https://images5.alphacoders.com/339/thumb-1920-339227.jpg);
 	background-repeat: no-repeat;
-    background-position: center;
-	width: 100%;
-	height: 100%;
-	display:grid;
+	background-position: center;
+	display: grid;
 	flex-direction: column;
 	background-size: cover;
+}
+
+section#sectionHomePage{
+	padding: 30px;
 	
 }
 
-#logoHomePage{
+#logoHomePage {
 	width: 500px;
-	margin-top: 30px;
-
+	margin-top: 10px;
 }
-#mesajeHome{
-	color:#f7d081;
-	margin-right: 140px;
+
+#mesajeHome {
+	color: #f7d081;
+	margin-right: 100px;
 	text-align: center;
 	font-family: 'High Tower Text';
-	font-size: 35px;
-	
+	font-size: 25px;
 }
 
-#welcome{
-	margin-top: 350px;
-	margin-left: 1380px;
-	width: 120px;
+#welcome {
+	margin-top: 300px;
+	margin-left: 1250px;
+	width: 130px;
 	height: 50px;
 	background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
 	border-radius: 10px;
 	font-family: 'High Tower Text';
 	font-weight: bold;
-	overflow: hidden;    
-	
-
+	overflow: hidden;
+	text-align: center;
 }
-#welcome:hover{
+
+#welcome:hover {
 	transition: 0.2s;
 	box-shadow: 0 0 50px #f7d081, 0 0 80px #f7d081, 0 0 100px #f7d081;
 }
 
-
-
-#pag2{
+#pag2 {
 	background-image: url(https://i.pinimg.com/originals/1f/1c/93/1f1c93e42c1c2cac80e0965d11dcd5e8.gif);
-	display:none;
+	display: none;
 	width: 100%;
 	height: 100%;
-	
 }
 
-.div#pag2{
+.div#pag2 {
 	display: flex;
 }
 
-header{
+header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	
-		
+	padding: 30px;
 }
-img#logo{
+
+img#logo {
 	height: 30%;
 	width: 30%;
-	padding-top: 30px;	
+	padding-top: 30px;
 	margin-left: 90px;
-
 }
 
 /* estilo seccion buscador*/
-button#searchButton{
+button#searchButton {
 	padding-top: 0px;
 	overflow: hidden;
 	border-radius: 10px;
 	height: 30px;
 	width: 60px;
 	background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
-	
 }
 
-button#searchButton:hover{
+button#searchButton:hover {
 	transition: 0.2s;
 	box-shadow: 0 0 50px #f7d081, 0 0 80px #f7d081, 0 0 100px #f7d081;
-	
 }
-input#seeker{
+
+input#seeker {
 	height: 30px;
 	width: 180px;
 	border-radius: 10px;
-
-
 }
-.buscador{
+
+.buscador {
 	padding-right: 0px;
 	margin-right: 100px;
-	
 }
 
-
-article{
+article {
 	padding: 20px;
 }
 
-
 /* estilo para selectores*/
 #filterButtons {
-  display: flex;
-  justify-content: space-around;
-  overflow: hidden;
-  transition: 0.2s;
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+	transition: 0.2s;
 }
-#filterButtons select {
-  width: 20%;
-  padding: 8px 15px;
-  color: rgba(15, 13, 4, 0.975);
-  background-color: #f7d081;
-  background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
-  border: 3px solid #ddc74c;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 18px;
-  font-family: 'Supermercado One', cursive;
-  font-weight: bold;
 
- 
+#filterButtons select {
+	width: 20%;
+	padding: 8px 15px;
+	color: rgba(15, 13, 4, 0.975);
+	background-color: #f7d081;
+	background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
+	border: 3px solid #ddc74c;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Supermercado One', cursive;
+	font-weight: bold;
 }
-section#filterButtons{
+
+section#filterButtons {
 	padding: 30px;
 }
 
-
-.containerCard{
+.containerCard {
 	align-items: center;
-    display: grid;
-	max-width:1200px;
+	display: grid;
+	max-width: 1200px;
 	margin: auto;
-	margin-top:100px;
+	margin-top: 100px;
 	perspective: 1000px;
-    grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 }
 
-.containerFather:hover .card{ 
-        transform:rotateY(180deg);        
-	
+.containerFather:hover .card {
+	transform: rotateY(180deg);
 }
 
- .card{
-	width: 150px;
-	height: 200px;
+.card {
+	width: 200px;
+	height: 300px;
 	background: red;
 	position: relative;
 	transform-style: preserve-3d;
 	transition: all 600ms;
 	border-radius: 20px;
 	text-align: center;
-    font-family: 'Supermercado One', cursive;
-  
- }
-        
+	font-family: 'High Tower Text' cursive;
+	font-size: 18px;
+}
+
 .cardFront,
-.cardBack{
+.cardBack {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -172,52 +162,65 @@ section#filterButtons{
 	backface-visibility: hidden;
 	transform-style: preserve-3d;
 	border-radius: 20px;
-	
 }
 
-.cardFront{
+.cardFront {
 	background-size: cover;
 	background-position: center;
- 
+	background-image: url(https://cdn11.bigcommerce.com/s-b72t4x/images/stencil/1280x1280/products/74433/81261/Harry_Potter_Poster_-_Hogwarts_Crest__81490.1489004781.jpg?c=2);
 }
 
-.cardBack{
+.Gryffindor{
+	background-image: url(https://m.media-amazon.com/images/I/81BpIbsbaWL._AC_SX466_.jpg);
+}
+.Hufflepuff{
+	background-image: url(https://i.pinimg.com/originals/0c/fa/05/0cfa058c7e9c4d9ccd9ce053e5ff8cb3.png);
+}
+.Ravenclaw{
+	background-image: url(https://static.posters.cz/image/750/carteles-de-metal/harry-potter-ravenclaw-i67994.jpg);
+}
+.Slytherin{
+	background-image: url(https://m.media-amazon.com/images/I/51T3hA0FXrL._AC_.jpg);
+
+}
+
+.cardBack {
 	transform: rotateY(180deg);
 	background: blue;
-
 }
 
+h1 {
+	font-size: 25px;
+}
 
-
-.bodyCardFront{
+.bodyCardFront {
 	width: 100%;
-	 height: 100%;
-	 text-align: center;
-	 padding: 40px;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-
-} 
-.bodyCardBack{
+	height: 100%;
 	text-align: center;
-
-}       
- /*boton inicio*/
-.btnInicio {
-  font-family: 'Supermercado One', cursive;  
-  font-size: 15px;
-  font-weight: 500;
-  border-radius: 10px;
-  margin: 80px 700px;
-  padding: 10px 15px;  
-  color: black;
-  overflow: hidden;
-  font-weight: bold;
-  background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
-
-  
+	padding: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.bodyCardBack {
+	text-align: center;
+}
+
+/*boton inicio*/
+.btnInicio {
+	font-family: 'Supermercado One', cursive;
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: 10px;
+	margin: 80px 700px;
+	padding: 10px 15px;
+	color: black;
+	overflow: hidden;
+	font-weight: bold;
+	background-image: url(https://image.shutterstock.com/image-illustration/brushed-gold-metal-background-texture-260nw-779522356.jpg);
+}
+
 .btnInicio:hover {
 	transition: 0.2s;
 	box-shadow: 0 0 50px #f7d081, 0 0 80px #f7d081, 0 0 100px #f7d081;

@@ -1,4 +1,7 @@
 export function orderNameAZ(prop){
+    if(!prop){
+        throw new Error()
+    }
     return function(a,b){
         if(a[prop] >b [prop]){
             return 1;
@@ -10,6 +13,9 @@ export function orderNameAZ(prop){
     }
 }
 export function orderNameZA(prop){
+    if(!prop){
+        throw new Error()
+    }
     return function (a,b){
         if(a[prop] <b[prop]){
             return 1;
@@ -19,4 +25,16 @@ export function orderNameZA(prop){
         }
         return 0;
     }
+}
+
+export const housesFilter = (characters, option) => {
+	const dataFiltrada = characters.filter(element => element.house === option)
+		return dataFiltrada;
+}
+
+  
+
+export const genderFilter =  (characters, option) => {
+    const dataFiltrada2 = characters.filter(element => element.gender === option)
+    return dataFiltrada2;
 }
