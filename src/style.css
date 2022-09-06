@@ -1,4 +1,4 @@
-@media (min-width: 1025px) {
+
   * {
     font-family: "Secular One", sans-serif;
   }
@@ -16,9 +16,13 @@
     display: inline-flex;
   }
 
+  .page1 {
+    display: inline;
+  }
+
   .logoImagen {
-    width: 6vw;
-    height: 5vw;
+    width: 9vh;
+    height: 8vh;
     margin-left: 3vw;
   }
 
@@ -32,32 +36,37 @@
 
   .btn1 {
     margin-left: 7vw;
-    margin-right: 3vw;
-    font-size: 1.2vw;
-    border-radius: 5px;
+    margin-right: 2vw;
+    font-size: 1vw;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
-    height: 6vh;
+    cursor: pointer;
+    height: 8vh;
     width: 12vw;
     text-align: center;
+  }
+  .imagenlogo{
+    width: 9vw;
+    height: 9vh;
   }
 
   header.selectBusqueda {
     align-items: center;
     justify-content: space-between;
     width: 99vw;
-    border-radius: 5px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background-color: #55c159;
     height: 10vh;
+    margin-right: 1vw;
   }
 
   .selectBusqueda select {
-    border-radius: 0.2em;
+    border-radius: 0.4em;
     border: 0.1em solid rgb(103, 190, 161);
-    cursor: grab;
+    cursor: pointer;
     font-size: 1em;
     color: gray;
     margin: 0.3em;
@@ -75,9 +84,9 @@
     margin-top: 2vw;
   }
   .selectBusqueda input {
-    border-radius: 3px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
-    cursor: grab;
+    cursor: pointer;
     font-size: 1em;
     margin: 0.3em;
     color: gray;
@@ -86,7 +95,11 @@
     flex-wrap: wrap;
     width: 20vw;
     height: 4vh;
-  }
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    -ms-border-radius: 0.4em;
+    -o-border-radius: 0.4em;
+}
 
   article.busqueda {
     font-size: 1rem;
@@ -96,22 +109,14 @@
     display: inline-flex;
   }
 
-  .contenedorTarjetas .encabezado {
-    text-align: center;
-    font-size: 4vw;
-    letter-spacing: 2px;
-  }
-  .cardsContainer {
-    width: 100%;
-    align-items: center;
-  }
+
   .btnBuscar {
     padding: 10px;
-    border-radius: 1px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
+    cursor: pointer;
     font-size: 0.6rem;
     margin: 1vw;
   }
@@ -123,81 +128,173 @@
   .btnLimpiar {
     margin-bottom: 0.5em;
     padding: 0.7em;
-    border-radius: 1px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
+    cursor: pointer;
     font-size: 0.6em;
     margin-right: 1.5vw;
     margin-top: 1vw;
   }
 
-  .contenedorTarjetas .encabezado {
+  .btnLimpiar:active {
+    transform: scale(1.1);
+  }
+
+  article  .encabezado {
     background-color: rgb(179, 255, 0);
     font-size: 1.5rem;
-  }
-  #notacuriosa{
-    width: 6vw;
-    height: 5vw;
-    margin-left: 60vw;
+    letter-spacing: 2px;
+    width: max-content;
+    text-align: center;
 
+
+
+  }
+  article .titulo{
+    justify-content: center;
+    width: 99%;
+    align-items: center;
+    margin-top: 2vw;
+    display: inline-flex;
+  }
+
+
+  /*PAGINAS*/
+
+  .page2 {
+    margin: 0;
+    padding: 0;
+
+  }
+  .optionsSelect {
+    height: 50%;
+  }
+
+  
+
+  .buttonsAndMascotas {
+    display: inline-flex;
+    margin-right: 2vw;
+
+  }
+  .imagenmascotas {
+    margin-bottom: 2vw;
+    margin-left: 4vw;
+  }
+
+  section .buttons {
+    margin-left: 2vw;
+    margin-top: 2vw;
+
+  }
+
+  aside.buttonsOrderMaxwinner {
+    margin-left: 1vw;
+    display:inline-flex;
+    width: 100%;
   }
 
 
   .orderButton {
     margin-bottom: 1em;
-    border-radius: 1px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
+    cursor: pointer;
     font-size: 0, 2em;
     margin: 1vw;
+    text-align: center;
+
+}
+
+  .orderButton:active{
+    transform:scale(1.1);
   }
   .maxWinner {
     margin-bottom: 1em;
-    border-radius: 1px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
+    cursor: pointer;
     font-size: 0, 2em;
     margin: 1vw;
   }
-  
+
+  .maxWinner:active{
+    transform:scale(1.1);
+  }
+
+  p .datocurioso {
+    font-size: 0.5em;
+    margin-top: 1vw;
+  }
+
+  .notacuriosaImg{
+    width: 7vw;
+    height: 6vw;
+    cursor: pointer;
+    margin-left: 3vw;
+  }
+
+  .notacuriosaImg:active{
+    transform:scale(1.1);
+
+}
+
+  .curiousSection{
+    margin-left: 45vw;
+    display: inline-flex;
+
+  }
+
+  .cardsContainer {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+  }
+
 
   .contenedorTarjetas {
-    width: 98vw;
+    width: 99vw;
     display: inline-block;
-    justify-content: space-between;
-    margin-top: 5vw;
+    justify-content: center;
+
+
     background-color: #eaecee;
   }
   .namesList {
     margin-top: 1.5vh;
     font-size: 1rem;
     margin-left: 5vw;
-    margin-right: 5vw;
+    margin-right: 3vw;
     background-color: #c4cbcf;
     width: 26vw;
     border: 1px solid rgb(103, 190, 161);
+    border-radius: 0.4em;
     background: rgb(83, 128, 83);
     color: honeydew;
-    height: 30vh;
+    height: 23vh;
+    margin-bottom: 5vw;
   }
 
   .cardsCalcular {
     margin-top: 1vh;
     font-size: 1rem;
     justify-content: center;
-    margin-right: 100vw;
+    margin-right: 2vw;
     background-color: #c4cbcf;
     width: 26vw;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
     height: 26vh;
+    padding-bottom: 4vw;
+
   }
 
   .fila {
@@ -217,47 +314,27 @@
   }
   .container {
     display: inline;
+    margin-bottom: 0;
   }
 
-  /*PAGINAS*/
-  .page1 {
-    display: inline;
-  }
-  .page2 {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
-  }
-  .optionsSelect {
-    height: 50%;
-  }
-
-  .buttonsAside {
-    display: inline-flex;
-    margin-right: 1vw;
-    
-  }
-  .imagenmascotas {
-    margin-bottom: 2vw;
-  }
-
-  .buttons {
-    margin-left: 2vw;
-    margin-top: 2vw;
-    
-  }
-
-
-
-  aside.bothButtons {
-    margin-left: 2vw;
-    display: inline-flex;
+  footer {
     justify-content: center;
+    align-items: center;
+    display: grid;
+    background-color: #eaecee;
+    margin-top: 0;
   }
-}
+
+ footer a{
+  padding-left: 2.5vw;
+  margin-top: 1vw;
+ }
+
+  .enlaceUp  img {
+    width: 2vw;
+    height: 2vw;
+  }
+
 
 /* RESPONSIVE MOBILE */
 @media (max-width: 765px) {
@@ -276,13 +353,16 @@
     display: inline-flex;
     align-items: center;
     margin-top: 2vw;
-    width: 80%;
+    width: 99%;
     margin-left: 2.5vw;
+    margin-right: 2.5vw ;
+    justify-content: space-between;
+
   }
 
   h1 {
     font-size: 4vw;
-    margin-left: 20vw;
+    /* margin-left: 20vw; */
     font-family: "Secular One", sans-serif;
     color: black;
     text-align: center;
@@ -292,26 +372,24 @@
     align-items: center;
     margin-top: 2vw;
     display: inline-flex;
-    width: 94vw;
+    width: 96vw;
     background-color: #55c159;
+    height: 25vw;
+    justify-content: center;
   }
 
-  .logoImagen {
-    width: 6, 4vw;
-    height: 10vw;
-    margin-left: 6vw;
-  }
+
 
   .btn1 {
-    margin-left: 17vw;
-    margin-right: 2vw;
+    /* margin-left: 14vw;
+    margin-right: 2vw; */
     font-size: 2.4vw;
     padding-top: 0.3em;
-    border-radius: 3px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
+    cursor: pointer;
     height: 5vh;
     width: 22vw;
     display: flex;
@@ -324,73 +402,66 @@
     font-size: 5em;
   }
   .selectBusqueda select {
-    border-radius: 0.2em;
+    border-radius: 0.4em;
     border: 0.1em solid rgb(103, 190, 161);
-    cursor: grab;
+    cursor: pointer;
     font-size: 0.7em;
     color: gray;
     margin: 0.3em;
     display: flex;
     width: 57vw;
-    height: 9vw;
-  }
+    height: 6vw;
+ 
+}
   nav.selectOptions {
     display: inline;
   }
   section .mascotaimg {
-    width: 89px;
-    height: 80px;
+    width: 69px;
+    height: 60px;
     margin-left: 3vw;
-    margin-top: 2vw;
+    margin-top: 1vw;
   }
   .selectBusqueda input {
-    border-radius: 0.2em;
+    border-radius: 0.4em;
     border: 0.1em solid rgb(103, 190, 161);
-    cursor: grab;
+    cursor: pointer;
     font-size: 0.7em;
     color: gray;
     margin: 0.3em;
     display: flex;
-    width: 55vw;
-    height: 7vw;
+    width: 55.5vw;
+    height: 6vw;
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    -ms-border-radius: 0.4em;
+    -o-border-radius: 0.4em;
+}
+
+  .logoImagen {
+    width: 10vw;
+    height: 11vw;
+    margin-top: 2vw;
+    margin-left: 1vw;
+
   }
 
-  .orderButton {
-    margin-bottom: 1em;
-    border-radius: 1px;
-    border: 1px solid rgb(103, 190, 161);
-    background: rgb(83, 128, 83);
-    color: honeydew;
-    cursor: grab;
-    font-size: 0.2em;
-    width: 19vw;
-  }
-
-  aside.bothButtons {
-    margin-left: 6vw;
-    display: inline-flex;
-    justify-content: center;
-  }
-  .buttonsAside {
-    display: inline-block;
-  }
   .imagenmascotas {
     flex-wrap: nowrap;
+    height: 11.5vw;
   }
 
-  .buttons {
-    margin-left: 2vw;
-    margin-bottom: 1vw;
-  }
 
   .btnBuscar {
-    border-radius: 1px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
-    font-size: 0.6em;
-    width: 15vw;
+    cursor: pointer;
+    font-size: 0.5em;
+    width: 14vw;
+    height: 7vw;
+    padding: 0;
     /* margin-top: 17vw; */
   }
 
@@ -399,65 +470,129 @@
   }
 
   .btnLimpiar {
-    border-radius: 1px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
-    font-size: 0.6em;
-    width: 15vw;
+    cursor: pointer;
+    font-size: 0.5em;
+    width: 14vw;
+    height: 7vw;
+  }
+  .btnLimpiar:active {
+    transform: scale(1.1);
   }
 
   .encabezado {
     background-color: rgb(179, 255, 0);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 2vw;
   }
-  .maxWinner {
+
+  .orderButton {
     margin-bottom: 1em;
-    border-radius: 1px;
+    border-radius: 0.4em;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
-    cursor: grab;
-    font-size: 0, 2em;
+    cursor: pointer;
+    font-size: 0.7em;
+    width: 19vw;
+    height: 10vw;
+  }
+
+  aside .buttonsOrderMaxwinner {
+    margin-left: 2vw;
+    display:flex;
+    width: 99%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+  }
+
+  .buttonsAndMascotas {
+    display: inline-block;
+  }
+
+
+  section .buttons {
+    justify-content: center;
+    display: inline-flex;
+  }
+
+  .maxWinner {
+    margin-bottom: 1em;
+    border-radius: 0.4em;
+    border: 1px solid rgb(103, 190, 161);
+    background: rgb(83, 128, 83);
+    color: honeydew;
+    cursor: pointer;
+    font-size: 0.6em;
     margin: 1vw;
+    height: 10vw;
+  }
+
+  .datocurioso {
+    font-size: 0.7em;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 30vw;
+  
+  }
+
+  .notacuriosaImg{
+    width: 20vw;
+    height: 16vw;
+    cursor: pointer;
+    margin-left: 1vw;
+  }
+
+  .notacuriosaImg:active{
+    transform:scale(1.1);
+
+}
+
+  .curiousSection{
+    margin-left: 1vw;
+    display: inline-flex;
+
   }
   .contenedorTarjetas {
-    width: 98vw;
+    width: 99vw;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
     justify-content: space-between;
-    margin-top: 4vw;
+    margin-top: 2vw;
     background-color: #c4cbcf;
   }
 
-  .contenedorTarjetas .encabezado {
+  .contenedorTarjetas #encabezado {
     text-align: center;
-    font-size: 5vw;
+    font-size: 0.9em;
   }
   .cardsContainer {
     width: 100%;
     margin: auto;
+    padding-left: 7vw;
   }
   .namesList {
-    margin-top: 0.5vh;
-    font-size: 1rem;
-    margin-left: 100vw;
-    margin-right: 100vw;
     background-color: #c4cbcf;
-    width: 90vw;
+    width: max-content;
     border: 1px solid rgb(103, 190, 161);
     background: rgb(83, 128, 83);
     color: honeydew;
     text-align: start;
+    height: min-content;
+    margin-top: 2vw;
   }
   .cardsCalcular {
-    margin-top: 2vh;
+    margin-top: 1vh;
     font-size: 1em;
-    width: 90vw;
+    width: min-content;
     border: 1px solid rgb(103, 190, 161);
-
-    color: black;
+    color: honeydew;
     margin-left: 2vw;
     height: 20vh;
     letter-spacing: 0.1em;
@@ -476,15 +611,14 @@
     margin-top: 2vw;
   }
   .fila tr {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-size: 1;
+    font-size: 0.7em;
     padding-bottom: 4vw;
     width: max-content;
     margin: 1vh;
   }
   .container {
     display: inline;
+
   }
 
   /*PAGINAS*/
@@ -494,14 +628,25 @@
   .page2 {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
   }
   .optionsSelect {
     height: 60%;
   }
 
+  footer {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    background-color: none;
+  }
 
+  footer a{
+   margin-left: 8vw;
+   margin-top: 1vw;
+  }
+  .enlaceUp img {
+    width: 5vw;
+    height: 5vw;
+    margin-top: 1vw;
+  }
 }
