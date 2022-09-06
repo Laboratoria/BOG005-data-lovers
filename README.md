@@ -1,4 +1,4 @@
-#  📽️🏯 Data Lovers Project - Studio Ghibli 🏯📽️
+#  🏯 Data Lovers Project - Studio Ghibli 🏯📽️
 
 ## Índice
 
@@ -29,10 +29,9 @@ Establecimos los criterios de aceptación para cada historia, buscando una conco
 4. Muestra información sobre las locaciones y los vehículos de las animaciones.
 5. Ordena la información mostrada en cada categoría de la A a la Z.
 
-
 ## 3. Diseño de la interfaz de usuario
 
-Para el desarrollo de nuestra interfaz procuramos sostener el diseño inicial y replicarlo en la plataforma.
+Para el desarrollo de nuestra interfaz procuramos sostener el prototipo de alta fidelidad y replicarlo en la plataforma, teniendo un producto muy similar al planteado.
 
 #### Prototipo de baja fidelidad
 
@@ -40,7 +39,10 @@ Para el desarrollo de nuestra interfaz procuramos sostener el diseño inicial y 
 
 #### Prototipo de alta fidelidad
 
-![.image](./prototipo-alta-fidelidad-movil.PNG)
+
+![.image](./prototipo-alta-fidelidad-movil.PNG#center)
+
+
 
 ## 4. Testeos de usabilidad
 
