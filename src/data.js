@@ -26,11 +26,11 @@ function filterByDirector(data, director) {
 
 //Función para obtener un porcentaje
 
-function getPercentage(data) {
+function getAverage(data) {
   let result = 0;
   data.forEach((e) => {
-    result += parseInt(e.rt_score) / data.length;
+    result += e.rt_score / data.length;
   });
   return result;
 }
-export { sortByNameOrTitle, filterByDirector, getPercentage };
+export { sortByNameOrTitle, filterByDirector, getAverage }; 

@@ -1,6 +1,6 @@
 /*AQUI DEBEN ESTAR LAS INTERACCIONES CON EL DOM--- EVENT LISTENER ETC...*/
 import ghibli from "./data/ghibli/ghibli.js";
-import { sortByNameOrTitle, filterByDirector, getPercentage } from "./data.js";
+import { sortByNameOrTitle, filterByDirector, getAverage } from "./data.js";
 
 let moviesData = [];
 let charactersData = [];
@@ -211,13 +211,12 @@ function showVehicles() {
 function showCuriousFact() {
   blankHtml();
   currentPage = "curiousFact";
-  // container.innerHTML = getPercentage(moviesData);
   container.innerHTML = "";
   messageContainer.innerHTML = `
   <div>
     <div class="card">
       <div class="cardText">
-        <h2 class="filmTitle">${getPercentage(moviesData)}</h2>
+        <h2 class="filmTitle">${getAverage(moviesData)}</h2>
       </div>
     </div>
   </div>

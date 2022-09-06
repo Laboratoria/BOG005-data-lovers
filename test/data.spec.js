@@ -1,6 +1,6 @@
-import { filterByDirector, sortByNameOrTitle } from "../src/data.js";
+import { filterByDirector, sortByNameOrTitle, getAverage } from "../src/data.js";
 
-// Test para función de ordenar A-Z
+// Tests para función de ordenar A-Z
 
 describe("sortByNameOrTitle", () => {
   it("Es una función", () => {
@@ -15,7 +15,7 @@ it("Filtra en el orden que corresponde", () => {
   });
 });
 
-// Test para función filtrar por director
+// Tests para función filtrar por director
 
 describe("filterByDirector", () => {
   it("Filtra por Isao Takahata", () => {
@@ -45,7 +45,19 @@ describe("filterByDirector", () => {
   });
 });
 
-/*it("Retorna una lista de objetos", () => {
-  const lista = filterByDirector(data, []);
-  expect(lista).toEqual(["something"]);
-});*/
+// Tests para función calcular
+
+describe("getAverage", () => {
+  
+it("Es una función", () => {
+    expect(typeof getAverage).toBe("function");
+  });
+
+it("La función hace un promedio", () => {
+let dataFakeRatings = [{ rt_score: 21 }, { rt_score: 42 }, { rt_score: 55 }, { rt_score: 90 }, { rt_score: 80 }, { rt_score: 55 }];
+let expectedResult = 57.166666666666664
+let realResult = getAverage(dataFakeRatings);
+
+expect(realResult).toEqual(expectedResult);
+  });
+});
