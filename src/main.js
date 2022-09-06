@@ -1,12 +1,11 @@
 /*AQUI DEBEN ESTAR LAS INTERACCIONES CON EL DOM--- EVENT LISTENER ETC...*/
 import ghibli from "./data/ghibli/ghibli.js";
-import { sortByNameOrTitle, filterByDirector, getPercentage } from "./data.js";
+import { sortByNameOrTitle, filterByDirector, getAverage } from "./data.js";
 
 let moviesData = [];
 let charactersData = [];
 let locationsData = [];
 let vehiclesData = [];
-
 let currentPage = "movies";
 /*Separación*/
 let moviesHtml = [];
@@ -20,7 +19,6 @@ const charactersMenu = document.getElementById("characters");
 const locationsMenu = document.getElementById("locations");
 const vehiclesMenu = document.getElementById("vehicles");
 const curiousFactMenu = document.getElementById("curiousFact");
-
 const sorAtoZ = document.getElementById("btn1");
 
 // eventos
@@ -96,7 +94,7 @@ function setMoviesHtml(arrData) {
         <div class="card">
           <img
             src="${m.poster}"
-            alt=""
+            alt="Imagenes Peliculas"
           />
           <div class="cardText">
             <h2 class="filmTitle">${m.title}</h2>
@@ -116,7 +114,7 @@ function setCharactersHtml() {
       <div class="card">
         <img
           src="${p.img}"
-          alt=""
+          alt="Imagenes Personajes"
         />
         <div class="cardText">
           <h2 class="filmTitle">${p.name}</h2>
@@ -135,7 +133,7 @@ function setLocationsHtml() {
       <div class="card">
         <img
           src="${l.img}"
-          alt=""
+          alt="Imagenes Localizaciones"
         />
         <div class="cardText">
           <h2 class="filmTitle">${l.name}</h2>
@@ -151,7 +149,7 @@ function setVehiclesHtml() {
       <div class="card">
         <img
           src="${v.img}"
-          alt=""
+          alt="Imagenes vehiculos"
         />
         <div class="cardText">
           <h2 class="filmTitle">${v.name}</h2>
@@ -178,6 +176,7 @@ function blankHtml() {
   vehiclesHtml = [];
   messageContainer.innerHTML = "";
 }
+/*Funciones que muestran peliculas, personajes,vehiculos, localizaciones y el dato curioso*/
 
 function showMovies(evt, data = ghibli.films) {
   console.log(data)
@@ -185,6 +184,8 @@ function showMovies(evt, data = ghibli.films) {
   setMoviesHtml(data);
   currentPage = "movies";
   container.innerHTML = moviesHtml.join("");
+  selectDirector.style.display = "block";
+  sorAtoZ.style.display = "block";
 }
 
 function showCharacters() {
@@ -192,6 +193,7 @@ function showCharacters() {
   setCharactersHtml();
   currentPage = "characters";
   container.innerHTML = charactersHtml.join("");
+  selectDirector.style.display = "none";
 }
 
 function showLocations() {
@@ -199,6 +201,7 @@ function showLocations() {
   setLocationsHtml();
   currentPage = "locations";
   container.innerHTML = locationsHtml.join("");
+  selectDirector.style.display = "none";
 }
 
 function showVehicles() {
@@ -206,23 +209,31 @@ function showVehicles() {
   setVehiclesHtml();
   currentPage = "vehicles";
   container.innerHTML = vehiclesHtml.join("");
+  selectDirector.style.display = "none";
 }
 
 function showCuriousFact() {
   blankHtml();
   currentPage = "curiousFact";
-  // container.innerHTML = getPercentage(moviesData);
   container.innerHTML = "";
   messageContainer.innerHTML = `
   <div>
     <div class="card">
-      <div class="cardText">
-        <h2 class="filmTitle">${getPercentage(moviesData)}</h2>
-      </div>
+        <h2 class="filmTitle--curiousFact">Las películas de Studio Ghibli tienen en promedio un puntaje de ${getAverage(moviesData)} en Rotten Tomatoes
+        </h2>
     </div>
+    <div class="container__curiousFactImage">
+    <img
+    src="./imagenes/ImagenDatoCurioso.webp" class="curiousFactImage"
+    alt="Imagen Dato Curioso"
+  />
+    </div>
+
   </div>
 `;
   setMoviesHtml(moviesData);
+  selectDirector.style.display = "none";
+  sorAtoZ.style.display = "none";
 }
 
 setData();
