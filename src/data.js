@@ -33,4 +33,4 @@ function getAverage(data) {
   });
   return result;
 }
-export { sortByNameOrTitle, filterByDirector, getAverage }; 
+export { sortByNameOrTitle, filterByDirector, getAverage };
