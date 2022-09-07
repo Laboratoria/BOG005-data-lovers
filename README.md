@@ -1,6 +1,6 @@
 #  🏯 Data Lovers Project - Studio Ghibli 🏯📽️
 
-### Visita la página aquí: [link] (https://zeligoland.github.io/BOG005-data-lovers.github.io/src/index.html)
+💻 Visita la página en el siguiente [link](https://zeligoland.github.io/BOG005-data-lovers.github.io/src/index.html).
 
 ## Índice
 
@@ -62,5 +62,3 @@ En el proceso de creación agregamos un filtro por director para las películas 
 ![.image](./movies-desktop.PNG)
 ![.image](./characters-desktop.PNG)
 ![.image](./ordered-vehicles.PNG)
-
-
