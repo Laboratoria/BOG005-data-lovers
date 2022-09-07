@@ -169,7 +169,7 @@ Que la función filtrar pase el test unitario.
 
 #### 7. Testeos de usabilidad
 
-* 
+*  como  retroalimentacion a nuestro proyecto se realizron algunos cambios para mejoras  de  nuestra plataforma  de diseno visual.
 
 #### 8. Checklist
 
