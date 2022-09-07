@@ -30,6 +30,7 @@ El objetivo principal de Harry Potter-DataLovers es ayudar a los nuevos usarios 
 (Esto con el fin de que el usuario tenga la opción de encontrar un personaje, sin tener que pasar por todos los que no esta buscando).
 
 
+### 3. Objetivos de aprendizaje
 
 ### 3. Objetivos de aprendizaje
 
@@ -153,14 +154,19 @@ Que la información esté en la pantalla.
 Que el diseño sea responsive.
 Que la función filtrar pase el test unitario.
 
+# 4.3 historia 3 - filtar
 
 #### 5.Prototipo de baja fidelidad
 
+Que el usuario pueda seleccionar casas/género..
+Que salga la información filtrada en pantalla.
 
+* Definición de terminado:
 
 #### 6. Prototipo de alta fidelidad
 
 
+#### 5.Prototipo de baja fidelidad
 
 #### 7. Testeos de usabilidad
 
@@ -187,3 +193,31 @@ Que la función filtrar pase el test unitario.
 * [x] UI: Es _responsive_.
 
 
+<<<<<<< HEAD
+#### 7. Testeos de usabilidad
+
+* 
+
+## 9. Checklist
+
+* [x] Usa VanillaJS.
+* [x] Pasa linter (`npm run pretest`)
+* [x] Pasa tests (`npm test`)
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+  lines y branches.
+* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [x] Incluye historias de usuario en `README.md`.
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+  `README.md`.
+* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+  en `README.md`.
+* [x] Incluye el listado de problemas que detectaste a través de tests de
+  usabilidad en el `README.md`.
+* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x] UI: Permite filtrar data en base a una condición.
+* [x] UI: Es _responsive_.
+
+
+=======
+>>>>>>> 7c9555a38569d3a33a59ed415a11a0ede05b601b
