@@ -1,122 +1,26 @@
 import { orderNameAZ, orderNameZA, housesFilter, genderFilter} from '../src/data.js';
-// let dataPrueba = [
-//   {
-//     "id": 1,
-//     "name": "Euan Abercrombie",
-       
-//   },
-//   {
-//     "id": 2,
-//     "name": "Stewart Ackerley",
-    
-//   },  
-//    {
-//     "id": 3,
-//     "name": "African prince",
-    
-//   },
-//   {
-//     "id": 4,
-//     "name": "Agnes's son",
-    
-//   },
- 
-//   {
-//     "id": 5,
-//     "name": "Cornelius Agrippa",
-    
-//   },
-  
- 
-// ]
 
 describe('orderNameAZ', () => {
   it('is a function', () => {
     expect(typeof orderNameAZ).toBe('function');
   });
-
-  // it('con un argumento de array de data de objetos, que contenga name, return array de data organizada por name de la A-Z ', () => {
-  //   const resultadoAZ = [
-  //     {
-  //       "id": 4,
-  //       "name": "Agnes's son",
-        
-  //     },
-  //     {
-  //       "id": 3,
-  //       "name": "African prince",
-        
-  //     },
-  //     {
-  //       "id": 5,
-  //       "name": "Cornelius Agrippa",
-        
-  //     },
-  //     {
-  //       "id": 1,
-  //       "name": "Euan Abercrombie",
-           
-  //     },
-  //     {
-  //       "id": 2,
-  //       "name": "Stewart Ackerley",
-        
-  //     },  
-  //   ]
-  //  expect(orderNameAZ(dataPrueba)).toEqual(resultadoAZ);
-  // });
-  it("Lanza error sin parametro",()=>{
-    expect(()=>orderNameAZ()).toThrow(Error)
+  it("Lanza error sin parametro", () => {
+    expect(() => orderNameAZ()).toThrow(Error)
   })
 });
-
 
 describe('orderNameZA', () => {
   it('is a function', () => {
     expect(typeof orderNameZA).toBe('function');
   });
-//.only solo ejecuta el test indicado
-  // it('con un argumento de array de data de objetos, que contenga name, return array de data organizada por name de la A-Z ', () => {
-  //   const resultadoZA = [
-  //     {
-  //       "id": 2,
-  //       "name": "Stewart Ackerley",
-        
-  //     }, 
-  //     {
-  //       "id": 1,
-  //       "name": "Euan Abercrombie",
-           
-  //     }, 
-  //     {
-  //       "id": 5,
-  //       "name": "Cornelius Agrippa",
-        
-  //     },
-  //     {
-  //       "id": 3,
-  //       "name": "African prince",
-        
-  //     },
-  //     {
-  //       "id": 4,
-  //       "name": "Agnes's son",
-        
-  //     },  
-      
-      
-  //   ]
-
-  //   expect(orderNameZA(dataPrueba)).toEqual(resultadoZA);
-  // });
-  it("Lanza error sin parametro",()=>{
-    expect(()=>orderNameZA()).toThrow(Error)
+  it("Lanza error sin parametro", () => {
+    expect(() => orderNameZA()).toThrow(Error)
   })
 });
 
-describe("casos prueba filter houses", () =>{
-    it("Gryffindor", () =>{
-    const muestra= [
+describe("casos prueba filter houses", () => {
+  it("Gryffindor", () => {
+    const muestra = [
       {
         "id": 1,
         "name": "Euan Abercrombie",
@@ -175,7 +79,7 @@ describe("casos prueba filter houses", () =>{
         "species": "Human",
         "ancestry": null,
         "gender": "Male",
-        "hair_color": null,       
+        "hair_color": null,
         "wand": null,
         "patronus": null,
         "house": "Gryffindor",
@@ -185,11 +89,10 @@ describe("casos prueba filter houses", () =>{
       },
     ]
     const resultadoRecibido = housesFilter(muestra, "Gryffindor")
-    console.log(resultadoRecibido)
     expect(resultadoRecibido).toEqual(resultadoEsperado)
-    })
-    it("Ravenclaw",() =>{
-    const muestra2 =  [
+  })
+  it("Ravenclaw", () => {
+    const muestra2 = [
       {
         "id": 1,
         "name": "Euan Abercrombie",
@@ -259,12 +162,11 @@ describe("casos prueba filter houses", () =>{
     ]
     const resultadoRecibido2 = housesFilter(muestra2, "Ravenclaw")
     expect(resultadoRecibido2).toEqual(resultadoEsperado2)
-    })
+  })
 })
 
-
-describe("prueba filtro genero", () =>{
-  it("Male", () =>{
+describe("prueba filtro genero", () => {
+  it("Male", () => {
     const muestra3 = [
       {
         "id": 1,
@@ -353,7 +255,7 @@ describe("prueba filtro genero", () =>{
     const resultadoRecibido3 = genderFilter(muestra3, "Male")
     expect(resultadoRecibido3).toEqual(resultadoEsperado3)
   })
-  it("Female" , () =>{
+  it("Female", () => {
     const muestra4 = [
       {
         "id": 1,

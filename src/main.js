@@ -71,7 +71,6 @@ card(characters)
 
 //filtro de las casas 
 document.getElementById("HogwartsHouses").addEventListener("change", function (event) {
-	console.log(event.target.value)
 	if (event.target.value == "Houses") {
 		card(characters)
 	} else {
