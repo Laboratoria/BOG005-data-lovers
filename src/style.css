@@ -7,6 +7,8 @@ html{
 	background-size: cover;
 }
 
+
+
 section#sectionHomePage{
 	padding: 30px;
 	
@@ -125,6 +127,7 @@ section#filterButtons {
 	padding: 30px;
 }
 
+
 .containerCard {
 	align-items: center;
 	display: grid;
@@ -134,7 +137,12 @@ section#filterButtons {
 	perspective: 1000px;
 	grid-template-columns: repeat(4, 1fr);
 }
-
+@media screen and (min-width: 768px )and (max-width:1024px){
+	.containerCard{
+		display:block;
+	}
+	
+}
 .containerFather:hover .card {
 	transform: rotateY(180deg);
 }

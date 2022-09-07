@@ -94,17 +94,3 @@ document.getElementById("genderCharacters").addEventListener("change", function 
 })
 
 
-
-
-
-/*let list1 = characters.filter(function (characters) {
-  return characters.gender === "Male";
-})
-console.log(list1);
-
-let list2 = characters.filter(function (characters) {
-  return characters.gender === "Female";
-})
-console.log(list2);*/
-
-

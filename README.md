@@ -179,7 +179,7 @@ Que la función filtrar pase el test unitario.
   `README.md`.
 * [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
+* [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [x] UI: Permite ordenar data por uno o más campos (asc y desc).
