@@ -167,6 +167,8 @@ Que la función filtrar pase el test unitario.
 
 ![prototipo de alta fidelidad](https://user-images.githubusercontent.com/108754453/188944703-8a96f1cd-1904-425a-8105-c288dee21655.PNG)
 
+https://www.figma.com/file/3FVWwXMJBc0lchzjoQnGjc/Untitled?node-id=5%3A53
+
 #### 7. Testeos de usabilidad
 
 *  como  retroalimentacion a nuestro proyecto se realizron algunos cambios para mejoras  de  nuestra plataforma  de diseno visual.
