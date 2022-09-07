@@ -60,18 +60,18 @@ El diseño de la interfaz se fue refinando de acuerdo con el feedback recibido p
 
 ![.image](./version-mobile.PNG)
 
-En el proceso de creación agregamos un filtro por director para las películas y un botón que puede ordenar de la A a la Z cada una de las secciones de la página.
+- En el proceso de creación agregamos un filtro por director para las películas y un botón que puede ordenar de la A a la Z cada una de las secciones de la página.
 
 ![.image](./movies-desktop.PNG)
 
-Se muestran los personajes con la información requerida
+- Se muestran los personajes con la información requerida
 
 ![.image](./characters-desktop.PNG)
 
-Se muestran los vehículos ordenados con la información requerida por nuestras usuarias.
+- Se muestran los vehículos ordenados con la información requerida por nuestras usuarias.
 
 ![.image](./ordered-vehicles.PNG)
 
-Finalmente incluimos un dato curioso, con el cálculo de un promedio que se puede conocer al dar click en el botón "dato curioso".
+- Finalmente incluimos un dato curioso, con el cálculo de un promedio que se puede conocer al dar click en el botón "dato curioso".
 
 ¡Te invitamos a visitar!🎦
