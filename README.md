@@ -1,6 +1,7 @@
 # DATA LOVERS - HARRY POTTER
 
 
+![logo](https://user-images.githubusercontent.com/108754453/188944054-3e7138a6-fa29-48ec-ae20-b9b6f1433996.gif)
 
 
 * 1. Resumen del proyecto
@@ -113,6 +114,7 @@ Dentro de nuestra estrategia de planificacion se tuvieron en cuenta los  siguien
 
 ### 4. Historias de usuario
 
+![historiasdeUsuario](https://user-images.githubusercontent.com/108754453/188944122-c6c4c9f2-fff3-475a-a3e2-9fdd172fcf41.PNG)
 
 
  # 4.1 historia 1 - visualizar
@@ -154,25 +156,22 @@ Que la información esté en la pantalla.
 Que el diseño sea responsive.
 Que la función filtrar pase el test unitario.
 
-# 4.3 historia 3 - filtar
+### 5. prototipo de baja fidelidad
+![prototipoBajaFidelidad](https://user-images.githubusercontent.com/108754453/188944819-951c1334-cb92-4d64-a32f-bf3f8cc58f57.PNG)
 
-#### 5.Prototipo de baja fidelidad
-
-Que el usuario pueda seleccionar casas/género..
-Que salga la información filtrada en pantalla.
-
-* Definición de terminado:
+![prototipo1](https://user-images.githubusercontent.com/108754453/188944829-eca978e0-754d-4a59-b1f1-f1a33f40dc99.PNG)
 
 #### 6. Prototipo de alta fidelidad
 
 
-#### 5.Prototipo de baja fidelidad
+
+![prototipo de alta fidelidad](https://user-images.githubusercontent.com/108754453/188944703-8a96f1cd-1904-425a-8105-c288dee21655.PNG)
 
 #### 7. Testeos de usabilidad
 
 * 
 
-## 9. Checklist
+#### 8. Checklist
 
 * [x] Usa VanillaJS.
 * [x] Pasa linter (`npm run pretest`)
@@ -193,31 +192,3 @@ Que salga la información filtrada en pantalla.
 * [x] UI: Es _responsive_.
 
 
-<<<<<<< HEAD
-#### 7. Testeos de usabilidad
-
-* 
-
-## 9. Checklist
-
-* [x] Usa VanillaJS.
-* [x] Pasa linter (`npm run pretest`)
-* [x] Pasa tests (`npm test`)
-* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [x] Incluye historias de usuario en `README.md`.
-* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [x] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [x] UI: Permite filtrar data en base a una condición.
-* [x] UI: Es _responsive_.
-
-
-=======
->>>>>>> 7c9555a38569d3a33a59ed415a11a0ede05b601b
