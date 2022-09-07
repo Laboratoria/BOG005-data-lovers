@@ -23,26 +23,27 @@ Establecimos los criterios de aceptación para cada historia, buscando una conco
 
 ![.image](./historia-de-usuario-1.PNG)
 
-1. Muestra cuántas y cuales son las animaciones de Studio Ghibli.
-2. Permite filtrar las películas por director y conocer en una ficha técnica su poster, año de lanzamiento, productor, entre otros.
-3. Cuenta con una sección de personajes que además de imágenes tiene información sobre su género, especie y edad.
-4. Muestra información sobre las locaciones y los vehículos de las animaciones.
-5. Ordena la información mostrada en cada categoría de la A a la Z.
+**1.** Muestra cuántas y cuales son las animaciones de Studio Ghibli.
+**2.** Permite **filtrar** las películas por director y conocer en una ficha técnica su poster, año de lanzamiento, productor, entre otros.
+**3.** Cuenta con una sección de personajes que además de imágenes tiene información sobre su género, especie y edad.
+**4.** **Muestra** información sobre las locaciones y los vehículos de las animaciones.
+**5.** **Ordena** la información mostrada en cada categoría de la A a la Z.
 
 ## 3. Diseño de la interfaz de usuario
 
-Para el desarrollo de nuestra interfaz procuramos sostener el prototipo de alta fidelidad y replicarlo en la plataforma, teniendo un producto muy similar al planteado.
+Para el desarrollo de nuestra interfaz procuramos sostener ambos prototipos y replicarlos en la plataforma, teniendo un producto muy similar al planteado.
 
 #### Prototipo de baja fidelidad
+
+Este primer prototipo muestra la estructura que tendría la página web en vista de escritorio.
 
 ![.image](./Baja-fidelidad.png)
 
 #### Prototipo de alta fidelidad
 
+A través de la herramienta figma, creamos un prototipo de alta fidelidad para móvil
 
-![.image](./prototipo-alta-fidelidad-movil.PNG#center)
-
-
+![.image](./prototipo-alta-fidelidad-movil.PNG)
 
 ## 4. Testeos de usabilidad
 
@@ -51,5 +52,13 @@ El diseño de la interfaz se fue refinando de acuerdo con el feedback recibido p
 ## 5. Producto final
 
 - La interfaz tiene un diseño responsive que muestra un menú hamburguesa para dispositivos más pequeños.  
+
+![.image](./version-mobile.PNG)
+
+En el proceso de creación agregamos un filtro por director para las películas y un botón de ordenar de la A a la Z que sirve para cada una de las secciones de la página.
+
+![.image](./movies-desktop.PNG)
+![.image](./characters-desktop.PNG)
+![.image](./ordered-vehicles.PNG)
 
 
