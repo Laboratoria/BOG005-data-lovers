@@ -1,10 +1,11 @@
 // estas funciones son de ejemplo
 
 
-export const shData = (element) => {
-  return 'country';
+export const filtrarPais = (datos, opcion) => {
+  const dataFiltradaPais = datos.filter((elemento) => elemento.team == opcion);
+  
+  return dataFiltradaPais;
 };
-  console.log(shData)
 
 export const anotherExample = () => {
   return 'OMG';

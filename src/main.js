@@ -1,3 +1,4 @@
+import { filtrarPais } from "./data.js";
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
@@ -10,6 +11,7 @@ const inputPais = document.getElementById("inputCountry");
 const countryPage = document.getElementById("pageCountry");
 const bottonSearcher = document.getElementById("searcher");
 const bottonInicio = document.getElementById("buttoninicio");
+const bottonCarst = document.getElementById("buscartarjetas");
 const left = document.getElementById("buttonLeft");
 const right = document.getElementById("buttonRight");
 let container = document.querySelector(".containerCard");
@@ -89,17 +91,29 @@ makeCard(athletes.athletes);
 //});
 
 //filtros;
-const filtrarPais = (datos, opcion) => {
+/*const filtrarPais = (datos, opcion) => {
   const dataFiltradaPais = datos.filter((elemento) => elemento.team == opcion);
   return dataFiltradaPais;
-};
+};*/
 
-inputPais.addEventListener("change", () => {
-  const valorPais = inputPais.value;
+searcher.addEventListener("change", () => {
+  const valorPais = bottonCarst.value;
   filtrarPais(deportes, valorPais);
-
   console.log("data filtrada", filtrarPais(deportes, valorPais));
 });
+
+searcher.addEventListener("change", dataPaisFiltrada);
+
+//Mostramos la data filtrada
+function dataPaisFiltrada() {
+  countryPage.style.display = "block";
+  firstPage.style.display = "none";
+  let butonDeFiltrar = inputCountry.value;
+  let dataPaisFiltrada;
+
+  dataPaisFiltrada = filtrarPais(deportes, butonDeFiltrar);
+  makeCard(dataPaisFiltrada);
+}
 
 //const filtrarPais = (datos) => {
 //const dataFiltradaPais = datos.filter(

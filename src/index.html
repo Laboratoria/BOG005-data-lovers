@@ -13,23 +13,23 @@
     <!--Página de inicio-->
     <section id="homepage" class="homepage">
       <section id="principal" class="principal">
-
+        <button id="searcher">Buscar</button>
       </section>
       
 
-      <!--Filtros-->
+      <!--
       <section id="seeker">
 
         <p>
           Género:
-          <select name="genero" type="text" id="inputName">
+          <select name="genero" type="option" id="inputName">
             <option>Masculino</option>
             <option>Femenino</option>
           </select>
         </p>
         <p>
           Medalla:
-          <select name="genero" type="text" id="inputMedal">
+          <select name="medalla" type="option" id="inputMedal">
             <option>Oro</option>
             <option>Plata</option>
             <option>Bronce</option>
@@ -37,15 +37,14 @@
         </p>
         <p>
          Paises:
-          <select name="genero" type="text" id="inputCountry">
+          <select name="pais" type="option" id="inputCountry">
             <option>Colombia</option>
             <option>China</option>
             <option>Brasil</option>
             <option>Japon</option>
           </select>
-        </p>
-        <p>Buscador.</p>
-        <button id="searcher">Buscar</button>
+        </p>-->
+        
 
         <!--ul id="filters">
           <li id="name">NOMBRE &nbsp;<input type="text" id="inputName" /></li>
@@ -77,8 +76,37 @@
 
       <main>
         <section>
-          <input> </input> 
-          <button id="buscartarjetas">Buscar</button>
+      
+        
+          
+      <!--Filtros-->
+      <section id="seeker">
+
+        <p>
+          Género:
+          <select name="genero" type="option" id="inputName">
+            <option>Masculino</option>
+            <option>Femenino</option>
+          </select>
+        </p>
+        <p>
+          Medalla:
+          <select name="medalla" type="option" id="inputMedal">
+            <option>Oro</option>
+            <option>Plata</option>
+            <option>Bronce</option>
+          </select>
+        </p>
+        <p>
+         Paises:
+          <select name="pais" type="option" id="inputCountry">
+            <option>Colombia</option>
+            <option>China</option>
+            <option>Brasil</option>
+            <option>Japon</option>
+          </select>
+        </p>
+        <button id="buscartarjetas">Buscar en las tarjetas </button>
         </section>
         <section class="containerCard"></section>
 
