@@ -53,7 +53,6 @@ function makeCard(athletes) {
          <section class="cardBack">
            <h1 class = "nameBack">${athletes[i].name}</h1>
            <p> Pais: ${athletes[i].team}</p>
-           <p> Pais: ${athletes[i].team}</p>
            <p>Medalla: ${athletes[i].medal}</p>
            <p>Deporte: ${athletes[i].sport} </p>
            <p>Altura: ${athletes[i].height}</p>
@@ -85,40 +84,15 @@ left.addEventListener("click", () => {
 //       <div class="bodyCardBack"></div>
 makeCard(athletes.athletes);
 
-//bottonSearcher.addEventListener("click", () => {
-// countryPage.style.display = "block";
-// firstPage.style.display = "none";
-//});
+//Filtros
 
-//filtros;
-/*const filtrarPais = (datos, opcion) => {
-  const dataFiltradaPais = datos.filter((elemento) => elemento.team == opcion);
-  return dataFiltradaPais;
-};*/
-
-searcher.addEventListener("change", () => {
-  const valorPais = bottonCarst.value;
-  filtrarPais(deportes, valorPais);
-  console.log("data filtrada", filtrarPais(deportes, valorPais));
-});
-
-searcher.addEventListener("change", dataPaisFiltrada);
-
-//Mostramos la data filtrada
-function dataPaisFiltrada() {
-  countryPage.style.display = "block";
-  firstPage.style.display = "none";
-  let butonDeFiltrar = inputCountry.value;
-  let dataPaisFiltrada;
-
-  dataPaisFiltrada = filtrarPais(deportes, butonDeFiltrar);
-  makeCard(dataPaisFiltrada);
-}
-
-//const filtrarPais = (datos) => {
-//const dataFiltradaPais = datos.filter(
-// (elemento) => elemento.team === "Colombia"
-//);
-//return dataFiltradaPais;
-//};
-console.log(filtrarPais(deportes, inputPais.value));
+document
+  .getElementById("inputCountry")
+  .addEventListener("change", function (event) {
+    if (event.target.value == "TODOS") {
+      makeCard(deportes);
+    } else {
+      let resultCountry = filtrarPais(deportes, event.target.value);
+      makeCard(resultCountry);
+    }
+  });
