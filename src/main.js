@@ -47,7 +47,7 @@ function makeCard(athletes) {
      <section class="cardFather">
        <section class="card">
          <section class="cardFront">
-           <h1 class="namePrincipal">${i + 1}</h1>
+           <h1 class="namePrincipal">${i + 1}, ${athletes[i].team}</h1>
            <h1 class="namePrincipal">${athletes[i].name}</h1>
            </section>
          <section class="cardBack">
@@ -84,15 +84,22 @@ left.addEventListener("click", () => {
 //       <div class="bodyCardBack"></div>
 makeCard(athletes.athletes);
 
-//Filtros
+//Filtro pais 
+
 
 document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
-    if (event.target.value == "TODOS") {
+    let selectOption = event.target.value
+    let resultCountry = filtrarPais(deportes, selectOption);
+    console.log ('Resultado de filtro: ',resultCountry)
+    if (resultCountry.length == 0) {
+      console.log('no se filtra porque no se encuentra la opción')
       makeCard(deportes);
     } else {
-      let resultCountry = filtrarPais(deportes, event.target.value);
-      makeCard(resultCountry);
+      console.log('funciona filtrado por el país');
+     makeCard(resultCountry);
     }
   });
+  
+
