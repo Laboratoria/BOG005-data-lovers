@@ -32,7 +32,7 @@ bottonInicio.addEventListener("click", () => {
   countryPage.style.display = "none";
 });
 
-console.log(makeCard);
+// console.log(makeCard);
 
 //
 function makeCard(athletes) {
@@ -40,9 +40,9 @@ function makeCard(athletes) {
 
   let finalHtml = "";
   // console.log("o.o", posicionFinal, posicionInicial);
-  for (let i = posicionInicial; i < posicionFinal; i++) {
-    //console.log("position en for: ", i);
-
+  for (let i = posicionInicial; i <= posicionFinal; i++) {
+    // console.log("position en for: ", athletes[i]);
+// console.log(athletes[ï])
     finalHtml += `
      <section class="cardFather">
        <section class="card">
@@ -92,14 +92,16 @@ document
   .addEventListener("change", function (event) {
     let selectOption = event.target.value
     let resultCountry = filtrarPais(deportes, selectOption);
-    console.log ('Resultado de filtro: ',resultCountry)
-    if (resultCountry.length == 0) {
-      console.log('no se filtra porque no se encuentra la opción')
-      makeCard(deportes);
-    } else {
-      console.log('funciona filtrado por el país');
-     makeCard(resultCountry);
-    }
+    console.log(resultCountry)
+    // console.log ('Resultado de filtro: ',resultCountry)
+    makeCard(resultCountry)
+    // if (resultCountry.length == 0) {
+    //   console.log('no se filtra porque no se encuentra la opción')
+    //   makeCard(deportes);
+    // } else {
+     
+    //  makeCard(resultCountry);
+    // }
   });
   
 
