@@ -2,7 +2,7 @@
 
 export const filtrarPais = (datos, opcion) => {
   const dataFiltradaPais = datos.filter((elemento) => elemento.team === opcion);
-
+  console.log(opcion);
   return dataFiltradaPais;
 };
 
