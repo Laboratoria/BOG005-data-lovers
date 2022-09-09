@@ -138,3 +138,14 @@ document
     //  makeCard(resultCountry);
     // }
   });
+
+//Filtro guia test
+
+/*document.getElementById("inputCountry").addEventListener("change", function (event){
+  if ( event.target.value=="allCountrys"){ 
+    makeCard (deportes)
+  } else { 
+    const resultadoPais = countryFilter ( deportes, event.target.value)
+    makeCard(resultadoPais)
+  }
+})*/
