@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="Harry Potter fan page. Data Lovers">
   <title>DL HARRY POTER</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -29,27 +29,27 @@
       <img src=" imgs/logo.gif" id="logo" alt="icono-potter" />
       <div class="buscador">
         <input type="search" id="seeker" placeholder="search character">
-        <button type="button" id="searchButton">buscar</button>
-      </div>
+        </div>
     </header>
     <!--botones de nuestros filtros-->
-    <section id=filterButtons>
-      <select name="filterCharacters" id="characters" class="filterSelectors">
-        <option>PERSONAJES</option>
+    <section id= "filterButtons">
+      <select name="filterCharacters" id="genderCharacters" class="filterSelectors">
+        <option value="allGender">PERSONAJES</option>
         <option value="Male">Hombre</option>
         <option value="Female">Mujer</option>
       </select>
       <select name="filterHogwartsHouses" id="HogwartsHouses" class="filterSelectors">
-        <option>CASAS DE HOGWARTS</option>
-        <option value="gryffindor">Gryffindor</option>
-        <option value="hufflepuff">Hufflepuff</option>
-        <option value="ravenclaw">Ravenclaw</option>
-        <option value="slytherin">Slytherin</option>
+        <option value="Houses">CASAS DE HOGWARTS</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Slytherin">Slytherin</option>
+
       </select>
       <select name="filterAlphabetically" id="alphabeticalOrder" class="filterSelectors">
         <option>ORDENAR</option>
-        <option value="a-z">A-Z</option>
-        <option value="z-a">Z-A</option>
+        <option value="a-z" id="order-a-z">A-Z</option>
+        <option value="z-a" id="order-z-a">Z-A</option>
       </select>
     </section>
     <main class="containerCard"></main>
