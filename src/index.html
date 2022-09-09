@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
+    <nav class="nav">
+      <input type="checkbox" id="check" />
+      <label for="check" class="nav__checkbtn">
+        <i class="nav__btn"
+          ><img src="./imagenes/MenuIcon.png" alt="IconImage"
+        /></i>
+        <a href="#" class="link">
+          <img src="./imagenes/TextTitle.png" alt="Texto Imagen" class="logo" />
+        </a>
+      </label>
+
+      <ul>
+        <li><a href="#" id="movies">Películas</a></li>
+        <li><a href="#" id="characters">Personajes</a></li>
+        <li><a href="#" id="locations">Lugares</a></li>
+        <li><a href="#" id="vehicles">Vehículos</a></li>
+        <li><a href="#" id="curiousFact">Dato Curioso</a></li>
+      </ul>
+    </nav>
+
+    <section class="welcome"></section>
+
+    <main class="main" id="main">
+      <p class="moviesWelcome">
+        Aquí encontrarás la información que necesitas sobre las animaciones de
+        Studio Ghibli, <b>que son un total de 20.</b>
+        <br />
+        Puedes ir hacia abajo ⬇️ y descubrir información de cada una.
+        <br />
+        ¡Vamos alla! 🏯
+      </p>
+
+      <div class="filterOptions">
+        <div id="filterByDirector">
+          
+          <select name="directorOptions" id="directorOptions">
+            <option value="">Filtra por director...</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+          </select>
+        </div>
+        <div id="buttons">
+          <button class="btn" id="btn1">Ordena de la A a la Z</button>
+        </div>
+      </div>
+
+      <div class="cardContainer"></div>
+      <div class="messageContainer"></div>
+    </main>
+
+    <footer class="footer">
+      <p class="welcome__text">
+        Copyright © 2022 Data Lovers - Studio Ghibli por
+        <b>Mariana Santos y Andrea Zapata</b>
+      </p>
+    </footer>
+
     <div id="root"></div>
+    <!--Esto lo hizo Alexis-->
     <script src="main.js" type="module"></script>
+    <!--Esto es la ruta al JS-->
   </body>
 </html>
