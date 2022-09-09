@@ -1,4 +1,4 @@
-import { filtrarPais } from "./data.js";
+import { countryFilter } from "./data.js";
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
@@ -111,9 +111,9 @@ left.addEventListener("click", () => {
 //       <div class="bodyCardBack"></div>
 makeCard(athletes.athletes, posicionInicial, posicionFinal);
 
-//Filtro pais
 
-document
+
+/*document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
     let selectOption = event.target.value;
@@ -137,7 +137,7 @@ document
 
     //  makeCard(resultCountry);
     // }
-  });
+
 
 //Filtro guia test
 

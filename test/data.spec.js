@@ -1,5 +1,5 @@
-import { example, anotherExample } from "../src/data.js";
 
+<<<<<<< HEAD
 describe("example", () => {
   it("is a function", () => {
     expect(typeof example).toBe("function");
@@ -37,3 +37,5 @@ describe("Text de filtro pais", ()=>{
  */
 //Este si es
  const este si = "este si es"; 
+=======
+>>>>>>> d575b3498c2cd75ad27391d3a058d217588444c2
