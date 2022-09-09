@@ -24,7 +24,7 @@ function filterByDirector(data, director) {
   return moviesByDirector;
 }
 
-//Función para obtener un porcentaje
+//Función para obtener un promedio
 
 function getAverage(data) {
   let result = 0;
