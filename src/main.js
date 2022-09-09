@@ -17,6 +17,7 @@ const right = document.getElementById("buttonRight");
 let container = document.querySelector(".containerCard");
 let posicionInicial = 0;
 let posicionFinal = 40;
+let dataGenerica = [];
 
 // cambio de pagina inicio a pagina de cartas
 bottonSearcher.addEventListener("click", () => {
@@ -32,17 +33,24 @@ bottonInicio.addEventListener("click", () => {
   countryPage.style.display = "none";
 });
 
-// console.log(makeCard);
-
+console.log("deportes: ", deportes);
+dataGenerica = deportes;
 //
-function makeCard(athletes) {
-  //console.log("athletes: ", athletes);
+function makeCard(athletes, posi, posf) {
+  console.log(
+    "array es: ",
+    athletes,
+    "posi param: ",
+    posi,
+    "posf param: ",
+    posf
+  );
 
   let finalHtml = "";
   // console.log("o.o", posicionFinal, posicionInicial);
-  for (let i = posicionInicial; i <= posicionFinal; i++) {
-    // console.log("position en for: ", athletes[i]);
-// console.log(athletes[ï])
+  for (let i = posi; i < posf; i++) {
+    //console.log("position en for: ", i);
+    //console.log(athletes[i]);
     finalHtml += `
      <section class="cardFather">
        <section class="card">
@@ -65,43 +73,68 @@ function makeCard(athletes) {
 }
 
 right.addEventListener("click", () => {
-  posicionInicial += 40;
-  posicionFinal += 40;
-
-  makeCard(athletes.athletes);
+  if (dataGenerica.length >= 40) {
+    // console.log("datGenerica: ", dataGenerica);
+    posicionInicial += 40;
+    console.log("tamaño: ", dataGenerica.length);
+    if (posicionFinal < dataGenerica.length) {
+      console.log(posicionFinal);
+      posicionFinal = posicionInicial + 40;
+    } else {
+      console.log("posfinal: ", posicionFinal);
+      console.log("posini: ", posicionInicial);
+      console.log("ultima paginación");
+      posicionInicial = posicionInicial - 40;
+      posicionFinal = dataGenerica.length;
+    }
+    console.log(
+      "posiciones fuera de la condición: ",
+      posicionInicial,
+      posicionFinal
+    );
+    makeCard(dataGenerica, posicionInicial, posicionFinal);
+  } else {
+    console.log("ya no hay mas cartas");
+  }
 });
 
 left.addEventListener("click", () => {
   if (posicionInicial != 0) {
     posicionInicial -= 40;
     posicionFinal -= 40;
-
+    console.log(athletes.athletes);
     makeCard(athletes.athletes);
   }
 });
 
 //       <div class="bodyCardFront"></div>
 //       <div class="bodyCardBack"></div>
-makeCard(athletes.athletes);
+makeCard(athletes.athletes, posicionInicial, posicionFinal);
 
-//Filtro pais 
-
+//Filtro pais
 
 document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
-    let selectOption = event.target.value
+    let selectOption = event.target.value;
     let resultCountry = filtrarPais(deportes, selectOption);
-    console.log(resultCountry)
-    // console.log ('Resultado de filtro: ',resultCountry)
-    makeCard(resultCountry)
+    dataGenerica = resultCountry;
+    console.log("genérica: ", dataGenerica);
+    console.log("Resultado de filtro: ", resultCountry);
+    if (resultCountry.length <= 40) {
+      //console.log("tamaño: ", resultCountry.length);
+      makeCard(resultCountry, 0, resultCountry.length);
+    } else {
+      posicionInicial = 0;
+      posicionFinal = 40;
+      makeCard(resultCountry, posicionInicial, posicionFinal);
+    }
+
     // if (resultCountry.length == 0) {
     //   console.log('no se filtra porque no se encuentra la opción')
     //   makeCard(deportes);
     // } else {
-     
+
     //  makeCard(resultCountry);
     // }
   });
-  
-
