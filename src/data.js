@@ -1,11 +1,14 @@
 // estas funciones son de ejemplo
 
-export let filtrarPais = (deportes, opcion) => {
-  let dataFiltradaPais = deportes.filter((elemento) => elemento.team === opcion);
-  console.log('parámetro: ',opcion);
-  return dataFiltradaPais;
-};
+//import athletes from "./data/athletes/athletes";
 
-export const anotherExample = () => {
-  return "OMG";
+//export let filtrarPais = (deportes, opcion) => {
+  //let dataFiltradaPais = deportes.filter((elemento) => elemento.team === opcion);
+  //console.log('parámetro: ',opcion);
+ // return dataFiltradaPais;
+//;
+
+export const countryFilter= (deportes , opcion) => { 
+  const paisFiltrado = deportes.filter(Element => Element.team === opcion)
+  return paisFiltrado;
 };

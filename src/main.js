@@ -1,4 +1,4 @@
-import { filtrarPais } from "./data.js";
+import { countryFilter } from "./data.js";
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
@@ -86,8 +86,16 @@ makeCard(athletes.athletes);
 
 //Filtro pais 
 
+document.getElementById("inputCountry").addEventListener("change", function (event){
+  if ( event.target.value=="allCountrys"){ 
+    makeCard (deportes)
+  } else { 
+    const resultadoPais = countryFilter ( deportes, event.target.value)
+    makeCard(resultadoPais)
+  }
+})
 
-document
+/*document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
     let selectOption = event.target.value
@@ -102,6 +110,6 @@ document
      
     //  makeCard(resultCountry);
     // }
-  });
+  });*/
   
 
