@@ -1,4 +1,4 @@
-import { countryFilter } from "./data.js";
+import { orderNameAZ, orderNameZA, countryFilter } from "./data.js";
 import athletes from "./data/athletes/athletes.js";
 import data from "./data/athletes/athletes.js";
 
@@ -28,6 +28,24 @@ bottonInicio.addEventListener("click", () => {
   countryPage.style.display = "none";
 });
 
+//Ordenar
+document.getElementById("ordenar").addEventListener("change", function (event) {
+  if (event.target.value == "az") {
+    orderAsc();
+  }
+  if (event.target.value == "za") {
+    orderDesc();
+  }
+});
+function orderAsc() {
+  let dataAsc = deportes.sort(orderNameAZ("name"));
+  makeCard(dataAsc);
+}
+function orderDesc() {
+  let dataDesc = deportes.sort(orderNameZA("name"));
+  makeCard(dataDesc);
+}
+
 //
 function makeCard(deportes) {
   let finalHtml = "";
@@ -56,6 +74,7 @@ function makeCard(deportes) {
 makeCard(deportes);
 //       <div class="bodyCardFront"></div>
 //       <div class="bodyCardBack"></div>*/
+//Filtros
 document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
