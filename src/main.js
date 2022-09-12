@@ -1,19 +1,20 @@
-import { orderNameAZ, orderNameZA, countryFilter } from "./data.js";
-import athletes from "./data/athletes/athletes.js";
+import {
+  orderNameAZ,
+  orderNameZA,
+  genderFilter,
+  medalFilter,
+  countryFilter,
+} from "./data.js";
 import data from "./data/athletes/athletes.js";
 
 //Variables//
 const deportes = data.athletes.slice(0, 100);
-console.log(deportes);
 const firstPage = document.getElementById("homepage");
-const inputPais = document.getElementById("inputCountry").value;
 const countryPage = document.getElementById("pageCountry");
 const bottonSearcher = document.getElementById("searcher");
 const bottonInicio = document.getElementById("buttoninicio");
-const bottonCarst = document.getElementById("buscartarjetas");
 let container = document.querySelector(".containerCard");
 let posicionInicial = 0;
-console.log(inputPais);
 
 // cambio de pagina inicio a pagina de cartas
 bottonSearcher.addEventListener("click", () => {
@@ -76,6 +77,7 @@ makeCard(deportes);
 //       <div class="bodyCardBack"></div>*/
 //Filtros
 
+//Por pais
 document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
@@ -84,5 +86,29 @@ document
     } else {
       const resultadoPais = countryFilter(deportes, event.target.value);
       makeCard(resultadoPais);
+    }
+  });
+
+//Por medalla
+document
+  .getElementById("inputMedal")
+  .addEventListener("change", function (event) {
+    if (event.target.value == "allMedal") {
+      makeCard(deportes);
+    } else {
+      const resultadoMedalla = medalFilter(deportes, event.target.value);
+      makeCard(resultadoMedalla);
+    }
+  });
+
+//Por género
+document
+  .getElementById("inputGender")
+  .addEventListener("change", function (event) {
+    if (event.target.value == "allgender") {
+      makeCard(deportes);
+    } else {
+      const resultadoGenero = genderFilter(deportes, event.target.value);
+      makeCard(resultadoGenero);
     }
   });
