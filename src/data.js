@@ -30,7 +30,24 @@ export function orderNameZA(prop) {
 
 //Filtros
 
+//Por país
 export const countryFilter = (deportes, opcion) => {
   const paisFiltrado = deportes.filter((Element) => Element.team === opcion);
   return paisFiltrado;
+};
+
+//Por género
+export const genderFilter = (deportes, opcion) => {
+  const generoFiltrado = deportes.filter(
+    (Element) => Element.gender === opcion
+  );
+  return generoFiltrado;
+};
+
+//Por medalla
+export const medalFilter = (deportes, opcion) => {
+  const medallaFiltrado = deportes.filter(
+    (Element) => Element.medal === opcion
+  );
+  return medallaFiltrado;
 };
