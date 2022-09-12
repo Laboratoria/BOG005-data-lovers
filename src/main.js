@@ -33,25 +33,25 @@ sorAtoZ.addEventListener("click", sortAsc);
 let container = document.querySelector(".cardContainer");
 let messageContainer = document.querySelector(".messageContainer");
 
-async function sortAsc() {
+function sortAsc() {
   switch (currentPage) {
     case "movies":
-      moviesData = await sortByNameOrTitle(moviesData);
+      moviesData = sortByNameOrTitle(moviesData);
       setMoviesHtml(moviesData);
       showMovies();
       break;
     case "characters":
-      charactersData = await sortByNameOrTitle(charactersData);
+      charactersData = sortByNameOrTitle(charactersData);
       setCharactersHtml(charactersData);
       showCharacters();
       break;
     case "locations":
-      locationsData = await sortByNameOrTitle(locationsData);
+      locationsData = sortByNameOrTitle(locationsData);
       setLocationsHtml(locationsData);
       showLocations();
       break;
     case "vehicles":
-      vehiclesData = await sortByNameOrTitle(vehiclesData);
+      vehiclesData = sortByNameOrTitle(vehiclesData);
       setVehiclesHtml(locationsData);
       showVehicles();
       break;
