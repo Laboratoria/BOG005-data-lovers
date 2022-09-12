@@ -15,58 +15,8 @@
       <section id="principal" class="principal">
         <button id="searcher">Buscar</button>
       </section>
-      
-
-      <!--
-      <section id="seeker">
-
-        <p>
-          Género:
-          <select name="genero" type="option" id="inputName">
-            <option>Masculino</option>
-            <option>Femenino</option>
-          </select>
-        </p>
-        <p>
-          Medalla:
-          <select name="medalla" type="option" id="inputMedal">
-            <option>Oro</option>
-            <option>Plata</option>
-            <option>Bronce</option>
-          </select>
-        </p>
-        <p>
-         Paises:
-          <select name="pais" type="option" id="inputCountry">
-            <option>Colombia</option>
-            <option>China</option>
-            <option>Brasil</option>
-            <option>Japon</option>
-          </select>
-        </p>-->
-        
-
-        <!--ul id="filters">
-          <li id="name">NOMBRE &nbsp;<input type="text" id="inputName" /></li>
-          <li id="country">
-            PAIS &nbsp;<input type="text" id="inputCountry" />
-          </li>
-          <li id="medal">
-            MEDALLA &nbsp;<input type="text" id="inputMedal" />
-          </li>
-          <li id="sport">
-            DEPORTE &nbsp;<input type="text" id="inputSport" />
-          </li>
-          <li id="countryMedal">
-            PAIS CON MÁS MEDALLAS &nbsp;<input
-              type="text"
-              id="inputCountryMedal"
-            />
-          </li>
-          
-        </!--ul-->
-      </section>
     </section>
+  
 
     <!--página con resultados-->
 
@@ -83,6 +33,11 @@
       <section id="seeker">
 
         <p>
+          Ordenar:
+          <select name="ordenar" id="ordenar">
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+          </select>
           Género:
           <select name="genero" type="option" id="inputName">
             <option>Masculino</option>
@@ -126,8 +81,7 @@
 
       <!--Paginación de las tarjetas-->
       <section class="pagination">
-        <button id="buttonLeft">Anterior</button>
-        <button id="buttonRight">Siguiente</button>
+       
         <button id="buttoninicio">Inicio</button>
       </section>
       <script src="main.js" type="module"></script>
