@@ -29,15 +29,8 @@ export function orderNameZA(prop) {
 }
 
 //Filtros
-export const countryFilter = (deportes, opcion) => {
-  console.log(deportes, opcion);
-  const paisFiltrado = deportes.filter((Element) => Element.team === opcion);
 
+export const countryFilter = (deportes, opcion) => {
+  const paisFiltrado = deportes.filter((Element) => Element.team === opcion);
   return paisFiltrado;
 };
-
-//filtro guia test
-/*export const countryFilter = (deportes, opcion) => {
-  const paisFiltrado = deportes.filter((Element) => Element.team === opcion);
-  return paisFiltrado;
-};*/
