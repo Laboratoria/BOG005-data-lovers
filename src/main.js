@@ -46,7 +46,7 @@ function orderDesc() {
   makeCard(dataDesc);
 }
 
-//
+//Pintar data en cartas
 function makeCard(deportes) {
   let finalHtml = "";
 
@@ -75,21 +75,8 @@ makeCard(deportes);
 //       <div class="bodyCardFront"></div>
 //       <div class="bodyCardBack"></div>*/
 //Filtros
+
 document
-  .getElementById("inputCountry")
-  .addEventListener("change", function (event) {
-    if (event.target.value == "allCountrys") {
-      makeCard(deportes);
-    } else {
-      const resultCountry = countryFilter(deportes, event.target.value);
-      console.log(resultCountry);
-      makeCard(resultCountry);
-    }
-  });
-
-//Filtro guia test
-
-/*document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
     if (event.target.value == "allCountrys") {
@@ -98,4 +85,4 @@ document
       const resultadoPais = countryFilter(deportes, event.target.value);
       makeCard(resultadoPais);
     }
-  });*/
+  });
