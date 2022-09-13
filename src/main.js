@@ -10,7 +10,6 @@ import data from "./data/athletes/athletes.js";
 
 //Variables//
 const deportes = data.athletes.slice(0, 100);
-console.log(deportes);
 const firstPage = document.getElementById("homepage");
 const countryPage = document.getElementById("pageCountry");
 const bottonSearcher = document.getElementById("searcher");
@@ -65,7 +64,8 @@ function makeCard(deportes) {
            <h1 class = "nameBack">${deportes[i].name}</h1>
            <p> Pais: ${deportes[i].team}</p>
            <p>Medalla: ${deportes[i].medal}</p>
-           <p>Deporte: ${deportes[i].sport} </p>
+           <p>Deporte: ${deportes[i].sport}</p>
+           <p>Género: ${deportes[i].gender}</p>
            <p>Altura: ${deportes[i].height}</p>
            <p>Peso: ${deportes[i].weight}</p>
          </section>
