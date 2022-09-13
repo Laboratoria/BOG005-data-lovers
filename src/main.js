@@ -4,11 +4,13 @@ import {
   genderFilter,
   medalFilter,
   countryFilter,
+  sportFilter,
 } from "./data.js";
 import data from "./data/athletes/athletes.js";
 
 //Variables//
 const deportes = data.athletes.slice(0, 100);
+console.log(deportes);
 const firstPage = document.getElementById("homepage");
 const countryPage = document.getElementById("pageCountry");
 const bottonSearcher = document.getElementById("searcher");
@@ -110,5 +112,17 @@ document
     } else {
       const resultadoGenero = genderFilter(deportes, event.target.value);
       makeCard(resultadoGenero);
+    }
+  });
+
+//Por deporte
+document
+  .getElementById("inputSport")
+  .addEventListener("change", function (event) {
+    if (event.target.value == "allSport") {
+      makeCard(deportes);
+    } else {
+      const resultadoDeporte = sportFilter(deportes, event.target.value);
+      makeCard(resultadoDeporte);
     }
   });

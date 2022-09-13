@@ -51,3 +51,11 @@ export const medalFilter = (deportes, opcion) => {
   );
   return medallaFiltrado;
 };
+
+//Por deporte
+export const sportFilter = (deportes, opcion) => {
+  const deporteFiltrado = deportes.filter(
+    (Element) => Element.sport === opcion
+  );
+  return deporteFiltrado;
+};
