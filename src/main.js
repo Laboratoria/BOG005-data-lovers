@@ -158,10 +158,13 @@ function setVehiclesHtml() {
   `);
   });
 }
+
 /*Funcion filtrado*/
 
 const selectDirector = document.getElementById("directorOptions");
-selectDirector.addEventListener("change", function () {
+selectDirector.addEventListener("change", function (e) {
+  console.log(selectDirector.value)
+  console.log(e.target.value)
   let selectedOption = this.options[selectDirector.selectedIndex];
   let selectedDirector = selectedOption.text;
   const arrayDirector = filterByDirector(moviesData, selectedDirector);
