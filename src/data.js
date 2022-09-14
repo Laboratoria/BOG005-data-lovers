@@ -62,3 +62,4 @@ export const sportFilter = (deportes, opcion) => {
 
 //Función para obtener un promedio
 
+

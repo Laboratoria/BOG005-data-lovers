@@ -70,13 +70,13 @@ function makeCards(deportes) {
            <h1 class="namePrincipal">${deporte.name}</h1>
            </section>
          <section class="cardBack">
-           <h1 class = "nameBack">${deporte.name}</h1>
-           <p> Pais: ${deporte.team}</p>
-           <p>Medalla: ${deporte.medal}</p>
-           <p>Deporte: ${deporte.sport}</p>
-           <p>Género: ${deporte.gender}</p>
-           <p>Altura: ${deporte.height}</p>
-           <p>Peso: ${deporte.weight}</p>
+           <h1 class = "nameBack" >${deporte.name}</h1>
+           <p class = "texT" > Pais: ${deporte.team}</p>
+           <p class = "texT" >Medalla: ${deporte.medal}</p>
+           <p class = "texT" >Deporte: ${deporte.sport}</p>
+           <p class = "texT" >Género: ${deporte.gender}</p>
+           <p class = "texT" >Altura: ${deporte.height}</p>
+           <p class = "texT" >Peso: ${deporte.weight}</p>
          </section>
        </section>
      </section>`;
@@ -138,12 +138,11 @@ document
     }
   });
 
-// funcion de calcular
+
 // promedio de mujeres
 
-document
+/*document
 .getElementById("datoCurioso")
 .addEventListener("click", () => {
 console.log("clik")
-});
-  
+});*/
