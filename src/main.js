@@ -5,7 +5,7 @@ import {
   medalFilter,
   countryFilter,
   sportFilter,
-  datoCurioso,
+  //calculo,
 } from "./data.js";
 import data from "./data/athletes/athletes.js";
 
@@ -55,7 +55,6 @@ function makeCards(deportes) {
   let finalHtml = "";
 
   for (let i = 0; i < deportes.length; i++) {
-
     const deporte = deportes[i];
 
     // background-image: url(imagendejugadores.png);'
@@ -64,11 +63,18 @@ function makeCards(deportes) {
     finalHtml += `
      <section class="cardFather">
        <section class="card">
-         <section class="cardFront" style="background-image: url(${deporte.gender === 'F' ? './imagenMujeres.png' : './imagenHombres.png'});">
-           <h1 class="namePrincipal">${i + 1}, ${deporte.team}</h1>
+         <section class="cardFront">
+          <div class="bodyCardFront" style="background-image: url(${
+            deporte.gender === "F"
+              ? "./imagenMujeres.png"
+              : "./imagenHombres.png"
+          });">
+           <h1 class="namePrincipal">${i + 1}</h1>
            <h1 class="namePrincipal">${deporte.name}</h1>
-           </section>
+          </div>
+         </section>
          <section class="cardBack">
+          <div class="bodyCardBack">
            <h1 class = "nameBack">${deporte.name}</h1>
            <p> Pais: ${deporte.team}</p>
            <p>Medalla: ${deporte.medal}</p>
@@ -76,6 +82,7 @@ function makeCards(deportes) {
            <p>Género: ${deporte.gender}</p>
            <p>Altura: ${deporte.height}</p>
            <p>Peso: ${deporte.weight}</p>
+          </div>
          </section>
        </section>
      </section>`;
@@ -85,8 +92,8 @@ function makeCards(deportes) {
 }
 
 makeCards(deportes);
-//       <div class="bodyCardFront"></div>
-//       <div class="bodyCardBack"></div>*/
+//
+//       */
 //Filtros
 
 //Por pais
@@ -137,10 +144,8 @@ document
     }
   });
 
-// funcion de calcular
 // promedio de mujeres
 
-document
-.getElementById("datoCurioso")
-.addEventListener("click", alert (datoCurioso ))
-  
+/*document
+  .getElementById("datoCurioso")
+  .addEventListener("click", alert(calculo));*/
