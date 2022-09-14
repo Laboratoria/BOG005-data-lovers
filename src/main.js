@@ -5,6 +5,7 @@ import {
   medalFilter,
   countryFilter,
   sportFilter,
+  datoCurioso,
 } from "./data.js";
 import data from "./data/athletes/athletes.js";
 
@@ -15,7 +16,6 @@ const countryPage = document.getElementById("pageCountry");
 const bottonSearcher = document.getElementById("searcher");
 const bottonInicio = document.getElementById("buttoninicio");
 let container = document.querySelector(".containerCard");
-let posicionInicial = 0;
 
 // cambio de pagina inicio a pagina de cartas
 bottonSearcher.addEventListener("click", () => {
@@ -32,49 +32,59 @@ bottonInicio.addEventListener("click", () => {
 
 //Ordenar
 document.getElementById("ordenar").addEventListener("change", function (event) {
-  if (event.target.value == "az") {
+  if (event.target.value === "az") {
     orderAsc();
   }
-  if (event.target.value == "za") {
+  if (event.target.value === "za") {
     orderDesc();
   }
 });
+
 function orderAsc() {
   let dataAsc = deportes.sort(orderNameAZ("name"));
-  makeCard(dataAsc);
+  makeCards(dataAsc);
 }
+
 function orderDesc() {
   let dataDesc = deportes.sort(orderNameZA("name"));
-  makeCard(dataDesc);
+  makeCards(dataDesc);
 }
 
 //Pintar data en cartas
-function makeCard(deportes) {
+function makeCards(deportes) {
   let finalHtml = "";
 
-  for (let i = posicionInicial; i < deportes.length; i++) {
+  for (let i = 0; i < deportes.length; i++) {
+
+    const deporte = deportes[i];
+
+    // background-image: url(imagendejugadores.png);'
+    // condition ? valor si la condicion es true : valor si la condicion es falsa '
+
     finalHtml += `
      <section class="cardFather">
        <section class="card">
-         <section class="cardFront">
-           <h1 class="namePrincipal">${i + 1}, ${deportes[i].team}</h1>
-           <h1 class="namePrincipal">${deportes[i].name}</h1>
+         <section class="cardFront" style="background-image: url(${deporte.gender === 'F' ? './imagenMujeres.png' : './imagenHombres.png'});">
+           <h1 class="namePrincipal">${i + 1}, ${deporte.team}</h1>
+           <h1 class="namePrincipal">${deporte.name}</h1>
            </section>
          <section class="cardBack">
-           <h1 class = "nameBack">${deportes[i].name}</h1>
-           <p> Pais: ${deportes[i].team}</p>
-           <p>Medalla: ${deportes[i].medal}</p>
-           <p>Deporte: ${deportes[i].sport}</p>
-           <p>Género: ${deportes[i].gender}</p>
-           <p>Altura: ${deportes[i].height}</p>
-           <p>Peso: ${deportes[i].weight}</p>
+           <h1 class = "nameBack">${deporte.name}</h1>
+           <p> Pais: ${deporte.team}</p>
+           <p>Medalla: ${deporte.medal}</p>
+           <p>Deporte: ${deporte.sport}</p>
+           <p>Género: ${deporte.gender}</p>
+           <p>Altura: ${deporte.height}</p>
+           <p>Peso: ${deporte.weight}</p>
          </section>
        </section>
      </section>`;
   }
+
   container.innerHTML = finalHtml;
 }
-makeCard(deportes);
+
+makeCards(deportes);
 //       <div class="bodyCardFront"></div>
 //       <div class="bodyCardBack"></div>*/
 //Filtros
@@ -84,10 +94,10 @@ document
   .getElementById("inputCountry")
   .addEventListener("change", function (event) {
     if (event.target.value == "allCountrys") {
-      makeCard(deportes);
+      makeCards(deportes);
     } else {
       const resultadoPais = countryFilter(deportes, event.target.value);
-      makeCard(resultadoPais);
+      makeCards(resultadoPais);
     }
   });
 
@@ -96,10 +106,10 @@ document
   .getElementById("inputMedal")
   .addEventListener("change", function (event) {
     if (event.target.value == "allMedal") {
-      makeCard(deportes);
+      makeCards(deportes);
     } else {
       const resultadoMedalla = medalFilter(deportes, event.target.value);
-      makeCard(resultadoMedalla);
+      makeCards(resultadoMedalla);
     }
   });
 
@@ -108,10 +118,10 @@ document
   .getElementById("inputGender")
   .addEventListener("change", function (event) {
     if (event.target.value == "allgender") {
-      makeCard(deportes);
+      makeCards(deportes);
     } else {
       const resultadoGenero = genderFilter(deportes, event.target.value);
-      makeCard(resultadoGenero);
+      makeCards(resultadoGenero);
     }
   });
 
@@ -120,9 +130,17 @@ document
   .getElementById("inputSport")
   .addEventListener("change", function (event) {
     if (event.target.value == "allSport") {
-      makeCard(deportes);
+      makeCards(deportes);
     } else {
       const resultadoDeporte = sportFilter(deportes, event.target.value);
-      makeCard(resultadoDeporte);
+      makeCards(resultadoDeporte);
     }
   });
+
+// funcion de calcular
+// promedio de mujeres
+
+document
+.getElementById("datoCurioso")
+.addEventListener("click", alert (datoCurioso ))
+  
