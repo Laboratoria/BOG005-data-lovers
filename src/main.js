@@ -5,7 +5,7 @@ import {
   medalFilter,
   countryFilter,
   sportFilter,
-  datoCurioso,
+  //datoCurioso,
 } from "./data.js";
 import data from "./data/athletes/athletes.js";
 
@@ -16,6 +16,7 @@ const countryPage = document.getElementById("pageCountry");
 const bottonSearcher = document.getElementById("searcher");
 const bottonInicio = document.getElementById("buttoninicio");
 let container = document.querySelector(".containerCard");
+
 
 // cambio de pagina inicio a pagina de cartas
 bottonSearcher.addEventListener("click", () => {
@@ -142,5 +143,7 @@ document
 
 document
 .getElementById("datoCurioso")
-.addEventListener("click", alert (datoCurioso ))
+.addEventListener("click", () => {
+console.log("clik")
+});
   
