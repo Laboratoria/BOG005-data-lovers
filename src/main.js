@@ -17,7 +17,6 @@ const bottonSearcher = document.getElementById("searcher");
 const bottonInicio = document.getElementById("buttoninicio");
 let container = document.querySelector(".containerCard");
 
-
 // cambio de pagina inicio a pagina de cartas
 bottonSearcher.addEventListener("click", () => {
   countryPage.style.display = "block";
@@ -56,7 +55,6 @@ function makeCards(deportes) {
   let finalHtml = "";
 
   for (let i = 0; i < deportes.length; i++) {
-
     const deporte = deportes[i];
 
     // background-image: url(imagendejugadores.png);'
@@ -65,7 +63,11 @@ function makeCards(deportes) {
     finalHtml += `
      <section class="cardFather">
        <section class="card">
-         <section class="cardFront" style="background-image: url(${deporte.gender === 'F' ? './imagenMujeres.png' : './imagenHombres.png'});">
+         <section class="cardFront" style="background-image: url(${
+           deporte.gender === "F"
+             ? "./imagenMujeres.png"
+             : "./imagenHombres.png"
+         });">
            <h1 class="namePrincipal">${i + 1}, ${deporte.team}</h1>
            <h1 class="namePrincipal">${deporte.name}</h1>
            </section>
@@ -86,8 +88,8 @@ function makeCards(deportes) {
 }
 
 makeCards(deportes);
-//       <div class="bodyCardFront"></div>
-//       <div class="bodyCardBack"></div>*/
+//
+//       */
 //Filtros
 
 //Por pais
@@ -137,7 +139,6 @@ document
       makeCards(resultadoDeporte);
     }
   });
-
 
 // promedio de mujeres
 
