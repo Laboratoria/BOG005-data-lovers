@@ -5,7 +5,7 @@
 ## Índice
 
 * [1. Introducción ](#1-Introducción )
-* [2. Historias de Usuario](#2-Historias de usuarios)
+* [2. Historias de Usuario] (#2-Historias de usuarios)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Definicion de producto ](#4-consideraciones-generales)
 
@@ -71,5 +71,11 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 
 ## 4. Definicion de producto 
-! [prototipo](https://co.pinterest.com/pin/390546598950116850/?nic_v3=1a7aR3HTE)  
+
+Prpototipo de alta fidelidad
+! [1db136aacb7fa7a01767377034d63a2f.jpg](https://co.pinterest.com/pin/390546598950116850/?nic_v3=1a7aR3HTE)  
+
+prototipo de baja fidelidad 
+
+! [baja fidelida.jpg](https://co.pinterest.com/pin/390546598950117044?nic_v3=1a7aR3HTE)
 
