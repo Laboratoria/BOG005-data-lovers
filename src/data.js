@@ -61,16 +61,3 @@ export const sportFilter = (deportes, opcion) => {
 };
 
 //Función para obtener un promedio
-
-/*export const datoCurioso = (deportes) => {
-
-  let women = 0;
-  deportes.map((index) => {
-      if (index.gender === "F") {
-          women++;
-      }
-      let resultWomen = (women * 100) / deportes.length;
-      let result = Number(resultWomen.toFixed(2));
-      
-  });
-  return result;*/

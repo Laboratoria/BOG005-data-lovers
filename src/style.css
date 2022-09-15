@@ -46,27 +46,35 @@ body {
 
 #seeker {
 
-    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    margin: 0%;
     height: 150px;
     background: #6bccf6;
-    border-radius: 10px;
+    border-radius: 0px;
+    font-family: sans-serif;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+
+    
 }
+
+
 
 #filters li {
     font-family: sans-serif;
-    font-size: 30px;
-    display: flex;
-    display: inline-flex;
-    justify-content: space-around;
-    margin-top: 25px;
-    margin-left: 70px;
+    font-size: 80px;
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
+    padding:10px 0px;
+    text-align: center;
+    width: 200px;
+
 }
 
 #searcher {
-    background-position: 50% 50%;
+    background-position: left;
     font-family: sans-serif;
     font-size: 35px;
     border-bottom: 15px;
@@ -77,15 +85,15 @@ body {
 }
 
 .containerCard {
+    
     max-width: 1380px;
-    margin: auto;
-    margin-top: 20px;
+    width: 100%;
     perspective: 1000px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background: purple;
-    border-radius: 10px;
+    
     
 }
 
@@ -101,7 +109,6 @@ body {
 .card {
     width: 250px;
     height: 300px;
-    background: white;
     position: relative;
     transform-style: preserve-3d;
     transition: all 600ms;
@@ -112,57 +119,72 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    *top: 0;
-    *left: 0;
+    top: 0;
     backface-visibility: hidden;
     transform-style: preserve-3d;
     font-family: sans-serif;
-      font-weight: 500;
-    font-size: 10px;
+    text-align: center;
+    font-size: 20px;
+    
     
 }
 
 .cardFront{
     
-
+    background-size: cover;
+    background-repeat: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
-   
-}
+    background-size: 99%;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
+}
+ 
 .namePrincipal{
-    
+    color: white;
+    left: 100px;
+    font-size: 20px;
+    top: 200px;
 }
+
+
 
 .bodyCardFront{
     width: 100%;
     height: 100%;
-    background-size: 99%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color: transparent;
+    left: 90%;
+    
+    padding: 40px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px;
-    transform: translateZ(60px);
+    text-align: center;
     
-    
-  
+    color:white;
 }
 
+.texT{
+    color: white;
+    left: 100px;
+}
+
+.nameBack{
+    font-size: 30px;
+    color: white;
+    left: 100px; 
+}
 .cardBack{
     transform: rotateY(180deg);
-    padding-left: 0px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px;
+    background: #239796;
+    border-radius: 20px;
+    
+
 }
 
 .bodyCardBack {
-    
+    padding: 50px;
+    text-align: center;
+    *justify-content: center;
+    color: white;
 }
