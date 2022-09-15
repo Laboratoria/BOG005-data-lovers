@@ -1,5 +1,3 @@
-// estas funciones son de ejemplo
-
 //Ordenar
 export function orderNameAZ(prop) {
   if (!prop) {
@@ -59,5 +57,3 @@ export const sportFilter = (deportes, opcion) => {
   );
   return deporteFiltrado;
 };
-
-//Función para obtener un promedio

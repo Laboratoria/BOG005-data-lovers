@@ -13,12 +13,12 @@
     <!--Página de inicio-->
     <section id="homepage" class="homepage">
       <section id="principal" class="principal">
-        <p>
+        <p class="textoInicial">
           Los Juegos Olímpicos de Río de Janeiro 2016, oficialmente conocidos
           como los Juegos de la XXXI Olimpiada, o más comúnmente como Río 2016,
           fue un evento multideportivo internacional, celebrado en la ciudad de
           Río de Janeiro, Brasil, entre el 5 y el 21 de agosto de 2016.
-          Participaron 11 551 atletas de 207 comités olímpicos nacionales.
+          Participaron 11.551 atletas de 207 comités olímpicos nacionales.
           ¿Quieres conocerlos mejor?
         </p>
         <button id="searcher">Saber más</button>
@@ -30,14 +30,15 @@
     <section id="pageCountry" class="pageCountry">
       <!--Filtros-->
       <main>
-        <section id="seeker">
-          <p>
+        <section id="botones">
+          <section id="seeker">
             Ordenar:
             <select name="ordenar" id="ordenar">
               <option value="all">Ordenar</option>
               <option value="az">A-Z</option>
               <option value="za">Z-A</option>
             </select>
+
             Deporte:
             <select name="deporte" id="inputSport">
               <option value="allSport">TODOS</option>
@@ -68,14 +69,14 @@
               <option>Weightlifting</option>
               <option>Wrestling</option>
             </select>
+
             Género:
             <select name="genero" type="option" id="inputGender">
               <option value="allgender">TODOS</option>
               <option value="M">M</option>
               <option value="F">F</option>
             </select>
-          </p>
-          <p>
+
             Medalla:
             <select name="medalla" type="option" id="inputMedal">
               <option value="allMedal">TODAS</option>
@@ -83,8 +84,7 @@
               <option>Silver</option>
               <option>Bronze</option>
             </select>
-          </p>
-          <p>
+
             Paises:
             <select name="genero" type="text" id="inputCountry">
               <option value="allCountrys">TODOS</option>
@@ -125,18 +125,13 @@
               <option>United States</option>
               <option>Uzbekistan</option>
             </select>
-          </p>
-          <button class="datoCurioso" id="datosCuriosos">Dato curioso</button>
+
+            <button id="buttoninicio">Inicio</button>
+          </section>
         </section>
         <section class="containerCard"></section>
-
-        <section class="buttons" id="buttons"></section>
       </main>
 
-      <!--Paginación de las tarjetas-->
-      <section class="pagination">
-        <button id="buttoninicio">Inicio</button>
-      </section>
       <script src="main.js" type="module"></script>
     </section>
   </body>
