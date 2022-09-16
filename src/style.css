@@ -87,7 +87,7 @@ body {
     font-family: sans-serif;
     font-size: 25px;    
     display: grid;
-    grid-template-columns: repeat(6, 200px);
+    grid-template-columns: repeat(6, 150px);
     grid-gap: 10px;
     
 
