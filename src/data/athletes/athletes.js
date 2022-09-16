@@ -595,7 +595,7 @@ export default {
       medal: "Silver",
     },
     {
-      name: "milie Andol",
+      name: "Milie Andol",
       gender: "F",
       height: "170",
       weight: "97",
