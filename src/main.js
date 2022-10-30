@@ -118,6 +118,11 @@ const left = () => {
 };
 btnLeft.addEventListener("click", left);
 
+const styleScreen = () => {
+  screenMainCharacteres.style.display = "none";
+  screenAllCharacteres.style.display = "grid";
+  btnRigth.style.display = "block";
+}
 //función para volver a la página de inicio
 const home = () => {
   screenMainCharacteres.style.display = "none";
@@ -132,18 +137,14 @@ btnInit.addEventListener("click", home);
 
 // función para el botón ordenar de la A-Z
 const selectOrder = () => {
-  screenMainCharacteres.style.display = "none";
-  screenAllCharacteres.style.display = "grid";
-  btnRigth.style.display = "block";
+  styleScreen();
   dataCopied(showOrder);
 };
 btnOrderAZ.addEventListener("click", selectOrder);
 
 // función para el botón ordenar de la Z-A
 const orderReverse = () => {
-  screenMainCharacteres.style.display = "none";
-  screenAllCharacteres.style.display = "grid";
-  btnRigth.style.display = "block";
+  styleScreen();
   showDatas = showData(dataRyM);
   showDatas = showOrder(showDatas).reverse();
   positionStart = -15;
@@ -154,18 +155,14 @@ btnOrderZA.addEventListener("click", orderReverse);
 
 //función para filtrar por especies humanas
 const filtersHuman = () => {
-  screenMainCharacteres.style.display = "none";
-  screenAllCharacteres.style.display = "grid";
-  btnRigth.style.display = "block";
+  styleScreen();
   dataCopied(filterHuman);
 };
 btnHuman.addEventListener("click", filtersHuman);
 
 //función para filtrar por especies aliens
 const filtersAliens = () => {
-  screenMainCharacteres.style.display = "none";
-  screenAllCharacteres.style.display = "grid";
-  btnRigth.style.display = "block";
+  styleScreen();
   dataCopied(filterAlien);
 };
 btnAlien.addEventListener("click", filtersAliens);

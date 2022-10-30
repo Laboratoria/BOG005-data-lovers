@@ -58,6 +58,9 @@ header{
     cursor: pointer;
     width: 14em;
 }
+#button-main-characteres{ 
+opacity: 0.5;
+}
 #button-characteres:hover, #button-main-characteres:hover{
 background-color: #E4D33E;
 color: brown;
