@@ -40,15 +40,20 @@ pageCharacteres.style.display = "none";
 btnLeft.style.display = "none";
 boxCurious.style.display = "none";
 
+const styleScreenAllCharacteres = () => {
+  screenMainCharacteres.style.display = "none";
+  pageStart.style.display = "none";
+  pageCharacteres.style.display = "block";
+  screenAllCharacteres.style.display = "grid";
+}
+
 //función rigth() con forEach
 const rigth = () => {
-  screenMainCharacteres.style.display = "none";
+  styleScreenAllCharacteres();
   boxCurious.style.display = "none";
   positionStart += 15;
   positionEnd += 15;
-  pageStart.style.display = "none";
-  pageCharacteres.style.display = "block";
-  screenAllCharacteres.style.display = "visible";
+  btnRigth.style.display = "block";
   screenAllCharacteres.innerHTML = "";
   if (positionStart >= 15) {
     btnLeft.style.display = "block";
@@ -86,12 +91,9 @@ let dataCopied = (datas) => {
 };
 
 const left = () => {
-  screenMainCharacteres.style.display = "none";
+  styleScreenAllCharacteres()
   positionStart -= 15;
   positionEnd -= 15;
-  pageStart.style.display = "none";
-  pageCharacteres.style.display = "block";
-  screenAllCharacteres.style.display = "grid";
   btnRigth.style.display = "block";
   if (positionStart < 0) {
     positionStart = 0;
