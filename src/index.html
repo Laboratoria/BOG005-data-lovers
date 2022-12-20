@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Harry Potter fan page. Data Lovers">
+  <title>DL HARRY POTER</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+  <!--creacion pagina principal-->
+  <div id="pag1">
+    <header id="logoPag1">
+      <img src="imgs/logo.gif" id="logoHomePage" />
+      <h1 id="mesajeHome">Dejate llevar por la magia y aprende sobre el <br> impresionante mundo de Harry Potter</h1>
+    </header>
+    <!--boton welcome-->
+    <section id="sectionHomePage">
+      <button type="button" id="welcome">BIENVENIDO</button>
+    </section>
+  </div>
+  <!--creacion pagina secundaria-->
+  <div id="pag2">
+    <!--encabezado:logo,barra buscador y boton buscador-->
+    <header>
+      <img src=" imgs/logo.gif" id="logo" alt="icono-potter" />
+      <div class="buscador">
+        <input type="search" id="seeker" placeholder="search character">
+        </div>
+    </header>
+    <!--botones de nuestros filtros-->
+    <section id= "filterButtons">
+      <select name="filterCharacters" id="genderCharacters" class="filterSelectors">
+        <option value="allGender">PERSONAJES</option>
+        <option value="Male">Hombre</option>
+        <option value="Female">Mujer</option>
+      </select>
+      <select name="filterHogwartsHouses" id="HogwartsHouses" class="filterSelectors">
+        <option value="Houses">CASAS DE HOGWARTS</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Slytherin">Slytherin</option>
+
+      </select>
+      <select name="filterAlphabetically" id="alphabeticalOrder" class="filterSelectors">
+        <option>ORDENAR</option>
+        <option value="a-z" id="order-a-z">A-Z</option>
+        <option value="z-a" id="order-z-a">Z-A</option>
+      </select>
+    </section>
+    <main class="containerCard"></main>
+    <!--boton regresa Inicio-->
+    <footer>
+      <button type="button" id="homeBack" class="btnInicio">INICIO</button>
+    </footer>
     <script src="main.js" type="module"></script>
-  </body>
+  </div>
+</body>
+
 </html>
